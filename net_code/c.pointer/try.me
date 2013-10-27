@@ -1,0 +1,2671 @@
+.\" $com ${ME:-me} -Mmanual ${MEFLAGS:-''} -T${T:-'lwroff'} $@ -tbl > ,try.ps; /home/grader/f2y-grd/bin.$SYS_TYPE/relocate.toc ,try.ps
+.ig
+###############################################################################
+#									      #
+#    Copyright (c) 1989 by Kenneth A. Reek.  Permission to copy or use this   #
+#    software without fee is granted to non-profit and not-for-profit	      #
+#    institutions and organizations provided that:			      #
+#    1) such copying or use is not for commercial advantage, and	      #
+#    2) no portion of this software is incorporated into any other program    #
+#       or device for commercial advantage, and				      #
+#    3) this copyright notice remains with the software.		      #
+#    Permission is also granted to make this software available to other      #
+#    non-profit or not-for-profit institutions and organizations whose use    #
+#    satisfies (1) through (3) above.  Any use of this software for	      #
+#    commercial advantage, or incorporation of any part of this software      #
+#    into any other program or device for commercial advantage, or any use    #
+#    or copying other than by non-profit or not-for-profit institutions or    #
+#    organizations requires written permission of the copyright holder.       #
+#									      #
+###############################################################################
+
+
+This is the user's manual for try.
+SCCS	@(#)try.me	1.11	03/13/00
+
+Revision history:
+	Version 1	Thu Mar 17 14:26:42 EST 1988 (original)
+
+	Version 1.1	Tue Apr 11 07:54:07 EDT 1989
+		News feature added.
+		Log file time is time when try started, not when it ended.
+		Dot files are removed from scratch directories, too.
+		Query feature added.
+		Expanded description of types of file names students can give.
+		Error msg printed if student gives 2 files w/same name.
+		Add user-specified messages.
+		Improve setting of environment variables from .tryrc
+		Delete all user env vars that begin with TRY_
+		Change umask during build to 077
+		Add support for System V
+
+	Version 1.2	Thu Dec 17 10:05:50 EST 1992
+		Ability to move log files, working directories and default
+		scripts added.
+		Allow init script to modify the environment.
+
+	Version 1.3	Thu Feb 17 13:51:42 EST 1994
+		Check for multiple try's running in the same wd
+		Allow long lines in .tryrc to be continued with \ 
+
+	Version 1.4	Mon May  9 10:47:13 EDT 1994
+		Recurse into subdirectories when changing file modes after
+		a build and when deleting files in the working directory.
+
+		Version 1.4 sccs id's:
+			alloc.c	1.1      4/11/89
+			build.c	1.3      5/9/94
+			check.c	1.3      12/8/92
+			child.c	1.1      4/11/89
+			data.c	1.1      4/11/89
+			dumplog.c	1.2      2/11/94
+			env.c	1.5      12/18/92
+			error.c	1.2      2/11/94
+			exec.c	1.1      4/11/89
+			housekeeping.c	1.1      4/11/89
+			id.c	1.1      4/11/89
+			log.c	1.3      12/8/92
+			misc.c	1.1      4/11/89
+			news.c	1.1      4/11/89
+			passwd.c	1.1      4/11/89
+			query.c	1.1      4/11/89
+			readstud.c	1.1      4/11/89
+			run.c	1.1      4/11/89
+			running.c	1.2      2/11/94
+			signal_names.c	1.1      4/11/89
+			studir.c	1.3      5/9/94
+			try.c	1.5      2/11/94
+			tryrc.c	1.4      12/8/92
+			writestud.c	1.2      2/11/94
+			xlate.c	1.2      2/17/94
+
+	Version 1.5	Thu Aug 25 11:46:38 EDT 1994
+		Add option to make exit status of init script important;
+		allow try_log to be used from within init script.  Also
+		allow build and run scripts to modify environment by
+		creating an .ENVIRONMENT file.
+
+		NOTE: Starting in version 1.5, the SCCS id of the manual
+		is the version number of the entire program.  Prior to
+		this, the version numbers did not correlate, so delta 1.4
+		of the manual is vacuous.
+
+		Version 1.5 sccs id's:
+			alloc.c	1.1      4/11/89
+			build.c	1.4      8/25/94
+			check.c	1.3      12/8/92
+			child.c	1.1      4/11/89
+			data.c	1.1      4/11/89
+			dumplog.c	1.2      2/11/94
+			env.c	1.6      8/29/94
+			error.c	1.2      2/11/94
+			exec.c	1.1      4/11/89
+			housekeeping.c	1.1      11 Apr 1989
+			id.c	1.1      11 Apr 1989
+			init.c  1.1     8/26/94
+			log.c	1.3      08 Dec 1992
+			misc.c	1.1      4/11/89
+			news.c	1.1      11 Apr 1989
+			passwd.c	1.1      4/11/89
+			query.c	1.1      4/11/89
+			readstud.c	1.1      4/11/89
+			run.c	1.2      8/25/94
+			running.c	1.2      2/11/94
+			signal_names.c	1.1      4/11/89
+			studir.c	1.3      09 May 1994
+			try.c	1.7      8/29/94
+			tryrc.c	1.5      8/25/94
+			writestud.c	1.2      11 Feb 1994
+			xlate.c	1.2      2/17/94
+
+	Version 1.6
+		Generalization of #ifdefs for SGI and other platforms;
+		general reorganization of declarations.
+
+		Add third filename for news: news.project-code, so that
+		projects which share a common project directory can each
+		have their own news.
+
+		Version 1.6 sccs id's:
+			alloc.c	1.1      4/11/89
+			build.c	1.5      12/6/94
+			check.c	1.4      12/6/94
+			child.c	1.2      12/6/94
+			data.c	1.2      12/6/94
+			dumplog.c	1.3      12/6/94
+			env.c	1.7      12/6/94
+			error.c	1.3      12/6/94
+			exec.c	1.2      12/6/94
+			housekeeping.c	1.2      12/6/94
+			id.c	1.4      4/7/95
+			init.c	1.2	12/6/94
+			log.c	1.4      12/6/94
+			misc.c	1.2      12/6/94
+			news.c	1.2      12/6/94
+			passwd.c	1.2      12/6/94
+			query.c	1.3      9/20/95
+			readstud.c	1.2      12/6/94
+			run.c	1.3      12/6/94
+			running.c	1.3      12/6/94
+			signal_names.c	1.1      4/11/89
+			studir.c	1.5      10 Feb 1995
+			try.c	1.9      10 Feb 1995
+			try_deblank.c	1.2      12/6/94
+			try_log.c	1.2      12/6/94
+			try_run.c	1.2      12/6/94
+			tryrc.c	1.6      12/6/94
+			writestud.c	1.3      12/6/94
+			xlate.c	1.3      12/6/94
+
+	Version 1.7
+		Convert to ANSI C by adding function prototypes.
+
+		Add "cleanupstatus" which allows the cleanup script to return
+		an error code for success/failure, and an error message that
+		will be logged.
+
+		Version 1.7 sccs id's:
+			alloc.c	1.2      10/15/97
+			build.c	1.7      10/15/97
+			check.c	1.5      10/15/97
+			child.c	1.3      10/15/97
+			data.c	1.3      10/15/97
+			dumplog.c	1.5      10/15/97
+			env.c	1.8      10/15/97
+			error.c	1.5      10/16/97
+			exec.c	1.3      10/15/97
+			housekeeping.c	1.4      10/15/97
+			id.c	1.5      10/15/97
+			log.c	1.7      10/16/97
+			misc.c	1.3      10/15/97
+			news.c	1.2      12/6/94
+			passwd.c	1.3      10/15/97
+			query.c	1.4      10/15/97
+			readstud.c	1.3      10/15/97
+			run.c	1.5      10/15/97
+			running.c	1.4      10/15/97
+			signal_names.c	1.2      10/15/97
+			studir.c	1.6      10/15/97
+			try.c	1.11      10/15/97
+			tryrc.c	1.8      10/15/97
+			writestud.c	1.4      10/15/97
+			xlate.c	1.4      10/15/97
+
+	Version 1.8
+		Corrected an error in the routine to delete everything from
+		the scratch directory: if the scratch directory contains a
+		symlink to another directory, try used to follow the link
+		and continue deleting everything it finds.  Now it simply
+		deletes the symlink without following it.
+
+		Version 1.8 sccs id's:
+			alloc.c	1.2      10/15/97
+			build.c	1.7      10/15/97
+			check.c	1.5      10/15/97
+			child.c	1.3      10/15/97
+			data.c	1.3      10/15/97
+			dumplog.c	1.5      10/15/97
+			env.c	1.8      10/15/97
+			error.c	1.5      10/16/97
+			exec.c	1.3      10/15/97
+			housekeeping.c	1.4      10/15/97
+			id.c	1.5      10/15/97
+			log.c	1.7      10/16/97
+			misc.c	1.3      10/15/97
+			news.c	1.2      12/6/94
+			passwd.c	1.3      10/15/97
+			query.c	1.4      10/15/97
+			readstud.c	1.3      10/15/97
+			run.c	1.5      10/15/97
+			running.c	1.4      10/15/97
+			signal_names.c	1.2      10/15/97
+			studir.c	1.7      01/27/99
+			try.c	1.11      10/15/97
+			tryrc.c	1.8      10/15/97
+			writestud.c	1.4      10/15/97
+			xlate.c	1.4      10/15/97
+
+	Version 1.9
+		Added an option (yyyy) that produces a 4-digit year in
+		the log file.  Also corrected an error that would have
+		caused the 2-digit year format to become 3 digits in
+		2000.  Try is now Y2K compliant.
+
+		Version 1.9 sccs id's:
+			alloc.c	1.2      10/15/97
+			build.c	1.7      10/15/97
+			check.c	1.5      10/15/97
+			child.c	1.3      10/15/97
+			data.c	1.3      10/15/97
+			dumplog.c	1.5      10/15/97
+			env.c	1.8      10/15/97
+			error.c	1.5      10/16/97
+			exec.c	1.3      10/15/97
+			housekeeping.c	1.4      10/15/97
+			id.c	1.5      10/15/97
+			log.c	1.8      03/10/99
+			misc.c	1.3      10/15/97
+			news.c	1.2      12/6/94
+			passwd.c	1.3      10/15/97
+			query.c	1.4      10/15/97
+			readstud.c	1.3      10/15/97
+			run.c	1.5      10/15/97
+			running.c	1.4      10/15/97
+			signal_names.c	1.2      10/15/97
+			studir.c	1.7      01/27/99
+			try.c	1.11      10/15/97
+			tryrc.c	1.9      03/10/99
+			writestud.c	1.4      10/15/97
+			xlate.c	1.4      10/15/97
+
+	Version 1.10
+		Changed the definitions of the signal names to match
+		our current Solaris.  (I wish they wouldn't move stuff
+		like that around.)  No changes to the documentation.
+			alloc.c	1.2      10/15/97
+			build.c	1.7      10/15/97
+			check.c	1.5      10/15/97
+			child.c	1.3      10/15/97
+			data.c	1.3      10/15/97
+			dumplog.c	1.5      10/15/97
+			env.c	1.8      10/15/97
+			error.c	1.5      10/16/97
+			exec.c	1.3      10/15/97
+			housekeeping.c	1.4      10/15/97
+			id.c	1.5      10/15/97
+			log.c	1.9      05/04/99
+			misc.c	1.3      10/15/97
+			news.c	1.2      12/6/94
+			passwd.c	1.3      10/15/97
+			query.c	1.4      10/15/97
+			readstud.c	1.3      10/15/97
+			run.c	1.5      10/15/97
+			running.c	1.4      10/15/97
+			signal_names.c	1.3      05/04/99
+			studir.c	1.7      01/27/99
+			try.c	1.11      10/15/97
+			tryrc.c	1.9      03/10/99
+			writestud.c	1.4      10/15/97
+			xlate.c	1.4      10/15/97
+
+	Version 1.11
+		Fixed a Y2K bug in env.c that slipped through.
+			alloc.c	1.2      10/15/97
+			build.c	1.7      10/15/97
+			check.c	1.5      10/15/97
+			child.c	1.3      10/15/97
+			data.c	1.3      10/15/97
+			dumplog.c	1.5      10/15/97
+			env.c	1.9      03/06/00
+			error.c	1.5      10/16/97
+			exec.c	1.3      10/15/97
+			housekeeping.c	1.4      10/15/97
+			id.c	1.5      10/15/97
+			log.c	1.9      05/04/99
+			misc.c	1.3      10/15/97
+			news.c	1.2      12/6/94
+			passwd.c	1.3      10/15/97
+			query.c	1.4      10/15/97
+			readstud.c	1.3      10/15/97
+			run.c	1.5      10/15/97
+			running.c	1.4      10/15/97
+			signal_names.c	1.3      05/04/99
+			studir.c	1.7      01/27/99
+			try.c	1.11      10/15/97
+			tryrc.c	1.9      03/10/99
+			writestud.c	1.4      10/15/97
+			xlate.c	1.4      10/15/97
+..
+.ds VS 1.11
+.de C	\" courier
+\\$3\fC\&\\$1\fP\\$2
+..
+.de BC	\" bold capitalized
+\&\\$3\\s-1\\fB\\$1\\fP\\s0\\$2
+..
+.de PN	\" program name
+.ie \\n(.$=1 \\fB\&\\$1\\fP
+.el \\fI\&\\$1\\fP\\$2
+..
+.de SS	\" shell script
+\\fB\&\\$1\\fP\\$2
+..
+.de FN	\" file name
+\\fB\&\\$1\\fP\\$2
+..
+.de UP	\" Unix program
+\\fI\&\\$1\\fP\\$2
+..
+.de TA
+.	ta .5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i
+..
+.ds TR \fBT\s-2RY\s0\fP
+.ds tR \fB\s-2TRY\s0\fP
+.nr EE .1i	\" indent for .EX examples
+.nr xs 0
+.ll 6.5i
+.po 1i
+.af mo 01
+.af dy 01
+.nr sf 3
+.he '\n(mo/\n(dy/\n(yr'\fIThe Try System\fP'Version \*(VS'
+.fo ''Page %''
+.tp
+.sp 5
+.(l C
+.sz 20
+The \fITry\fR System
+.sz 18
+\- or \-
+How to Avoid Testing Student Programs
+.sz 10
+.sp
+.sz 9
+Version \*(VS
+.sz 10
+.sp
+Kenneth A. Reek
+Undergraduate Computer Science Department
+Rochester Institute of Technology
+Rochester, NY 14623-0887
+.)l
+.sp .5i
+.ce 1
+.sz 14
+ABSTRACT
+.sz 10
+.sp
+.ll -1.5i
+.po +.75i
+The \*(TR System,
+which runs under
+U\s-1NIX\s0\**,
+.(f
+\**\ U\s-1NIX\s0 is a registered trademark of The Open Group.
+.)f
+allows students to test their programs
+in a controlled manner
+with the instructor's test data.
+The system will accept any type of files from the student,
+and the instructor has great flexibility in
+determining what is to be tested
+and how the tests are to be performed.
+The results of the tests are recorded in a log file
+for later grading.
+At no time does the student have direct access to the test data or the log file.
+The instructor is protected from damage
+that might be caused by malicious student programs.
+.sp .5i
+.ll +1.5i
+.po -.75i
+\*(td
+.(z
+.nr pp 8
+.lp
+Copyright \(co 1989, 1992, 1994, 1997, 1999 by Kenneth A. Reek.
+Permission to copy or use this
+software without fee is granted to non-profit and not-for-profit
+institutions and organizations provided that:
+.np
+such copying or use is not for commercial advantage, and
+.np
+no portion of this software is incorporated into any other program
+or device for commercial advantage, and
+.np
+this copyright notice remains with the software.
+.lp
+Permission is also granted to make this software available to other
+non-profit or not-for-profit institutions and organizations whose use
+satisfies (1) through (3) above.  Any use of this software for
+commercial advantage, or incorporation of any part of this software
+into any other program or device for commercial advantage, or any use
+or copying other than by non-profit or not-for-profit institutions or
+organizations requires written permission of the copyright holder.
+.br
+.nr pp 10
+.)z
+.bp
+.2c .5i
+.sh 1 "Overview"
+.pp
+The \*(tR system
+allows students to test their projects
+in a controlled manner
+with the instructor's test data.
+The instructor creates a shell script to build the student's project
+and a script to run the project.
+When the student runs \*(tR,
+the student's file(s) are copied into a scratch directory,
+and the instructor's scripts are executed to create the project
+and test it.
+The results of each attempt are recorded in a log file for that student.
+Additional scripts can be created to give the student information
+about a test that the project failed,
+or to give the student information from the log file.
+.pp
+There are no limitations on the type or number of files that
+\*(tR will accept\(emit simply copies all of the files
+named by the student into the scratch directory.
+The instructor determines how many and what kind of files are
+appropriate for a project
+by the way the \*(lqbuild\*(rq script is written.
+Similarly, the only preconceived notion that \*(tR has of how a project
+should be tested
+is that there may be more than one test, and the tests are numbered
+from 1 to 127.
+The instructor determines how many and what kind of tests should be
+performed by the way the \*(lqrun\*(rq script is written.
+.pp
+Each time the student runs the \*(tR program, an entry is added
+to that student's log file
+indicating the results of the attempt.
+Possible results include: unable to build the project,
+failed a test, and so forth.
+The instructor may give information to be added to the log file
+to further explain an error.
+The log file is formatted with automated processing in mind.
+.pp
+The \*(tR program runs as a set-user-id program
+so that it can access the instructor's test data and scripts 
+and the log files
+even though the student cannot directly access them.
+Execution of student programs in the instructor's
+account,
+a gaping hole in the security of other automated grading systems,
+is not a problem with \*(tR.
+.sh 1 "How \*(TR Works"
+.pp
+\*(TR may be used to test any type of program in any language,
+shell scripts, makefiles, etc.
+The word \*(lqproject\*(rq will be used in this document
+to refer to the student's work.
+.pp
+When a student thinks his project is finished,
+he invokes \*(tR as in the following example:
+.EX
+.ft C
+$ try kar\-grd lab3 makefile *.c *.h
+.EE
+The first two arguments are given to the student by the instructor,
+and specify the account in which the project is to be tested
+(the instructor's grader account is most appropriate)
+and the title of the project (called \*(lqproject-code\*(rq in this document).
+The remaining arguments are the files that make up the project.
+.pp
+\*(TR looks in the
+.FN \&.tryrc
+file in the specified account
+for an entry whose first field is the specified project-code.
+The remaining fields specify the \*(lqtry directory\*(rq and the
+\*(lqproject directory\*(rq to be used for the project.
+\*(TR moves to the try directory,
+creates a scratch directory for the student if one is not already present,
+moves to the scratch directory, and copies all of the files
+named on the command line.
+(The scratch directory is normally cleaned out after every run.)
+.pp
+If there is a file
+.FN news
+in the try directory or
+in the project directory,
+the news is given to the student.
+A record is kept in the student's home directory
+to prevent old news from being reported every time the student uses \*(tR.
+.pp
+From within the scratch directory, \*(tR runs a shell script
+provided by the instructor to build the student's project;
+this may do compilations, make, formatting, or whatever is appropriate.
+If the project was successfully built,
+\*(tR runs a shell script to run the student's project.
+This script is also provided by the instructor, who is free to
+test the project in any way he or she sees fit.
+.pp
+If a test fails, another shell script is executed
+to give the student information about the failed test,
+presumably to assist him in fixing his program.
+The instructor may allow or disallow this, or may limit or expand
+upon the information the student is given,
+as this script is also written by the instructor.
+.pp
+A separate log file is maintained for each student,
+and the result of each run of \*(tR is recorded here.
+If the student gives the
+\fB\-l\fR
+(the letter \fIel\fR, not a one) option to \*(tR,
+a shell script is run which prints information from his log file.
+The instructor writes this script, and can choose to give as much or
+as little information as is appropriate.
+.pp
+With two exceptions,
+all of the shell scripts provided by the instructor
+are executed with the instructor's user-id.
+This makes it easy to write scripts that access files in 
+the project directories.
+The
+.SS build_safe
+and
+.SS run_safe
+scripts, however,
+are executed with a nonexistent user-id.
+These scripts are used when commands given by the student must be executed
+(e.g. when using a student-supplied makefile).
+The nonexistent user-id protects the instructor from mischief
+that might be caused by running these commands with the instructor's user-id.
+.sh 2 ".tryrc"
+.pp
+The
+.FN \&.tryrc
+file contains basic information about projects.
+It resides in the home directory of the account in which
+student projects will be tested.
+An instructor's grader account is the recommended choice,
+although an instructor's personal account is also acceptable.
+.pp
+The file contains an arbitrary number of entries, one per line.
+Blank lines and lines that start with a pound sign (#) are ignored,
+and may be used to put comments in the file.
+Each entry has the following format:
+.EX
+.ft I
+project-code try-dir project-dir options
+.EE
+The fields are separated by white space,
+and the third and fourth fields are optional.
+Long entries can be
+entered on multiple lines by ending each line except the last
+with a backslash.
+Leading white space on the continued lines is skipped.
+.pp
+The first field specifies the
+\fIproject-code\fR
+that the students will use in the \*(tR command.
+The second field indicates the directory where \*(tR is based 
+for this project (see
+\fIThe Try Directory\fR, below).
+The third (if present)
+specifies the project directory (within the try directory)
+that contains the scripts and files needed for testing the project
+(see
+\fIThe Project Directory\fR, below).
+This is a relative pathname that is
+interpreted from the try directory;
+the pathname may include subdirectories.
+If the third field is absent, the
+project directory name is assumed to be the same as the
+\fIproject-code\fR.
+.pp
+The fourth field, if any, specifies options that apply to this project.
+In order to give options for a project,
+a project directory must be given.
+If several options are desired, they are given as a comma-separated list.
+The list may not contain unquoted white space.
+.sh 3 ".tryrc Options"
+.pp
+The currently-implemented options are listed below.
+.ip \fBoff\fR
+Submissions are no longer accepted for
+this project.
+This is useful to prevent late submissions
+while still allowing students
+to read news, do queries,
+or examine their log files for a project.
+.ip \fBdummy\fR
+This project-code is a dummy entry which
+does not correspond to any project.
+Queries, news and log file dumps are allowed.
+This might be used as a way to allow a student
+to dump his entire log file.
+.ip \fBsave\fR
+Do not clean out the scratch directory when \*(tR finishes.
+The files are left in the scratch directory,
+possibly for future examination by the instructor
+(e.g. when debugging your shell scripts).
+Should \*(tR be run by the student again, the scratch directory
+will be cleaned out at the beginning of that run and the saved files
+will be lost.
+The \fBsave\fR option is therefore reliable
+only when used on the last project to be done for some time
+in the try directory;
+in this event, the
+.SS cleanup
+script should be used to delete any unneeded files to conserve disk space.
+.ip \fBignore\fR
+Signals will be ignored during runs with this project.
+See also \fISignals\fR, below.
+.ip \fBpost\fR
+Signals will be posted during runs with this project.
+See also \fISignals\fR, below.
+.ip \fBinitstatus\fR
+The exit status of the 
+.SS init
+script is checked; if non-zero, \*(tR logs the failure and exits.
+.ip \fBcleanupstatus\fR
+The exit status of the
+.SS cleanup
+script is checked; if non-zero, \*(tR logs the failure and exits.
+.ip \fByyyy\fR
+Changes the date format in log file entries to yyyy/mm/dd
+(the default is yy/mm/dd).
+.ip \fINAME=value\fR
+Sets the environment variable \fI\s-1NAME\s0\fR to the given value.
+If the value contains white space or commas,
+the entire value (not just a portion of it)
+must be quoted with either \(aa or ".
+Environment variables can be helpful in getting one set
+of shell scripts to work
+for several different projects,
+with the environment variables triggering
+different actions for different projects.
+Environment variables given values in this way take precedence over
+variables set by \*(tR
+(see \fIThe Environment\fR below for a list of these).
+.lp
+The following four options control the locations of various
+things in the try directory;
+it may be useful to return to this section
+after reading
+.i "The Try Directory" ,
+below.
+.ip \fBlog_dir=\fIdirname\fR
+This specifies a directory in which the log files should be put.
+If a relative pathname is given, it is interpreted relative to the
+try directory.
+The default value is
+.q . .
+This value is given in the environment variable
+.BC LOG_DIR .
+.ip \fBscript_dir=\fIdirname\fR
+This specifies a directory in which common scripts will reside.
+The default value is
+.q . .
+A relative pathname is interpreted relative to the try directory.
+This value is given in the environment variable
+.BC SCRIPT_DIR .
+(See note 3 of Appendix 1.)
+.ip \fBwd_dir=\fIdirname\fR
+This specifies a directory in which the scratch directories should be put.
+A relative pathname for this is also interpreted from the try
+directory.
+The default value is
+.q . .
+This value
+is given in the environment variable
+.BC WD_DIR .
+.ip \fBwd_backpath=\fIdirname\fR
+This specifies the pathname needed to get back to the try directory
+from within a scratch directory.
+The default value is
+.q .\|. .
+This value
+is given in the environment variable
+.BC WD_BACKPATH .
+This option is required whenever the
+.b wd_dir
+option is used.
+As an example, with
+.C "wd_dir=Scratch" ,
+the appropriate backpath would be
+.C wd_backpath=../..
+.pp
+\*(TR deletes all environment variables beginning with
+\*(lqTRY_\*(rq.
+This allows the instructor to use variables with this prefix
+in scripts without worrying about whether the student's environment
+contains them already.
+.nr A \n(FI
+.FS wide
+.ft C
+.ta \w'try/325 'u +\w'try/325 'u +\w'week2/sep.comp 'u
+try/309	/	/	log_dir=Logs,wd_dir=Wds,wd_backpath=../..
+all	try/309	.	dummy
+1-1	try/309	week1/hello	off
+1-2	try/309	week1/sep.comp
+1-3	try/309	week1/uc.lc	no_log_dir
+2-1	try/309	week2/copy_n	OPT=2
+2-2	try/309	week2/storage
+
+try/325	/	/	save,ignore,script_dir=Scripts
+325-1	try/325	proj1	off
+325-2	try/325	proj2	no_save,post
+325-3	try/325	proj3	log_dir=/home/fac/kar/pub/not_a_good_place
+.ta .5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i
+.FE "\&.tryrc file using options"
+.sh 3 "Default Options"
+.pp
+If the
+.FN \&.tryrc
+file
+contains an entry whose project name is identical to the try directory
+given for a group of projects,
+the options given for this dummy entry will apply to all projects in that
+try directory.
+Note that the dummy entry must have all of its fields given;
+any values may be given as they are ignored.
+It is suggested that the name
+.FN /
+be given for the try directory and project directory
+to prevent students from accidentally using this entry as a real project.
+Note that the \fBdummy\fR option must not be given, or it will apply
+to all other projects in the same try directory.
+.pp
+If an option is preceded by \fBno_\fR, that option will be turned off
+for a project.
+This gives the instructor a way to turn on default options that are
+usually used, and turn them off for specific projects for which they
+are unwanted.
+(This mechanism cannot be used to turn off the setting of environment variables.)
+.FG "" \nA
+shows a
+.FN \&.tryrc
+file illustrating the use of options.
+.sh 2 "The Try Directory"
+.pp
+All of the information accessed or maintained by
+\*(tR for a set of projects is kept in a directory
+called the \*(lqtry directory.\*(rq
+This includes:
+.ip a)
+the scratch directories (one for each student) in which student projects
+are actually built and tested,
+.ip b)
+the log files (one for each student) in which the result of each try is
+recorded,
+.ip c)
+the default optional scripts
+.SS dump_log
+and
+.SS explain ,
+and
+.ip d)
+the project directories, which contain the files needed to test a particular
+project.
+.lp
+The locations of the scratch directories, the log files, and the
+optional scripts may be modified by using the appropriate options
+in the
+.b .tryrc
+file
+(see \fI.tryrc Options\fP, above).
+.pp
+The instructor may choose to put each project in a separate try directory;
+in this case, every student would have a separate log file for each project.
+Or, many projects can share one try directory, and each student's log file
+would then contain entries for all of the projects.
+.pp
+It is recommended that the try directory be created
+in a directory whose mode disallows public (and possibly group) access.
+The try directory itself must have at least mode 111
+(see
+\fIThe \*(lqSafe\*(rq Scripts\fR, below);
+the restrictive mode of the parent directory would then prevent
+students from accessing any files in the try directory.
+.sh 3 "Project Directories"
+.pp
+All of the files and shell scripts needed to test a project are
+placed in one directory called the \*(lqproject directory.\*(rq\ 
+This must minimally include a shell script to build the project
+and a shell script to run the project.
+Data files, output files, other scripts and any other files needed
+for this project also live here.
+.sh 3 "Scratch Directories"
+.pp
+When a student runs \*(tR, a scratch directory called \*(lqwd\|.\|\fIaccount\fR\*(rq
+is made for that student,
+where
+\fIaccount\fR
+is the account name the student is using.
+By default,
+the scratch directories are made in the
+try directory;
+if a
+.b wd_dir
+is given in the
+.b .tryrc
+file, then the scratch directories are created in that directory.
+Each student has a different scratch directory.
+In this way, different students can be running \*(tR at the same time
+with no conflict.
+.pp
+Because running more than one \*(tR at a time in the same scratch directory
+can lead to unpredictable results, \*(tR attempts to determine
+whether the scratch directory is in use.
+This is done with a lock file called
+.q \&.tryid
+in the scratch directory.
+If a conflict is found, the student is told to interrupt all the \*(tR's
+and start over, though they can continue executing if they so choose.
+.pp
+In order to guarantee a known environment in which to build and run
+the student's project,
+the scratch directory is cleaned out before the student's files
+are copied.
+It is also cleaned out after \*(tR has finished
+unless the \fBsave\fR option is given for the project.
+Note that subdirectories and
+files whose names begin with a dot are also deleted.
+Symbolic links are deleted, but their targets are not.
+.pp
+\*(TR creates a file in the scratch directory called \*(lq.account\*(rq;
+this file contains the account number of the student using the directory
+and may be accessed from the instructor's shell scripts.
+This may also be obtained from the
+.BC STUDENT
+environment variable.
+.sh 3 "The Log File"
+.pp
+A log file called \*(lqlog\|.\|\fIaccount\fR\*(rq
+is created for each student,
+where
+\fIaccount\fR
+is the account name that the student is using.
+By default, the log files are made in the try directory; if a
+.b log_dir
+is given in the
+.b .tryrc
+file, then the log files are created in that directory.
+Log files are created with mode 400, but \*(tR preserves their modes
+if they have been changed.
+An entry is appended to this file for each run of \*(tR
+indicating the account number used,
+the date and time that \*(tR was invoked (as opposed to when
+it finished),
+the
+\fIproject-code\fR, and the status of the attempt.
+.pp
+Log file entries have the following format:
+.EX
+.ft I
+account project date time status
+.EE
+Fields are separated from one another by a tab
+except that the date and time fields are separated by spaces.
+The time is stored in hh:mm:ss format.
+By default, the date is stored in yy/mm/dd format, and there are four
+spaces between the date and the time.
+If the \fByyyy\fP option is given, the date is stored in
+yyyy/mm/dd format and there are two spaces between it and the time.
+.pp
+.FG
+lists the values that may appear in the
+status field.
+.FS wide
+.ft C
+.in \n(.lu-\w'build_safe script could not be executed.'u/2u
+Log file created for \f(CIstudent's name\fP
+Completed.
+Completed: \f(CImessage\fP
+Failed build.
+Failed build: \f(CImessage\fP
+Failed build_safe.
+Failed build_safe: \f(CImessage\fP
+Failed test \f(CIn\fP.
+Failed test \f(CIn\fP: \f(CImessage\fP
+build script could not be executed.
+build_safe script could not be executed.
+run script could not be executed.
+run_safe script could not be executed.
+Interrupted: \f(CIsignal name\fP
+.in
+.FE "Log file status values"
+\f(CIMessage\fP
+is text that is passed back by the instructor
+from the build or run script with the
+.PN try_log
+program.
+\f(CISignal name\fP
+is the name of the signal that caused \*(tR
+to abort.
+If \*(tR fails due to missing or incorrect scripts,
+or to an internal error,
+an appropriate message is written to the log file
+(these messages are not listed here).
+.pp
+The first entry in each log file contains
+.EX
+.ft C
+Log file created for \f(CIname\fR
+.EE
+in the status field, where \f(CIname\fR is the student's name
+from the password file.
+The project field in this entry will be \*(lq!\*(rq,
+and the time will be earlier than any other entry
+in order to ensure that this entry will remain at the top
+after a sort.
+.sh 2 "Copying Student Files"
+.pp
+\*(TR accepts only file names, not directory names.
+To submit all of the files in a directory, shell meta-characters
+would be used.
+.pp
+When a pathname is given for a file, the copy of the file is made
+using only the last component of the pathname.
+This ensures that, regardless of the pathname given,
+the copy resides in the scratch directory.
+If, however, a student gives two pathnames whose last components are identical,
+then both files will be written to the same copy, and one will be lost.
+For example,
+.EX
+.ft C
+$ try kar-grd 4-2 p2.c misc/p2.c
+.EE
+both files would be copied to \*(lqp2.c\*(rq in the scratch directory,
+and only the second one would survive.
+If this situation occurs, the student is informed and \*(tR is aborted
+and no log entry is made.
+.pp
+When \*(tR copies the student's files into the scratch directory,
+they will be owned by a nonexistent user id.
+The public and group permissions of each file will be set
+the same as the owner permission, however, so that they can be accessed
+from the instructor's scripts.
+.sh 2 "Instructor-Supplied Shell Scripts"
+.pp
+\*(TR uses shell scripts provided by the
+instructor to build the student's project and to run it.
+These scripts reside in the project directory.
+Common scripts may be shared among many projects by creating
+links from one project directory to another.
+Some optional scripts may reside in the try directory
+or the optional script directory,
+and be shared in that way.
+Appendix 1 contains a table that
+summarizes the purposes and requirements of all the
+various shell scripts.
+.pp
+There are two general categories of scripts,
+protected and unprotected.
+Unprotected shell scripts are executed with the
+instructor's user-id,
+and should be used only
+when all commands to be executed were given by the instructor.
+Protected shell scripts (the \*(lqsafe\*(rq scripts)
+are executed with a nonexistent user-id,
+and are used when it is necessary to execute commands given by the student,
+e.g. executing a student's shell script, or using
+.UP make (1)
+with a student supplied makefile.
+.pp
+Because of the way in which \*(tR executes them,
+Bourne shell scripts must begin with the line
+.EX
+.ft C
+#! /bin/sh
+.EE
+and C shell scripts must begin with
+.EX
+.ft C
+#! /bin/csh
+.EE
+or
+.EX
+.ft C
+#! /bin/csh -f
+.EE
+This does not apply to System V Unix.
+.pp
+Due to a bug in the C shell,
+it cannot be used for the
+.SS build_safe
+or
+.SS run_safe
+scripts
+unless all of the directories above the scratch directory
+have public read and execute access.
+For reasons of security,
+the parent of the try directory usually has no permission for 
+anyone other than the owner.
+The choice is between giving up this security to use the C shell,
+or retaining the security by using the Bourne shell.
+.pp
+Executable programs may be used in place of any of the shell scripts described.
+While they are less convenient to write, programs run more efficiently
+than shell scripts.
+.pp
+All of the scripts described are invoked by \*(tR from within the
+scratch directory.
+In order to access files in the project directory from one of these scripts,
+the pathname from the scratch directory to the project directory
+must be used, as in the following example:
+.EX
+\fC$WD_BACKPATH/\f(CIproject-dir\fR/\f(CIname\fR
+.EE
+where
+\f(CIproject-dir\fR
+is the name of the project directory.
+\*(TR defines an environment variable called
+.BC PROJ_DIR
+whose
+value is the name of the current project directory.
+The example below shows how this variable would be used
+in one of the scripts:
+.EX
+.ft C
+ln $WD_BACKPATH/$PROJ_DIR/x\-o x.o
+.EE
+Use of this variable makes it easier to share common scripts among several
+projects.
+.sh 2 "The Unprotected Scripts"
+.pp
+These scripts are appropriate when
+the only commands to be executed are those given by the instructor.
+.sh 3 "The \fBinit\fP Script"
+.pp
+This script is optional.
+If it exists,
+it is run prior to the
+.SS build
+or
+.SS build_safe
+script
+to perform any initialization that must be done before the student's project
+is built.
+The user's file names are passed as arguments.
+.pp
+This script is
+most frequently used to perform tasks that could not be done in the
+beginning of the
+.SS build_safe
+script (because of its being executed
+with a nonexistent user-id).
+It can also be used to perform initialization
+unique to a particular project
+so that a common
+.SS build
+script could be used,
+or to perform authentication of the student's account.
+.pp
+The exit status of the
+.SS init
+script is ignored unless
+the \fBinitstatus\fP option is given.
+In this case, a non-zero status causes
+\*(tR to log the failure and exit,
+and the
+.PN try_log
+program may be used in the
+.SS init
+script to add a more detailed explanation to the log file.
+.pp
+The following example shows an
+.SS init
+script that copies files
+from the project directory into the scratch directory.
+The file modes are changed to make them accessible to the nonexistent user-id
+with which the
+.SS build_safe
+script is run.
+This avoids the need to allow public read access
+to files in the project directory.
+An environment variable is created that indicates
+the number of tests that were found
+(see
+\fIModifying the Environment\fR, below for more details).
+.EX
+.ft C
+.ta \w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u
+#! /bin/sh
+
+for N in 1 2 3 4 5 6 7 8
+do
+	cp $WD_BACKPATH/$PROJ_DIR/*.$N .
+	chmod 666 *.$N
+done
+echo N_TESTS=8 > .ENVIRONMENT
+.ta \w'xxxxxxxx'u +\w'xxxxxxxx'u +\w'xxxxxxxx'u +\w'xxxxxxxx'u +\w'xxxxxxxx'u +\w'xxxxxxxx'u +\w'xxxxxxxx'u +\w'xxxxxxxx'u +\w'xxxxxxxx'u
+.EE
+.sh 3 "The \fBbuild\fP Script"
+.pp
+The purpose of the build script is to create the student's project
+from the file(s) that were copied.
+This may involve compilation, formatting, running
+.UP make (1),
+and so forth.
+It may also involve doing nothing, for example when the student is supposed
+to submit an executable file for testing.
+.pp
+The instructor may call his build script either
+.SS build
+or
+.SS build_safe.
+\*(TR places no restrictions on what can be done in these scripts,
+however it is risky to execute certain commands in the
+.SS build
+script.
+See \fIThe Safe Scripts\fR below for a detailed discussion
+of the differences between them.
+.pp
+When the build script is invoked,
+the names of the files that were copied are passed as arguments.
+.UP echo (1)
+commands may be put in the script to inform the student
+of what is happening in the script
+or to explain errors.
+The build script should return an exit status of zero
+if the project was successfully built,
+and nonzero if something went wrong.
+\*(TR tests this exit status;
+if a nonzero status is returned, the failure is recorded in the log file
+and \*(tR stops.
+.pp
+If the build script ended successfully,
+\*(tR creates a file called \*(lq,newest_file\*(rq that contains
+the name of the most recently modified file in the scratch directory.
+This is useful when the name of the file being built
+is not known ahead of time, as might be the case when
+executing
+.UP make ""
+in the
+.SS build_safe
+script.
+.pp
+The umask is set to 077 while the
+.SS build
+script runs in order to prevent temporary files created by compilers
+and other programs from being accessed by other users.
+After the script finishes,
+\*(tR changes the modes on all subdirectories and
+files to make the public and group
+permissions identical to the owner permissions.
+This ensures that the files can be accessed from either the
+.SS run
+or
+.SS run_safe
+script.
+.pp
+The following build script compiles a single Pascal file;
+if all goes well, the file
+.PN a.out
+is created.
+Because the
+.UP pc ""
+command is the last command in the script,
+its exit status is returned by the script.
+.EX
+.ft C
+#! /bin/sh
+pc $1
+.EE
+.pp
+The next script expects an arbitrary list of C source and header files,
+and compiles them with a main program and print function
+supplied by the instructor.
+It also echoes the commands so that the student will know
+where any errors that are printed originated.
+Note that the instructor's object files are named
+\fIfile\fB\-o\fR
+rather
+than
+\fIfile\fB.o\fR;
+this is to avoid the automatic deletion of old object files
+that occurs on some U\s-1NIX\s0 systems.
+The
+.UP rm
+command ensures that no object files sent by the student survive.
+.EX
+.ft C
+#! /bin/sh
+rm -f *.o
+D=$WD_BACKPATH/$PROJ_DIR
+ln $D/main\-o main.o
+ln $D/print\-o print.o
+echo cc *.c *.o \-o lab2
+cc *.c *.o \-o lab2
+.EE
+.pp
+The build script in
+.FG
+.FS wide
+.ft C
+.ta \w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u
+#! /bin/sh
+cc \-c $1
+if [ $? \-ne 0 ]
+then
+	exit 1
+fi
+names=\(ganm \-g *.o | egrep \(aa_strncpy$\(aa\(ga
+if [ \-n "$names" ]
+then
+	try_log Used library strncpy
+	echo It is cheating to use strncpy from the C library!
+	exit 1
+fi
+ln $WD_BACKPATH/$PROJ_DIR/main\-o main.o
+cc *.o
+.ta .5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i
+.FE "Build script that checks for library functions"
+.nr A \n(FI
+.FS wide
+.ft C
+.ta \w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u
+#! /bin/sh
+if [ $# \-ne 2 ]
+then
+	echo You gave me $# files, but I was expecting 2. Please try again with
+	echo one .c file and one .h file.
+	exit 1
+fi
+cfile=  hfile=
+for file
+do
+	case $file in
+	*.c)	cfile=$file
+		;;
+	*.h)	hfile=$file
+		;;
+	esac
+done
+if [ \-z "$cfile" \-o \-z "$hfile" ]
+then
+	echo You must give me a .c file and echo a .h file, but one is missing.
+	exit 1
+fi
+echo cc $cfile
+cc $cfile
+.ta .5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i
+.FE "Build script with error checking"
+compiles a student function that is supposed to
+duplicate the work done by the library routine
+.PN strncpy .
+The script uses
+.UP nm (1)
+to check the student's
+object file to make sure
+that
+.PN strncpy ""
+is not called.
+.pp
+.FG "" \nA
+shows a script that expects two file names, one C source file and one
+header file.
+It does a lot of checking that the names are correct,
+and then compiles the source file.
+.sh 3 "The \fBrun\fP Script"
+.pp
+The purpose of the run script is to test the student's project.
+This might involve running a program several times with various
+input files
+and comparing the output that was produced with correct output,
+running
+.UP make (1)
+to test the student's makefile,
+running the student's shell script,
+running a program to check some aspect of the student's file(s),
+and so forth.
+.pp
+The instructor may call his run script either
+.SS run
+or
+\fBrun_safe\fR.
+\*(TR places no restrictions on what can be done in these scripts,
+however it is risky to execute certain commands in the
+.SS run
+script.
+See \fIThe Safe Scripts\fR below for a detailed discussion
+of the differences between them.
+.pp
+The only preconceived notion that \*(tR has about testing projects
+is that there may be many separate tests,
+numbered in the range 1\-127.
+If the student's project passes all of the tests,
+the run script should return an exit value of zero.
+If a test fails, the script should return the test number
+as an exit value.
+Depending upon this value,
+\*(tR will record the success, or the test number that failed,
+in the log file.
+.pp
+Exit status values 129\-255 may also be used for failed test
+numbers 1\-127.
+\*(TR ignores the high order bit, but passes it to the
+.SS explain
+script, where it can be interpreted in any desired way.
+An
+.SS explain
+script illustrating this is shown in the next section.
+The
+.SS run
+script should not return an exit status of 128.
+.pp
+It is important that
+.PN try_run
+be used to execute the student's program.
+.PN Try_run
+limits the cpu time, file space and other resources that can be used
+by the program
+(on System V, only the file space can be controlled),
+but it also prevents the program from going outside of the scratch
+directory.
+If the student's program were executed directly in the
+.SS run
+script,
+it would be able to access, create and delete files in the instructor's
+account just as the instructor could.
+.pp
+The umask is 0 while the
+.SS run
+script executes so that any files it creates will be readable by
+subsequent scripts.
+If it is necessary to create files outside of the scratch directory
+(e.g. by running a compiler or other utility that creates temporary files),
+then the umask should be set in the script to a value that will
+prevent other students from accessing these temporary files.
+.pp
+The
+.SS run
+script in
+.FG
+.FS
+.ft C
+.ta \w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u
+#! /bin/sh
+for T in 1 2 3
+do
+	echo Running test $T
+	try_run a.out $T > out
+	if [ \-s out ]
+	then
+		exit $T
+	fi
+done
+exit 0
+.ta .5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i
+.FE "Run script for several tests
+runs a predetermined
+number of tests.
+The test number is passed as an argument to the program;
+presumably the main program was written by the instructor
+and uses this argument to decide which test to run.
+The main program in this example prints only when
+errors are encountered, hence the test for non-zero
+size of the output file.
+.pp
+The
+.SS run
+script in
+.FG
+also runs a predetermined number of tests.
+In this case, however, the build script created three executable programs,
+each linked with different versions of the instructor's routines.
+The executables were named
+\*(lqtest.1\*(rq, \*(lqtest.2\*(rq, and \*(lqtest.3\*(rq.
+Again, nothing is printed unless errors are detected.
+Note that the exit status of 
+.PN try_run
+is checked in this script.
+Along with the use of
+.PN try_log
+this records more detailed failure information in the log file
+(e.g. cpu time limit exceeded, memory fault, etc.).
+.FS
+.ft C
+.ta \w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u
+#! /bin/sh
+for T in 1 2 3
+do
+	echo Running test $T
+	try_run cpu=1 test.$T > out
+	status=$?
+	if [ $status \-ne 0 ]
+	then
+		try_log $status
+		exit $T
+	fi
+	if [ \-s out ]
+	then
+		exit $T
+	fi
+done
+exit 0
+.ta .5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i
+.FE "Run script for several executables"
+.pp
+.FG
+shows a run script that executes the student's program
+with several different input files.
+Each input file is accompanied by a description file
+that is printed if the test fails (see \fIThe explain Script\fR, below),
+and by an output file that contains correct answers.
+The script runs until it runs out of input files or an error occurs.
+.sh 3 "The \fBexplain\fP Script"
+.pp
+The purpose of this script is to explain to the student
+the test that caused the project to fail.
+This might involve copying an input file to the terminal,
+copying a description file, and so forth.
+It might involve nothing at all if the instructor so chooses.
+.FS
+.ft C
+.ta \w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u
+#! /bin/sh
+T=1
+D=$WD_BACKPATH/$PROJ_DIR
+while [ \-r $D/test.$T ]
+do
+	echo Running test $T
+	IN=$D/input.$T
+	OUT=$D/output.$T
+	try_run fsize=1k \e
+		a.out < $IN > ,x
+	status=$?
+	if [ $status \-ne 0 ]
+	then
+		try_log $status
+		exit $T
+	fi
+	if cmp \-s ,x $OUT
+	then
+		true
+	else
+		exit $T
+	fi
+	T=\(gaexpr $T + 1\(ga
+done
+exit 0
+.ta .5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i
+.FE "Run script using input and output files"
+.pp
+The test number that was returned by the run script is passed as the
+only argument.
+The exit status of this script has no significance.
+.pp
+It is quite possible for many projects to have identical
+.SS explain
+scripts.
+Therefore, if no
+.SS explain
+script is found in the project directory,
+the
+.SS explain
+script
+(if there is one)
+in the script directory (or the try directory if no
+.b script_dir
+was given)
+will be executed instead.
+.pp
+The following script simply copies an input file to the terminal.
+.EX
+.ft C
+#! /bin/sh
+echo Here is the input for test $1
+cat $WD_BACKPATH/$PROJ_DIR/input.$1
+.EE
+.pp
+The script in
+.FG
+checks the high-order bit in the test number
+to determine whether or not to reveal the input file.
+The
+.SS run
+script would have set this bit depending on how the
+student's project failed.
+.pp
+If the stuff printed by the
+.SS explain
+script is long,
+the
+.UP more (1)
+command should be used to prevent it
+from scrolling off of the screen before the student can read it.
+This is illustrated in the previous example.
+It is important for security reasons
+to pipe the data to be printed into
+.UP more ""
+rather than giving filenames as arguments to
+.UP more ""
+(see \fIUsing More\fR, below for details).
+The
+\fB\-d\fR flag was given to cause
+.UP more ""
+to print a descriptive prompt when it pauses at the bottom of the screen.
+This is helpful to novice users who are unfamiliar with its operation.
+.FS
+.ft C
+.ta \w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u
+#! /bin/sh
+if [ $1 \-gt 128 ]
+then
+	echo The cause of the failure can be determined from the output you
+	echo have already seen.
+	exit
+fi
+echo Here is the input for test $1
+cat $WD_BACKPATH/$PROJ_DIR/input.$1 | more \-d
+.ta .5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i
+.FE "Explain script
+.sh 3 "The \fBcleanup\fP Script"
+.pp
+This script is optional.
+If it exists,
+it is run after the
+.SS run
+or
+.SS run_safe
+script has finished
+(and after the
+.SS explain
+script, if there is one, is finished).
+One argument is passed to this script: \*(lq0\*(rq indicates that
+the project could not be built or failed a test, and \*(lq1\*(rq indicates that the
+student successfully completed the project.
+If it is necessary to know the names of the files submitted by the student,
+the
+.BC FILES
+environment variable may be used.
+.pp
+This script is
+most frequently used to perform cleanup tasks that could not be done at the
+end of the
+.SS run_safe
+script.
+It can also be used to perform cleanup tasks
+unique to a particular project
+so that a common
+.SS run
+script could be used.
+If the \fBsave\fR option was given for a project in the
+.FN \&.tryrc
+file, the scratch directory
+will not be cleaned out.
+The
+.SS cleanup
+script can be used in this case to remove any unneeded files from the
+scratch directory so that only the good stuff is kept.
+.pp
+The exit status of the
+.SS cleanup
+script is ignored unless
+the \fBcleanupstatus\fP option is given.
+In this case, a non-zero status causes
+\*(tR to log the failure and exit,
+and the
+.PN try_log
+program may be used in the
+.SS cleanup
+script to add a more detailed explanation to the log file.
+.pp
+.FG
+.FS
+.ft C
+.ta \w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u
+#! /bin/sh
+ARCH=$WD_BACKPATH/arch_$PROJ_DIR
+if [ ! -d $ARCH ]
+then
+	mkdir $ARCH
+fi
+rm *.o
+tar cf $ARCH/$STUDENT *
+compress $ARCH/$STUDENT
+.ta .5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i
+.FE "Cleanup script
+shows a
+.SS cleanup
+script that
+copies the student's files to an archive that can be perused later,
+for example, to grade the student's programming style.
+.sh 3 "The \fBdump_log\fP Script"
+.pp
+This script is executed when the student uses the
+\fB\-l\fR
+option in \*(tR.
+Its purpose is to print portions of the student's log file.
+It is run from within the scratch directory, although no student
+files are copied with
+.b -l .
+It is called with the name of the log file and the project code
+as arguments;
+the log file name is the pathname to the log file from the
+scratch directory.
+The instructor can print as much or as little information from
+the log file as he wants.
+The exit status of this script has no significance.
+.pp
+It is likely that most projects will have identical
+\fBdump_log\fR
+scripts.
+Therefore, if no
+\fBdump_log\fR
+script is found in the project directory,
+the
+\fBdump_log\fR
+(if there is one)
+in the script directory (or the try directory if no
+.b script_dir
+was given)
+will be executed instead.
+.pp
+The script below simply prints the entire log file,
+regardless of the project code.
+.EX
+.ft C
+#! /bin/sh
+cat $1 | more \-d
+.EE
+.pp
+The next script prints only those entries for the specified project.
+The \(-> symbol in the
+.UP egrep
+patterns below represents a tab.
+This is adequate so long as none of the project codes look like dates or
+times.
+.EX
+.ft C
+#! /bin/sh
+egrep "\(->$2\(->" $1
+.EE
+.pp
+The script in
+.FG
+.FS
+.ft C
+.ta \w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u
+#! /bin/sh
+X=\(gaegrep "\(->$2\(->.*\(->Completed" $1\(ga
+if [ \-n "$X" ]
+then
+	echo Completed
+else
+	echo Not completed
+fi
+.ta .5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i
+.FE "Completion status dump_log script
+simply tells a student whether he has
+completed the specified project.
+The final example in
+.FG
+shows a script that
+allows a student to examine his entire log file
+as well as the entries for a specific project.
+This is done with a dummy entry \*(lqall\*(rq in the
+.FN .tryrc
+file.
+In this case, the log file is sorted first, which brings all of the
+entries for each project together before printing them.
+.FS
+.ft C
+.ta \w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u
+#! /bin/sh
+if [ "$2" = all ]
+then
+	sort $1 | more -d
+else
+	egrep "\(->$2\(->" $1
+fi
+.ta .5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i
+.FE "Dump_log script for all entries
+.sh 3 "The \fBquery\fP Script"
+.pp
+This optional script is intended to provide a mechanism by which the student
+can obtain information about a project.
+It is executed
+when the \fB\-q\fR flag is given to \*(tR.
+The script is executed from
+the scratch directory like the rest of the scripts
+(although no student files are copied for queries).
+An instructor could write a query script that divulged information
+about the tests for a project, collected information from the student,
+gave hints for completing the project, and so forth.
+Queries are not recorded in the log file.
+.pp
+There is no
+.SS query_safe
+script.
+Like the other unprotected scripts,
+the
+.SS query
+script is executed with the instructor's user-id.
+Because of its general nature,
+one must be particularly vigilant when writing this script
+to avoid commands that might allow the
+student to execute arbitrary programs.
+For example, it is unsafe to invoke an editor from the script
+and allow the student to enter editing commands;
+the student could use the editor's shell escape to execute arbitrary
+commands in the instructor's account.
+.PN Try_run
+can be used to execute any such dangerous program in the
+.SS query
+script, so long as any files that need to be accessed by the program
+reside in (or have links in) the scratch directory.
+.sh 2 "Modifying the Environment"
+.pp
+While \*(tR begins with the environment variables
+defined by the student,
+it modifies some of these values for security reasons
+(see
+\fISecurity and The Environment\fP, below).
+The instructor is then given two opportunities to further modify
+the environment.
+.pp
+First, environment variables may be set in the
+.FN .tryrc
+file, as previously described.
+Second, the
+.SS init ,
+.SS build ,
+.SS build_safe ,
+.SS run ,
+and
+.SS run_safe
+scripts may all create a file named
+.FN .ENVIRONMENT
+containing environment variable definitions of the form
+.(l
+.ft CI
+NAME=value
+.)l
+If such a file exists after one of these scripts finishes,
+\*(tR will add those variables to its environment so that their
+values will be available to the subsequent scripts.
+Should a variable which already has a value be set in this manner,
+the new value replaces the old one.
+.sh 2 "Status Messages"
+.pp
+\*(TR informs the student when the build script fails,
+when a test in the run script fails,
+and when the project is successfully completed.
+The instructor can specify the text
+to be used in these messages
+with environment variables set in the
+.FN \&.tryrc
+file.
+There is an environment variable for each of these messages.
+If it is explicitly empty, the message is not printed at all.
+.pp
+These messages are all used as the format string for a C language
+.PN printf.
+.FG 
+shows the default messages,
+the names of the relevant environment variables,
+and the argument printed in each message.
+.FS wide
+.TS
+center;
+cf/ cf/ cf/ cf/
+lfC l c l.
+Env Variable	Argument	Format	Default message
+_
+TRY_SUCCESS	project code	%s	You have successfully completed project %s!
+TRY_FAIL_BUILD	project code	%s	Couldn't build your project.
+TRY_FAIL_RUN	test number	%d	Your project failed test %d.
+.TE
+.FE "T\s-2RY\s0 status messages
+If the text supplied for a message does not contain a format code,
+the argument will not be printed.
+If it does contain a format code, the code must be compatible with the one
+shown in the table.
+You deserve what you get if your format code is not compatible,
+or if you give more than one.
+.sh 2 "News"
+.pp
+\*(TR implements a capability to allow the instructor to
+provide students with news.
+If there is a file called
+.FN news
+in the try directory with read permission for the owner,
+its contents are written to the student's terminal after the files have been copied.
+This file is intended to be used for general information for a class.
+There can also be a
+.FN news
+or
+.FN news.\fIproject-code
+.r
+file in each of the project directories for specific information about that project.
+The former is used for projects with their own project directories,
+and the latter for projects which share a common project directory.
+If both exist, only the latter file is used.
+This news is only printed when the specific project is submitted.
+.pp
+A status file is kept in the student's home directory recording which
+news files have been seen.
+This is keyed on the date that news files were modified,
+so any change to
+a news file will cause it to be shown to the student during their next
+run of \*(tR.
+If the \fB\-n\fR flag is given to \*(tR, general news (if any)
+and news for the named project (if any)
+are printed regardless of whether the student has seen it before.
+.pp
+News is not printed when running in the background (\fB\-b\fR) mode.
+.sh 2 "Errors"
+.pp
+Errors that may occur when a student runs \*(tR either
+have to do with the student's files or with the instructor's
+scripts and files.
+There are also several \*(lqimpossible\*(rq errors that should never occur,
+such as not being able to fork or create a pipe, etc.
+Errors that are the fault of the student are reported to the student.
+These include files that the student named which cannot be accessed,
+and incorrect instructor or project code arguments.
+Interrupts are also reported to the user.
+.pp
+When any other error occurs, \*(tR tells the student to see their
+instructor,
+and records a descriptive error message in the student's log file.
+This prevents students from seeing the gory details of the instructor's
+mistakes,
+and also allows the instructors to see the real error message
+rather than relying on what the student thought they saw but didn't write down
+and is no longer quite sure of.
+.pp
+The check option to \*(tR (described below) allows the instructor to
+verify that the required scripts exist and that the scripts and directories
+have the proper modes.
+Also, after setting up a project, it is a good idea to test your scripts
+by using \*(tR from a different account (e.g. if you have set up \*(tR in
+your grader account, test it from your faculty account).
+This often spots problems in scripts or with permissions of data files
+that might otherwise have caused trouble for the students.
+.sh 1 "Security"
+.pp
+\*(TR runs as a set-user-id program in order to be able
+to access the instructor's files
+without requiring that the student have access to them.
+In this regard, the information in the try directory
+is as safe from students as the instructor cares to make it.
+The difficulty with security comes when the student's program
+is executed in the scratch directory.
+Presumably this program could do
+\fIanything\fR;
+for example, deleting files in the current and parent directories.
+A more sophisticated user might make a copy of
+\fB/bin/sh\fR
+in his own directory and set the mode so that it is set-user-id
+to the faculty account, or remove failure entries from his own log file,
+and so forth.
+The really careful student can arrange to leave no traces of his mischief.
+.pp
+For such things to happen, the student's program must be executed
+by the instructor's account.
+However, this is typically what happens with
+.UP submit (1R),
+where the instructor runs shell scripts to execute the students' programs
+and save the output for later perusal.
+.pp
+These and other security issues were considered in the design of \*(tR.
+It is the author's belief that
+a moderately careful instructor is completely safe using \*(tR\**.
+.(f
+\** But see \fIUsing Make\fR, below.
+.)f
+Neither people nor software are perfect, however, hence the
+assertion that it is better to use \*(tR
+in an account that does not have a lot of power
+than in a faculty account.
+.sh 2 "The Safe Scripts"
+.pp
+The
+.SS build
+and
+.SS run
+scripts are executed with the instructor's
+user-id.
+This is acceptable for most commands that might be needed to
+build and test a project, and simplifies accessing files in the
+project directory and elsewhere.
+There are commands, however, that are risky to execute
+with the instructor's identity.
+Running
+.UP make (1)
+with a student-supplied makefile,
+for example,
+allows the student to execute arbitrary commands
+with the instructor's identity in the instructor's account.
+.pp
+The
+.SS build_safe
+and
+.SS run_safe
+scripts
+are executed with a nonexistent user-id and group-id.
+Commands executed in these scripts will be able to access only those
+files that have public permission.
+Arbitrary commands from a student makefile will therefore be limited by the
+public permissions set in the try directory rather than by the
+instructor's permissions, and can therefore be rendered harmless.
+.pp
+To allow access to files in the project directory
+from the
+.SS build_safe
+and
+.SS run_safe
+scripts,
+the try directory and project directory must both have at least mode 111.
+The files that are accessed
+must also have the appropriate public permission set.
+It is recommended that only the required permission be given, and no more.
+711 would be a typical mode for the try directory and for project directories.
+This would allow the safe scripts to access files in the directory,
+but would not allow malicious commands to list the directories
+or add or delete files in them.
+.pp
+Mode 711 for the try directory allows
+outsiders into the directory if they already know the names of files
+contained therein.
+To obtain complete protection from outsiders,
+the try directory should be created in a directory whose mode is 700.
+The required public mode for the try directory also does not prevent
+a malicious student program from accessing files in the directory
+whose names are known in advance.
+Such access is prevented by the permissions on the files themselves.
+The absence of write permission on the try directory and project
+directories
+prevents the malicious student from creating new files or deleting in them.
+.pp
+The scratch directories require mode 777 as the nonexistent user
+will be creating and possibly deleting files in them.
+\*(TR creates them with this mode and makes sure they still have
+the proper mode before each use.
+Files copied into the scratch directory will be owned by the nonexistent user,
+with their group and public permissions set the same as the owner permissions
+on the student's copy of the file.
+.pp
+.FG
+shows a script that tests a student's makefile.
+The
+.SS run_safe
+script was used because of the need to run
+.UP make .
+.FS
+.ft C
+.ta \w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u
+#! /bin/sh
+D=$WD_BACKPATH/$PROJ_DIR
+TRY_SAVE_ANS=
+T=1
+while [ \-r $D/test.$T ]
+do
+	echo Running test $T
+	touch \(gacat $D/touch.$T\(ga
+	try_run \-p cpu=20 \e
+		/bin/make > ,x
+	status=$?
+	if [ $status \-ne 0 ]
+	then
+		try_log $status
+		exit $T
+	fi
+	awk \-f $D/awk1 < ,x |
+		try_deblank \-b \-r > ,$$
+	if [ \-n "$TRY_SAVE_ANS" ]
+	then
+		cp ,$$ $D/output.$T
+	fi
+	if cmp \-s ,$$ $D/output.$T
+	then
+		true
+	else
+		exit $T
+	fi
+	T=\(gaexpr $T + 1\(ga
+done
+exit 0
+.ta .5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i
+.FE "Run_safe script"
+.pp
+This script has several noteworthy features.
+First,
+.PN try_run
+is used to execute
+.UP make .
+This guards against infinite loops in the commands the student might execute.
+The
+\fB\-p\fR
+option is used to allow access to commands in
+system directories;
+this is safe because the script is executed with the nonexistent user-id.
+.pp
+If the shell variable
+\fBTRY_SAVE_ANS\fR
+is set to any value,
+the script will copy the student's output files and use them as the
+correct answers.
+The instructor could use this feature with his own makefile
+to easily create the correct output files.
+It is important that this variable either begin with \*(lqTRY_\*(rq
+or be explicitly set empty
+to guard against the possibility of
+the student having an environment variable with the same name.
+This script does both.
+.pp
+Note that between
+.UP make s,
+various files are touched to see how the
+student's makefile reacts to the changes.
+Also, the
+.UP make ""
+output is massaged by
+.PN try_deblank
+and an
+\fIawk\fR
+program
+before being compared to the solutions;
+this takes care of the possibility that the student's makefile
+compiles source files in a different order than in the instructor's makefile.
+.sh 2 "Security and The Environment"
+.pp
+The environment is another source of security problems.
+The student is executing \*(tR, so it is the student's environment
+that is passed by \*(tR to everything it executes.
+For this reason, the environment is laundered as described below
+before being passed to any of the instructor's scripts.
+.FG
+.FS wide
+.ns
+.TS
+center;
+cf/ cf/
+lfC l.
+Variable	Set to
+_
+BACKGROUND	\*(lqyes\*(rq if the student gave the \fB\-b\fR option, else not set.
+FILES	a list of the file names given by the student.
+HOME	the name of the instructor's home directory.
+INST	the name of the instructor's account.
+LOG_DIR	the directory containing the log files (relative to the try directory)
+PATH	the standard value \*(lq/usr/local/bin:/usr/ucb:/bin:/usr/bin\*(rq
+PROJ	the project name given by the student.
+PROJ_DIR	the name of the project directory.
+SCRIPT_DIR	the directory containing the common scripts (relative to the try directory)
+SHELL	the bogus value \*(lq/bin/echo\*(rq
+SIGNAL	the number of the signal that occurred
+STUDENT	the student's account name
+STUDENT_HOME	the name of the student's home directory.
+TRY_STARTTIME	the time of day when \*(tR was started.
+WD_BACKPATH	the pathname to get back to the try directory from the scratch directories
+WD_DIR	the directory containing the scratch directories (relative to the try directory)
+.ns
+.TE
+.FE "Environment variables
+summarizes the environment variables that are added or changed.
+.pp
+Experienced shell script writers often use the
+.BC HOME
+environment variable.
+Were it not changed, this would be the student's home directory.
+Therefore,
+.BC HOME
+is set to the home directory of the instructor's account.
+The student's home directory is kept in the new variable
+.BC STUDENT_HOME
+\&.
+.pp
+A new variable called
+.BC PROJ_DIR
+is added to the environment.
+Its value is the name of the project directory.
+This is useful in shell scripts that are used by
+more than one project.
+The variables
+.BC INST
+and
+.BC PROJ
+are also created;
+their values are the instructor's account
+and the project code, respectively.
+.pp
+A common strategy to circumvent security provisions
+is to create one's own versions of
+system programs (e.g. cc, ls, etc.) in one's own bin directory,
+and set the
+.BC PATH
+environment variable to search that directory before the system directories.
+If the instructor uses any of these command in his scripts, the
+student's version of the program will be executed,
+presumably with the instructor's identity.
+To avoid this,
+\*(tR sets
+.BC PATH
+to
+.EX
+.ft C
+/usr/local/bin:/usr/ucb:/bin:/usr/bin
+.EE
+This ensures that only the standard directories are searched for programs
+used in shell scripts.
+.pp
+The current directory is absent from
+.BC PATH
+to prevent the student from passing his version of a system program
+in as a file and executing it from the scratch directory.
+This also makes it less likely that the instructor will
+accidentally execute the student's program
+directly in a script rather than with
+.PN try_run
+(see below),
+which would be a security breach.
+.pp
+If the instructor wishes to use programs in his own
+\fBbin\fR
+directory
+in \*(tR scripts,
+.BC PATH
+can be changed in the appropriate scripts as in the following example:
+.EX
+.ft C
+PATH=$HOME/bin:$PATH
+.EE
+One should \fInot\fR put the current directory in
+the
+.BC PATH
+as that could cause scripts or programs submitted by the student
+to be run instead of standard programs.
+.pp
+An environment variables
+.BC FILES
+is created; its value is the list of file names submitted by the student.
+.pp
+If the student used the
+\fB\-b\fR
+option to run in the background,
+the environment variable
+.BC BACKGROUND
+will be set.
+The instructor may test this in scripts to decide, for example,
+whether or not to use
+.UP more (1)
+(which is interactive) to print to the screen.
+.pp
+The environment variable
+.BC SHELL
+is changed to be \*(lq/bin/echo\*(rq
+in order to prevent users from gaining access to the shell
+through
+.UP more .
+(Also, see \fIUsing More\fR, below.)\ 
+Unfortunately, many other programs also examine this variable,
+and their operation will also be affected by its change.
+Those that use it to do shell escapes will no longer be able to do so,
+which is just what is desired.
+Programs that use it for other reasons may not work as expected
+in \*(tR scripts.
+.pp
+The environment variable
+.BC STUDENT
+is set to the student's account name.
+.pp
+Setting any of these environment variables from the
+.FN \&.tryrc
+file supercedes the actions described above.
+This gives the instructor a way, for example, to set his own
+.BC PATH
+variable without having to remember to put it in each and every script.
+.pp
+All variables in the student's environment that begin with \*(lqTRY_\*(rq
+are deleted.
+This allows the instructor to use variables with this prefix
+without having to worry about interference from the student.
+.sh 2 "Using More"
+.pp
+Throughout this document, the
+.UP more (1)
+command has been suggested as the way to present text to the user,
+as it prevents long output from scrolling off of the top of the screen
+before the user has had a chance to read it.
+Unfortunately,
+.UP more ""
+itself is a source of two security problems.
+.pp
+The first problem is the shell escape mechanism,
+which is effectively disabled when \*(tR changes the
+.BC SHELL
+environment variable (see above).
+The second problem is the ability to invoke an editor
+on the current file being printed.
+From the editor, the student might be able to obtain a shell
+(depending on whether the editor invoked examines the
+.BC SHELL
+variable).
+This can be prevented by using
+.UP more ""
+only in a pipeline,
+as in the following example:
+.EX
+.ft C
+cat errors | more \-d
+.EE
+.UP More ""
+will not start an editor when its input is from a pipe, thus
+avoiding the security problem.
+.pp
+.UP More ""
+really ought to have a \*(lqsecure mode\*(rq flag that would prevent it
+from starting editors or invoking shells in sensitive situations.
+Until it does, one must be careful when writing scripts to never
+invoke
+.UP more ""
+directly on a file.
+The other alternative is to simply not use it, or to write one's own.
+.sh 2 "Using Make"
+.pp
+The need to run
+.UP make ""
+from a safe script when students submit their own makefiles
+has already been discussed.
+However, the safe scripts cannot prevent this problem:
+if the student starts a shell from his makefile,
+then he can 
+.UP cd
+to other scratch directories and try to make copies of files
+submitted by other students.
+This is hard to prevent because of the liberal permissions needed
+on the scratch directories in order to allow processes with
+the nonexistent user-id to work in them.
+However, the default is to delete everything in the scratch directory
+at the end of the submission, so the problem reduces to one of timing:
+copies may be obtained only when the other student is actually running \*(tR,
+and then only when the students' own makefiles are used.
+Students can be very tenacious, however.
+.pp
+The safest strategy is not to take student makefiles.
+But if you must, consider filtering them to look for invocations of a shell.
+.sh 1 "Directory and File Modes"
+.pp
+The table below specifies the minimum modes needed for
+things in the try directory.
+.br
+.ne 11
+.TS
+center;
+cf/ cf/
+l c.
+What	Mode
+_
+try directory	111
+project directory \(dg	111
+wd_dir \(dd	100
+script_dir \(dd	100
+log_dir \(dd	100
+news files	400
+\fBinit\fR script	500
+\fBbuild\fR script	500
+\fBbuild_safe\fR script	555
+\fBrun\fR script	500
+\fBrun_safe\fR script	555
+\fBexplain\fR script	500
+\fBcleanup\fR script	500
+\fBdump_log\fR script	500
+\fBquery\fR script	500
+.TE
+.ip \(dg
+If the pathname for the project directory contains subdirectories,
+each component of the name must also have at least this permission.
+.ip \(dd
+These all default to the try directory.
+If a pathname is given for any of these, each component of the name
+must have at least this permission.
+.pp
+Files in the project directory that are accessed from the
+.SS build_safe
+or
+.SS run_safe
+scripts must have public permission
+appropriate for the type of access.
+Usually this is read permission, meaning that they will require
+at least mode 444.
+.sh 2 "The Check Option"
+.pp
+The
+\fB\-c\fR
+option to \*(tR
+causes it to check that the various directories and scripts
+are present and have the proper mode.
+Improper modes will be changed.
+\fINote:\fR
+only the scripts and directories in the table above are checked
+with this option.
+Files accessed from within the instructor's scripts are not checked
+for proper permissions.
+.pp
+This may only be used by the instructor.
+The instructor account and project code must be given,
+but no files are required for this option.
+Sample output from the check option is shown in
+.FG .
+.FS
+.ft C
+$ try \-c kar 4\-1
+try: Looking in directory "class/309/labs":
+try: "make/build_safe" and "make/build" both exist, the former will be used.
+try: "make/build_safe" exists but has mode 600.  It needs at least mode 555.
+try: I changed it to 755 for you.
+try: "make/run_safe" exists but has mode 600.  It needs at least mode 555.
+try: I changed it to 755 for you.
+try: "make/explain" exists but has mode 0.  It needs at least mode 500.
+try: I changed it to 500 for you.
+$
+.FE "Sample output from the check option"
+.sh 1 "Signals"
+.pp
+Signals that are likely to be generated by the user include
+.BC SIGINT
+(the delete or rubout key),
+.BC SIGHUP
+(modem hangup),
+.BC SIGQUIT
+(keyboard quit signal),
+and
+.BC SIGTERM
+(from the
+.UP kill (1)
+program).
+\*(TR
+always honors these signals while the student's files are being copied
+(for when the student sees that he has given the wrong file),
+and always ignores them after the
+.SS run
+script has finished
+(to prevent students from being able to interrupt the
+.SS cleanup
+or
+.SS explain
+scripts).
+The way in which \*(tR handles these signals while the project is being built
+and tested
+depends on options given by the instructor,
+whose effects are explained below.
+.pp
+All other signals always cause \*(tR to terminate abnormally,
+with the signal name reported in the log file if possible.
+These signals would ordinarily indicate
+the presence of a bug in the \*(tR program
+(e.g. a memory fault),
+however, the student can always send such a signal with
+the
+.UP kill ""
+program.
+.sh 2 "Signal Handling Options"
+.pp
+By default, the the four user signals are handled the same as
+the other signals.
+Their receipt causes \*(tR to terminate abnormally,
+reporting the signal name in the log file.
+Shell scripts will also receive these signals, and instructors
+are free to implement any desired signal handling actions in scripts
+with the \fBtrap\fR or \fBonintr\fR shell statements.
+.pp
+Two of the options that can be given in the
+.FN \&.tryrc
+file modify the way the four user signals are handled.
+The \fBignore\fR option causes them to be ignored,
+and causes all shell scripts to ignore them as well.
+The instructor may wish to explicitly handle other signals in his scripts.
+.pp
+The \fBpost\fR option causes \*(tR to ignore the four user signals,
+but does not arrange for shell scripts to ignore them.
+The instructor can handle them if desired
+with the \fBtrap\fR or \fBonintr\fR shell statements.
+In addition, when \*(tR receives a signal, it adds the variable
+.BC SIGNAL
+to the environment;
+its value is the number of the signal received
+(see
+.UP signal (2)
+or
+.UP sigvec (2)
+).
+If desired, the instructor can test for this variable in his shell scripts
+and take appropriate action if it is found.
+.pp
+Giving both the \fBpost\fR and \fBignore\fR options
+has the same effect as \fBignore\fR,
+except that the
+.BC SIGNAL
+environment variable is posted when a user signal is received.
+.pp
+One must be aware that
+these options only change the default signal handling actions.
+If a program explicitly arranges to catch signals, the ignored
+signals will no longer be ignored.
+A few programs do this;
+the C compiler is a notable example.
+Even with the \fBignore\fR option set, the user can interrupt the C
+compiler, which will then return a failing exit status so at least the
+build script will behave reasonably.
+If programs used in the run script arrange to catch their signals,
+it could cause more of a problem.
+It is unfortunate that there is nothing that can be done in \*(tR
+to remedy this.
+.sh 1 "Utility Programs"
+.pp
+There are several utility programs that were developed for \*(tR;
+these are described below.
+.sh 2 "Try_run"
+.pp
+This program is used to run a student's executable program
+in a controlled manner.
+It limits the resources that can be used by the program
+to catch infinite loops and prevent huge files from being created.
+It prevents the program from accessing
+any files outside of the current directory
+to protect the instructor account from malicious actions
+that a student program might take.
+Its exit status can be tested in the script
+to determine how the student's program finished.
+.pp
+See
+\fItry\fR(1R)
+for complete information.
+.sh 2 "Try_log"
+.pp
+This program inserts a message into the log file,
+and may be used in build and run scripts.
+If one command line argument is given and it is numeric,
+it is assumed to be an exit status from
+.PN try_run
+and a message explaining the status is added to the log file.
+Otherwise, the text of the argument(s) is taken as the message
+and inserted into the log file.
+Newlines found in the message are removed.
+Messages that are too long (e.g. several hundred characters)
+should be avoided as they
+may break programs that read the log files.
+.PN try_log
+may be used before successful as well as unsuccessful
+termination of a script, but it should be executed only once.
+.pp
+Several of the previous examples illustrated the use of
+.PN try_log
+to report error status from 
+.PN try_run
+and to add other messages to the log file.
+.FG
+shows a build script that uses
+.PN try_log
+to record whether a failure was due to compilation or linking errors.
+This might be taken into account when grading the project.
+.FS
+.ft C
+.ta \w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u +\w'xxx'u
+#! /bin/sh
+echo cc \-c $*
+cc \-c $*
+if [ $? \-ne 0 ]
+then
+	try_log cc
+	exit 1
+fi
+D=$WD_BACKPATH/$PROJ_DIR
+ln $D/print\-o print.o
+echo cc *.o
+cc *.o
+if [ $? \-ne 0 ]
+then
+	try_log ld
+	exit 1
+fi
+exit 0
+.ta .5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i
+.FE "Build script using try_log"
+.pp
+See
+.PN try_log
+for complete information.
+.sh 2 "Try_deblank"
+.pp
+This program performs commonly used text manipulations,
+and is often used to filter the output of
+a student's program before checking it for correctness.
+Options available include
+removing all leading and trailing blanks,
+adding one leading and one trailing blank,
+reducing runs of blanks to a single blank,
+removing blank lines,
+and printing the input one word per line.
+Tabs may also be treated as blanks in the above transformations.
+.pp
+See
+.PN try_deblank
+for complete information.
+.sh 1 "Detecting Cheating"
+.pp
+\*(TR deletes the contents of the scratch directory when it is finished.
+Instructors might argue that this makes it more difficult to detect cheating
+by removing the evidence.
+The instructor is always free to make copies of whatever files he wishes
+in any location outside of the scratch directory,
+as illustrated in the sample
+.SS cleanup
+script given above.
+To help detect cheating, the instructor would also wish to
+run some sort of program to help find duplication among
+different students' files.
+The example below, executed at the end of a run script,
+records in the log file a checksum for each of the student's files.
+.EX
+.ft C
+try_log \(gasum $FILES\(ga
+.EE
+.sh 1 "Where Implemented"
+.pp
+Currently,
+\*(tR
+is installed on all of the Sun servers (solaris).
+.sh 1 "Appendices"
+.pp
+The first appendix summarizes the purposes and requirements
+of all of the shell scripts written by the instructor.
+Manual pages for these programs are included next.
+The shorter \*(tR manual page is intended for distribution to students,
+who need to know how to run the program but do not need to know
+the details of how project tests are set up.
+.ig
+Create the appendix and table of contents
+..
+.nr bt 4i
+.nf
+.bp
+.1c
+.ll 6.5i
+.po 1i
+.TS
+center box;
+cf/ cf/ cf/ cf/ cf/
+cf/ cf/ cf/ cf/ cf/
+l l l l l.
+.ft I
+Script	Req/	Min	Arguments	Exit
+Name	Opt	Mode	Passed	Code
+.ft R
+_
+init	opt	500	student's file names	0=success,
+				1=failed (4)
+_
+build	(1)	500	student's file names	T{
+0=success, 1=failed
+T}
+_
+build_safe	(1)	555	student's file names	T{
+0=success, 1=failed
+T}
+_
+run	(2)	500	student's file names	T{
+.nf
+0=successful, else return
+number of the failed test
+T}
+_
+run_safe	(2)	555	student's file names	T{
+.nf
+0=successful, else return
+number of the failed test
+T}
+_
+explain	(3)	500	number returned by run script	(none)
+_
+cleanup	opt	500	0=project failed	0=success,
+			1=project succeeded	1=failed (5)
+_
+dump_log	(3)	500	name of log file, project code	(none)
+_
+query	opt	500	(none)	(none)
+.TE
+.fi
+.lp
+.ft I
+Notes:
+.ft R
+.ip
+Scripts that require a minimum mode of 555 are executed by a
+nonexistent user-id.
+Other scripts are executed by the instructor's user-id.
+.ip (1)
+Either the
+.SS build
+or the
+.SS build_safe
+script is required.
+If both are present, the
+.SS build_safe
+script will be used.
+.ip (2)
+Either the
+.SS run
+or the
+.SS run_safe
+script is required.
+If both are present, the
+.SS run_safe
+script will be used.
+.ip (3)
+If there is no
+.SS explain
+script in the project directory,
+the
+.SS explain
+script
+(if there is one)
+in the script directory
+will be used.
+The same is true for the
+\fBdump_log\fR
+script.
+.ip (4)
+The status of the 
+.SS init
+script is relevant only when the
+\fBinitstatus\fR option is given.
+.ip (5)
+The status of the 
+.SS cleanup
+script is relevant only when the
+\fBcleanupstatus\fR option is given.
+.sp 2
+.lp
+.ft B
+.ce 2
+Appendix 1
+Summary of Shell Scripts
+.ft R
+.he ''''
+.fo ''%''
+.bp 1
+.af % i
+.ce 1
+.sz 12
+\fBTable of Contents\fR
+.sz
+.sp
+.xp

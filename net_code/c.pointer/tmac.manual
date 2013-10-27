@@ -1,0 +1,130 @@
+.ig
+Macros for formatting full manuals (not Unix man pages)
+
+sccs id: @(#)tmac.manual	1.1	29 Aug 1994
+
+Pre-sccs version history:
+	1	06/09/88: original
+	2	4/4/91: Compensate for indent so centering works in figures
+	3	1/22/92: Play back figures in nofill mode
+	4	4/1/93: Fix compensation of line length for indent
+	5	7/15/94: Change specific font references to quadrant #'s
+
+..
+.nr tp 11	\" Set titles in 11 point type.
+.nr sp 11	\" Set section headings in 11 point type.
+.nr sf 3	\" Set section headings in bold face.
+.\"
+.\" The .NE and .OL macros provide revision bars.  When revising a document,
+.\" put a .NE request at the beginning of the new stuff and a .OL request
+.\" after the end of the new stuff.  Everything in between will be printed
+.\" with a revision bar off the right margin.  Both macros take an optional
+.\" argument of ".br" -- if this is given, a line break is done before the
+.\" revision bar is turned on/off.
+.\"
+.de NE	\" Start of new stuff: begin revision bar
+.if '\\$1'W' .if '\\$2'.br' .br
+.if '\\$1'.br' .br
+.mc \s14\(br\s0
+..
+.de OL	\" End of new stuff: turn off revision bar
+.if '\\$1'D' .if '\\$2'.br' .br
+.if '\\$1'.br' .br
+.mc
+..
+.\"
+.\" This macro collects section headings for a table of contents.
+.\"
+.de $0	\" Collect section headings for table of contents
+.(x
+.ie 2-\\$3 \{\
+.sp
+\\$2\h'|.5i'\\$1
+.\}
+.el \h'.5i'\\$2\h'|1i'\\$1
+.)x
+..
+.\"
+.\" These macros implement figures.  Figures float to the bottom of the page
+.\" or (if no room) to the top of the next page.  In multi column documents,
+.\" if the figure is too wide to fit in a single column, it will be expanded
+.\" to be the full width of the paper.  This is also done if the argument
+.\" "wide" is given in the .FS macro.  A box is drawn around the figure, and
+.\" the figure number is incremented.
+.\"
+.nr zs .5v	\" 12/18/92: change from 0 to .5v
+.nr FI 1	\" Start figure numbers at 1
+.de FG	\" Refer to a figure
+.\" 1/27/92: 2nd argument, if present, is used as figure number.
+.ie \\n(.$<=1 Figure \\n(FI\\$1
+.el Figure \\$2\\$1
+..
+.de FS	\" Figure Start.  If 1st argument is "wide", it will be full page width
+.(z
+.nr FL 0
+.if \\n($m>1 \{\
+.	if '\\$1'wide' \{\
+.		nr FL \\n(.l
+.		ll (\\n($lu+\\n($su)*\\n($mu-\\n($su
+.	\}
+.\}
+.ta .5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i +.5i
+.in +.1i
+.\".ll -.1i	\" 4/4/91: Compensate for indent so centering works
+.ll -.2i	\" 4/1/93: Compensate for indent so centering works
+.di FX
+..
+.de FE	\" Figure End.  First argument is the figure's caption.
+.di
+.ll +.2i	\" 4/1/93: Un-Compensate for indent
+.\".ll +.1i	\" 4/4/91: Un-Compensate for indent
+.in -.1i
+.if (\\n(FL=0)&(\\n($m>1) \{\
+.	if \\n(dl+.1i>\\n(.l \{\
+.		nr FL \\n(.l
+.		ll (\\n($lu+\\n($su)*\\n($mu-\\n($su
+.	\}
+.\}
+.rs	\" 1/27/92: ensure the following .sp will work
+.nr FT \\n(.du-.5v
+.sp
+.\" 1/22/92: Play back figures in nofill mode
+.ie \\n(.u \{\
+.	nf
+.	FX
+.	fi
+.\}
+.el .FX
+.rm FX
+.sp
+.ce 2
+.ft 3
+Figure \\n(FI
+.\"	4/14/92: print figure title only if one was given
+.if \\n(.$>0 \&\\$1
+.ce 0	\" 4/14/92: if no figure title given, turn off centering
+.ft 1
+.sp -.5
+\L'|\\n(FTu'\l'\\n(.lu\(ul'\L'-|\\n(FTu'\l'-\\n(.lu\(ul'
+.sp .5
+.if \\n(FL .ll \\n(FLu
+.nr FI \\n(FI+1
+.)z
+.rr FT
+.rr FL
+..
+.\"
+.\" These macros implement examples.  Examples are set in-line with the
+.\" text, but are not broken at page or column boundaries.  They are set
+.\" in no-fill mode and indented 1/4 inch from the text.  1/4 inch tabs
+.\" are used.
+.\"
+.nr EE .25i
+.de EX	\" Example Start.  Examples are kept on a page and no-filled.
+.nr bi \\n(EEu	\" Indent for .(b blocks for examples
+.(b
+.ta .25i +.25i +.25i +.25i +.25i +.25i +.25i +.25i +.25i
+..
+.de EE	\" Example End.
+.)b
+..

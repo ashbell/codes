@@ -1,0 +1,76 @@
+.\" $com ${ME:-me} -m -Man ${MEFLAGS:-''} -T${T:-$DEFAULT_T} $@
+.ig
+###############################################################################
+#									      #
+#    Copyright (c) 1989 by Kenneth A. Reek.  Permission to copy or use this   #
+#    software without fee is granted to non-profit and not-for-profit	      #
+#    institutions and organizations provided that:			      #
+#    1) such copying or use is not for commercial advantage, and	      #
+#    2) no portion of this software is incorporated into any other program    #
+#       or device for commercial advantage, and				      #
+#    3) this copyright notice remains with the software.		      #
+#    Permission is also granted to make this software available to other      #
+#    non-profit or not-for-profit institutions and organizations whose use    #
+#    satisfies (1) through (3) above.  Any use of this software for	      #
+#    commercial advantage, or incorporation of any part of this software      #
+#    into any other program or device for commercial advantage, or any use    #
+#    or copying other than by non-profit or not-for-profit institutions or    #
+#    organizations requires written permission of the copyright holder.       #
+#									      #
+###############################################################################
+..
+.ll 6.5i
+.po 1i
+.TH TRY_DEBLANK 1R "R. I. T."
+.SH NAME
+try_deblank \- remove blank spaces
+.SH SYNOPSIS
+.B try_deblank
+[
+.I options
+]
+.SH DESCRIPTION
+.I Try_deblank
+performs some transformations on text
+in order to make it easier to compare
+to a predefined file.
+The
+.I options
+determine what transformations are to be done.
+.TP
+.B \-a
+Add one leading and one trailing blank to each line.
+This is useful in conjunction with the
+.B \-b flag in
+.IR diff (1).
+.TP
+.B \-b
+Remove all leading and trailing blanks from each line.
+.TP
+.B \-r
+Reduce each run of two or more blank spaces to a single blank.
+.TP
+.B \-t
+Treat tabs as if they were blanks.
+.TP
+.B \-l
+Delete empty lines.
+Lines that originally contained only blanks will be deleted if
+all of the blanks are removed through other options.
+.TP
+.B \-o
+Write one word per output line.
+A word is a contiguous run of non-blank characters.
+If this option is given, the
+.B \-r
+option is turned on and the
+.B \-a
+option is turned off.
+.PP
+If no arguments are given,
+.B \-r
+is assumed.
+.SH "SEE ALSO"
+\fIThe Try System\fR, by K. Reek
+.SH BUGS
+Report bugs to K. Reek, x6155

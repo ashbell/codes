@@ -1,0 +1,8 @@
+c-ctype.o: c-ctype.c ../src/config.h c-ctype.h \
+ /usr/lib/gcc/i586-suse-linux/4.4/include/stdbool.h
+
+../src/config.h:
+
+c-ctype.h:
+
+/usr/lib/gcc/i586-suse-linux/4.4/include/stdbool.h:

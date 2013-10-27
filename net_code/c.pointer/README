@@ -1,0 +1,111 @@
+TRY README	@(#)README	1.6	03/13/00
+
+Disclaimer: The author and Rochester Institute of Technology make no repre-
+sentations about the suitability of this software for any purpose.  It is
+provided "as is", without express or implied warranties of any kind.
+
+	Hello!  This directory now contains everything you need to compile
+the try system.  These steps are necessary:
+
+1)	De-archive all of the files (if you're reading this, you've probably
+	done that already).
+
+2)	There is a script called "make", which is used for multi-architecture
+	or multi-target environments.  It determines which architecture
+	it is running on, and then sets options and flags which depend on
+	this.  It then invokes the real make with these options.  
+
+	If you want to create targets for more than one architecture or
+	environment, modify this file as appropriate.
+
+3)	Edit the file "try.h" and change the definitions found at the
+	beginning to whatever is appropriate for (each of) your
+	environment(s).  Specifically, NEWPATH is the standard search path
+	for your system.  Be sure that this does NOT include the current
+	directory anywhere.
+
+	Change the value for TRY_UID (if necessary) to a value not used
+	as a user-id or group-id by any other user.
+
+	Change the value for TRY_ACCT (if necessary) to a login name not
+	used by any other user.
+
+	There are some other defines that should or should not be set
+	here; the file Test.c contains a description of them, and tests
+	for proper operation when compiled with a particular set.
+
+4)	Add an entry to your password file with the login name given by
+	TRY_ACCT, and the uid and gid given by TRY_UID.
+
+5)	Modify the file "signal_names.c" as needed to match the signal
+	definitions found on your system.
+
+6)	Say "make all" to compile and link all of the programs, and put
+	them into one of your standard "bin" directories.  The set-uid
+	requirements for these programs is as follows:
+
+	Mode		Owner	Group	Program
+	---s--s--x	root	try	try
+	---x--x--x	root	try	try_deblank
+	---x--x--x	root	try	try_log
+	---s--s--x	root	try	try_run
+
+	(Note: any group may be used, so long as none of the students
+	that will be using the system belong to it.)
+
+7)	You're all set!  Everything should now work as documented in the
+	user's guide.  
+
+	I am interested in hearing of any bug fixes or enhancements you
+make to any of the programs, and am especially interested in hearing of
+any security holes you find.
+
+	Here is a table of contents of this directory, should there be
+any confusion.
+
+README		This file.
+Makefile	A standard makefile.
+make		A script that I use to keep compilations straight between
+		two machines that share the same filesystem.
+try.h		Declarations and definitions.
+*.c		Source code
+tmac.manual	Troff macros for formatting the user's guide (see note below).
+try-s.1r	Manual page for "try", intended for students.
+try.1r		Manual page for "try", intended for instructors.
+try.me		The try user's guide.
+try.ps		The try user's guide in PostScript.
+try.pdf		The try user's guide in PDF (Adobe Acrobat).
+try_deblank.1r	Manual page
+try_log.1r	Manual page
+try_run.1r	Manual page
+CONTENTS	A ls -l listing of the directory.
+
+The user's guide was formatted using "lwroff", a locally developed formatter
+of the troff variety.  If you have a PostScript printer, you should be able
+to print "try.ps" without difficulty.  Otherwise, use Adobe Acrobat to
+view or print the "try.pdf" file.  If you must reformat the user's guide,
+try the following command:
+
+    tbl try.me | troff -t -rT2 -me tmac.manual (options) -
+
+using whatever options and other stuff is appropriate for your laser printer.
+Ordinary troff's will be unable to handle the Courier fonts along with the
+three Times fonts.  You should also be aware that floating figures in two
+column text are a tad beyond the capabilities of the -me macros; changes to
+the formatting parameters or the text may cause the figures to screw up.
+Should this happen, they should be moved in the source file to change their
+positions.
+
+
+	Try is now Y2K compliant.  Try itself does nothing with dates except
+to record them in the log files.  I've added an option "yyyy" that changes
+the format of the dates from yy/mm/dd to yyyy/mm/dd; this may simplify your
+life if you do any date processing of the log files.
+
+	Kenneth A. Reek
+	School of Computer Science and Information Technology
+	Rochester Institute of Technology
+	One Lomb Memorial Drive
+	Rochester, NY 14623
+
+	kar@cs.rit.edu

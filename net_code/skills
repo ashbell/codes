@@ -1,0 +1,293 @@
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++				Linux Skills											   	
++							--By Sar ~!		
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++
++				Useful Skills For Your Applications ~!
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+1.	show your desktop when your dont't shortkeys ~ {
+	ctrl + alt + D = show your desktop!
+	}
+----------------------------------------------------------------------------
+	or look up all pdf files redirect to a text ~!
+	cat | find . -name '*.pdf'  > pdf
+----------------------------------------------------------------------------
+
+2.	On ubuntu show the click_right 'open a terminal'{
+	sudo apt-get install nautilus-open-terminal
+	}
+----------------------------------------------------------------------------
+
+3.	Firefox show menubar when your hide the menu,{
+	Tools = "Hide Menubar"
+	Press 'Alt' show the menu;
+	Alt + f firefox menu show = call menubar;
+	}
+----------------------------------------------------------------------------
+
+4.	Programming manual;{
+	man scanf printf man fsprintf  man socket;
+	}	
+----------------------------------------------------------------------------
+
+5.	Gvim menu no Chinese fonts;{
+	Ubuntu 10.04 Lucid Lynx默认安装将会把中文区域设置为zh_CN.utf8， 而GVim能识别的
+	中文区域设置为zh_CN.UTF-8。因此GVim会在启动时报错，且无法正常加载中文菜单。 解决：
+----------------------------------------------------------------------------
+	cd /usr/share/vim/vim72/lang
+	sudo ln -s menu_zh_cn.utf-8.vim menu_zh_cn.utf8.vim
+----------------------------------------------------------------------------
+	此方法使得GVim可以识别zh_CN.utf8，并采用于zh_CN.UTF-8完全相同的菜单设置。并且不
+	影响系统的中文区域设置
+	}
+----------------------------------------------------------------------------
+	
+6.	How to use diff patch a library?  *.diff {
+	Applying patches with patch:
+	To apply a patch to a single file, change to the directory where the 
+	file is located and call patch:
+----------------------------------------------------------------------------
+	patch < foo.patch
+
+	These instructions assume the patch is distributed in unified format, 
+	which identifies the file the patch should be applied to. If not, you 
+	can specify the file on the command line:
+----------------------------------------------------------------------------
+	patch foo.txt < bar.patch
+
+	Applying patches to entire directories (perhaps the more common case) is
+	similar, but you have to be careful about setting a "p level". What this
+	means is that, within patch files,     the files to be patched are 
+	identified by path names which may be different now that the files are 
+	located on your computer rather than on the computer where the patch was
+	created. The p level instructs patch to ignore parts of the path name so
+	that it can identify the files correctly. Most often a p level of one 
+	will work, so you use:
+----------------------------------------------------------------------------
+	patch -p1 < baz.patch
+
+	You should change to the top level source directory before running this
+	command. If a patch level of one does not correctly identify any files 
+	to patch, inspect the patch file for file names. If you see a name like
+
+	/users/stephen/package/src/net/http.c
+
+	and you are working in a directory that contains net/http.c, use
+
+	patch -p5 < baz.patch
+
+	In general, count up one for each path separator (slash character) that 
+	youremove from the beginning of the path, until what's left is a path 
+	that exists in your working directory. The count you reach is the p
+	level.To remove a patch, use the -R flag, ie:
+----------------------------------------------------------------------------
+	patch -p5 -R < baz.patch
+----------------------------------------------------------------------------
+	Creating patches with diff:
+	Using diff is simple whether you are working with single files or entire
+	source directories. To create a patch for a single file, use the form:
+
+	diff -u original.c new.c > original.patch
+	To create a patch for an entire source tree, make a copy of the tree:
+	cp -R original new
+
+	Make any changes required in the directory new/. Then create a patch 
+	with the following command:
+----------------------------------------------------------------------------
+	diff -rupN original/ new/ > original.patch
+
+	That's all you need to get started with diff and patch. For more 
+	information use:
+----------------------------------------------------------------------------
+	man diff
+	man patch
+	}
+----------------------------------------------------------------------------
+
+7.	VIM skills : find a function comment {
+	vi  +  alt+shit + k look function()  linux programmer !!
+	shit + insert = paste something in a terminal konsole
+	}
+----------------------------------------------------------------------------
+8.	Gedit Gconfig Tools config the gedit~!{
+	gconf-editor      gconf-merge-tree  gconf-schemas     gconftool         
+	gconftool-2
+----------------------------------------------------------------------------
+	Use these tools to config your gedit encoding.......
+	}
+----------------------------------------------------------------------------
+
+9.	The quieter you become, the more you are able to hear ...{
+	>>		sudo apt-get -f install
+	自动帮你安装所有包的依赖
+	}
+----------------------------------------------------------------------------
+10.	How to extract a deb-package {
+	使用ar命令解开.deb包 
+	ar vx test.deb 
+		|
+	debian-binary 
+	control.tar.gz 
+	data.tar.gz 
+	使用 tar 解开 data.tar.gz 即可得到deb文件中的数据文件 
+	tar -xzvf data.tar.gz 
+	}
+----------------------------------------------------------------------------
+11. What happened when press win+M  + wireshark {
+	all windows become back~!
+	wireshark :: A powerfull network scanf and sniffer
+	dsniff + netsniff-ng + sniffit + nmap 
+	more hackers' tools runniing on Linux ~nice 
+	}
+----------------------------------------------------------------------------
+12.Open-terminal in GNOME file manager-nautilus {
+	sudo apt-get install nautilus-open-terminal
+	
+	ubuntu下gdm和kdm切换
+    sudo dpkg-reconfigure gdm
+	sudo dpkg-reconfigure kdm
+----------------------------------------------------------------------------	
+	解决Ubuntu安装KDM themes后无法注销（注销之后黑屏, X没有重新启动所致）
+	编辑kdmrc即可：
+	/etc/kde4/kdm/kdmrc || 找到  [X-*-Core] 选项，在下面加上
+	TerminateServer=true  , 然后重启即可。
+	}
+----------------------------------------------------------------------------
+13.Vim find {
+	:/n --> Next
+	:/N --> Preview Forward
+	} chntpw -l /-u username ASM
+----------------------------------------------------------------------------
+14.Encrypt files and folders {
+	Creat a gpg key: use ## seahorse
+	~/.gnugpg/
+	pgp -e/-c/-d
+	kgpg -k
+	}
+----------------------------------------------------------------------------
+15.Cat Pipe && sth usefull command : {
+	eg:  cat | aptitude update > aptitude
+----------------------------------------------------------------------------	
+	VIM: Plugins : sp && Filemanager using: {
+		sp : edit another files with mutiltables
+		:WMToggle Filemanager start command
+		ctr +  w && H/J/K/L  
+				 | 
+				 K
+			--H		L--
+				 J
+				 |
+		use this shortcut to switch  file-manager and editors ~!
+		find . * | grep [Aa]ndroid
+
+		}
+	}
+----------------------------------------------------------------------------
+16.Sth About Linux commands && software we can use: {
+    axel-kapt jedit-> powerful source editor 
+    cvs - Concurrent Versions System 同步版本控制系统  比自己编译强多了～！
+    同时发生的
+----------------------------------------------------------------------------
+    find . * | grep [Aa]ndroid
+    find . -name \*.pdf--> find all pdf files
+    find ../  -name \*.pdf | xargs -I {} cp {} ..
+    
+    Try this: unrar part1.rar ......
+    find -type f -name '*.rar' -exec unrar x {} \;
+
+    find . -name *.[Cc]
+    
+    unrar x -kb *.part1.rar
+    
+    Oh yeah~!  grep all :
+    $$: lib/modules/2.6.32-32-generic/build$ grep -r -i 'TASK_INTERRUPTIBLE' *
+    
+    find . -name \* | grep 11 | xargs rm -v
+----------------------------------------------------------------------------
+    Something About Regular Expression:
+    a >.
+        Instead of using a pattern like "[A-Za-z]*" which won't match words 
+        like "won't," we will use a pattern, "[^ ]*," that matches everything
+        except a space. 
+        Well, this will also match anything because "*" means zero or more.
+
+        sed 's/ ./&:::/3' src --> 匹配空格+任意字符，从第三次开始替换
+        EG: yeah. si3ge..  yeah yeah yes yep \\
+                        |
+                        |
+            yeah. si3ge..  yeah y:::eah yes yep
+
+        space + si3ge/1 -- space + yeah/2 -- space + yeah/3 substitute --
+        
+        & == space + y   <----> space + y::: 
+----------------------------------------------------------------------------
+
+17. Text File encoding using iconv tools {
+    file --mime-encoding files   ~!
+    iconv -f iso-8859-1 -t utf-8 ./a.c	-p aaaa.c
+    }
+----------------------------------------------------------------------------
+18. How to type special characters in Linux?
+    using the unicode
+    Ctrl + shift + u + utf.code
+    eg: ° = 00B0 // °C 
+----------------------------------------------------------------------------
+19. How to delete and cpoy an area text using vim? 
+    对齐: 在vim下, (Esc)用命令V, 然后移动光标,选种你的文本, 然后按下=键
+    删除全文:   1, $d enter
+    从光标至结尾:  . , $d
+    指定的行: m,nd
+    area: V a line
+          v a character ! d = delete y = copy !
+    vim 多行copy:首先进入末行模式
+    :n,m co n 
+    n m 是指想要拷贝的第几行到第几行之间，比如22 -25行，我想拷贝到50行下就是
+    :22，25 co 50
+    set cindent ~!
+----------------------------------------------------------------------------
+    先在想删除的起始行输入'V'
+    然后移动到删除的结束行,
+    这时候，经过的地方都高亮显示了
+    输入'd'即可删除选中的内容。
+    输入'y'可复制。
+    如果最开始输入'v'那么可以以字符为单位选择。
+    删除整个用ggVGd
+
+    如果纯用命令那么输入：":<起始>,<结束>d"
+    删除整篇用":%d".
+    gg : 跳到文章的开始
+    G  : 跳到文章的末尾
+    读取外部命令的输出:
+    : r! command
+    : r! date
+    2011年 08月 17日 星期三 13:07:58 CST
+----------------------------------------------------------------------------
+    删除文件名中的空格或者替换相关的名字脚本:
+    for i in *; do mv "$i" "${i// /}" ; done;
+    for i in *; do mv "$i" "${i//reg1/sub}" ; done;
+----------------------------------------------------------------------------
+    About xterm -fg -bg and Xresources files:
+    You need to create a .Xresources file in your home directory using an 
+    editor like gedit. The code you have given looks ok to me. Alternatively
+    you could modify your xterm command by adding the options -fg and -bg.
+----------------------------------------------------------------------------
+    About boot-repair
+    Enter Live-CD-ubuntu desktop, type commands:
+    sudo add-apt-repository ppa:yannubuntu/boot-repair
+    sudo apt-get update && sudo apt-get install -y boot-repair-ubuntu
+----------------------------------------------------------------------------
+20. How to get the file size ?
+    du -h file
+----------------------------------------------------------------------------
+21. iiii
+           
+
+
+
+
+
+    

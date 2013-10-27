@@ -1,0 +1,114 @@
+#! /bin/sh
+
+###############################################################################
+#
+#    Copyright (c) 1989 by Kenneth A. Reek.  Permission to copy or use this
+#    software without fee is granted to non-profit and not-for-profit
+#    institutions and organizations provided that:
+#    1) such copying or use is not for commercial advantage, and
+#    2) no portion of this software is incorporated into any other program
+#       or device for commercial advantage, and
+#    3) this copyright notice remains with the software.
+#    Permission is also granted to make this software available to other
+#    non-profit or not-for-profit institutions and organizations whose use
+#    satisfies (1) through (3) above.  Any use of this software for
+#    commercial advantage, or incorporation of any part of this software
+#    into any other program or device for commercial advantage, or any use
+#    or copying other than by non-profit or not-for-profit institutions or
+#    organizations requires written permission of the copyright holder.
+#
+###############################################################################
+
+#
+# make -- front end to the real make; controls architecture-dependent
+#	differences.
+#
+# sccs id: @(#)make	1.6      10/16/97
+#
+# Usage: make [ args ]
+# where:
+#	args	Anything -- they are passed along as args to the real make.
+#
+
+#
+# Determine the architecture we're running on.
+#
+if [ -z "$SYS_TYPE" ]
+then
+	. /home/grader/f2y-grd/scripts/sys_type
+fi
+
+#
+# Set standard architecture-dependent flags.
+#
+ARCH=Arch.$SYS_TYPE
+BIN=bin.$SYS_TYPE
+
+#
+# Non-standard architecture-dependent flags.  Any names not listed
+# explicitly will result in "unknown architecture" abort.
+#
+ARCH_FLAGS=CFLAGS="-DARCH_$SYS_TYPE -O"
+case "$SYS_TYPE" in
+solaris) # -Bstatic not needed with solaris! (?)
+	;;
+
+sparc)	ARCH_FLAGS="$ARCH_FLAGS -Bstatic"
+	;;
+
+sun3)	ARCH_FLAGS="$ARCH_FLAGS -Bstatic"
+	;;
+
+sgi)	
+	;;
+
+*)	echo Unknown architecture!
+	exit 1
+	;;
+esac
+
+#
+# Determine what version of make to use.
+#
+if [ -z "$MAKE" ]
+then
+	#
+	# MAKE environment variable not set -- look at directories in
+	# the PATH to find make.
+	#
+	for dir in `echo $PATH | sed 's/:/ /g'`
+	do
+		if [ $dir = . ]
+		then
+			continue
+		fi
+		if [ -f $dir/make ]
+		then
+			break
+		fi
+	done
+
+	if [ -f $dir/make ]
+	then
+		MAKE=$dir/make export MAKE
+	else
+		echo Environment variable MAKE is not set, and cannot find standard make anywhere!
+		exit 1
+	fi
+
+elif [ $MAKE = gmake ]
+then
+	#
+	# gmake uses SHELL environment variable to decide which shell to use
+	#
+	unset SHELL
+fi
+
+if [ ! -r $ARCH ]
+then
+	rm -f Arch.*
+	$MAKE clean
+fi
+touch $ARCH
+
+$MAKE ARCH_MAKE_SCRIPT=Y BIN=$BIN "$ARCH_FLAGS" -e $*

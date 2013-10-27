@@ -1,0 +1,243 @@
+.\" $com ${ME:-me} -m -Man ${MEFLAGS:-''} -T${T:-$DEFAULT_T} $@ -tbl
+.ig
+###############################################################################
+#									      #
+#    Copyright (c) 1989 by Kenneth A. Reek.  Permission to copy or use this   #
+#    software without fee is granted to non-profit and not-for-profit	      #
+#    institutions and organizations provided that:			      #
+#    1) such copying or use is not for commercial advantage, and	      #
+#    2) no portion of this software is incorporated into any other program    #
+#       or device for commercial advantage, and				      #
+#    3) this copyright notice remains with the software.		      #
+#    Permission is also granted to make this software available to other      #
+#    non-profit or not-for-profit institutions and organizations whose use    #
+#    satisfies (1) through (3) above.  Any use of this software for	      #
+#    commercial advantage, or incorporation of any part of this software      #
+#    into any other program or device for commercial advantage, or any use    #
+#    or copying other than by non-profit or not-for-profit institutions or    #
+#    organizations requires written permission of the copyright holder.       #
+#									      #
+###############################################################################
+..
+.ll 6.5i
+.po 1i
+.TH TRY_RUN 1R "R. I. T."
+.SH NAME
+try_run \- run a student program
+.SH SYNOPSIS
+.B try_run
+[
+.B \-p
+] [
+.B \-e
+] [
+.I resource-limits
+]
+.I prog
+[
+.I args
+\&... ]
+.SH DESCRIPTION
+.I Try_run
+executes a student program in a controlled fashion.
+Cpu and file space usage are limited,
+and the program is prevented from referencing any files
+above the current directory.
+The student program's standard error is changed to share its standard output,
+so redirecting the standard output of
+.I try_run
+will catch both the output and errors produced by the program.
+The
+.B \-e
+flag prevents this sharing, and leaves the standard error alone.
+.I prog
+is the pathname to the program to be executed.
+Any
+.I args
+given are passed to the program.
+.PP
+.I Try_run
+executes the student program with the current directory
+treated as if it were /.
+This prohibits the program from accessing any files outside of
+the directory in which it is running
+to prevent (or at least restrict) damage caused by a malicious program.
+This does not prevent the instructor from redirecting
+the input or output to files outside the current directory when
+.I try_run
+is executed.
+The
+.B \-p
+option eliminates this protection for programs that
+must access files outside of the current directory.
+This option should only be used when execution is protected
+by some other means (e.g. by being run in the
+.B run_safe
+script of
+.IR try (1R)
+).
+.PP
+Any of the following may be used as
+.IR resource-limits :
+.nf
+.sp 
+.TS
+box center;
+c c c c
+c c c c
+l l l l.
+Resource	Argument(s)	Default	Units
+to Limit	to Use	Value & Units	Allowed
+_
+Cpu time	T{
+.BI cpu= n
+.BI cputime= n
+.BI cpu= hh:mm
+.BI cputime= hh:mm
+T}	10 seconds	T{
+h (hours)
+m (minutes)
+T}
+_
+File size	T{
+.BI fsize= n
+.BI filesize= n
+T}	10240 bytes	T{
+k (kilobytes)
+m (megabytes)
+T}
+_
+Data segment size	T{
+.BI data= n
+.BI datasize= n
+T}	\(if bytes	T{
+k (kilobytes)
+m (megabytes)
+T}
+_
+Stack segment size	T{
+.BI stack= n
+.BI stacksize= n
+T}	\(if bytes	T{
+k (kilobytes)
+m (megabytes)
+T}
+_
+Core file size	T{
+.BI core= n
+.BI coredumpsize= n
+T}	0 bytes	T{
+k (kilobytes)
+m (megabytes)
+T}
+_
+Resident set size	T{
+.BI rss= n
+T}	\(if bytes	T{
+k (kilobytes)
+m (megabytes)
+T}
+.TE
+.sp
+.fi
+Specifying \fIn\fR as \fBinf\fR (infinity) indicates
+no limit for that particular resource.
+.I Try_run
+will not raise resource limits above the user's original limits.
+.SH "SYSTEM V"
+On System V Unix, only the file size can be limited.
+The other arguments are accepted for compatibility,
+but have no effect.
+.SH "EXIT STATUS"
+If the student program terminated normally, it's exit status
+is written in ASCII to the file
+.B ,user.exit.status
+and
+.I try_run
+returns a status of zero.
+Otherwise,
+.I try_run
+will return one of the following exit status values.
+.br
+.ne 2.25i
+.sp
+.TS
+box center;
+c c
+l lw(4i).
+Value	Meaning
+_
+0	T{
+The student program exited normally.
+T}
+_
+1 \- 31	T{
+The student program aborted due to a signal
+(bus error, interrupt, etc.).
+The actual status value is the signal number
+(see
+.IR signal (2)
+or
+.IR sigvec (2)
+for the signal names).
+T}
+_
+128 \- 252	T{
+\fITry_run\fR
+was unable to execute the student program.
+Subtracting 128 from the status value
+will give the error code for the problem
+(see
+.IR intro (2)
+for error code descriptions).
+T}
+_
+253	T{
+\fITry_run\fR was invoked improperly.
+T}
+254	T{
+\fITry_run\fR could not fork a new process
+to run the student program.
+T}
+255	T{
+\fITry_run\fR could not create a pipe.
+T}
+.TE
+.sp
+These status values are known by the
+.IR try_log (1R)
+program, which is used in the \fItry\fR system
+to add descriptive messages for these problems
+to the log file.
+.SH EXAMPLES
+.IP "$ try_run a.out"
+Runs the program
+.I a.out
+in the current directory.
+The default limits (or
+.IR try_run 's
+limits, whichever are smaller)
+are imposed on the program,
+and the program will not be able to access
+any files outside of the current directory.
+.IP "$ try_run a.out < ../project_4/input.1 > output"
+Same as above, except the standard input is obtained from the given file
+and the standard output (including the user's standard error)
+is saved in a file.
+.IP "$ try_run -p cpu=1 fsize=inf a.out > output"
+The program is limited to one second of cpu time, but can create files
+of unlimited size (or the maximum size the user is allowed).
+There is no protection on what files the program may access.
+.IP "$ try_run cpu=1m core=100k a.out"
+The program is limited to one minute of cpu time,
+and may produce a core file up to 100k bytes if it fails.
+.SH FILES
+,user.exit.status
+.SH "SEE ALSO"
+\fIThe Try System\fR, by K. Reek
+.br
+.IR try (1R)
+.br
+.IR try_log (1R)
+.SH BUGS
+Report bugs to K. Reek, x6155

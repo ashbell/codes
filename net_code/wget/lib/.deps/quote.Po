@@ -1,0 +1,10 @@
+quote.o: quote.c ../src/config.h quotearg.h \
+ /usr/lib/gcc/i586-suse-linux/4.4/include/stddef.h quote.h
+
+../src/config.h:
+
+quotearg.h:
+
+/usr/lib/gcc/i586-suse-linux/4.4/include/stddef.h:
+
+quote.h:

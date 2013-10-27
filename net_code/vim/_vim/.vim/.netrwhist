@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/sar/Desktop/C&&Data/DSAAC2eCode'
+let g:netrw_dirhist_2='/home/sar/.fvwm'
+let g:netrw_dirhist_3='/home/drv/Desktop'
+let g:netrw_dirhist_4='/'
+let g:netrw_dirhist_5='/home/drv/Desktop'
+let g:netrw_dirhist_6='/home/drv'
+let g:netrw_dirhist_7='/home/drv/Gitweb/C++/IO.c'
+let g:netrw_dirhist_8='/home/drv/Desktop'

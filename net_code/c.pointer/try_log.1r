@@ -1,0 +1,55 @@
+.\" $com ${ME:-me} -m -Man ${MEFLAGS:-''} -T${T:-$DEFAULT_T} $@
+.ig
+###############################################################################
+#									      #
+#    Copyright (c) 1989 by Kenneth A. Reek.  Permission to copy or use this   #
+#    software without fee is granted to non-profit and not-for-profit	      #
+#    institutions and organizations provided that:			      #
+#    1) such copying or use is not for commercial advantage, and	      #
+#    2) no portion of this software is incorporated into any other program    #
+#       or device for commercial advantage, and				      #
+#    3) this copyright notice remains with the software.		      #
+#    Permission is also granted to make this software available to other      #
+#    non-profit or not-for-profit institutions and organizations whose use    #
+#    satisfies (1) through (3) above.  Any use of this software for	      #
+#    commercial advantage, or incorporation of any part of this software      #
+#    into any other program or device for commercial advantage, or any use    #
+#    or copying other than by non-profit or not-for-profit institutions or    #
+#    organizations requires written permission of the copyright holder.       #
+#									      #
+###############################################################################
+..
+.ll 6.5i
+.po 1i
+.TH TRY_LOG 1R "R. I. T."
+.SH NAME
+try_log \- add a message to a \fItry\fR log file
+.SH SYNOPSIS
+.B try_log
+.I message
+.SH DESCRIPTION
+When used in a build or run script with
+.IR try (1R),
+.I try_log
+adds a message to the status line recorded in the student's log file.
+.PP
+If
+.I message
+is a single numeric argument,
+it is assumed to be an exit status from
+.IR try_run (1R).
+In this case, a message describing the status is used.
+Otherwise,
+.I message
+itself is added to the log file.
+Newlines in the message are replaced by spaces.
+.PP
+Though
+.I try_log
+may appear many times in a build or run script,
+it should be executed at most once.
+It may be used with successful projects as well as unsuccessful ones.
+.SH "SEE ALSO"
+\fIThe Try System\fR, by K. Reek
+.SH BUGS
+Report bugs to K. Reek, x6155

@@ -1,0 +1,14775 @@
+%!PS-Adobe-1.0
+%%Pages: (atend)
+%%DocumentFonts: (atend)
+%%EndComments
+save /lwsave exch def
+/$lw 50 dict def $lw begin
+/d{def}def
+/sz 0 d
+/gs{gsave}d
+/gr{grestore}d
+/m{moveto}d
+/rm{rmoveto}d
+/rl{rlineto}d
+/s{show}d
+/sw{stringwidth}d
+/np{newpath}d
+/cp{closepath}d
+/st{stroke}d
+/sc{scale}d
+/x{exch}d
+/B{save/pg x d .166667 .166667 sc}d
+/BL{save/pg x d 612 0 translate 90 rotate .166667 .166667 sc}d
+/E{pg restore showpage}d
+/V{/Y x d 0 Y m}d
+/S{x Y m s}d
+/Sx{x Y m dup sw pop 0 rm gs -1 1 sc s gr}d
+/Sy{x Y m gs 0 sz 2 mul 3 div rm 1 -1 sc s gr}d
+/Sxy{x Y m dup sw pop 0 rm gs 0 sz 2 mul 3 div rm -1 -1 sc s gr}d
+/F{findfont x 6 mul dup/sz x d scalefont setfont}d
+/URy{sz 4.6 div}d
+/LW{sz 30 div setlinewidth}d
+/L{0 URy neg rm LW neg 0 x rl gs st gr 0 URy rm/Y currentpoint x pop d}d
+/M{np dup/Y x d m}d
+/H{Y m}d
+/l{dup 0 lt{neg dup neg 0 rm}if LW 0 rl gs st gr}d
+/l2{0 URy neg rm l 0 URy rm}d
+/RNx{sz .025 mul}d
+/RNy{sz .75 mul}d
+/l3{RNx neg RNy rm l RNx RNy neg rm}d
+/Sh{gs np m dup 0 rl x 0 x rl neg 0 rl cp
+gs counttomark 1 eq {setgray}{setrgbcolor}ifelse pop fill gr
+0 ne{stroke}if gr}d
+/Sha{/Shar x d gs np m
+Shar 0 90 arc Shar 90 180 arc Shar 180 270 arc Shar 270 360 arc cp
+gs counttomark 1 eq {setgray}{setrgbcolor}ifelse pop fill gr
+0 ne{stroke}if gr}d
+/f1{sz .0833 mul 0 rm
+sz .5833 mul dup 0 rl dup 0 x rl neg 0 rl cp st}d
+/f2{sz .0833 mul 0 rm sz .5833 mul 2 div dup dup 0 rm
+currentpoint 3 -1 roll add 3 -1 roll -90 270 arc st}d
+/f3{(4)(1)fr}d
+/f4{(2)(1)fr}d
+/f5{(4)(3)fr}d
+/fr{gs sz .31 mul 0 x rm .6 .6 sc dup s gr
+sw pop .6 mul 0 rm(\244)s gs .6 .6 sc s gr}d
+%%EndProlog
+%%Page: 1 1
+B
+20/Times-Roman F
+3766 V
+1443(The)S
+20/Times-Italic F
+1669(Try)S
+20/Times-Roman F
+1876(System)S
+18/Times-Roman F
+3640 V
+1701(\261)S
+1791(or)S
+1917(\261)S
+3514 V
+930(How)S
+1176(to)S
+1296(Avoid)S
+1602(Testing)S
+1962(Student)S
+2328(Programs)S
+9/Times-Roman F
+3382 V
+1694(Version)S
+1883(1.11)S
+10/Times-Roman F
+3244 V
+1623(Kenneth)S
+1847(A.)S
+1925(Reek)S
+3175 V
+1270(Undergraduate)S
+1648(Computer)S
+1909(Science)S
+2117(Department)S
+3106 V
+1417(Rochester)S
+1678(Institute)S
+1896(of)S
+1966(Technology)S
+3037 V
+1500(Rochester,)S
+1776(NY)S
+1882(14623-0887)S
+14/Times-Roman F
+2698 V
+1616(ABSTRACT)S
+10/Times-Roman F
+2548 V
+756(The)S
+10/Times-Bold F
+872(T)S
+8/Times-Bold F
+912(RY)S
+10/Times-Roman F
+1004(System,)S
+1218(which)S
+1387(runs)S
+1512(under)S
+1671(U)S
+9/Times-Roman F
+1714(NIX)S
+7/Times-Roman F
+2572 V
+1810(1)S
+10/Times-Roman F
+2548 V
+1831(,)S
+1868(allows)S
+2047(students)S
+2266(to)S
+2335(test)S
+2441(their)S
+2573(programs)S
+2821(in)S
+2889(a)S
+2479 V
+756(controlled)S
+1025(manner)S
+1230(with)S
+1361(the)S
+1459(instructor's)S
+1757(test)S
+1865(data.)S
+2025(The)S
+2143(system)S
+2334(will)S
+2451(accept)S
+2629(any)S
+2739(type)S
+2866(of)S
+2410 V
+756(\256les)S
+879(from)S
+1018(the)S
+1114(student,)S
+1325(and)S
+1434(the)S
+1530(instructor)S
+1783(has)S
+1885(great)S
+2028(\257exibility)S
+2285(in)S
+2354(determining)S
+2668(what)S
+2807(is)S
+2869(to)S
+2341 V
+756(be)S
+836(tested)S
+1000(and)S
+1110(how)S
+1236(the)S
+1333(tests)S
+1463(are)S
+1560(to)S
+1630(be)S
+1709(performed.)S
+2017(The)S
+2133(results)S
+2312(of)S
+2384(the)S
+2480(tests)S
+2609(are)S
+2705(recorded)S
+2272 V
+756(in)S
+828(a)S
+880(log)S
+982(\256le)S
+1084(for)S
+1179(later)S
+1312(grading.)S
+1556(At)S
+1641(no)S
+1726(time)S
+1859(does)S
+1994(the)S
+2093(student)S
+2292(have)S
+2431(direct)S
+2593(access)S
+2771(to)S
+2842(the)S
+2203 V
+756(test)S
+861(data)S
+983(or)S
+1054(the)S
+1149(log)S
+1247(\256le.)S
+1380(The)S
+1495(instructor)S
+1747(is)S
+1808(protected)S
+2054(from)S
+2192(damage)S
+2401(that)S
+2513(might)S
+2675(be)S
+2752(caused)S
+2134 V
+756(by)S
+836(malicious)S
+1091(student)S
+1285(programs.)S
+1849 V
+432(March)S
+609(13,)S
+704(2000)S
+8/Times-Roman F
+1201 V
+432(Copyright)S
+8/Symbol F
+643(\323)S
+8/Times-Roman F
+698(1989,)S
+823(1992,)S
+948(1994,)S
+1073(1997,)S
+1198(1999)S
+1311(by)S
+1376(Kenneth)S
+1554(A.)S
+1617(Reek.)S
+1759(Permission)S
+1988(to)S
+2041(copy)S
+2150(or)S
+2206(use)S
+2286(this)S
+2371(software)S
+2552(without)S
+2714(fee)S
+2788(is)S
+2836(granted)S
+2995(to)S
+3048(non-pro\256t)S
+1144 V
+432(and)S
+517(not-for-pro\256t)S
+786(institutions)S
+1014(and)S
+1099(organizations)S
+1372(provided)S
+1558(that:)S
+1063 V
+432(\(1\))S
+536(such)S
+640(copying)S
+810(or)S
+866(use)S
+946(is)S
+994(not)S
+1071(for)S
+1143(commercial)S
+1383(advantage,)S
+1604(and)S
+982 V
+432(\(2\))S
+536(no)S
+600(portion)S
+754(of)S
+810(this)S
+895(software)S
+1076(is)S
+1124(incorporated)S
+1381(into)S
+1471(any)S
+1556(other)S
+1670(program)S
+1848(or)S
+1904(device)S
+2044(for)S
+2116(commercial)S
+2356(advantage,)S
+2577(and)S
+901 V
+432(\(3\))S
+536(this)S
+621(copyright)S
+820(notice)S
+952(remains)S
+1119(with)S
+1220(the)S
+1294(software.)S
+820 V
+432(Permission)S
+671(is)S
+729(also)S
+832(granted)S
+1000(to)S
+1062(make)S
+1190(this)S
+1284(software)S
+1474(available)S
+1670(to)S
+1732(other)S
+1855(non-pro\256t)S
+2072(or)S
+2137(not-for-pro\256t)S
+2415(institutions)S
+2652(and)S
+2746(organizations)S
+3028(whose)S
+3176(use)S
+763 V
+432(satis\256es)S
+601(\(1\))S
+674(through)S
+840(\(3\))S
+913(above.)S
+1072(Any)S
+1171(use)S
+1251(of)S
+1307(this)S
+1392(software)S
+1573(for)S
+1645(commercial)S
+1885(advantage,)S
+2106(or)S
+2162(incorporation)S
+2435(of)S
+2491(any)S
+2576(part)S
+2666(of)S
+2722(this)S
+2807(software)S
+2988(into)S
+3078(any)S
+3163(oth-)S
+706 V
+432(er)S
+488(program)S
+669(or)S
+728(device)S
+871(for)S
+946(commercial)S
+1189(advantage,)S
+1413(or)S
+1472(any)S
+1560(use)S
+1643(or)S
+1702(copying)S
+1874(other)S
+1990(than)S
+2090(by)S
+2156(non-pro\256t)S
+2366(or)S
+2424(not-for-pro\256t)S
+2695(institutions)S
+2925(or)S
+2983(organizations)S
+649 V
+432(requires)S
+602(written)S
+753(permission)S
+979(of)S
+1035(the)S
+1109(copyright)S
+1308(holder.)S
+432 556 M
+864 l
+5/Times-Roman F
+493 V
+561(1)S
+8/Times-Roman F
+475 V
+592(U)S
+7/Times-Roman F
+627(NIX)S
+8/Times-Roman F
+717(is)S
+765(a)S
+802(registered)S
+1006(trademark)S
+1215(of)S
+1271(The)S
+1361(Open)S
+1481(Group.)S
+E
+%%Page: 1 2
+B
+12/Times-Bold F
+4207 V
+1556(Table)S
+1756(of)S
+1840(Contents)S
+10/Times-Roman F
+4000 V
+432(1)S
+648(Overview)S
+909(.............................................................................................................................................)S
+3210(1)S
+3862 V
+432(2)S
+648(How)S
+10/Times-Bold F
+784(T)S
+8/Times-Bold F
+824(RY)S
+10/Times-Roman F
+914(Works)S
+1104(................................................................................................................................)S
+3210(1)S
+3793 V
+648(2.1)S
+864(.tryrc)S
+1014(......................................................................................................................................)S
+3210(2)S
+3724 V
+648(2.1.1)S
+864(.tryrc)S
+1013(Options)S
+1224(........................................................................................................................)S
+3210(2)S
+3655 V
+648(2.1.2)S
+864(Default)S
+1065(Options)S
+1284(....................................................................................................................)S
+3210(3)S
+3586 V
+648(2.2)S
+864(The)S
+978(Try)S
+1085(Directory)S
+1344(................................................................................................................)S
+3210(3)S
+3517 V
+648(2.2.1)S
+864(Project)S
+1055(Directories)S
+1344(................................................................................................................)S
+3210(4)S
+3448 V
+648(2.2.2)S
+864(Scratch)S
+1065(Directories)S
+1359(...............................................................................................................)S
+3210(4)S
+3379 V
+648(2.2.3)S
+864(The)S
+978(Log)S
+1095(File)S
+1209(.........................................................................................................................)S
+3210(4)S
+3310 V
+648(2.3)S
+864(Copying)S
+1091(Student)S
+1295(Files)S
+1434(..........................................................................................................)S
+3210(4)S
+3241 V
+648(2.4)S
+864(Instructor-Supplied)S
+1352(Shell)S
+1496(Scripts)S
+1689(.........................................................................................)S
+3210(5)S
+3172 V
+648(2.5)S
+864(The)S
+978(Unprotected)S
+1296(Scripts)S
+1494(......................................................................................................)S
+3210(6)S
+3103 V
+648(2.5.1)S
+864(The)S
+10/Times-Bold F
+978(init)S
+10/Times-Roman F
+1085(Script)S
+1254(......................................................................................................................)S
+3210(6)S
+3034 V
+648(2.5.2)S
+864(The)S
+10/Times-Bold F
+978(build)S
+10/Times-Roman F
+1131(Script)S
+1299(...................................................................................................................)S
+3210(6)S
+2965 V
+648(2.5.3)S
+864(The)S
+10/Times-Bold F
+978(run)S
+10/Times-Roman F
+1091(Script)S
+1269(.....................................................................................................................)S
+3210(7)S
+2896 V
+648(2.5.4)S
+864(The)S
+10/Times-Bold F
+978(explain)S
+10/Times-Roman F
+1185(Script)S
+1359(...............................................................................................................)S
+3210(9)S
+2827 V
+648(2.5.5)S
+864(The)S
+10/Times-Bold F
+978(cleanup)S
+10/Times-Roman F
+1198(Script)S
+1374(..............................................................................................................)S
+3210(9)S
+2758 V
+648(2.5.6)S
+864(The)S
+10/Times-Bold F
+978(dump_log)S
+10/Times-Roman F
+1254(Script)S
+1419(...........................................................................................................)S
+3180(10)S
+2689 V
+648(2.5.7)S
+864(The)S
+10/Times-Bold F
+978(query)S
+10/Times-Roman F
+1148(Script)S
+1314(..................................................................................................................)S
+3180(11)S
+2620 V
+648(2.6)S
+864(Modifying)S
+1141(the)S
+1235(Environment)S
+1584(................................................................................................)S
+3180(11)S
+2551 V
+648(2.7)S
+864(Status)S
+1031(Messages)S
+1284(....................................................................................................................)S
+3180(11)S
+2482 V
+648(2.8)S
+864(News)S
+1029(.....................................................................................................................................)S
+3180(11)S
+2413 V
+648(2.9)S
+864(Errors)S
+1044(....................................................................................................................................)S
+3180(12)S
+2275 V
+432(3)S
+648(Security)S
+879(...............................................................................................................................................)S
+3180(12)S
+2206 V
+648(3.1)S
+864(The)S
+978(Safe)S
+1105(Scripts)S
+1299(...................................................................................................................)S
+3180(12)S
+2137 V
+648(3.2)S
+864(Security)S
+1085(and)S
+1192(The)S
+1306(Environment)S
+1644(............................................................................................)S
+3180(13)S
+2068 V
+648(3.3)S
+864(Using)S
+1027(More)S
+1179(...........................................................................................................................)S
+3180(15)S
+1999 V
+648(3.4)S
+864(Using)S
+1027(Make)S
+1194(..........................................................................................................................)S
+3180(15)S
+1861 V
+432(4)S
+648(Directory)S
+899(and)S
+1006(File)S
+1120(Modes)S
+1314(..................................................................................................................)S
+3180(15)S
+1792 V
+648(4.1)S
+864(The)S
+978(Check)S
+1152(Option)S
+1344(................................................................................................................)S
+3180(15)S
+1654 V
+432(5)S
+648(Signals)S
+849(.................................................................................................................................................)S
+3180(16)S
+1585 V
+648(5.1)S
+864(Signal)S
+1038(Handling)S
+1282(Options)S
+1494(......................................................................................................)S
+3180(16)S
+1447 V
+432(6)S
+648(Utility)S
+826(Programs)S
+1089(.................................................................................................................................)S
+3180(16)S
+1378 V
+648(6.1)S
+864(Try_run)S
+1089(.................................................................................................................................)S
+3180(17)S
+1309 V
+648(6.2)S
+864(Try_log)S
+1089(.................................................................................................................................)S
+3180(17)S
+1240 V
+648(6.3)S
+864(Try_deblank)S
+1194(..........................................................................................................................)S
+3180(17)S
+1102 V
+432(7)S
+648(Detecting)S
+903(Cheating)S
+1149(.............................................................................................................................)S
+3180(17)S
+964 V
+432(8)S
+648(Where)S
+829(Implemented)S
+1179(...........................................................................................................................)S
+3180(17)S
+826 V
+432(9)S
+648(Appendices)S
+954(..........................................................................................................................................)S
+3180(17)S
+11/Times-Bold F
+259 V
+1827(i)S
+E
+%%Page: 1 3
+B
+11/Times-Bold F
+4429 V
+432(03/13/0)S
+11/Times-Italic F
+1627(The)S
+1748(Try)S
+1862(System)S
+11/Times-Bold F
+2882(Version)S
+3124(1.11)S
+4222 V
+432(1.)S
+526(Overview)S
+10/Times-Roman F
+4129 V
+582(The)S
+8/Times-Bold F
+700(TRY)S
+10/Times-Roman F
+830(system)S
+1024(allows)S
+1208(students)S
+1432(to)S
+1506(test)S
+1617(their)S
+4060 V
+432(projects)S
+645(in)S
+714(a)S
+763(controlled)S
+1029(manner)S
+1231(with)S
+1359(the)S
+1454(instructor's)S
+3991 V
+432(test)S
+549(data.)S
+718(The)S
+845(instructor)S
+1109(creates)S
+1310(a)S
+1369(shell)S
+1515(script)S
+1681(to)S
+3922 V
+432(build)S
+586(the)S
+690(student's)S
+937(project)S
+1134(and)S
+1250(a)S
+1306(script)S
+1469(to)S
+1545(run)S
+1654(the)S
+3853 V
+432(project.)S
+663(When)S
+835(the)S
+937(student)S
+1139(runs)S
+8/Times-Bold F
+1266(TRY)S
+10/Times-Roman F
+1368(,)S
+1410(the)S
+1511(student's)S
+3784 V
+432(\256le\(s\))S
+602(are)S
+706(copied)S
+897(into)S
+1020(a)S
+1076(scratch)S
+1276(directory,)S
+1538(and)S
+1654(the)S
+3715 V
+432(instructor's)S
+727(scripts)S
+905(are)S
+999(executed)S
+1234(to)S
+1301(create)S
+1466(the)S
+1560(project)S
+3646 V
+432(and)S
+568(test)S
+701(it.)S
+819(The)S
+962(results)S
+1167(of)S
+1265(each)S
+1424(attempt)S
+1654(are)S
+3577 V
+432(recorded)S
+672(in)S
+748(a)S
+804(log)S
+910(\256le)S
+1016(for)S
+1114(that)S
+1233(student.)S
+1470(Additional)S
+3508 V
+432(scripts)S
+616(can)S
+727(be)S
+811(created)S
+1013(to)S
+1087(give)S
+1217(the)S
+1317(student)S
+1517(informa-)S
+3439 V
+432(tion)S
+553(about)S
+714(a)S
+768(test)S
+879(that)S
+997(the)S
+1098(project)S
+1293(failed,)S
+1473(or)S
+1550(to)S
+1624(give)S
+3370 V
+432(the)S
+526(student)S
+720(information)S
+1025(from)S
+1162(the)S
+1256(log)S
+1353(\256le.)S
+3277 V
+582(There)S
+770(are)S
+891(no)S
+997(limitations)S
+1302(on)S
+1408(the)S
+1528(type)S
+1678(or)S
+3208 V
+432(number)S
+654(of)S
+742(\256les)S
+880(that)S
+8/Times-Bold F
+1005(TRY)S
+10/Times-Roman F
+1145(will)S
+1277(accept\320it)S
+1564(simply)S
+3139 V
+432(copies)S
+608(all)S
+691(of)S
+763(the)S
+859(\256les)S
+981(named)S
+1164(by)S
+1246(the)S
+1342(student)S
+1538(into)S
+1654(the)S
+3070 V
+432(scratch)S
+639(directory.)S
+928(The)S
+1058(instructor)S
+1325(determines)S
+1625(how)S
+3001 V
+432(many)S
+595(and)S
+711(what)S
+857(kind)S
+992(of)S
+1070(\256les)S
+1198(are)S
+1300(appropriate)S
+1603(for)S
+1701(a)S
+2932 V
+432(project)S
+636(by)S
+732(the)S
+841(way)S
+976(the)S
+1085(\252build\272)S
+1298(script)S
+1467(is)S
+1542(written.)S
+2863 V
+432(Similarly,)S
+707(the)S
+816(only)S
+958(preconceived)S
+1315(notion)S
+1504(that)S
+8/Times-Bold F
+1626(TRY)S
+10/Times-Roman F
+2794 V
+432(has)S
+538(of)S
+614(how)S
+743(a)S
+796(project)S
+990(should)S
+1176(be)S
+1259(tested)S
+1426(is)S
+1491(that)S
+1607(there)S
+2725 V
+432(may)S
+562(be)S
+645(more)S
+794(than)S
+923(one)S
+1035(test,)S
+1159(and)S
+1271(the)S
+1370(tests)S
+1502(are)S
+1601(num-)S
+2656 V
+432(bered)S
+603(from)S
+756(1)S
+822(to)S
+905(127.)S
+1066(The)S
+1196(instructor)S
+1463(determines)S
+2587 V
+432(how)S
+566(many)S
+731(and)S
+849(what)S
+997(kind)S
+1135(of)S
+1216(tests)S
+1354(should)S
+1544(be)S
+1631(per-)S
+2518 V
+432(formed)S
+626(by)S
+706(the)S
+800(way)S
+920(the)S
+1014(\252run\272)S
+1168(script)S
+1322(is)S
+1382(written.)S
+2425 V
+582(Each)S
+728(time)S
+861(the)S
+960(student)S
+1159(runs)S
+1287(the)S
+8/Times-Bold F
+1382(TRY)S
+10/Times-Roman F
+1509(program,)S
+2356 V
+432(an)S
+509(entry)S
+653(is)S
+713(added)S
+877(to)S
+944(that)S
+1055(student's)S
+1292(log)S
+1389(\256le)S
+1486(indicating)S
+2287 V
+432(the)S
+531(results)S
+713(of)S
+788(the)S
+887(attempt.)S
+1128(Possible)S
+1352(results)S
+1533(include:)S
+2218 V
+432(unable)S
+627(to)S
+708(build)S
+866(the)S
+974(project,)S
+1191(failed)S
+1363(a)S
+1423(test,)S
+1555(and)S
+1675(so)S
+2149 V
+432(forth.)S
+616(The)S
+742(instructor)S
+1005(may)S
+1141(give)S
+1277(information)S
+1593(to)S
+1671(be)S
+2080 V
+432(added)S
+610(to)S
+691(the)S
+798(log)S
+908(\256le)S
+1018(to)S
+1098(further)S
+1295(explain)S
+1506(an)S
+1596(error.)S
+2011 V
+432(The)S
+549(log)S
+649(\256le)S
+749(is)S
+811(formatted)S
+1068(with)S
+1197(automated)S
+1471(processing)S
+1942 V
+432(in)S
+499(mind.)S
+1849 V
+582(The)S
+8/Times-Bold F
+703(TRY)S
+10/Times-Roman F
+836(program)S
+1071(runs)S
+1205(as)S
+1286(a)S
+1344(set-user-id)S
+1628(pro-)S
+1780 V
+432(gram)S
+581(so)S
+659(that)S
+775(it)S
+834(can)S
+943(access)S
+1122(the)S
+1221(instructor's)S
+1519(test)S
+1627(data)S
+1711 V
+432(and)S
+540(scripts)S
+718(and)S
+826(the)S
+921(log)S
+1019(\256les)S
+1139(even)S
+1273(though)S
+1460(the)S
+1554(student)S
+1642 V
+432(cannot)S
+622(directly)S
+836(access)S
+1019(them.)S
+1203(Execution)S
+1476(of)S
+1554(student)S
+1573 V
+432(programs)S
+685(in)S
+757(the)S
+856(instructor's)S
+1155(account,)S
+1383(a)S
+1435(gaping)S
+1624(hole)S
+1504 V
+432(in)S
+504(the)S
+602(security)S
+817(of)S
+891(other)S
+1039(automated)S
+1315(grading)S
+1523(systems,)S
+1435 V
+432(is)S
+492(not)S
+589(a)S
+636(problem)S
+857(with)S
+8/Times-Bold F
+980(TRY)S
+10/Times-Roman F
+1082(.)S
+11/Times-Bold F
+1294 V
+432(2.)S
+526(How)S
+680(T)S
+9/Times-Bold F
+724(RY)S
+11/Times-Bold F
+824(Works)S
+10/Times-Bold F
+1201 V
+582(T)S
+8/Times-Bold F
+622(RY)S
+10/Times-Roman F
+713(may)S
+838(be)S
+916(used)S
+1047(to)S
+1115(test)S
+1220(any)S
+1328(type)S
+1453(of)S
+1524(program)S
+1132 V
+432(in)S
+508(any)S
+623(language,)S
+884(shell)S
+1026(scripts,)S
+1226(make\256les,)S
+1500(etc.)S
+1634(The)S
+1063 V
+432(word)S
+589(\252project\272)S
+845(will)S
+973(be)S
+1064(used)S
+1208(in)S
+1289(this)S
+1410(document)S
+1681(to)S
+994 V
+432(refer)S
+566(to)S
+633(the)S
+727(student's)S
+964(work.)S
+901 V
+582(When)S
+751(a)S
+803(student)S
+1002(thinks)S
+1173(his)S
+1267(project)S
+1459(is)S
+1523(\256nished,)S
+832 V
+432(he)S
+509(invokes)S
+8/Times-Bold F
+712(TRY)S
+10/Times-Roman F
+834(as)S
+904(in)S
+971(the)S
+1065(following)S
+1319(example:)S
+10/Courier F
+739 V
+475($)S
+547(try)S
+691(kar\261grd)S
+979(lab3)S
+1159(makefile)S
+1483(*.c)S
+1627(*.h)S
+10/Times-Roman F
+646 V
+432(The)S
+549(\256rst)S
+665(two)S
+778(arguments)S
+1052(are)S
+1149(given)S
+1306(to)S
+1376(the)S
+1472(student)S
+1668(by)S
+577 V
+432(the)S
+530(instructor,)S
+799(and)S
+909(specify)S
+1106(the)S
+1203(account)S
+1414(in)S
+1484(which)S
+1654(the)S
+508 V
+432(project)S
+646(is)S
+732(to)S
+825(be)S
+928(tested)S
+1115(\(the)S
+1255(instructor's)S
+1574(grader)S
+4222 V
+1944(account)S
+2167(is)S
+2242(most)S
+2394(appropriate\))S
+2724(and)S
+2845(the)S
+2953(title)S
+3082(of)S
+3166(the)S
+4153 V
+1944(project)S
+2152(\(called)S
+2357(\252project-code\272)S
+2753(in)S
+2840(this)S
+2967(document\).)S
+4084 V
+1944(The)S
+2060(remaining)S
+2327(arguments)S
+2600(are)S
+2696(the)S
+2792(\256les)S
+2914(that)S
+3027(make)S
+3180(up)S
+4015 V
+1944(the)S
+2038(project.)S
+10/Times-Bold F
+3922 V
+2094(T)S
+8/Times-Bold F
+2134(RY)S
+10/Times-Roman F
+2233(looks)S
+2392(in)S
+2468(the)S
+10/Times-Bold F
+2570(.tryrc)S
+10/Times-Roman F
+2744(\256le)S
+2849(in)S
+2924(the)S
+3026(speci\256ed)S
+3853 V
+1944(account)S
+2181(for)S
+2300(an)S
+2406(entry)S
+2579(whose)S
+2781(\256rst)S
+2923(\256eld)S
+3078(is)S
+3166(the)S
+3784 V
+1944(speci\256ed)S
+2179(project-code.)S
+2537(The)S
+2651(remaining)S
+2916(\256elds)S
+3066(specify)S
+3715 V
+1944(the)S
+2041(\252try)S
+2158(directory\272)S
+2425(and)S
+2534(the)S
+2630(\252project)S
+2847(directory\272)S
+3114(to)S
+3183(be)S
+3646 V
+1944(used)S
+2081(for)S
+2178(the)S
+2279(project.)S
+10/Times-Bold F
+2509(T)S
+8/Times-Bold F
+2549(RY)S
+10/Times-Roman F
+2646(moves)S
+2830(to)S
+2904(the)S
+3005(try)S
+3099(direc-)S
+3577 V
+1944(tory,)S
+2087(creates)S
+2286(a)S
+2344(scratch)S
+2546(directory)S
+2795(for)S
+2895(the)S
+2999(student)S
+3203(if)S
+3508 V
+1944(one)S
+2066(is)S
+2141(not)S
+2253(already)S
+2466(present,)S
+2689(moves)S
+2880(to)S
+2961(the)S
+3069(scratch)S
+3439 V
+1944(directory,)S
+2204(and)S
+2318(copies)S
+2499(all)S
+2587(of)S
+2664(the)S
+2765(\256les)S
+2892(named)S
+3080(on)S
+3166(the)S
+3370 V
+1944(command)S
+2211(line.)S
+2366(\(The)S
+2509(scratch)S
+2708(directory)S
+2954(is)S
+3022(normally)S
+3301 V
+1944(cleaned)S
+2149(out)S
+2246(after)S
+2377(every)S
+2531(run.\))S
+3208 V
+2094(If)S
+2160(there)S
+2307(is)S
+2373(a)S
+2426(\256le)S
+10/Times-Bold F
+2529(news)S
+10/Times-Roman F
+2681(in)S
+2754(the)S
+2854(try)S
+2947(directory)S
+3190(or)S
+3139 V
+1944(in)S
+2023(the)S
+2129(project)S
+2329(directory,)S
+2593(the)S
+2698(news)S
+2852(is)S
+2923(given)S
+3088(to)S
+3166(the)S
+3070 V
+1944(student.)S
+2188(A)S
+2266(record)S
+2454(is)S
+2528(kept)S
+2666(in)S
+2747(the)S
+2855(student's)S
+3106(home)S
+3001 V
+1944(directory)S
+2191(to)S
+2267(prevent)S
+2476(old)S
+2581(news)S
+2732(from)S
+2877(being)S
+3039(reported)S
+2932 V
+1944(every)S
+2098(time)S
+2226(the)S
+2320(student)S
+2514(uses)S
+8/Times-Bold F
+2633(TRY)S
+10/Times-Roman F
+2735(.)S
+2839 V
+2094(From)S
+2247(within)S
+2424(the)S
+2520(scratch)S
+2713(directory,)S
+8/Times-Bold F
+2964(TRY)S
+10/Times-Roman F
+3088(runs)S
+3213(a)S
+2770 V
+1944(shell)S
+2086(script)S
+2248(provided)S
+2490(by)S
+2578(the)S
+2680(instructor)S
+2939(to)S
+3014(build)S
+3166(the)S
+2701 V
+1944(student's)S
+2190(project;)S
+2404(this)S
+2519(may)S
+2651(do)S
+2739(compilations,)S
+3094(make,)S
+2632 V
+1944(formatting,)S
+2242(or)S
+2320(whatever)S
+2568(is)S
+2635(appropriate.)S
+2972(If)S
+3039(the)S
+3140(pro-)S
+2563 V
+1944(ject)S
+2060(was)S
+2181(successfully)S
+2503(built,)S
+8/Times-Bold F
+2652(TRY)S
+10/Times-Roman F
+2781(runs)S
+2911(a)S
+2965(shell)S
+3106(script)S
+2494 V
+1944(to)S
+2013(run)S
+2115(the)S
+2211(student's)S
+2450(project.)S
+2675(This)S
+2804(script)S
+2960(is)S
+3022(also)S
+3140(pro-)S
+2425 V
+1944(vided)S
+2102(by)S
+2186(the)S
+2284(instructor,)S
+2554(who)S
+2681(is)S
+2745(free)S
+2863(to)S
+2934(test)S
+3042(the)S
+3140(pro-)S
+2356 V
+1944(ject)S
+2052(in)S
+2119(any)S
+2226(way)S
+2346(he)S
+2423(or)S
+2493(she)S
+2593(sees)S
+2713(\256t.)S
+2263 V
+2094(If)S
+2158(a)S
+2209(test)S
+2317(fails,)S
+2460(another)S
+2665(shell)S
+2803(script)S
+2961(is)S
+3025(executed)S
+2194 V
+1944(to)S
+2012(give)S
+2137(the)S
+2232(student)S
+2427(information)S
+2733(about)S
+2888(the)S
+2983(failed)S
+3141(test,)S
+2125 V
+1944(presumably)S
+2264(to)S
+2350(assist)S
+2518(him)S
+2650(in)S
+2735(\256xing)S
+2913(his)S
+3021(program.)S
+2056 V
+1944(The)S
+2066(instructor)S
+2325(may)S
+2457(allow)S
+2619(or)S
+2697(disallow)S
+2929(this,)S
+3059(or)S
+3136(may)S
+1987 V
+1944(limit)S
+2083(or)S
+2157(expand)S
+2355(upon)S
+2499(the)S
+2597(information)S
+2906(the)S
+3003(student)S
+3200(is)S
+1918 V
+1944(given,)S
+2113(as)S
+2183(this)S
+2290(script)S
+2444(is)S
+2504(also)S
+2621(written)S
+2812(by)S
+2892(the)S
+2986(instructor.)S
+1825 V
+2094(A)S
+2159(separate)S
+2379(log)S
+2478(\256le)S
+2576(is)S
+2637(maintained)S
+2927(for)S
+3018(each)S
+3150(stu-)S
+1756 V
+1944(dent,)S
+2088(and)S
+2200(the)S
+2298(result)S
+2456(of)S
+2530(each)S
+2665(run)S
+2769(of)S
+8/Times-Bold F
+2839(TRY)S
+10/Times-Roman F
+2965(is)S
+3029(recorded)S
+1687 V
+1944(here.)S
+2105(If)S
+2167(the)S
+2263(student)S
+2459(gives)S
+2608(the)S
+10/Times-Bold F
+2704(\261l)S
+10/Times-Roman F
+2773(\(the)S
+2889(letter)S
+10/Times-Italic F
+3035(el)S
+10/Times-Roman F
+3079(,)S
+3115(not)S
+3213(a)S
+1618 V
+1944(one\))S
+2088(option)S
+2279(to)S
+8/Times-Bold F
+2359(TRY)S
+10/Times-Roman F
+2461(,)S
+2513(a)S
+2577(shell)S
+2728(script)S
+2899(is)S
+2976(run)S
+3093(which)S
+1549 V
+1944(prints)S
+2106(information)S
+2416(from)S
+2558(his)S
+2653(log)S
+2755(\256le.)S
+2891(The)S
+3009(instructor)S
+1480 V
+1944(writes)S
+2118(this)S
+2232(script,)S
+2408(and)S
+2522(can)S
+2633(choose)S
+2827(to)S
+2900(give)S
+3030(as)S
+3106(much)S
+1411 V
+1944(or)S
+2014(as)S
+2084(little)S
+2216(information)S
+2521(as)S
+2591(is)S
+2651(appropriate.)S
+1318 V
+2094(With)S
+2245(two)S
+2365(exceptions,)S
+2668(all)S
+2758(of)S
+2837(the)S
+2940(shell)S
+3083(scripts)S
+1249 V
+1944(provided)S
+2194(by)S
+2290(the)S
+2399(instructor)S
+2665(are)S
+2774(executed)S
+3024(with)S
+3166(the)S
+1180 V
+1944(instructor's)S
+2254(user-id.)S
+2492(This)S
+2634(makes)S
+2823(it)S
+2892(easy)S
+3034(to)S
+3116(write)S
+1111 V
+1944(scripts)S
+2135(that)S
+2260(access)S
+2448(\256les)S
+2582(in)S
+2662(the)S
+2769(project)S
+2970(directories.)S
+1042 V
+1944(The)S
+10/Times-Bold F
+2065(build_safe)S
+10/Times-Roman F
+2355(and)S
+10/Times-Bold F
+2469(run_safe)S
+10/Times-Roman F
+2719(scripts,)S
+2918(however,)S
+3166(are)S
+973 V
+1944(executed)S
+2187(with)S
+2322(a)S
+2377(nonexistent)S
+2683(user-id.)S
+2912(These)S
+3083(scripts)S
+904 V
+1944(are)S
+2039(used)S
+2170(when)S
+2320(commands)S
+2601(given)S
+2755(by)S
+2835(the)S
+2929(student)S
+3123(must)S
+835 V
+1944(be)S
+2040(executed)S
+2294(\(e.g.)S
+2440(when)S
+2609(using)S
+2777(a)S
+2842(student-supplied)S
+766 V
+1944(make\256le\).)S
+2253(The)S
+2393(nonexistent)S
+2717(user-id)S
+2930(protects)S
+3166(the)S
+697 V
+1944(instructor)S
+2208(from)S
+2358(mischief)S
+2599(that)S
+2722(might)S
+2895(be)S
+2984(caused)S
+3180(by)S
+628 V
+1944(running)S
+2156(these)S
+2305(commands)S
+2591(with)S
+2723(the)S
+2822(instructor's)S
+3120(user-)S
+559 V
+1944(id.)S
+11/Times-Bold F
+259 V
+1741(Page)S
+1898(1)S
+E
+%%Page: 2 4
+B
+11/Times-Bold F
+4429 V
+432(03/13/0)S
+11/Times-Italic F
+1627(The)S
+1748(Try)S
+1862(System)S
+11/Times-Bold F
+2882(Version)S
+3124(1.11)S
+4222 V
+432(2.1.)S
+576(.tryrc)S
+10/Times-Roman F
+4129 V
+582(The)S
+10/Times-Bold F
+720(.tryrc)S
+10/Times-Roman F
+910(\256le)S
+1031(contains)S
+1276(basic)S
+1443(information)S
+4060 V
+432(about)S
+593(projects.)S
+845(It)S
+908(resides)S
+1101(in)S
+1174(the)S
+1274(home)S
+1434(directory)S
+1678(of)S
+3991 V
+432(the)S
+527(account)S
+736(in)S
+804(which)S
+972(student)S
+1167(projects)S
+1379(will)S
+1494(be)S
+1572(tested.)S
+3922 V
+432(An)S
+531(instructor's)S
+830(grader)S
+1009(account)S
+1222(is)S
+1287(the)S
+1386(recommended)S
+3853 V
+432(choice,)S
+630(although)S
+866(an)S
+948(instructor's)S
+1247(personal)S
+1476(account)S
+1688(is)S
+3784 V
+432(also)S
+549(acceptable.)S
+3691 V
+582(The)S
+722(\256le)S
+845(contains)S
+1092(an)S
+1195(arbitrary)S
+1449(number)S
+1678(of)S
+3622 V
+432(entries,)S
+643(one)S
+765(per)S
+877(line.)S
+1038(Blank)S
+1217(lines)S
+1366(and)S
+1488(lines)S
+1637(that)S
+3553 V
+432(start)S
+558(with)S
+687(a)S
+736(pound)S
+908(sign)S
+1030(\(#\))S
+1122(are)S
+1218(ignored,)S
+1438(and)S
+1546(may)S
+1671(be)S
+3484 V
+432(used)S
+571(to)S
+647(put)S
+753(comments)S
+1030(in)S
+1105(the)S
+1207(\256le.)S
+1347(Each)S
+1496(entry)S
+1648(has)S
+3415 V
+432(the)S
+526(following)S
+780(format:)S
+10/Times-Italic F
+3322 V
+475(project-code)S
+800(try-dir)S
+977(project-dir)S
+1258(options)S
+10/Times-Roman F
+3229 V
+432(The)S
+560(\256elds)S
+724(are)S
+831(separated)S
+1092(by)S
+1185(white)S
+1352(space,)S
+1534(and)S
+1654(the)S
+3160 V
+432(third)S
+578(and)S
+697(fourth)S
+876(\256elds)S
+1038(are)S
+1144(optional.)S
+1409(Long)S
+1567(entries)S
+3091 V
+432(can)S
+550(be)S
+641(entered)S
+852(on)S
+945(multiple)S
+1180(lines)S
+1327(by)S
+1420(ending)S
+1617(each)S
+3022 V
+432(line)S
+565(except)S
+764(the)S
+879(last)S
+1004(with)S
+1152(a)S
+1220(backslash.)S
+1530(Leading)S
+2953 V
+432(white)S
+586(space)S
+740(on)S
+820(the)S
+914(continued)S
+1172(lines)S
+1306(is)S
+1366(skipped.)S
+2860 V
+582(The)S
+706(\256rst)S
+828(\256eld)S
+964(speci\256es)S
+1200(the)S
+10/Times-Italic F
+1303(project-code)S
+10/Times-Roman F
+1637(that)S
+2791 V
+432(the)S
+540(students)S
+770(will)S
+897(use)S
+1010(in)S
+1090(the)S
+8/Times-Bold F
+1193(TRY)S
+10/Times-Roman F
+1328(command.)S
+1634(The)S
+2722 V
+432(second)S
+632(\256eld)S
+772(indicates)S
+1020(the)S
+1127(directory)S
+1378(where)S
+8/Times-Bold F
+1554(TRY)S
+10/Times-Roman F
+1688(is)S
+2653 V
+432(based)S
+614(for)S
+729(this)S
+861(project)S
+1074(\(see)S
+10/Times-Italic F
+1216(The)S
+1351(Try)S
+1479(Directory)S
+10/Times-Roman F
+1713(,)S
+2584 V
+432(below\).)S
+661(The)S
+782(third)S
+923(\(if)S
+1007(present\))S
+1227(speci\256es)S
+1460(the)S
+1560(project)S
+2515 V
+432(directory)S
+673(\(within)S
+870(the)S
+967(try)S
+1057(directory\))S
+1318(that)S
+1431(contains)S
+1654(the)S
+2446 V
+432(scripts)S
+616(and)S
+730(\256les)S
+857(needed)S
+1054(for)S
+1150(testing)S
+1337(the)S
+1437(project)S
+1631(\(see)S
+10/Times-Italic F
+2377 V
+432(The)S
+554(Project)S
+764(Directory)S
+10/Times-Roman F
+998(,)S
+1045(below\).)S
+1279(This)S
+1417(is)S
+1488(a)S
+1546(relative)S
+2308 V
+432(pathname)S
+692(that)S
+808(is)S
+873(interpreted)S
+1160(from)S
+1302(the)S
+1401(try)S
+1493(directory;)S
+2239 V
+432(the)S
+543(pathname)S
+815(may)S
+955(include)S
+1169(subdirectories.)S
+1578(If)S
+1654(the)S
+2170 V
+432(third)S
+576(\256eld)S
+713(is)S
+783(absent,)S
+981(the)S
+1084(project)S
+1281(directory)S
+1528(name)S
+1688(is)S
+2101 V
+432(assumed)S
+659(to)S
+726(be)S
+803(the)S
+897(same)S
+1041(as)S
+1111(the)S
+10/Times-Italic F
+1205(project-code)S
+10/Times-Roman F
+1510(.)S
+2008 V
+582(The)S
+701(fourth)S
+872(\256eld,)S
+1018(if)S
+1079(any,)S
+1205(speci\256es)S
+1436(options)S
+1637(that)S
+1939 V
+432(apply)S
+589(to)S
+659(this)S
+769(project.)S
+994(In)S
+1066(order)S
+1215(to)S
+1284(give)S
+1410(options)S
+1609(for)S
+1701(a)S
+1870 V
+432(project,)S
+661(a)S
+734(project)S
+947(directory)S
+1210(must)S
+1372(be)S
+1474(given.)S
+1688(If)S
+1801 V
+432(several)S
+640(options)S
+854(are)S
+965(desired,)S
+1191(they)S
+1332(are)S
+1443(given)S
+1614(as)S
+1701(a)S
+1732 V
+432(comma-separated)S
+897(list.)S
+1045(The)S
+1178(list)S
+1291(may)S
+1434(not)S
+1550(contain)S
+1663 V
+432(unquoted)S
+676(white)S
+830(space.)S
+11/Times-Bold F
+1522 V
+432(2.1.1.)S
+626(.tryrc)S
+807(Options)S
+10/Times-Roman F
+1429 V
+582(The)S
+705(currently-implemented)S
+1288(options)S
+1494(are)S
+1597(listed)S
+1360 V
+432(below.)S
+10/Times-Bold F
+1267 V
+432(off)S
+10/Times-Roman F
+602(Submissions)S
+933(are)S
+1035(no)S
+1123(longer)S
+1305(accepted)S
+1544(for)S
+1641(this)S
+1198 V
+582(project.)S
+806(This)S
+934(is)S
+995(useful)S
+1162(to)S
+1229(prevent)S
+1430(late)S
+1538(submis-)S
+1129 V
+582(sions)S
+745(while)S
+919(still)S
+1050(allowing)S
+1301(students)S
+1538(to)S
+1624(read)S
+1060 V
+582(news,)S
+751(do)S
+842(queries,)S
+1062(or)S
+1143(examine)S
+1379(their)S
+1521(log)S
+1628(\256les)S
+991 V
+582(for)S
+672(a)S
+719(project.)S
+10/Times-Bold F
+898 V
+432(dummy)S
+10/Times-Roman F
+829 V
+582(This)S
+725(project-code)S
+1063(is)S
+1139(a)S
+1202(dummy)S
+1422(entry)S
+1581(which)S
+760 V
+582(does)S
+718(not)S
+821(correspond)S
+1114(to)S
+1186(any)S
+1298(project.)S
+1526(Queries,)S
+691 V
+582(news)S
+736(and)S
+854(log)S
+962(\256le)S
+1070(dumps)S
+1261(are)S
+1365(allowed.)S
+1621(This)S
+622 V
+582(might)S
+747(be)S
+828(used)S
+961(as)S
+1034(a)S
+1084(way)S
+1207(to)S
+1277(allow)S
+1434(a)S
+1484(student)S
+1681(to)S
+553 V
+582(dump)S
+739(his)S
+829(entire)S
+987(log)S
+1084(\256le.)S
+10/Times-Bold F
+4222 V
+1944(save)S
+10/Times-Roman F
+2094(Do)S
+2196(not)S
+2302(clean)S
+2458(out)S
+2563(the)S
+2665(scratch)S
+2864(directory)S
+3110(when)S
+8/Times-Bold F
+4153 V
+2094(TRY)S
+10/Times-Roman F
+2220(\256nishes.)S
+2461(The)S
+2578(\256les)S
+2701(are)S
+2798(left)S
+2902(in)S
+2972(the)S
+3069(scratch)S
+4084 V
+2094(directory,)S
+2355(possibly)S
+2583(for)S
+2681(future)S
+2853(examination)S
+3180(by)S
+4015 V
+2094(the)S
+2189(instructor)S
+2441(\(e.g.)S
+2569(when)S
+2720(debugging)S
+2995(your)S
+3126(shell)S
+3946 V
+2094(scripts\).)S
+2338(Should)S
+8/Times-Bold F
+2536(TRY)S
+10/Times-Roman F
+2670(be)S
+2759(run)S
+2870(by)S
+2961(the)S
+3066(student)S
+3877 V
+2094(again,)S
+2274(the)S
+2382(scratch)S
+2587(directory)S
+2838(will)S
+2965(be)S
+3055(cleaned)S
+3808 V
+2094(out)S
+2193(at)S
+2259(the)S
+2354(beginning)S
+2616(of)S
+2687(that)S
+2799(run)S
+2900(and)S
+3008(the)S
+3103(saved)S
+3739 V
+2094(\256les)S
+2224(will)S
+2348(be)S
+2434(lost.)S
+2585(The)S
+10/Times-Bold F
+2708(save)S
+10/Times-Roman F
+2847(option)S
+3030(is)S
+3099(there-)S
+3670 V
+2094(fore)S
+2217(reliable)S
+2425(only)S
+2557(when)S
+2712(used)S
+2847(on)S
+2932(the)S
+3031(last)S
+3140(pro-)S
+3601 V
+2094(ject)S
+2203(to)S
+2271(be)S
+2349(done)S
+2486(for)S
+2576(some)S
+2723(time)S
+2851(in)S
+2918(the)S
+3012(try)S
+3099(direc-)S
+3532 V
+2094(tory;)S
+2235(in)S
+2309(this)S
+2422(event,)S
+2594(the)S
+10/Times-Bold F
+2694(cleanup)S
+10/Times-Roman F
+2920(script)S
+3080(should)S
+3463 V
+2094(be)S
+2178(used)S
+2315(to)S
+2389(delete)S
+2561(any)S
+2675(unneeded)S
+2933(\256les)S
+3060(to)S
+3133(con-)S
+3394 V
+2094(serve)S
+2241(disk)S
+2361(space.)S
+10/Times-Bold F
+3301 V
+1944(ignore)S
+10/Times-Roman F
+3232 V
+2094(Signals)S
+2297(will)S
+2417(be)S
+2500(ignored)S
+2710(during)S
+2893(runs)S
+3021(with)S
+3153(this)S
+3163 V
+2094(project.)S
+2317(See)S
+2424(also)S
+10/Times-Italic F
+2541(Signals)S
+10/Times-Roman F
+2718(,)S
+2753(below.)S
+10/Times-Bold F
+3070 V
+1944(post)S
+10/Times-Roman F
+2094(Signals)S
+2301(will)S
+2425(be)S
+2512(posted)S
+2699(during)S
+2885(runs)S
+3017(with)S
+3153(this)S
+3001 V
+2094(project.)S
+2317(See)S
+2424(also)S
+10/Times-Italic F
+2541(Signals)S
+10/Times-Roman F
+2718(,)S
+2753(below.)S
+10/Times-Bold F
+2908 V
+1944(initstatus)S
+10/Times-Roman F
+2839 V
+2094(The)S
+2209(exit)S
+2321(status)S
+2479(of)S
+2550(the)S
+10/Times-Bold F
+2645(init)S
+10/Times-Roman F
+2753(script)S
+2908(is)S
+2968(checked;)S
+3203(if)S
+2770 V
+2094(non-zero,)S
+8/Times-Bold F
+2339(TRY)S
+10/Times-Roman F
+2461(logs)S
+2581(the)S
+2675(failure)S
+2853(and)S
+2960(exits.)S
+10/Times-Bold F
+2677 V
+1944(cleanupstatus)S
+10/Times-Roman F
+2608 V
+2094(The)S
+2235(exit)S
+2373(status)S
+2557(of)S
+2654(the)S
+10/Times-Bold F
+2774(cleanup)S
+10/Times-Roman F
+3020(script)S
+3200(is)S
+2539 V
+2094(checked;)S
+2331(if)S
+2389(non-zero,)S
+8/Times-Bold F
+2635(TRY)S
+10/Times-Roman F
+2758(logs)S
+2879(the)S
+2974(failure)S
+3153(and)S
+2470 V
+2094(exits.)S
+10/Times-Bold F
+2377 V
+1944(yyyy)S
+10/Times-Roman F
+2094(Changes)S
+2326(the)S
+2425(date)S
+2550(format)S
+2735(in)S
+2806(log)S
+2907(\256le)S
+3008(entries)S
+3193(to)S
+2308 V
+2094(yyyy/mm/dd)S
+2422(\(the)S
+2536(default)S
+2724(is)S
+2784(yy/mm/dd\).)S
+10/Times-Italic F
+2215 V
+1944(NAME=value)S
+10/Times-Roman F
+2146 V
+2094(Sets)S
+2229(the)S
+2338(environment)S
+2677(variable)S
+9/Times-Italic F
+2904(NAME)S
+10/Times-Roman F
+3085(to)S
+3166(the)S
+2077 V
+2094(given)S
+2273(value.)S
+2484(If)S
+2568(the)S
+2686(value)S
+2861(contains)S
+3106(white)S
+2008 V
+2094(space)S
+2252(or)S
+2326(commas,)S
+2566(the)S
+2664(entire)S
+2826(value)S
+2981(\(not)S
+3102(just)S
+3213(a)S
+1939 V
+2094(portion)S
+2292(of)S
+2366(it\))S
+2444(must)S
+2585(be)S
+2666(quoted)S
+2854(with)S
+2985(either)S
+3147(\302)S
+3190(or)S
+1870 V
+2094(".)S
+2186(Environment)S
+2534(variables)S
+2785(can)S
+2901(be)S
+2990(helpful)S
+3193(in)S
+1801 V
+2094(getting)S
+2295(one)S
+2415(set)S
+2515(of)S
+2598(shell)S
+2745(scripts)S
+2935(to)S
+3015(work)S
+3170(for)S
+1732 V
+2094(several)S
+2301(different)S
+2544(projects,)S
+2785(with)S
+2927(the)S
+3036(environ-)S
+1663 V
+2094(ment)S
+2239(variables)S
+2481(triggering)S
+2743(different)S
+2975(actions)S
+3170(for)S
+1594 V
+2094(different)S
+2362(projects.)S
+2648(Environment)S
+3022(variables)S
+1525 V
+2094(given)S
+2249(values)S
+2424(in)S
+2492(this)S
+2600(way)S
+2720(take)S
+2841(precedence)S
+3133(over)S
+1456 V
+2094(variables)S
+2347(set)S
+2448(by)S
+8/Times-Bold F
+2538(TRY)S
+10/Times-Roman F
+2674(\(see)S
+10/Times-Italic F
+2805(The)S
+2929(Environment)S
+10/Times-Roman F
+1387 V
+2094(below)S
+2261(for)S
+2351(a)S
+2398(list)S
+2492(of)S
+2562(these\).)S
+1294 V
+1944(The)S
+2064(following)S
+2324(four)S
+2450(options)S
+2652(control)S
+2848(the)S
+2947(locations)S
+3190(of)S
+1225 V
+1944(various)S
+2144(things)S
+2314(in)S
+2384(the)S
+2481(try)S
+2571(directory;)S
+2829(it)S
+2886(may)S
+3013(be)S
+3093(useful)S
+1156 V
+1944(to)S
+2033(return)S
+2219(to)S
+2308(this)S
+2437(section)S
+2650(after)S
+2803(reading)S
+10/Times-Italic F
+3026(The)S
+3157(Try)S
+1087 V
+1944(Directory)S
+10/Times-Roman F
+2178(,)S
+2213(below.)S
+10/Times-Bold F
+994 V
+1944(log_dir=)S
+10/Times-Italic F
+2162(dirname)S
+10/Times-Roman F
+925 V
+2094(This)S
+2236(speci\256es)S
+2478(a)S
+2540(directory)S
+2793(in)S
+2874(which)S
+3055(the)S
+3163(log)S
+856 V
+2094(\256les)S
+2219(should)S
+2403(be)S
+2484(put.)S
+2620(If)S
+2684(a)S
+2735(relative)S
+2941(pathname)S
+3200(is)S
+787 V
+2094(given,)S
+2285(it)S
+2361(is)S
+2443(interpreted)S
+2747(relative)S
+2970(to)S
+3058(the)S
+3173(try)S
+718 V
+2094(directory.)S
+2389(The)S
+2525(default)S
+2735(value)S
+2907(is)S
+2988(\252.\272.)S
+3133(This)S
+649 V
+2094(value)S
+2262(is)S
+2339(given)S
+2510(in)S
+2594(the)S
+2704(environment)S
+3045(variable)S
+9/Times-Bold F
+580 V
+2094(LOG_DIR)S
+10/Times-Roman F
+2340(.)S
+11/Times-Bold F
+259 V
+1741(Page)S
+1898(2)S
+E
+%%Page: 3 5
+B
+11/Times-Bold F
+4429 V
+432(03/13/0)S
+11/Times-Italic F
+1627(The)S
+1748(Try)S
+1862(System)S
+11/Times-Bold F
+2882(Version)S
+3124(1.11)S
+10/Times-Bold F
+4222 V
+432(script_dir=)S
+10/Times-Italic F
+720(dirname)S
+10/Times-Roman F
+4153 V
+582(This)S
+720(speci\256es)S
+958(a)S
+1015(directory)S
+1263(in)S
+1340(which)S
+1517(common)S
+4084 V
+582(scripts)S
+768(will)S
+891(reside.)S
+1099(The)S
+1221(default)S
+1417(value)S
+1576(is)S
+1644(\252.\272.)S
+4015 V
+582(A)S
+651(relative)S
+859(pathname)S
+1120(is)S
+1186(interpreted)S
+1474(relative)S
+1681(to)S
+3946 V
+582(the)S
+684(try)S
+779(directory.)S
+1060(This)S
+1194(value)S
+1352(is)S
+1419(given)S
+1580(in)S
+1654(the)S
+3877 V
+582(environment)S
+948(variable)S
+9/Times-Bold F
+1202(SCRIPT_DIR)S
+10/Times-Roman F
+1526(.)S
+1621(\(See)S
+3808 V
+582(note)S
+706(3)S
+756(of)S
+826(Appendix)S
+1083(1.\))S
+10/Times-Bold F
+3715 V
+432(wd_dir=)S
+10/Times-Italic F
+649(dirname)S
+10/Times-Roman F
+3646 V
+582(This)S
+711(speci\256es)S
+939(a)S
+987(directory)S
+1226(in)S
+1294(which)S
+1462(the)S
+1557(scratch)S
+3577 V
+582(directories)S
+873(should)S
+1069(be)S
+1162(put.)S
+1309(A)S
+1387(relative)S
+1604(path-)S
+3508 V
+582(name)S
+739(for)S
+834(this)S
+946(is)S
+1011(also)S
+1133(interpreted)S
+1420(from)S
+1562(the)S
+1661(try)S
+3439 V
+582(directory.)S
+877(The)S
+1013(default)S
+1223(value)S
+1395(is)S
+1476(\252.\272.)S
+1621(This)S
+3370 V
+582(value)S
+750(is)S
+827(given)S
+998(in)S
+1082(the)S
+1192(environment)S
+1533(variable)S
+9/Times-Bold F
+3301 V
+582(WD_DIR)S
+10/Times-Roman F
+801(.)S
+10/Times-Bold F
+3208 V
+432(wd_backpath=)S
+10/Times-Italic F
+811(dirname)S
+10/Times-Roman F
+3139 V
+582(This)S
+728(speci\256es)S
+974(the)S
+1087(pathname)S
+1360(needed)S
+1569(to)S
+1654(get)S
+3070 V
+582(back)S
+743(to)S
+837(the)S
+958(try)S
+1072(directory)S
+1337(from)S
+1501(within)S
+1701(a)S
+3001 V
+582(scratch)S
+783(directory.)S
+1066(The)S
+1190(default)S
+1388(value)S
+1549(is)S
+1619(\252.)S
+1671(.\272.)S
+2932 V
+582(This)S
+717(value)S
+876(is)S
+944(given)S
+1106(in)S
+1181(the)S
+1282(environment)S
+1614(vari-)S
+2863 V
+582(able)S
+9/Times-Bold F
+753(WD_BACKPATH)S
+10/Times-Roman F
+1179(.)S
+1285(This)S
+1463(option)S
+1688(is)S
+2794 V
+582(required)S
+806(whenever)S
+1063(the)S
+10/Times-Bold F
+1160(wd_dir)S
+10/Times-Roman F
+1365(option)S
+1541(is)S
+1603(used.)S
+2725 V
+582(As)S
+689(an)S
+786(example,)S
+1046(with)S
+10/Courier F
+1209(wd_dir=Scratch)S
+10/Times-Roman F
+1713(,)S
+2656 V
+582(the)S
+749(appropriate)S
+1117(backpath)S
+1428(would)S
+1671(be)S
+10/Courier F
+2587 V
+582(wd_backpath=../..)S
+10/Times-Bold F
+2494 V
+582(T)S
+8/Times-Bold F
+622(RY)S
+10/Times-Roman F
+718(deletes)S
+912(all)S
+999(environment)S
+1330(variables)S
+1574(begin-)S
+2425 V
+432(ning)S
+572(with)S
+712(\252TRY_\272.)S
+984(This)S
+1123(allows)S
+1312(the)S
+1418(instructor)S
+1681(to)S
+2356 V
+432(use)S
+533(variables)S
+772(with)S
+900(this)S
+1007(pre\256x)S
+1167(in)S
+1234(scripts)S
+1411(without)S
+1615(wor-)S
+2287 V
+432(rying)S
+582(about)S
+739(whether)S
+956(the)S
+1053(student's)S
+1293(environment)S
+1621(con-)S
+2218 V
+432(tains)S
+566(them)S
+707(already.)S
+11/Times-Bold F
+2077 V
+432(2.1.2.)S
+626(Default)S
+857(Options)S
+10/Times-Roman F
+1984 V
+582(If)S
+644(the)S
+10/Times-Bold F
+740(.tryrc)S
+10/Times-Roman F
+908(\256le)S
+1007(contains)S
+1230(an)S
+1309(entry)S
+1454(whose)S
+1628(pro-)S
+1915 V
+432(ject)S
+545(name)S
+701(is)S
+765(identical)S
+998(to)S
+1069(the)S
+1167(try)S
+1258(directory)S
+1500(given)S
+1658(for)S
+1846 V
+432(a)S
+501(group)S
+683(of)S
+775(projects,)S
+1022(the)S
+1137(options)S
+1355(given)S
+1530(for)S
+1641(this)S
+1777 V
+432(dummy)S
+645(entry)S
+798(will)S
+921(apply)S
+1084(to)S
+1159(all)S
+1248(projects)S
+1467(in)S
+1542(that)S
+1661(try)S
+1708 V
+432(directory.)S
+706(Note)S
+843(that)S
+954(the)S
+1048(dummy)S
+1252(entry)S
+1396(must)S
+1533(have)S
+1667(all)S
+10/Courier F
+1534 V
+475(try/309)S
+763(/)S
+1051(/)S
+1591(log_dir=Logs,wd_dir=Wds,wd_backpath=../..)S
+1465 V
+475(all)S
+763(try/309)S
+1051(.)S
+1591(dummy)S
+1396 V
+475(1-1)S
+763(try/309)S
+1051(week1/hello)S
+1591(off)S
+1327 V
+475(1-2)S
+763(try/309)S
+1051(week1/sep.comp)S
+1258 V
+475(1-3)S
+763(try/309)S
+1051(week1/uc.lc)S
+1591(no_log_dir)S
+1189 V
+475(2-1)S
+763(try/309)S
+1051(week2/copy_n)S
+1591(OPT=2)S
+1120 V
+475(2-2)S
+763(try/309)S
+1051(week2/storage)S
+982 V
+475(try/325)S
+763(/)S
+1051(/)S
+1591(save,ignore,script_dir=Scripts)S
+913 V
+475(325-1)S
+763(try/325)S
+1051(proj1)S
+1591(off)S
+844 V
+475(325-2)S
+763(try/325)S
+1051(proj2)S
+1591(no_save,post)S
+775 V
+475(325-3)S
+763(try/325)S
+1051(proj3)S
+1591(log_dir=/home/fac/kar/pub/not_a_good_place)S
+10/Times-Bold F
+637 V
+1725(Figure)S
+1916(1)S
+568 V
+1533(.tryrc)S
+1699(\256le)S
+1796(using)S
+1952(options)S
+432 532 M
+10/Times-Roman F
+-1104 L
+432 1636 M
+2808 l2
+3240 1636 M
+1104 L
+3240 532 M
+-2808 l2
+4222 V
+1944(of)S
+2016(its)S
+2095(\256elds)S
+2247(given;)S
+2420(any)S
+2529(values)S
+2705(may)S
+2831(be)S
+2910(given)S
+3065(as)S
+3136(they)S
+4153 V
+1944(are)S
+2054(ignored.)S
+2309(It)S
+2382(is)S
+2458(suggested)S
+2730(that)S
+2856(the)S
+2965(name)S
+10/Times-Bold F
+3131(/)S
+10/Times-Roman F
+3183(be)S
+4084 V
+1944(given)S
+2105(for)S
+2202(the)S
+2303(try)S
+2397(directory)S
+2642(and)S
+2755(project)S
+2949(directory)S
+3193(to)S
+4015 V
+1944(prevent)S
+2153(students)S
+2378(from)S
+2523(accidentally)S
+2844(using)S
+3002(this)S
+3116(entry)S
+3946 V
+1944(as)S
+2031(a)S
+2095(real)S
+2223(project.)S
+2463(Note)S
+2617(that)S
+2744(the)S
+10/Times-Bold F
+2854(dummy)S
+10/Times-Roman F
+3086(option)S
+3877 V
+1944(must)S
+2084(not)S
+2184(be)S
+2264(given,)S
+2436(or)S
+2509(it)S
+2566(will)S
+2683(apply)S
+2840(to)S
+2910(all)S
+2994(other)S
+3140(pro-)S
+3808 V
+1944(jects)S
+2075(in)S
+2142(the)S
+2236(same)S
+2380(try)S
+2467(directory.)S
+3715 V
+2094(If)S
+2162(an)S
+2247(option)S
+2429(is)S
+2497(preceded)S
+2743(by)S
+10/Times-Bold F
+2831(no_)S
+10/Times-Roman F
+2924(,)S
+2967(that)S
+3086(option)S
+3646 V
+1944(will)S
+2073(be)S
+2165(turned)S
+2354(off)S
+2459(for)S
+2564(a)S
+2626(project.)S
+2864(This)S
+3005(gives)S
+3166(the)S
+3577 V
+1944(instructor)S
+2200(a)S
+2252(way)S
+2377(to)S
+2449(turn)S
+2571(on)S
+2656(default)S
+2849(options)S
+3051(that)S
+3166(are)S
+3508 V
+1944(usually)S
+2141(used,)S
+2288(and)S
+2397(turn)S
+2516(them)S
+2659(off)S
+2751(for)S
+2843(speci\256c)S
+3049(projects)S
+3439 V
+1944(for)S
+2053(which)S
+2239(they)S
+2381(are)S
+2493(unwanted.)S
+2800(\(This)S
+2965(mechanism)S
+3370 V
+1944(cannot)S
+2135(be)S
+2222(used)S
+2362(to)S
+2439(turn)S
+2565(off)S
+2664(the)S
+2767(setting)S
+2957(of)S
+3036(environ-)S
+3301 V
+1944(ment)S
+2092(variables.\))S
+2372(Figure)S
+2556(1)S
+2613(shows)S
+2788(a)S
+10/Times-Bold F
+2841(.tryrc)S
+10/Times-Roman F
+3013(\256le)S
+3116(illus-)S
+3232 V
+1944(trating)S
+2122(the)S
+2216(use)S
+2316(of)S
+2386(options.)S
+11/Times-Bold F
+3091 V
+1944(2.2.)S
+2088(The)S
+2220(Try)S
+2348(Directory)S
+10/Times-Roman F
+2998 V
+2094(All)S
+2193(of)S
+2265(the)S
+2361(information)S
+2668(accessed)S
+2900(or)S
+2971(maintained)S
+2929 V
+1944(by)S
+8/Times-Bold F
+2027(TRY)S
+10/Times-Roman F
+2156(for)S
+2253(a)S
+2307(set)S
+2401(of)S
+2478(projects)S
+2696(is)S
+2763(kept)S
+2894(in)S
+2968(a)S
+3022(directory)S
+2860 V
+1944(called)S
+2109(the)S
+2203(\252try)S
+2317(directory.\272)S
+2597(This)S
+2724(includes:)S
+2767 V
+1944(a\))S
+2094(the)S
+2196(scratch)S
+2395(directories)S
+2677(\(one)S
+2811(for)S
+2908(each)S
+3046(student\))S
+2698 V
+2094(in)S
+2176(which)S
+2358(student)S
+2567(projects)S
+2793(are)S
+2902(actually)S
+3129(built)S
+2629 V
+2094(and)S
+2201(tested,)S
+2536 V
+1944(b\))S
+2094(the)S
+2196(log)S
+2301(\256les)S
+2429(\(one)S
+2563(for)S
+2660(each)S
+2798(student\))S
+3019(in)S
+3093(which)S
+2467 V
+2094(the)S
+2188(result)S
+2342(of)S
+2412(each)S
+2543(try)S
+2630(is)S
+2690(recorded,)S
+2374 V
+1944(c\))S
+2094(the)S
+2210(default)S
+2419(optional)S
+2658(scripts)S
+10/Times-Bold F
+2856(dump_log)S
+10/Times-Roman F
+3153(and)S
+10/Times-Bold F
+2305 V
+2094(explain)S
+10/Times-Roman F
+2281(,)S
+2316(and)S
+2212 V
+1944(d\))S
+2094(the)S
+2191(project)S
+2382(directories,)S
+2675(which)S
+2844(contain)S
+3044(the)S
+3140(\256les)S
+2143 V
+2094(needed)S
+2285(to)S
+2352(test)S
+2456(a)S
+2503(particular)S
+2755(project.)S
+2050 V
+1944(The)S
+2077(locations)S
+2334(of)S
+2422(the)S
+2534(scratch)S
+2743(directories,)S
+3051(the)S
+3163(log)S
+1981 V
+1944(\256les,)S
+2088(and)S
+2204(the)S
+2307(optional)S
+2534(scripts)S
+2720(may)S
+2853(be)S
+2938(modi\256ed)S
+3180(by)S
+1912 V
+1944(using)S
+2099(the)S
+2198(appropriate)S
+2498(options)S
+2700(in)S
+2772(the)S
+10/Times-Bold F
+2871(.tryrc)S
+10/Times-Roman F
+3042(\256le)S
+3143(\(see)S
+10/Times-Italic F
+1843 V
+1944(.tryrc)S
+2096(Options)S
+10/Times-Roman F
+2286(,)S
+2321(above\).)S
+1750 V
+2094(The)S
+2209(instructor)S
+2461(may)S
+2586(choose)S
+2774(to)S
+2842(put)S
+2940(each)S
+3072(project)S
+1681 V
+1944(in)S
+2033(a)S
+2102(separate)S
+2342(try)S
+2451(directory;)S
+2728(in)S
+2817(this)S
+2946(case,)S
+3106(every)S
+11/Times-Bold F
+259 V
+1741(Page)S
+1898(3)S
+E
+%%Page: 4 6
+B
+11/Times-Bold F
+4429 V
+432(03/13/0)S
+11/Times-Italic F
+1627(The)S
+1748(Try)S
+1862(System)S
+11/Times-Bold F
+2882(Version)S
+3124(1.11)S
+10/Times-Roman F
+4222 V
+432(student)S
+628(would)S
+800(have)S
+936(a)S
+985(separate)S
+1205(log)S
+1304(\256le)S
+1403(for)S
+1495(each)S
+1628(pro-)S
+4153 V
+432(ject.)S
+577(Or,)S
+677(many)S
+833(projects)S
+1046(can)S
+1151(share)S
+1299(one)S
+1407(try)S
+1495(directory,)S
+4084 V
+432(and)S
+562(each)S
+715(student's)S
+974(log)S
+1093(\256le)S
+1212(would)S
+1404(then)S
+1550(contain)S
+4015 V
+432(entries)S
+613(for)S
+703(all)S
+784(of)S
+854(the)S
+948(projects.)S
+3922 V
+582(It)S
+651(is)S
+723(recommended)S
+1097(that)S
+1219(the)S
+1324(try)S
+1422(directory)S
+1671(be)S
+3853 V
+432(created)S
+631(in)S
+702(a)S
+753(directory)S
+994(whose)S
+1170(mode)S
+1327(disallows)S
+1577(public)S
+3784 V
+432(\(and)S
+559(possibly)S
+779(group\))S
+959(access.)S
+1168(The)S
+1282(try)S
+1369(directory)S
+1607(itself)S
+3715 V
+432(must)S
+591(have)S
+746(at)S
+831(least)S
+983(mode)S
+1158(111)S
+1289(\(see)S
+10/Times-Italic F
+1427(The)S
+1558(\252Safe\272)S
+3646 V
+432(Scripts)S
+10/Times-Roman F
+599(,)S
+644(below\);)S
+858(the)S
+961(restrictive)S
+1232(mode)S
+1395(of)S
+1474(the)S
+1577(parent)S
+3577 V
+432(directory)S
+676(would)S
+852(then)S
+982(prevent)S
+1189(students)S
+1412(from)S
+1554(access-)S
+3508 V
+432(ing)S
+529(any)S
+636(\256les)S
+756(in)S
+823(the)S
+917(try)S
+1004(directory.)S
+11/Times-Bold F
+3367 V
+432(2.2.1.)S
+626(Project)S
+852(Directories)S
+10/Times-Roman F
+3274 V
+582(All)S
+680(of)S
+751(the)S
+846(\256les)S
+967(and)S
+1075(shell)S
+1209(scripts)S
+1386(needed)S
+1577(to)S
+1644(test)S
+3205 V
+432(a)S
+497(project)S
+703(are)S
+814(placed)S
+1009(in)S
+1093(one)S
+1217(directory)S
+1472(called)S
+1654(the)S
+3136 V
+432(\252project)S
+651(directory.\272)S
+955(This)S
+1086(must)S
+1227(minimally)S
+1500(include)S
+1701(a)S
+3067 V
+432(shell)S
+569(script)S
+726(to)S
+796(build)S
+943(the)S
+1040(project)S
+1231(and)S
+1340(a)S
+1389(shell)S
+1525(script)S
+1681(to)S
+2998 V
+432(run)S
+532(the)S
+626(project.)S
+849(Data)S
+983(\256les,)S
+1118(output)S
+1292(\256les,)S
+1427(other)S
+1571(scripts)S
+2929 V
+432(and)S
+543(any)S
+654(other)S
+802(\256les)S
+926(needed)S
+1121(for)S
+1215(this)S
+1326(project)S
+1517(also)S
+1637(live)S
+2860 V
+432(here.)S
+11/Times-Bold F
+2719 V
+432(2.2.2.)S
+626(Scratch)S
+864(Directories)S
+10/Times-Roman F
+2626 V
+582(When)S
+751(a)S
+802(student)S
+1000(runs)S
+8/Times-Bold F
+1123(TRY)S
+10/Times-Roman F
+1225(,)S
+1264(a)S
+1315(scratch)S
+1510(directory)S
+2557 V
+432(called)S
+624(\252wd)S
+734(.)S
+10/Times-Italic F
+759(account)S
+10/Times-Roman F
+950(\272)S
+1023(is)S
+1109(made)S
+1286(for)S
+1402(that)S
+1539(student,)S
+2488 V
+432(where)S
+10/Times-Italic F
+609(account)S
+10/Times-Roman F
+830(is)S
+900(the)S
+1004(account)S
+1222(name)S
+1382(the)S
+1485(student)S
+1688(is)S
+2419 V
+432(using.)S
+622(By)S
+717(default,)S
+925(the)S
+1024(scratch)S
+1220(directories)S
+1499(are)S
+1597(made)S
+2350 V
+432(in)S
+513(the)S
+620(try)S
+720(directory;)S
+988(if)S
+1058(a)S
+10/Times-Bold F
+1118(wd_dir)S
+10/Times-Roman F
+1334(is)S
+1407(given)S
+1574(in)S
+1654(the)S
+10/Times-Bold F
+2281 V
+432(.tryrc)S
+10/Times-Roman F
+608(\256le,)S
+730(then)S
+863(the)S
+966(scratch)S
+1166(directories)S
+1450(are)S
+1553(created)S
+2212 V
+432(in)S
+522(that)S
+655(directory.)S
+950(Each)S
+1113(student)S
+1329(has)S
+1451(a)S
+1520(different)S
+2143 V
+432(scratch)S
+639(directory.)S
+928(In)S
+1014(this)S
+1137(way,)S
+1288(different)S
+1531(students)S
+2074 V
+432(can)S
+556(be)S
+653(running)S
+8/Times-Bold F
+875(TRY)S
+10/Times-Roman F
+1016(at)S
+1099(the)S
+1212(same)S
+1375(time)S
+1522(with)S
+1668(no)S
+2005 V
+432(con\257ict.)S
+1912 V
+582(Because)S
+804(running)S
+1012(more)S
+1157(than)S
+1282(one)S
+8/Times-Bold F
+1386(TRY)S
+10/Times-Roman F
+1509(at)S
+1573(a)S
+1620(time)S
+1843 V
+432(in)S
+502(the)S
+599(same)S
+746(scratch)S
+940(directory)S
+1181(can)S
+1288(lead)S
+1411(to)S
+1480(unpredict-)S
+1774 V
+432(able)S
+557(results,)S
+8/Times-Bold F
+749(TRY)S
+10/Times-Roman F
+874(attempts)S
+1102(to)S
+1172(determine)S
+1437(whether)S
+1654(the)S
+1705 V
+432(scratch)S
+624(directory)S
+863(is)S
+924(in)S
+991(use.)S
+1126(This)S
+1253(is)S
+1313(done)S
+1450(with)S
+1577(a)S
+1624(lock)S
+1636 V
+432(\256le)S
+544(called)S
+724(\252.tryid\272)S
+942(in)S
+1024(the)S
+1133(scratch)S
+1339(directory.)S
+1627(If)S
+1701(a)S
+1567 V
+432(con\257ict)S
+638(is)S
+703(found,)S
+883(the)S
+982(student)S
+1181(is)S
+1246(told)S
+1364(to)S
+1435(interrupt)S
+1667(all)S
+1498 V
+432(the)S
+8/Times-Bold F
+528(TRY)S
+10/Times-Roman F
+630('s)S
+699(and)S
+812(start)S
+942(over,)S
+1090(though)S
+1282(they)S
+1411(can)S
+1520(continue)S
+1429 V
+432(executing)S
+687(if)S
+744(they)S
+868(so)S
+941(choose.)S
+1336 V
+582(In)S
+653(order)S
+801(to)S
+869(guarantee)S
+1125(a)S
+1173(known)S
+1356(environment)S
+1681(in)S
+1267 V
+432(which)S
+612(to)S
+692(build)S
+849(and)S
+969(run)S
+1082(the)S
+1189(student's)S
+1439(project,)S
+1654(the)S
+1198 V
+432(scratch)S
+626(directory)S
+867(is)S
+930(cleaned)S
+1138(out)S
+1238(before)S
+1415(the)S
+1511(student's)S
+1129 V
+432(\256les)S
+553(are)S
+647(copied.)S
+863(It)S
+920(is)S
+980(also)S
+1097(cleaned)S
+1302(out)S
+1399(after)S
+8/Times-Bold F
+1526(TRY)S
+10/Times-Roman F
+1648(has)S
+1060 V
+432(\256nished)S
+645(unless)S
+818(the)S
+10/Times-Bold F
+914(save)S
+10/Times-Roman F
+1046(option)S
+1222(is)S
+1284(given)S
+1440(for)S
+1532(the)S
+1628(pro-)S
+991 V
+432(ject.)S
+603(Note)S
+768(that)S
+907(subdirectories)S
+1293(and)S
+1428(\256les)S
+1575(whose)S
+922 V
+432(names)S
+610(begin)S
+767(with)S
+897(a)S
+947(dot)S
+1047(are)S
+1144(also)S
+1264(deleted.)S
+1497(Symbolic)S
+853 V
+432(links)S
+569(are)S
+663(deleted,)S
+873(but)S
+970(their)S
+1101(targets)S
+1282(are)S
+1376(not.)S
+10/Times-Bold F
+760 V
+582(T)S
+8/Times-Bold F
+622(RY)S
+10/Times-Roman F
+729(creates)S
+934(a)S
+997(\256le)S
+1110(in)S
+1193(the)S
+1303(scratch)S
+1510(directory)S
+691 V
+432(called)S
+619(\252.account\272;)S
+935(this)S
+1064(\256le)S
+1183(contains)S
+1425(the)S
+1540(account)S
+622 V
+432(number)S
+642(of)S
+717(the)S
+816(student)S
+1015(using)S
+1170(the)S
+1269(directory)S
+1512(and)S
+1624(may)S
+553 V
+432(be)S
+511(accessed)S
+744(from)S
+883(the)S
+978(instructor's)S
+1273(shell)S
+1408(scripts.)S
+1621(This)S
+484 V
+432(may)S
+601(also)S
+763(be)S
+884(obtained)S
+1156(from)S
+1337(the)S
+9/Times-Bold F
+1473(STUDENT)S
+10/Times-Roman F
+4222 V
+1944(environment)S
+2269(variable.)S
+11/Times-Bold F
+4081 V
+1944(2.2.3.)S
+2138(The)S
+2270(Log)S
+2402(File)S
+10/Times-Roman F
+3988 V
+2094(A)S
+2161(log)S
+2261(\256le)S
+2361(called)S
+2529(\252log)S
+2643(.)S
+10/Times-Italic F
+2668(account)S
+10/Times-Roman F
+2859(\272)S
+2909(is)S
+2972(created)S
+3170(for)S
+3919 V
+1944(each)S
+2088(student,)S
+2309(where)S
+10/Times-Italic F
+2488(account)S
+10/Times-Roman F
+2711(is)S
+2783(the)S
+2889(account)S
+3109(name)S
+3850 V
+1944(that)S
+2063(the)S
+2165(student)S
+2367(is)S
+2435(using.)S
+2628(By)S
+2725(default,)S
+2935(the)S
+3036(log)S
+3140(\256les)S
+3781 V
+1944(are)S
+2043(made)S
+2199(in)S
+2271(the)S
+2370(try)S
+2462(directory;)S
+2722(if)S
+2783(a)S
+10/Times-Bold F
+2834(log_dir)S
+10/Times-Roman F
+3042(is)S
+3106(given)S
+3712 V
+1944(in)S
+2020(the)S
+10/Times-Bold F
+2123(.tryrc)S
+10/Times-Roman F
+2298(\256le,)S
+2419(then)S
+2552(the)S
+2655(log)S
+2760(\256les)S
+2888(are)S
+2990(created)S
+3193(in)S
+3643 V
+1944(that)S
+2055(directory.)S
+2328(Log)S
+2445(\256les)S
+2565(are)S
+2659(created)S
+2854(with)S
+2981(mode)S
+3135(400,)S
+3574 V
+1944(but)S
+8/Times-Bold F
+2050(TRY)S
+10/Times-Roman F
+2184(preserves)S
+2443(their)S
+2586(modes)S
+2775(if)S
+2844(they)S
+2980(have)S
+3126(been)S
+3505 V
+1944(changed.)S
+2203(An)S
+2299(entry)S
+2445(is)S
+2507(appended)S
+2760(to)S
+2829(this)S
+2938(\256le)S
+3037(for)S
+3129(each)S
+3436 V
+1944(run)S
+2047(of)S
+8/Times-Bold F
+2116(TRY)S
+10/Times-Roman F
+2241(indicating)S
+2506(the)S
+2603(account)S
+2813(number)S
+3019(used,)S
+3166(the)S
+3367 V
+1944(date)S
+2068(and)S
+2178(time)S
+2309(that)S
+8/Times-Bold F
+2419(TRY)S
+10/Times-Roman F
+2544(was)S
+2660(invoked)S
+2877(\(as)S
+2970(opposed)S
+3193(to)S
+3298 V
+1944(when)S
+2095(it)S
+2150(\256nished\),)S
+2396(the)S
+10/Times-Italic F
+2491(project-code)S
+10/Times-Roman F
+2796(,)S
+2832(and)S
+2939(the)S
+3033(status)S
+3190(of)S
+3229 V
+1944(the)S
+2038(attempt.)S
+3136 V
+2094(Log)S
+2211(\256le)S
+2308(entries)S
+2489(have)S
+2623(the)S
+2717(following)S
+2971(format:)S
+10/Times-Italic F
+3043 V
+1987(account)S
+2198(project)S
+2389(date)S
+2513(time)S
+2637(status)S
+10/Times-Roman F
+2950 V
+1944(Fields)S
+2129(are)S
+2241(separated)S
+2507(from)S
+2662(one)S
+2787(another)S
+3005(by)S
+3102(a)S
+3166(tab)S
+2881 V
+1944(except)S
+2123(that)S
+2235(the)S
+2330(date)S
+2452(and)S
+2560(time)S
+2688(\256elds)S
+2838(are)S
+2932(separated)S
+3180(by)S
+2812 V
+1944(spaces.)S
+2157(The)S
+2272(time)S
+2401(is)S
+2462(stored)S
+2630(in)S
+2698(hh:mm:ss)S
+2953(format.)S
+3170(By)S
+2743 V
+1944(default,)S
+2152(the)S
+2250(date)S
+2375(is)S
+2439(stored)S
+2610(in)S
+2681(yy/mm/dd)S
+2953(format,)S
+3153(and)S
+2674 V
+1944(there)S
+2086(are)S
+2181(four)S
+2302(spaces)S
+2480(between)S
+2701(the)S
+2795(date)S
+2916(and)S
+3023(the)S
+3117(time.)S
+2605 V
+1944(If)S
+2015(the)S
+10/Times-Bold F
+2120(yyyy)S
+10/Times-Roman F
+2271(option)S
+2456(is)S
+2527(given,)S
+2707(the)S
+2812(date)S
+2944(is)S
+3015(stored)S
+3193(in)S
+2536 V
+1944(yyyy/mm/dd)S
+2302(format)S
+2513(and)S
+2650(there)S
+2821(are)S
+2944(two)S
+3083(spaces)S
+2467 V
+1944(between)S
+2165(it)S
+2219(and)S
+2326(the)S
+2420(time.)S
+2374 V
+2094(Figure)S
+2280(2)S
+2339(lists)S
+2465(the)S
+2568(values)S
+2751(that)S
+2871(may)S
+3004(appear)S
+3193(in)S
+2305 V
+1944(the)S
+2048(status)S
+2215(\256eld.)S
+10/Courier-Oblique F
+2419(Message)S
+10/Times-Roman F
+2701(is)S
+2771(text)S
+2891(that)S
+3011(is)S
+3080(passed)S
+2236 V
+1944(back)S
+2085(by)S
+2172(the)S
+2273(instructor)S
+2531(from)S
+2674(the)S
+2774(build)S
+2924(or)S
+3000(run)S
+3106(script)S
+2167 V
+1944(with)S
+2076(the)S
+10/Times-Bold F
+2175(try_log)S
+10/Times-Roman F
+2383(program.)S
+10/Courier-Oblique F
+2678(Signal)S
+2934(name)S
+10/Times-Roman F
+3102(is)S
+3166(the)S
+2098 V
+1944(name)S
+2095(of)S
+2165(the)S
+2259(signal)S
+2423(that)S
+2534(caused)S
+8/Times-Bold F
+2714(TRY)S
+10/Times-Roman F
+2836(to)S
+2903(abort.)S
+3082(If)S
+8/Times-Bold F
+3138(TRY)S
+10/Times-Roman F
+2029 V
+1944(fails)S
+2080(due)S
+2198(to)S
+2276(missing)S
+2494(or)S
+2575(incorrect)S
+2821(scripts,)S
+3024(or)S
+3105(to)S
+3183(an)S
+1960 V
+1944(internal)S
+2156(error,)S
+2315(an)S
+2399(appropriate)S
+2700(message)S
+2930(is)S
+2996(written)S
+3193(to)S
+1891 V
+1944(the)S
+2038(log)S
+2135(\256le)S
+2232(\(these)S
+2396(messages)S
+2643(are)S
+2737(not)S
+2834(listed)S
+2985(here\).)S
+1798 V
+2094(The)S
+2208(\256rst)S
+2321(entry)S
+2465(in)S
+2532(each)S
+2663(log)S
+2760(\256le)S
+2857(contains)S
+10/Courier F
+1705 V
+1987(Log)S
+2131(file)S
+2311(created)S
+2599(for)S
+10/Courier-Oblique F
+2743(name)S
+10/Times-Roman F
+1612 V
+1944(in)S
+2026(the)S
+2135(status)S
+2307(\256eld,)S
+2464(where)S
+10/Courier-Oblique F
+2662(name)S
+10/Times-Roman F
+2841(is)S
+2915(the)S
+3023(student's)S
+1543 V
+1944(name)S
+2103(from)S
+2248(the)S
+2350(password)S
+2604(\256le.)S
+2743(The)S
+2864(project)S
+3059(\256eld)S
+3193(in)S
+1474 V
+1944(this)S
+2058(entry)S
+2209(will)S
+2330(be)S
+2414(\252!\272,)S
+2530(and)S
+2644(the)S
+2745(time)S
+2880(will)S
+3001(be)S
+3085(earlier)S
+1405 V
+1944(than)S
+2082(any)S
+2203(other)S
+2361(entry)S
+2519(in)S
+2599(order)S
+2759(to)S
+2839(ensure)S
+3029(that)S
+3153(this)S
+1336 V
+1944(entry)S
+2088(will)S
+2202(remain)S
+2390(at)S
+2454(the)S
+2548(top)S
+2645(after)S
+2776(a)S
+2823(sort.)S
+11/Times-Bold F
+1195 V
+1944(2.3.)S
+2088(Copying)S
+2349(Student)S
+2592(Files)S
+10/Times-Bold F
+1102 V
+2094(T)S
+8/Times-Bold F
+2134(RY)S
+10/Times-Roman F
+2239(accepts)S
+2452(only)S
+2594(\256le)S
+2706(names,)S
+2910(not)S
+3022(directory)S
+1033 V
+1944(names.)S
+2165(To)S
+2264(submit)S
+2460(all)S
+2553(of)S
+2635(the)S
+2740(\256les)S
+2871(in)S
+2949(a)S
+3007(directory,)S
+964 V
+1944(shell)S
+2078(meta-characters)S
+2481(would)S
+2651(be)S
+2728(used.)S
+871 V
+2094(When)S
+2259(a)S
+2307(pathname)S
+2563(is)S
+2624(given)S
+2779(for)S
+2870(a)S
+2917(\256le,)S
+3029(the)S
+3123(copy)S
+802 V
+1944(of)S
+2016(the)S
+2111(\256le)S
+2209(is)S
+2270(made)S
+2422(using)S
+2573(only)S
+2701(the)S
+2796(last)S
+2901(component)S
+3190(of)S
+733 V
+1944(the)S
+2046(pathname.)S
+2344(This)S
+2478(ensures)S
+2685(that,)S
+2818(regardless)S
+3089(of)S
+3166(the)S
+664 V
+1944(pathname)S
+2217(given,)S
+2404(the)S
+2516(copy)S
+2670(resides)S
+2874(in)S
+2958(the)S
+3069(scratch)S
+595 V
+1944(directory.)S
+2229(If,)S
+2316(however,)S
+2570(a)S
+2629(student)S
+2835(gives)S
+2994(two)S
+3116(path-)S
+526 V
+1944(names)S
+2134(whose)S
+2323(last)S
+2442(components)S
+2768(are)S
+2877(identical,)S
+3136(then)S
+457 V
+1944(both)S
+2073(\256les)S
+2195(will)S
+2311(be)S
+2390(written)S
+2583(to)S
+2652(the)S
+2747(same)S
+2892(copy,)S
+3045(and)S
+3153(one)S
+11/Times-Bold F
+259 V
+1741(Page)S
+1898(4)S
+E
+%%Page: 5 7
+B
+11/Times-Bold F
+4429 V
+432(03/13/0)S
+11/Times-Italic F
+1627(The)S
+1748(Try)S
+1862(System)S
+11/Times-Bold F
+2882(Version)S
+3124(1.11)S
+10/Courier F
+4117 V
+1073(Log)S
+1217(file)S
+1397(created)S
+1685(for)S
+10/Courier-Oblique F
+1829(student's)S
+2189(name)S
+10/Courier F
+4048 V
+1073(Completed.)S
+3979 V
+1073(Completed:)S
+10/Courier-Oblique F
+1469(message)S
+10/Courier F
+3910 V
+1073(Failed)S
+1325(build.)S
+3841 V
+1073(Failed)S
+1325(build:)S
+10/Courier-Oblique F
+1577(message)S
+10/Courier F
+3772 V
+1073(Failed)S
+1325(build_safe.)S
+3703 V
+1073(Failed)S
+1325(build_safe:)S
+10/Courier-Oblique F
+1757(message)S
+10/Courier F
+3634 V
+1073(Failed)S
+1325(test)S
+10/Courier-Oblique F
+1505(n)S
+10/Courier F
+1541(.)S
+3565 V
+1073(Failed)S
+1325(test)S
+10/Courier-Oblique F
+1505(n)S
+10/Courier F
+1541(:)S
+10/Courier-Oblique F
+1613(message)S
+10/Courier F
+3496 V
+1073(build)S
+1289(script)S
+1541(could)S
+1757(not)S
+1901(be)S
+2009(executed.)S
+3427 V
+1073(build_safe)S
+1469(script)S
+1721(could)S
+1937(not)S
+2081(be)S
+2189(executed.)S
+3358 V
+1073(run)S
+1217(script)S
+1469(could)S
+1685(not)S
+1829(be)S
+1937(executed.)S
+3289 V
+1073(run_safe)S
+1397(script)S
+1649(could)S
+1865(not)S
+2009(be)S
+2117(executed.)S
+3220 V
+1073(Interrupted:)S
+10/Courier-Oblique F
+1541(signal)S
+1793(name)S
+10/Times-Bold F
+3082 V
+1725(Figure)S
+1916(2)S
+3013 V
+1563(Log)S
+1683(\256le)S
+1780(status)S
+1949(values)S
+432 2977 M
+10/Times-Roman F
+-1242 L
+432 4219 M
+2808 l2
+3240 4219 M
+1242 L
+3240 2977 M
+-2808 l2
+2839 V
+432(will)S
+546(be)S
+623(lost.)S
+765(For)S
+868(example,)S
+10/Courier F
+2746 V
+475($)S
+547(try)S
+691(kar-grd)S
+979(4-2)S
+1123(p2.c)S
+1303(misc/p2.c)S
+10/Times-Roman F
+2653 V
+432(both)S
+565(\256les)S
+690(would)S
+865(be)S
+947(copied)S
+1133(to)S
+1205(\252p2.c\272)S
+1386(in)S
+1458(the)S
+1557(scratch)S
+2584 V
+432(directory,)S
+694(and)S
+810(only)S
+946(the)S
+1048(second)S
+1243(one)S
+1358(would)S
+1536(survive.)S
+2515 V
+432(If)S
+497(this)S
+608(situation)S
+840(occurs,)S
+1036(the)S
+1134(student)S
+1332(is)S
+1396(informed)S
+1641(and)S
+8/Times-Bold F
+2446 V
+432(TRY)S
+10/Times-Roman F
+554(is)S
+614(aborted)S
+815(and)S
+922(no)S
+1002(log)S
+1099(entry)S
+1243(is)S
+1303(made.)S
+2353 V
+582(When)S
+8/Times-Bold F
+750(TRY)S
+10/Times-Roman F
+880(copies)S
+1061(the)S
+1162(student's)S
+1406(\256les)S
+1533(into)S
+1654(the)S
+2284 V
+432(scratch)S
+631(directory,)S
+892(they)S
+1024(will)S
+1146(be)S
+1231(owned)S
+1419(by)S
+1507(a)S
+1561(nonex-)S
+2215 V
+432(istent)S
+585(user)S
+707(id.)S
+811(The)S
+927(public)S
+1100(and)S
+1209(group)S
+1370(permissions)S
+1678(of)S
+2146 V
+432(each)S
+567(\256le)S
+668(will)S
+786(be)S
+867(set)S
+957(the)S
+1054(same)S
+1201(as)S
+1274(the)S
+1371(owner)S
+1544(permis-)S
+2077 V
+432(sion,)S
+578(however,)S
+831(so)S
+914(that)S
+1035(they)S
+1169(can)S
+1283(be)S
+1370(accessed)S
+1611(from)S
+2008 V
+432(the)S
+526(instructor's)S
+820(scripts.)S
+11/Times-Bold F
+1867 V
+432(2.4.)S
+576(Instructor-Supplied)S
+1160(Shell)S
+1321(Scripts)S
+10/Times-Bold F
+1774 V
+582(T)S
+8/Times-Bold F
+622(RY)S
+10/Times-Roman F
+745(uses)S
+901(shell)S
+1067(scripts)S
+1276(provided)S
+1542(by)S
+1654(the)S
+1705 V
+432(instructor)S
+691(to)S
+766(build)S
+918(the)S
+1020(student's)S
+1265(project)S
+1460(and)S
+1574(to)S
+1648(run)S
+1636 V
+432(it.)S
+539(These)S
+720(scripts)S
+914(reside)S
+1095(in)S
+1179(the)S
+1290(project)S
+1495(directory.)S
+1567 V
+432(Common)S
+685(scripts)S
+871(may)S
+1004(be)S
+1089(shared)S
+1274(among)S
+1466(many)S
+1628(pro-)S
+1498 V
+432(jects)S
+565(by)S
+647(creating)S
+864(links)S
+1003(from)S
+1142(one)S
+1251(project)S
+1441(directory)S
+1681(to)S
+1429 V
+432(another.)S
+680(Some)S
+849(optional)S
+1078(scripts)S
+1266(may)S
+1401(reside)S
+1576(in)S
+1654(the)S
+1360 V
+432(try)S
+522(directory)S
+763(or)S
+835(the)S
+931(optional)S
+1151(script)S
+1307(directory,)S
+1562(and)S
+1671(be)S
+1291 V
+432(shared)S
+621(in)S
+700(that)S
+823(way.)S
+990(Appendix)S
+1259(1)S
+1320(contains)S
+1552(a)S
+1610(table)S
+1222 V
+432(that)S
+553(summarizes)S
+871(the)S
+975(purposes)S
+1218(and)S
+1334(requirements)S
+1678(of)S
+1153 V
+432(all)S
+513(the)S
+607(various)S
+804(shell)S
+938(scripts.)S
+1060 V
+582(There)S
+756(are)S
+863(two)S
+986(general)S
+1197(categories)S
+1474(of)S
+1556(scripts,)S
+991 V
+432(protected)S
+720(and)S
+870(unprotected.)S
+1253(Unprotected)S
+1614(shell)S
+922 V
+432(scripts)S
+625(are)S
+735(executed)S
+986(with)S
+1128(the)S
+1237(instructor's)S
+1546(user-id,)S
+853 V
+432(and)S
+544(should)S
+729(be)S
+811(used)S
+945(only)S
+1076(when)S
+1230(all)S
+1315(commands)S
+1600(to)S
+1671(be)S
+784 V
+432(executed)S
+681(were)S
+832(given)S
+1000(by)S
+1094(the)S
+1201(instructor.)S
+1500(Protected)S
+715 V
+432(shell)S
+569(scripts)S
+749(\(the)S
+866(\252safe\272)S
+1040(scripts\))S
+1239(are)S
+1335(executed)S
+1572(with)S
+1701(a)S
+646 V
+432(nonexistent)S
+736(user-id,)S
+944(and)S
+1057(are)S
+1157(used)S
+1293(when)S
+1449(it)S
+1509(is)S
+1574(neces-)S
+577 V
+432(sary)S
+568(to)S
+650(execute)S
+870(commands)S
+1166(given)S
+1335(by)S
+1430(the)S
+1539(student,)S
+508 V
+432(e.g.)S
+560(executing)S
+836(a)S
+904(student's)S
+1162(shell)S
+1317(script,)S
+1507(or)S
+1598(using)S
+10/Times-Italic F
+2839 V
+1944(make)S
+10/Times-Roman F
+2071(\(1\))S
+2161(with)S
+2288(a)S
+2335(student)S
+2529(supplied)S
+2753(make\256le.)S
+2746 V
+2094(Because)S
+2327(of)S
+2409(the)S
+2515(way)S
+2647(in)S
+2725(which)S
+8/Times-Bold F
+2899(TRY)S
+10/Times-Roman F
+3032(executes)S
+2677 V
+1944(them,)S
+2100(Bourne)S
+2297(shell)S
+2431(scripts)S
+2608(must)S
+2745(begin)S
+2899(with)S
+3026(the)S
+3120(line)S
+10/Courier F
+2584 V
+1987(#!)S
+2095(/bin/sh)S
+10/Times-Roman F
+2491 V
+1944(and)S
+2051(C)S
+2111(shell)S
+2245(scripts)S
+2422(must)S
+2559(begin)S
+2713(with)S
+10/Courier F
+2398 V
+1987(#!)S
+2095(/bin/csh)S
+10/Times-Roman F
+2305 V
+1944(or)S
+10/Courier F
+2212 V
+1987(#!)S
+2095(/bin/csh)S
+2419(-f)S
+10/Times-Roman F
+2119 V
+1944(This)S
+2071(does)S
+2201(not)S
+2298(apply)S
+2452(to)S
+2519(System)S
+2716(V)S
+2779(Unix.)S
+2026 V
+2094(Due)S
+2215(to)S
+2283(a)S
+2331(bug)S
+2442(in)S
+2510(the)S
+2605(C)S
+2666(shell,)S
+2816(it)S
+2871(cannot)S
+3053(be)S
+3130(used)S
+1957 V
+1944(for)S
+2039(the)S
+10/Times-Bold F
+2138(build_safe)S
+10/Times-Roman F
+2426(or)S
+10/Times-Bold F
+2501(run_safe)S
+10/Times-Roman F
+2749(scripts)S
+2931(unless)S
+3105(all)S
+3190(of)S
+1888 V
+1944(the)S
+2059(directories)S
+2355(above)S
+2540(the)S
+2655(scratch)S
+2867(directory)S
+3126(have)S
+1819 V
+1944(public)S
+2134(read)S
+2276(and)S
+2401(execute)S
+2624(access.)S
+2851(For)S
+2972(reasons)S
+3190(of)S
+1750 V
+1944(security,)S
+2176(the)S
+2276(parent)S
+2452(of)S
+2527(the)S
+2626(try)S
+2718(directory)S
+2961(usually)S
+3160(has)S
+1681 V
+1944(no)S
+2042(permission)S
+2344(for)S
+2451(anyone)S
+2662(other)S
+2823(than)S
+2964(the)S
+3075(owner.)S
+1612 V
+1944(The)S
+2059(choice)S
+2238(is)S
+2299(between)S
+2521(giving)S
+2695(up)S
+2775(this)S
+2882(security)S
+3093(to)S
+3160(use)S
+1543 V
+1944(the)S
+2047(C)S
+2116(shell,)S
+2274(or)S
+2353(retaining)S
+2597(the)S
+2700(security)S
+2920(by)S
+3008(using)S
+3166(the)S
+1474 V
+1944(Bourne)S
+2141(shell.)S
+1381 V
+2094(Executable)S
+2385(programs)S
+2634(may)S
+2760(be)S
+2839(used)S
+2971(in)S
+3040(place)S
+3190(of)S
+1312 V
+1944(any)S
+2059(of)S
+2137(the)S
+2239(shell)S
+2381(scripts)S
+2566(described.)S
+2860(While)S
+3035(they)S
+3166(are)S
+1243 V
+1944(less)S
+2088(convenient)S
+2407(to)S
+2508(write,)S
+2701(programs)S
+2982(run)S
+3116(more)S
+1174 V
+1944(ef\256ciently)S
+2209(than)S
+2333(shell)S
+2467(scripts.)S
+1081 V
+2094(All)S
+2204(of)S
+2287(the)S
+2394(scripts)S
+2584(described)S
+2848(are)S
+2954(invoked)S
+3180(by)S
+8/Times-Bold F
+1012 V
+1944(TRY)S
+10/Times-Roman F
+2072(from)S
+2214(within)S
+2393(the)S
+2492(scratch)S
+2688(directory.)S
+2966(In)S
+3041(order)S
+3193(to)S
+943 V
+1944(access)S
+2134(\256les)S
+2269(in)S
+2351(the)S
+2460(project)S
+2663(directory)S
+2916(from)S
+3068(one)S
+3190(of)S
+874 V
+1944(these)S
+2095(scripts,)S
+2294(the)S
+2395(pathname)S
+2657(from)S
+2801(the)S
+2902(scratch)S
+3099(direc-)S
+805 V
+1944(tory)S
+2064(to)S
+2134(the)S
+2230(project)S
+2420(directory)S
+2660(must)S
+2799(be)S
+2878(used,)S
+3025(as)S
+3097(in)S
+3166(the)S
+736 V
+1944(following)S
+2198(example:)S
+10/Courier F
+643 V
+1987($WD_BACKPATH/)S
+10/Courier-Oblique F
+2455(project-dir)S
+10/Times-Roman F
+2851(/)S
+10/Courier-Oblique F
+2868(name)S
+10/Times-Roman F
+550 V
+1944(where)S
+10/Courier-Oblique F
+2136(project-dir)S
+10/Times-Roman F
+2561(is)S
+2630(the)S
+2733(name)S
+2892(of)S
+2970(the)S
+3072(project)S
+481 V
+1944(directory.)S
+10/Times-Bold F
+2239(T)S
+8/Times-Bold F
+2279(RY)S
+10/Times-Roman F
+2390(de\256nes)S
+2601(an)S
+2699(environment)S
+3045(variable)S
+11/Times-Bold F
+259 V
+1741(Page)S
+1898(5)S
+E
+%%Page: 6 8
+B
+11/Times-Bold F
+4429 V
+432(03/13/0)S
+11/Times-Italic F
+1627(The)S
+1748(Try)S
+1862(System)S
+11/Times-Bold F
+2882(Version)S
+3124(1.11)S
+10/Times-Roman F
+4222 V
+432(called)S
+9/Times-Bold F
+605(PROJ_DIR)S
+10/Times-Roman F
+901(whose)S
+1083(value)S
+1243(is)S
+1312(the)S
+1415(name)S
+1575(of)S
+1654(the)S
+4153 V
+432(current)S
+655(project)S
+875(directory.)S
+1180(The)S
+1325(example)S
+1581(below)S
+4084 V
+432(shows)S
+610(how)S
+742(this)S
+858(variable)S
+1082(would)S
+1261(be)S
+1347(used)S
+1486(in)S
+1562(one)S
+1678(of)S
+4015 V
+432(the)S
+526(scripts:)S
+10/Courier F
+3922 V
+475(ln)S
+583($WD_BACKPATH/$PROJ_DIR/x\261o)S
+1555(x.o)S
+10/Times-Roman F
+3829 V
+432(Use)S
+553(of)S
+630(this)S
+744(variable)S
+966(makes)S
+1147(it)S
+1208(easier)S
+1376(to)S
+1450(share)S
+1604(com-)S
+3760 V
+432(mon)S
+559(scripts)S
+736(among)S
+920(several)S
+1111(projects.)S
+11/Times-Bold F
+3619 V
+432(2.5.)S
+576(The)S
+708(Unprotected)S
+1082(Scripts)S
+10/Times-Roman F
+3526 V
+582(These)S
+757(scripts)S
+945(are)S
+1050(appropriate)S
+1356(when)S
+1517(the)S
+1621(only)S
+3457 V
+432(commands)S
+724(to)S
+802(be)S
+890(executed)S
+1136(are)S
+1241(those)S
+1399(given)S
+1564(by)S
+1654(the)S
+3388 V
+432(instructor.)S
+11/Times-Bold F
+3247 V
+432(2.5.1.)S
+626(The)S
+758(init)S
+875(Script)S
+10/Times-Roman F
+3154 V
+582(This)S
+717(script)S
+879(is)S
+947(optional.)S
+1208(If)S
+1276(it)S
+1338(exists,)S
+1518(it)S
+1580(is)S
+1648(run)S
+3085 V
+432(prior)S
+579(to)S
+656(the)S
+10/Times-Bold F
+760(build)S
+10/Times-Roman F
+923(or)S
+10/Times-Bold F
+1003(build_safe)S
+10/Times-Roman F
+1295(script)S
+1458(to)S
+1534(perform)S
+3016 V
+432(any)S
+561(initialization)S
+910(that)S
+1043(must)S
+1202(be)S
+1301(done)S
+1459(before)S
+1654(the)S
+2947 V
+432(student's)S
+672(project)S
+863(is)S
+926(built.)S
+1095(The)S
+1212(user's)S
+1378(\256le)S
+1478(names)S
+1654(are)S
+2878 V
+432(passed)S
+612(as)S
+682(arguments.)S
+2785 V
+582(This)S
+711(script)S
+867(is)S
+928(most)S
+1066(frequently)S
+1335(used)S
+1466(to)S
+1534(perform)S
+2716 V
+432(tasks)S
+574(that)S
+687(could)S
+843(not)S
+942(be)S
+1020(done)S
+1158(in)S
+1226(the)S
+1321(beginning)S
+1583(of)S
+1654(the)S
+10/Times-Bold F
+2647 V
+432(build_safe)S
+10/Times-Roman F
+734(script)S
+907(\(because)S
+1157(of)S
+1246(its)S
+1341(being)S
+1513(executed)S
+2578 V
+432(with)S
+565(a)S
+618(nonexistent)S
+922(user-id\).)S
+1170(It)S
+1233(can)S
+1342(also)S
+1464(be)S
+1546(used)S
+1681(to)S
+2509 V
+432(perform)S
+653(initialization)S
+986(unique)S
+1176(to)S
+1249(a)S
+1302(particular)S
+1560(project)S
+2440 V
+432(so)S
+509(that)S
+624(a)S
+675(common)S
+10/Times-Bold F
+910(build)S
+10/Times-Roman F
+1066(script)S
+1223(could)S
+1380(be)S
+1460(used,)S
+1608(or)S
+1681(to)S
+2371 V
+432(perform)S
+646(authentication)S
+1009(of)S
+1079(the)S
+1173(student's)S
+1410(account.)S
+2278 V
+582(The)S
+708(exit)S
+831(status)S
+1000(of)S
+1082(the)S
+10/Times-Bold F
+1188(init)S
+10/Times-Roman F
+1307(script)S
+1473(is)S
+1544(ignored)S
+2209 V
+432(unless)S
+604(the)S
+10/Times-Bold F
+699(initstatus)S
+10/Times-Roman F
+956(option)S
+1131(is)S
+1192(given.)S
+1382(In)S
+1453(this)S
+1561(case,)S
+1701(a)S
+2140 V
+432(non-zero)S
+677(status)S
+845(causes)S
+8/Times-Bold F
+1029(TRY)S
+10/Times-Roman F
+1162(to)S
+1240(log)S
+1348(the)S
+1453(failure)S
+1641(and)S
+2071 V
+432(exit,)S
+566(and)S
+681(the)S
+10/Times-Bold F
+783(try_log)S
+10/Times-Roman F
+995(program)S
+1227(may)S
+1359(be)S
+1443(used)S
+1580(in)S
+1654(the)S
+10/Times-Bold F
+2002 V
+432(init)S
+10/Times-Roman F
+541(script)S
+697(to)S
+766(add)S
+875(a)S
+924(more)S
+1070(detailed)S
+1283(explanation)S
+1586(to)S
+1654(the)S
+1933 V
+432(log)S
+529(\256le.)S
+1840 V
+582(The)S
+707(following)S
+972(example)S
+1208(shows)S
+1388(an)S
+10/Times-Bold F
+1476(init)S
+10/Times-Roman F
+1594(script)S
+1771 V
+432(that)S
+549(copies)S
+729(\256les)S
+855(from)S
+998(the)S
+1098(project)S
+1292(directory)S
+1535(into)S
+1654(the)S
+1702 V
+432(scratch)S
+635(directory.)S
+920(The)S
+1046(\256le)S
+1155(modes)S
+1344(are)S
+1449(changed)S
+1681(to)S
+1633 V
+432(make)S
+602(them)S
+762(accessible)S
+1046(to)S
+1132(the)S
+1245(nonexistent)S
+1561(user-id)S
+1564 V
+432(with)S
+584(which)S
+775(the)S
+10/Times-Bold F
+893(build_safe)S
+10/Times-Roman F
+1200(script)S
+1378(is)S
+1462(run.)S
+1621(This)S
+1495 V
+432(avoids)S
+613(the)S
+711(need)S
+849(to)S
+920(allow)S
+1078(public)S
+1253(read)S
+1381(access)S
+1558(to)S
+1628(\256les)S
+1426 V
+432(in)S
+500(the)S
+594(project)S
+782(directory.)S
+1055(An)S
+1148(environment)S
+1473(variable)S
+1688(is)S
+1357 V
+432(created)S
+631(that)S
+746(indicates)S
+985(the)S
+1083(number)S
+1291(of)S
+1365(tests)S
+1496(that)S
+1611(were)S
+1288 V
+432(found)S
+605(\(see)S
+10/Times-Italic F
+735(Modifying)S
+1015(the)S
+1121(Environment)S
+10/Times-Roman F
+1432(,)S
+1479(below)S
+1658(for)S
+1219 V
+432(more)S
+576(details\).)S
+10/Courier F
+1126 V
+475(#!)S
+583(/bin/sh)S
+988 V
+475(for)S
+619(N)S
+691(in)S
+799(1)S
+871(2)S
+943(3)S
+1015(4)S
+1087(5)S
+1159(6)S
+1231(7)S
+1303(8)S
+919 V
+475(do)S
+850 V
+583(cp)S
+691($WD_BACKPATH/$PROJ_DIR/*.$N)S
+1699(.)S
+781 V
+583(chmod)S
+799(666)S
+943(*.$N)S
+712 V
+475(done)S
+643 V
+475(echo)S
+655(N_TESTS=8)S
+1015(>)S
+1087(.ENVIRONMENT)S
+11/Times-Bold F
+4222 V
+1944(2.5.2.)S
+2138(The)S
+2270(build)S
+2439(Script)S
+10/Times-Roman F
+4129 V
+2094(The)S
+2219(purpose)S
+2440(of)S
+2521(the)S
+2626(build)S
+2781(script)S
+2946(is)S
+3017(to)S
+3095(create)S
+4060 V
+1944(the)S
+2061(student's)S
+2321(project)S
+2532(from)S
+2692(the)S
+2808(\256le\(s\))S
+2990(that)S
+3123(were)S
+3991 V
+1944(copied.)S
+2167(This)S
+2301(may)S
+2432(involve)S
+2640(compilation,)S
+2970(formatting,)S
+3922 V
+1944(running)S
+10/Times-Italic F
+2155(make)S
+10/Times-Roman F
+2282(\(1\),)S
+2391(and)S
+2501(so)S
+2577(forth.)S
+2752(It)S
+2812(may)S
+2939(also)S
+3059(involve)S
+3853 V
+1944(doing)S
+2102(nothing,)S
+2322(for)S
+2413(example)S
+2639(when)S
+2789(the)S
+2883(student)S
+3077(is)S
+3137(sup-)S
+3784 V
+1944(posed)S
+2104(to)S
+2171(submit)S
+2355(an)S
+2432(executable)S
+2711(\256le)S
+2808(for)S
+2898(testing.)S
+3691 V
+2094(The)S
+2212(instructor)S
+2467(may)S
+2594(call)S
+2705(his)S
+2798(build)S
+2945(script)S
+3102(either)S
+10/Times-Bold F
+3622 V
+1944(build)S
+10/Times-Roman F
+2101(or)S
+10/Times-Bold F
+2175(build_safe.)S
+2497(T)S
+8/Times-Bold F
+2537(RY)S
+10/Times-Roman F
+2631(places)S
+2806(no)S
+2889(restrictions)S
+3180(on)S
+3553 V
+1944(what)S
+2094(can)S
+2211(be)S
+2301(done)S
+2451(in)S
+2531(these)S
+2688(scripts,)S
+2893(however)S
+3133(it)S
+3200(is)S
+3484 V
+1944(risky)S
+2102(to)S
+2187(execute)S
+2410(certain)S
+2613(commands)S
+2912(in)S
+2996(the)S
+10/Times-Bold F
+3107(build)S
+10/Times-Roman F
+3415 V
+1944(script.)S
+2144(See)S
+10/Times-Italic F
+2262(The)S
+2383(Safe)S
+2517(Scripts)S
+10/Times-Roman F
+2714(below)S
+2891(for)S
+2991(a)S
+3048(detailed)S
+3346 V
+1944(discussion)S
+2214(of)S
+2284(the)S
+2378(differences)S
+2666(between)S
+2887(them.)S
+3253 V
+2094(When)S
+2266(the)S
+2368(build)S
+2520(script)S
+2682(is)S
+2749(invoked,)S
+2985(the)S
+3086(names)S
+3184 V
+1944(of)S
+2027(the)S
+2134(\256les)S
+2267(that)S
+2391(were)S
+2540(copied)S
+2733(are)S
+2839(passed)S
+3031(as)S
+3113(argu-)S
+3115 V
+1944(ments.)S
+10/Times-Italic F
+2146(echo)S
+10/Times-Roman F
+2260(\(1\))S
+2353(commands)S
+2637(may)S
+2763(be)S
+2842(put)S
+2941(in)S
+3010(the)S
+3106(script)S
+3046 V
+1944(to)S
+2020(inform)S
+2213(the)S
+2316(student)S
+2519(of)S
+2598(what)S
+2744(is)S
+2812(happening)S
+3091(in)S
+3166(the)S
+2977 V
+1944(script)S
+2103(or)S
+2178(to)S
+2250(explain)S
+2453(errors.)S
+2653(The)S
+2772(build)S
+2921(script)S
+3080(should)S
+2908 V
+1944(return)S
+2113(an)S
+2194(exit)S
+2309(status)S
+2470(of)S
+2544(zero)S
+2672(if)S
+2733(the)S
+2831(project)S
+3023(was)S
+3140(suc-)S
+2839 V
+1944(cessfully)S
+2203(built,)S
+2374(and)S
+2506(nonzero)S
+2745(if)S
+2827(something)S
+3123(went)S
+2770 V
+1944(wrong.)S
+10/Times-Bold F
+2170(T)S
+8/Times-Bold F
+2210(RY)S
+10/Times-Roman F
+2318(tests)S
+2463(this)S
+2588(exit)S
+2717(status;)S
+2908(if)S
+2982(a)S
+3046(nonzero)S
+2701 V
+1944(status)S
+2106(is)S
+2171(returned,)S
+2412(the)S
+2511(failure)S
+2694(is)S
+2759(recorded)S
+2994(in)S
+3065(the)S
+3163(log)S
+2632 V
+1944(\256le)S
+2041(and)S
+8/Times-Bold F
+2144(TRY)S
+10/Times-Roman F
+2266(stops.)S
+2539 V
+2094(If)S
+2172(the)S
+2283(build)S
+2444(script)S
+2615(ended)S
+2796(successfully,)S
+8/Times-Bold F
+3138(TRY)S
+10/Times-Roman F
+2470 V
+1944(creates)S
+2137(a)S
+2189(\256le)S
+2290(called)S
+2459(\252,newest_\256le\272)S
+2826(that)S
+2941(contains)S
+3166(the)S
+2401 V
+1944(name)S
+2115(of)S
+2205(the)S
+2319(most)S
+2476(recently)S
+2711(modi\256ed)S
+2964(\256le)S
+3080(in)S
+3166(the)S
+2332 V
+1944(scratch)S
+2140(directory.)S
+2417(This)S
+2548(is)S
+2612(useful)S
+2783(when)S
+2937(the)S
+3035(name)S
+3190(of)S
+2263 V
+1944(the)S
+2044(\256le)S
+2147(being)S
+2307(built)S
+2444(is)S
+2510(not)S
+2613(known)S
+2801(ahead)S
+2967(of)S
+3042(time,)S
+3190(as)S
+2194 V
+1944(might)S
+2124(be)S
+2220(the)S
+2333(case)S
+2475(when)S
+2643(executing)S
+10/Times-Italic F
+2916(make)S
+10/Times-Roman F
+3081(in)S
+3166(the)S
+10/Times-Bold F
+2125 V
+1944(build_safe)S
+10/Times-Roman F
+2227(script.)S
+2032 V
+2094(The)S
+2227(umask)S
+2423(is)S
+2502(set)S
+2608(to)S
+2694(077)S
+2823(while)S
+2995(the)S
+10/Times-Bold F
+3107(build)S
+10/Times-Roman F
+1963 V
+1944(script)S
+2123(runs)S
+2270(in)S
+2361(order)S
+2532(to)S
+2623(prevent)S
+2848(temporary)S
+3140(\256les)S
+1894 V
+1944(created)S
+2164(by)S
+2269(compilers)S
+2552(and)S
+2684(other)S
+2852(programs)S
+3123(from)S
+1825 V
+1944(being)S
+2118(accessed)S
+2368(by)S
+2467(other)S
+2630(users.)S
+2827(After)S
+2993(the)S
+3106(script)S
+1756 V
+1944(\256nishes,)S
+8/Times-Bold F
+2171(TRY)S
+10/Times-Roman F
+2306(changes)S
+2533(the)S
+2640(modes)S
+2830(on)S
+2923(all)S
+3016(subdirec-)S
+1687 V
+1944(tories)S
+2106(and)S
+2221(\256les)S
+2349(to)S
+2424(make)S
+2583(the)S
+2684(public)S
+2862(and)S
+2976(group)S
+3143(per-)S
+1618 V
+1944(missions)S
+2184(identical)S
+2423(to)S
+2500(the)S
+2603(owner)S
+2782(permissions.)S
+3133(This)S
+1549 V
+1944(ensures)S
+2155(that)S
+2277(the)S
+2382(\256les)S
+2513(can)S
+2627(be)S
+2714(accessed)S
+2955(from)S
+3102(either)S
+1480 V
+1944(the)S
+10/Times-Bold F
+2038(run)S
+10/Times-Roman F
+2151(or)S
+10/Times-Bold F
+2221(run_safe)S
+10/Times-Roman F
+2464(script.)S
+1387 V
+2094(The)S
+2217(following)S
+2480(build)S
+2633(script)S
+2795(compiles)S
+3041(a)S
+3096(single)S
+1318 V
+1944(Pascal)S
+2120(\256le;)S
+2236(if)S
+2294(all)S
+2376(goes)S
+2507(well,)S
+2647(the)S
+2742(\256le)S
+10/Times-Bold F
+2840(a.out)S
+10/Times-Roman F
+2989(is)S
+3050(created.)S
+1249 V
+1944(Because)S
+2176(the)S
+10/Times-Italic F
+2281(pc)S
+10/Times-Roman F
+2369(command)S
+2637(is)S
+2707(the)S
+2811(last)S
+2925(command)S
+3193(in)S
+1180 V
+1944(the)S
+2038(script,)S
+2207(its)S
+2284(exit)S
+2395(status)S
+2552(is)S
+2612(returned)S
+2833(by)S
+2913(the)S
+3007(script.)S
+10/Courier F
+1087 V
+1987(#!)S
+2095(/bin/sh)S
+1018 V
+1987(pc)S
+2095($1)S
+10/Times-Roman F
+901 V
+2094(The)S
+2214(next)S
+2344(script)S
+2504(expects)S
+2711(an)S
+2793(arbitrary)S
+3026(list)S
+3125(of)S
+3200(C)S
+832 V
+1944(source)S
+2128(and)S
+2242(header)S
+2430(\256les,)S
+2572(and)S
+2686(compiles)S
+2931(them)S
+3079(with)S
+3213(a)S
+763 V
+1944(main)S
+2098(program)S
+2335(and)S
+2455(print)S
+2602(function)S
+2836(supplied)S
+3073(by)S
+3166(the)S
+694 V
+1944(instructor.)S
+2233(It)S
+2293(also)S
+2413(echoes)S
+2599(the)S
+2695(commands)S
+2978(so)S
+3053(that)S
+3166(the)S
+625 V
+1944(student)S
+2142(will)S
+2259(know)S
+2415(where)S
+2585(any)S
+2695(errors)S
+2858(that)S
+2972(are)S
+3069(printed)S
+556 V
+1944(originated.)S
+2260(Note)S
+2413(that)S
+2539(the)S
+2648(instructor's)S
+2957(object)S
+3140(\256les)S
+487 V
+1944(are)S
+2045(named)S
+10/Times-Italic F
+2233(\256le)S
+10/Times-Bold F
+2307(\261o)S
+10/Times-Roman F
+2394(rather)S
+2562(than)S
+10/Times-Italic F
+2692(\256le)S
+10/Times-Bold F
+2766(.o)S
+10/Times-Roman F
+2811(;)S
+2854(this)S
+2967(is)S
+3033(to)S
+3106(avoid)S
+11/Times-Bold F
+259 V
+1741(Page)S
+1898(6)S
+E
+%%Page: 7 9
+B
+11/Times-Bold F
+4429 V
+432(03/13/0)S
+11/Times-Italic F
+1627(The)S
+1748(Try)S
+1862(System)S
+11/Times-Bold F
+2882(Version)S
+3124(1.11)S
+10/Times-Roman F
+4222 V
+432(the)S
+527(automatic)S
+787(deletion)S
+1003(of)S
+1074(old)S
+1172(object)S
+1340(\256les)S
+1460(that)S
+1571(occurs)S
+4153 V
+432(on)S
+516(some)S
+667(U)S
+9/Times-Roman F
+710(NIX)S
+10/Times-Roman F
+830(systems.)S
+1079(The)S
+10/Times-Italic F
+1197(rm)S
+10/Times-Roman F
+1287(command)S
+1548(ensures)S
+4084 V
+432(that)S
+543(no)S
+623(object)S
+791(\256les)S
+911(sent)S
+1028(by)S
+1108(the)S
+1202(student)S
+1396(survive.)S
+10/Courier F
+3991 V
+475(#!)S
+583(/bin/sh)S
+3922 V
+475(rm)S
+583(-f)S
+691(*.o)S
+3853 V
+475(D=$WD_BACKPATH/$PROJ_DIR)S
+3784 V
+475(ln)S
+583($D/main\261o)S
+943(main.o)S
+3715 V
+475(ln)S
+583($D/print\261o)S
+979(print.o)S
+3646 V
+475(echo)S
+655(cc)S
+763(*.c)S
+907(*.o)S
+1051(\261o)S
+1159(lab2)S
+3577 V
+475(cc)S
+583(*.c)S
+727(*.o)S
+871(\261o)S
+979(lab2)S
+10/Times-Roman F
+3460 V
+582(The)S
+705(build)S
+857(script)S
+1019(in)S
+1094(Figure)S
+1279(3)S
+1337(compiles)S
+1583(a)S
+1638(stu-)S
+3391 V
+432(dent)S
+558(function)S
+781(that)S
+894(is)S
+955(supposed)S
+1199(to)S
+1267(duplicate)S
+1510(the)S
+1605(work)S
+3322 V
+432(done)S
+571(by)S
+653(the)S
+748(library)S
+930(routine)S
+10/Times-Italic F
+1122(strncpy)S
+10/Times-Roman F
+1299(.)S
+1355(The)S
+1470(script)S
+1625(uses)S
+10/Times-Italic F
+3253 V
+432(nm)S
+10/Times-Roman F
+505(\(1\))S
+609(to)S
+690(check)S
+865(the)S
+973(student's)S
+1224(object)S
+1406(\256le)S
+1517(to)S
+1597(make)S
+3184 V
+432(sure)S
+552(that)S
+10/Times-Italic F
+663(strncpy)S
+10/Times-Roman F
+860(is)S
+920(not)S
+1017(called.)S
+3091 V
+582(Figure)S
+766(4)S
+823(shows)S
+998(a)S
+1051(script)S
+1211(that)S
+1328(expects)S
+1535(two)S
+1651(\256le)S
+3022 V
+432(names,)S
+633(one)S
+752(C)S
+824(source)S
+1012(\256le)S
+1120(and)S
+1238(one)S
+1356(header)S
+1548(\256le.)S
+1691(It)S
+2953 V
+432(does)S
+570(a)S
+625(lot)S
+717(of)S
+795(checking)S
+1041(that)S
+1160(the)S
+1262(names)S
+1444(are)S
+1545(correct,)S
+2884 V
+432(and)S
+539(then)S
+663(compiles)S
+901(the)S
+995(source)S
+1172(\256le.)S
+11/Times-Bold F
+2743 V
+432(2.5.3.)S
+626(The)S
+758(run)S
+883(Script)S
+10/Times-Roman F
+2650 V
+582(The)S
+707(purpose)S
+928(of)S
+1009(the)S
+1114(run)S
+1225(script)S
+1390(is)S
+1461(to)S
+1539(test)S
+1654(the)S
+2581 V
+432(student's)S
+688(project.)S
+930(This)S
+1076(might)S
+1256(involve)S
+1476(running)S
+1701(a)S
+2512 V
+432(program)S
+664(several)S
+863(times)S
+1022(with)S
+1157(various)S
+1362(input)S
+1514(\256les)S
+1641(and)S
+2443 V
+432(comparing)S
+740(the)S
+863(output)S
+1066(that)S
+1206(was)S
+1348(produced)S
+1621(with)S
+2374 V
+432(correct)S
+622(output,)S
+813(running)S
+10/Times-Italic F
+1022(make)S
+10/Times-Roman F
+1149(\(1\))S
+1241(to)S
+1310(test)S
+1416(the)S
+1511(student's)S
+2305 V
+432(make\256le,)S
+680(running)S
+891(the)S
+989(student's)S
+1230(shell)S
+1368(script,)S
+1541(running)S
+2236 V
+432(a)S
+492(program)S
+729(to)S
+808(check)S
+981(some)S
+1140(aspect)S
+1323(of)S
+1405(the)S
+1511(student's)S
+2167 V
+432(\256le\(s\),)S
+607(and)S
+714(so)S
+787(forth.)S
+2074 V
+582(The)S
+706(instructor)S
+967(may)S
+1101(call)S
+1219(his)S
+1318(run)S
+1427(script)S
+1590(either)S
+10/Times-Bold F
+2005 V
+432(run)S
+10/Times-Roman F
+561(or)S
+10/Times-Bold F
+646(run_safe)S
+10/Times-Roman F
+869(.)S
+10/Times-Bold F
+939(T)S
+8/Times-Bold F
+979(RY)S
+10/Times-Roman F
+1084(places)S
+1270(no)S
+1365(restrictions)S
+1668(on)S
+1936 V
+432(what)S
+582(can)S
+699(be)S
+789(done)S
+939(in)S
+1019(these)S
+1176(scripts,)S
+1381(however)S
+1621(it)S
+1688(is)S
+1867 V
+432(risky)S
+596(to)S
+687(execute)S
+916(certain)S
+1124(commands)S
+1428(in)S
+1518(the)S
+10/Times-Bold F
+1635(run)S
+10/Courier F
+1693 V
+475(#!)S
+583(/bin/sh)S
+1624 V
+475(cc)S
+583(\261c)S
+691($1)S
+1555 V
+475(if)S
+583([)S
+655($?)S
+763(\261ne)S
+907(0)S
+979(])S
+1486 V
+475(then)S
+1417 V
+583(exit)S
+763(1)S
+1348 V
+475(fi)S
+1279 V
+475(names=\301nm)S
+835(\261g)S
+943(*.o)S
+1087(|)S
+1159(egrep)S
+1375(\302_strncpy$\302\301)S
+1210 V
+475(if)S
+583([)S
+655(\261n)S
+763("$names")S
+1087(])S
+1141 V
+475(then)S
+1072 V
+583(try_log)S
+871(Used)S
+1051(library)S
+1339(strncpy)S
+1003 V
+583(echo)S
+763(It)S
+871(is)S
+979(cheating)S
+1303(to)S
+1411(use)S
+1555(strncpy)S
+1843(from)S
+2023(the)S
+2167(C)S
+2239(library!)S
+934 V
+583(exit)S
+763(1)S
+865 V
+475(fi)S
+796 V
+475(ln)S
+583($WD_BACKPATH/$PROJ_DIR/main\261o)S
+1663(main.o)S
+727 V
+475(cc)S
+583(*.o)S
+10/Times-Bold F
+589 V
+1725(Figure)S
+1916(3)S
+520 V
+1249(Build)S
+1409(script)S
+1576(that)S
+1699(checks)S
+1889(for)S
+1986(library)S
+2187(functions)S
+432 484 M
+10/Times-Roman F
+-1311 L
+432 1795 M
+2808 l2
+3240 1795 M
+1311 L
+3240 484 M
+-2808 l2
+4222 V
+1944(script.)S
+2144(See)S
+10/Times-Italic F
+2262(The)S
+2383(Safe)S
+2517(Scripts)S
+10/Times-Roman F
+2714(below)S
+2891(for)S
+2991(a)S
+3048(detailed)S
+4153 V
+1944(discussion)S
+2214(of)S
+2284(the)S
+2378(differences)S
+2666(between)S
+2887(them.)S
+4060 V
+2094(The)S
+2222(only)S
+2363(preconceived)S
+2718(notion)S
+2905(that)S
+8/Times-Bold F
+3025(TRY)S
+10/Times-Roman F
+3160(has)S
+3991 V
+1944(about)S
+2111(testing)S
+2305(projects)S
+2529(is)S
+2602(that)S
+2726(there)S
+2880(may)S
+3017(be)S
+3106(many)S
+3922 V
+1944(separate)S
+2165(tests,)S
+2310(numbered)S
+2574(in)S
+2644(the)S
+2741(range)S
+2897(1\261127.)S
+3104(If)S
+3166(the)S
+3853 V
+1944(student's)S
+2199(project)S
+2404(passes)S
+2594(all)S
+2692(of)S
+2779(the)S
+2890(tests,)S
+3049(the)S
+3160(run)S
+3784 V
+1944(script)S
+2102(should)S
+2286(return)S
+2454(an)S
+2535(exit)S
+2650(value)S
+2805(of)S
+2879(zero.)S
+3042(If)S
+3106(a)S
+3156(test)S
+3715 V
+1944(fails,)S
+2087(the)S
+2185(script)S
+2343(should)S
+2527(return)S
+2695(the)S
+2793(test)S
+2901(number)S
+3109(as)S
+3183(an)S
+3646 V
+1944(exit)S
+2068(value.)S
+2267(Depending)S
+2564(upon)S
+2717(this)S
+2837(value,)S
+8/Times-Bold F
+3012(TRY)S
+10/Times-Roman F
+3146(will)S
+3577 V
+1944(record)S
+2120(the)S
+2215(success,)S
+2431(or)S
+2502(the)S
+2597(test)S
+2702(number)S
+2907(that)S
+3019(failed,)S
+3193(in)S
+3508 V
+1944(the)S
+2038(log)S
+2135(\256le.)S
+3415 V
+2094(Exit)S
+2221(status)S
+2383(values)S
+2562(129\261255)S
+2797(may)S
+2926(also)S
+3048(be)S
+3130(used)S
+3346 V
+1944(for)S
+2050(failed)S
+2224(test)S
+2344(numbers)S
+2587(1\261127.)S
+10/Times-Bold F
+2808(T)S
+8/Times-Bold F
+2848(RY)S
+10/Times-Roman F
+2954(ignores)S
+3166(the)S
+3277 V
+1944(high)S
+2081(order)S
+2237(bit,)S
+2345(but)S
+2451(passes)S
+2633(it)S
+2696(to)S
+2772(the)S
+10/Times-Bold F
+2875(explain)S
+10/Times-Roman F
+3091(script,)S
+3208 V
+1944(where)S
+2113(it)S
+2169(can)S
+2275(be)S
+2354(interpreted)S
+2638(in)S
+2707(any)S
+2816(desired)S
+3011(way.)S
+3167(An)S
+10/Times-Bold F
+3139 V
+1944(explain)S
+10/Times-Roman F
+2157(script)S
+2317(illustrating)S
+2605(this)S
+2718(is)S
+2784(shown)S
+2965(in)S
+3037(the)S
+3136(next)S
+3070 V
+1944(section.)S
+2180(The)S
+10/Times-Bold F
+2304(run)S
+10/Times-Roman F
+2427(script)S
+2591(should)S
+2781(not)S
+2888(return)S
+3062(an)S
+3149(exit)S
+3001 V
+1944(status)S
+2101(of)S
+2171(128.)S
+2908 V
+2094(It)S
+2160(is)S
+2228(important)S
+2491(that)S
+10/Times-Bold F
+2610(try_run)S
+10/Times-Roman F
+2838(be)S
+2923(used)S
+3061(to)S
+3136(exe-)S
+2839 V
+1944(cute)S
+2066(the)S
+2161(student's)S
+2399(program.)S
+10/Times-Bold F
+2659(Try_run)S
+10/Times-Roman F
+2900(limits)S
+3059(the)S
+3153(cpu)S
+2770 V
+1944(time,)S
+2088(\256le)S
+2186(space)S
+2340(and)S
+2447(other)S
+2591(resources)S
+2838(that)S
+2949(can)S
+3053(be)S
+3130(used)S
+2701 V
+1944(by)S
+2032(the)S
+2134(program)S
+2366(\(on)S
+2474(System)S
+2679(V,)S
+2765(only)S
+2900(the)S
+3002(\256le)S
+3106(space)S
+2632 V
+1944(can)S
+2052(be)S
+2132(controlled\),)S
+2435(but)S
+2535(it)S
+2592(also)S
+2712(prevents)S
+2939(the)S
+3036(program)S
+2563 V
+1944(from)S
+2087(going)S
+2250(outside)S
+2450(of)S
+2526(the)S
+2626(scratch)S
+2823(directory.)S
+3101(If)S
+3166(the)S
+2494 V
+1944(student's)S
+2182(program)S
+2407(were)S
+2545(executed)S
+2781(directly)S
+2986(in)S
+3053(the)S
+10/Times-Bold F
+3147(run)S
+10/Times-Roman F
+2425 V
+1944(script,)S
+2117(it)S
+2175(would)S
+2349(be)S
+2430(able)S
+2555(to)S
+2625(access,)S
+2817(create)S
+2985(and)S
+3095(delete)S
+2356 V
+1944(\256les)S
+2066(in)S
+2135(the)S
+2231(instructor's)S
+2526(account)S
+2735(just)S
+2843(as)S
+2914(the)S
+3009(instructor)S
+2287 V
+1944(could.)S
+2194 V
+2094(The)S
+2211(umask)S
+2391(is)S
+2454(0)S
+2507(while)S
+2664(the)S
+10/Times-Bold F
+2761(run)S
+10/Times-Roman F
+2876(script)S
+3032(executes)S
+2125 V
+1944(so)S
+2022(that)S
+2138(any)S
+2250(\256les)S
+2375(it)S
+2433(creates)S
+2625(will)S
+2743(be)S
+2824(readable)S
+3053(by)S
+3137(sub-)S
+2056 V
+1944(sequent)S
+2149(scripts.)S
+2362(If)S
+2423(it)S
+2477(is)S
+2537(necessary)S
+2791(to)S
+2858(create)S
+3023(\256les)S
+3143(out-)S
+1987 V
+1944(side)S
+2062(of)S
+2132(the)S
+2226(scratch)S
+2417(directory)S
+2655(\(e.g.)S
+2782(by)S
+2862(running)S
+3069(a)S
+3116(com-)S
+1918 V
+1944(piler)S
+2087(or)S
+2169(other)S
+2325(utility)S
+2502(that)S
+2625(creates)S
+2825(temporary)S
+3105(\256les\),)S
+11/Times-Bold F
+259 V
+1741(Page)S
+1898(7)S
+E
+%%Page: 8 10
+B
+11/Times-Bold F
+4429 V
+432(03/13/0)S
+11/Times-Italic F
+1627(The)S
+1748(Try)S
+1862(System)S
+11/Times-Bold F
+2882(Version)S
+3124(1.11)S
+10/Courier F
+4117 V
+475(#!)S
+583(/bin/sh)S
+4048 V
+475(if)S
+583([)S
+655($#)S
+763(\261ne)S
+907(2)S
+979(])S
+3979 V
+475(then)S
+3910 V
+583(echo)S
+763(You)S
+907(gave)S
+1087(me)S
+1195($#)S
+1303(files,)S
+1555(but)S
+1699(I)S
+1771(was)S
+1915(expecting)S
+2275(2.)S
+2383(Please)S
+2635(try)S
+2779(again)S
+2995(with)S
+3841 V
+583(echo)S
+763(one)S
+907(.c)S
+1015(file)S
+1195(and)S
+1339(one)S
+1483(.h)S
+1591(file.)S
+3772 V
+583(exit)S
+763(1)S
+3703 V
+475(fi)S
+3634 V
+475(cfile=)S
+763(hfile=)S
+3565 V
+475(for)S
+619(file)S
+3496 V
+475(do)S
+3427 V
+583(case)S
+763($file)S
+979(in)S
+3358 V
+583(*.c\))S
+799(cfile=$file)S
+3289 V
+691(;;)S
+3220 V
+583(*.h\))S
+799(hfile=$file)S
+3151 V
+691(;;)S
+3082 V
+583(esac)S
+3013 V
+475(done)S
+2944 V
+475(if)S
+583([)S
+655(\261z)S
+763("$cfile")S
+1087(\261o)S
+1195(\261z)S
+1303("$hfile")S
+1627(])S
+2875 V
+475(then)S
+2806 V
+583(echo)S
+763(You)S
+907(must)S
+1087(give)S
+1267(me)S
+1375(a)S
+1447(.c)S
+1555(file)S
+1735(and)S
+1879(echo)S
+2059(a)S
+2131(.h)S
+2239(file,)S
+2455(but)S
+2599(one)S
+2743(is)S
+2851(missing.)S
+2737 V
+583(exit)S
+763(1)S
+2668 V
+475(fi)S
+2599 V
+475(echo)S
+655(cc)S
+763($cfile)S
+2530 V
+475(cc)S
+583($cfile)S
+10/Times-Bold F
+2392 V
+1725(Figure)S
+1916(4)S
+2323 V
+1413(Build)S
+1573(script)S
+1740(with)S
+1873(error)S
+2031(checking)S
+432 2287 M
+10/Times-Roman F
+-1932 L
+432 4219 M
+2808 l2
+3240 4219 M
+1932 L
+3240 2287 M
+-2808 l2
+2149 V
+432(then)S
+571(the)S
+680(umask)S
+872(should)S
+1067(be)S
+1159(set)S
+1261(in)S
+1343(the)S
+1452(script)S
+1620(to)S
+1701(a)S
+2080 V
+432(value)S
+590(that)S
+708(will)S
+829(prevent)S
+1037(other)S
+1188(students)S
+1411(from)S
+1554(access-)S
+2011 V
+432(ing)S
+529(these)S
+673(temporary)S
+941(\256les.)S
+1918 V
+582(The)S
+10/Times-Bold F
+707(run)S
+10/Times-Roman F
+831(script)S
+996(in)S
+1073(Figure)S
+1260(5)S
+1320(runs)S
+1453(a)S
+1510(predeter-)S
+1849 V
+432(mined)S
+609(number)S
+819(of)S
+895(tests.)S
+1063(The)S
+1183(test)S
+1293(number)S
+1503(is)S
+1568(passed)S
+1780 V
+432(as)S
+520(an)S
+615(argument)S
+881(to)S
+966(the)S
+1078(program;)S
+1336(presumably)S
+1654(the)S
+1711 V
+432(main)S
+590(program)S
+831(was)S
+961(written)S
+1168(by)S
+1264(the)S
+1374(instructor)S
+1641(and)S
+1642 V
+432(uses)S
+556(this)S
+664(argument)S
+913(to)S
+981(decide)S
+1160(which)S
+1328(test)S
+1432(to)S
+1499(run.)S
+1634(The)S
+10/Courier F
+1468 V
+475(#!)S
+583(/bin/sh)S
+1399 V
+475(for)S
+619(T)S
+691(in)S
+799(1)S
+871(2)S
+943(3)S
+1330 V
+475(do)S
+1261 V
+583(echo)S
+763(Running)S
+1051(test)S
+1231($T)S
+1192 V
+583(try_run)S
+871(a.out)S
+1087($T)S
+1195(>)S
+1267(out)S
+1123 V
+583(if)S
+691([)S
+763(\261s)S
+871(out)S
+1015(])S
+1054 V
+583(then)S
+985 V
+691(exit)S
+871($T)S
+916 V
+583(fi)S
+847 V
+475(done)S
+778 V
+475(exit)S
+655(0)S
+10/Times-Bold F
+640 V
+969(Figure)S
+1160(5)S
+571 V
+726(Run)S
+855(script)S
+1022(for)S
+1119(several)S
+1320(tests)S
+432 535 M
+10/Times-Roman F
+-1035 L
+432 1570 M
+1296 l2
+1728 1570 M
+1035 L
+1728 535 M
+-1296 l2
+2149 V
+1944(main)S
+2102(program)S
+2343(in)S
+2427(this)S
+2551(example)S
+2793(prints)S
+2967(only)S
+3110(when)S
+2080 V
+1944(errors)S
+2111(are)S
+2212(encountered,)S
+2549(hence)S
+2717(the)S
+2818(test)S
+2929(for)S
+3026(non-zero)S
+2011 V
+1944(size)S
+2058(of)S
+2128(the)S
+2222(output)S
+2396(\256le.)S
+1918 V
+2094(The)S
+10/Times-Bold F
+2234(run)S
+10/Times-Roman F
+2373(script)S
+2553(in)S
+2646(Figure)S
+2848(6)S
+2923(also)S
+3065(runs)S
+3213(a)S
+1849 V
+1944(predetermined)S
+2321(number)S
+2533(of)S
+2611(tests.)S
+2780(In)S
+2857(this)S
+2971(case,)S
+3117(how-)S
+1780 V
+1944(ever,)S
+2091(the)S
+2192(build)S
+2343(script)S
+2504(created)S
+2706(three)S
+2854(executable)S
+3140(pro-)S
+1711 V
+1944(grams,)S
+2140(each)S
+2285(linked)S
+2469(with)S
+2609(different)S
+2850(versions)S
+3083(of)S
+3166(the)S
+1642 V
+1944(instructor's)S
+2246(routines.)S
+2503(The)S
+2625(executables)S
+2935(were)S
+3079(named)S
+1573 V
+1944(\252test.1\272,)S
+2177(\252test.2\272,)S
+2410(and)S
+2532(\252test.3\272.)S
+2785(Again,)S
+2982(nothing)S
+3200(is)S
+1504 V
+1944(printed)S
+2150(unless)S
+2335(errors)S
+2510(are)S
+2619(detected.)S
+2890(Note)S
+3041(that)S
+3166(the)S
+1435 V
+1944(exit)S
+2073(status)S
+2247(of)S
+10/Times-Bold F
+2334(try_run)S
+10/Times-Roman F
+2571(is)S
+2648(checked)S
+2883(in)S
+2967(this)S
+3091(script.)S
+1366 V
+1944(Along)S
+2127(with)S
+2267(the)S
+2374(use)S
+2487(of)S
+10/Times-Bold F
+2570(try_log)S
+10/Times-Roman F
+2787(this)S
+2907(records)S
+3116(more)S
+1297 V
+1944(detailed)S
+2160(failure)S
+2342(information)S
+2651(in)S
+2722(the)S
+2820(log)S
+2921(\256le)S
+3022(\(e.g.)S
+3153(cpu)S
+1228 V
+1944(time)S
+2072(limit)S
+2207(exceeded,)S
+2467(memory)S
+2688(fault,)S
+2834(etc.\).)S
+1135 V
+2094(Figure)S
+2276(7)S
+2331(shows)S
+2505(a)S
+2557(run)S
+2661(script)S
+2819(that)S
+2934(executes)S
+3166(the)S
+1066 V
+1944(student's)S
+2186(program)S
+2415(with)S
+2547(several)S
+2743(different)S
+2976(input)S
+3125(\256les.)S
+997 V
+1944(Each)S
+2088(input)S
+2235(\256le)S
+2335(is)S
+2398(accompanied)S
+2740(by)S
+2823(a)S
+2873(description)S
+3163(\256le)S
+928 V
+1944(that)S
+2072(is)S
+2149(printed)S
+2357(if)S
+2431(the)S
+2542(test)S
+2663(fails)S
+2803(\(see)S
+10/Times-Italic F
+2936(The)S
+3062(explain)S
+859 V
+1944(Script)S
+10/Times-Roman F
+2088(,)S
+2132(below\),)S
+2343(and)S
+2459(by)S
+2548(an)S
+2633(output)S
+2815(\256le)S
+2920(that)S
+3039(contains)S
+790 V
+1944(correct)S
+2134(answers.)S
+2384(The)S
+2500(script)S
+2656(runs)S
+2781(until)S
+2913(it)S
+2968(runs)S
+3092(out)S
+3190(of)S
+721 V
+1944(input)S
+2088(\256les)S
+2208(or)S
+2278(an)S
+2355(error)S
+2492(occurs.)S
+11/Times-Bold F
+259 V
+1741(Page)S
+1898(8)S
+E
+%%Page: 9 11
+B
+11/Times-Bold F
+4429 V
+432(03/13/0)S
+11/Times-Italic F
+1627(The)S
+1748(Try)S
+1862(System)S
+11/Times-Bold F
+2882(Version)S
+3124(1.11)S
+10/Courier F
+4117 V
+475(#!)S
+583(/bin/sh)S
+4048 V
+475(for)S
+619(T)S
+691(in)S
+799(1)S
+871(2)S
+943(3)S
+3979 V
+475(do)S
+3910 V
+583(echo)S
+763(Running)S
+1051(test)S
+1231($T)S
+3841 V
+583(try_run)S
+871(cpu=1)S
+1087(test.$T)S
+1375(>)S
+1447(out)S
+3772 V
+583(status=$?)S
+3703 V
+583(if)S
+691([)S
+763($status)S
+1051(\261ne)S
+1195(0)S
+1267(])S
+3634 V
+583(then)S
+3565 V
+691(try_log)S
+979($status)S
+3496 V
+691(exit)S
+871($T)S
+3427 V
+583(fi)S
+3358 V
+583(if)S
+691([)S
+763(\261s)S
+871(out)S
+1015(])S
+3289 V
+583(then)S
+3220 V
+691(exit)S
+871($T)S
+3151 V
+583(fi)S
+3082 V
+475(done)S
+3013 V
+475(exit)S
+655(0)S
+10/Times-Bold F
+2875 V
+969(Figure)S
+1160(6)S
+2806 V
+636(Run)S
+765(script)S
+932(for)S
+1029(several)S
+1230(executables)S
+432 2770 M
+10/Times-Roman F
+-1449 L
+432 4219 M
+1296 l2
+1728 4219 M
+1449 L
+1728 2770 M
+-1296 l2
+11/Times-Bold F
+2632 V
+432(2.5.4.)S
+626(The)S
+758(explain)S
+985(Script)S
+10/Times-Roman F
+2539 V
+582(The)S
+699(purpose)S
+912(of)S
+985(this)S
+1095(script)S
+1252(is)S
+1315(to)S
+1385(explain)S
+1585(to)S
+1654(the)S
+2470 V
+432(student)S
+628(the)S
+724(test)S
+830(that)S
+943(caused)S
+1129(the)S
+1225(project)S
+1415(to)S
+1484(fail.)S
+1621(This)S
+2401 V
+432(might)S
+596(involve)S
+800(copying)S
+1017(an)S
+1097(input)S
+1244(\256le)S
+1344(to)S
+1414(the)S
+1511(terminal,)S
+2332 V
+432(copying)S
+657(a)S
+715(description)S
+1014(\256le,)S
+1137(and)S
+1255(so)S
+1338(forth.)S
+1520(It)S
+1587(might)S
+2263 V
+432(involve)S
+633(nothing)S
+837(at)S
+901(all)S
+982(if)S
+1039(the)S
+1133(instructor)S
+1384(so)S
+1457(chooses.)S
+2170 V
+582(The)S
+700(test)S
+807(number)S
+1014(that)S
+1128(was)S
+1244(returned)S
+1468(by)S
+1551(the)S
+1648(run)S
+2101 V
+432(script)S
+602(is)S
+678(passed)S
+874(as)S
+959(the)S
+1068(only)S
+1210(argument.)S
+1508(The)S
+1637(exit)S
+2032 V
+432(status)S
+589(of)S
+659(this)S
+766(script)S
+920(has)S
+1020(no)S
+1100(signi\256cance.)S
+1939 V
+582(It)S
+644(is)S
+709(quite)S
+855(possible)S
+1076(for)S
+1170(many)S
+1328(projects)S
+1543(to)S
+1614(have)S
+1870 V
+432(identical)S
+10/Times-Bold F
+670(explain)S
+10/Times-Roman F
+886(scripts.)S
+1107(Therefore,)S
+1388(if)S
+1453(no)S
+10/Times-Bold F
+1541(explain)S
+10/Times-Roman F
+1801 V
+432(script)S
+591(is)S
+656(found)S
+821(in)S
+893(the)S
+992(project)S
+1185(directory,)S
+1443(the)S
+10/Times-Bold F
+1541(explain)S
+10/Times-Roman F
+1732 V
+432(script)S
+588(\(if)S
+667(there)S
+810(is)S
+872(one\))S
+1001(in)S
+1070(the)S
+1166(script)S
+1322(directory)S
+1562(\(or)S
+1654(the)S
+1663 V
+432(try)S
+532(directory)S
+783(if)S
+853(no)S
+10/Times-Bold F
+946(script_dir)S
+10/Times-Roman F
+1233(was)S
+1359(given\))S
+1545(will)S
+1671(be)S
+1594 V
+432(executed)S
+667(instead.)S
+1501 V
+582(The)S
+707(following)S
+972(script)S
+1137(simply)S
+1332(copies)S
+1517(an)S
+1604(input)S
+1432 V
+432(\256le)S
+529(to)S
+596(the)S
+690(terminal.)S
+10/Courier F
+1339 V
+475(#!)S
+583(/bin/sh)S
+1270 V
+475(echo)S
+655(Here)S
+835(is)S
+943(the)S
+1087(input)S
+1303(for)S
+1447(test)S
+1627($1)S
+1201 V
+475(cat)S
+619($WD_BACKPATH/$PROJ_DIR/input.$1)S
+10/Times-Roman F
+1084 V
+582(The)S
+704(script)S
+866(in)S
+941(Figure)S
+1125(8)S
+1182(checks)S
+1373(the)S
+1474(high-order)S
+1015 V
+432(bit)S
+522(in)S
+595(the)S
+695(test)S
+805(number)S
+1015(to)S
+1088(determine)S
+1356(whether)S
+1576(or)S
+1651(not)S
+946 V
+432(to)S
+502(reveal)S
+673(the)S
+770(input)S
+917(\256le.)S
+1052(The)S
+10/Times-Bold F
+1169(run)S
+10/Times-Roman F
+1285(script)S
+1442(would)S
+1614(have)S
+877 V
+432(set)S
+525(this)S
+638(bit)S
+728(depending)S
+1005(on)S
+1091(how)S
+1219(the)S
+1318(student's)S
+1560(project)S
+808 V
+432(failed.)S
+715 V
+582(If)S
+654(the)S
+760(stuff)S
+902(printed)S
+1105(by)S
+1197(the)S
+10/Times-Bold F
+1303(explain)S
+10/Times-Roman F
+1522(script)S
+1688(is)S
+646 V
+432(long,)S
+597(the)S
+10/Times-Italic F
+713(more)S
+10/Times-Roman F
+836(\(1\))S
+948(command)S
+1228(should)S
+1430(be)S
+1529(used)S
+1681(to)S
+577 V
+432(prevent)S
+645(it)S
+711(from)S
+860(scrolling)S
+1102(off)S
+1203(of)S
+1284(the)S
+1389(screen)S
+1574(before)S
+508 V
+432(the)S
+538(student)S
+744(can)S
+859(read)S
+994(it.)S
+1094(This)S
+1232(is)S
+1303(illustrated)S
+1576(in)S
+1654(the)S
+10/Courier F
+4117 V
+1987(#!)S
+2095(/bin/sh)S
+4048 V
+1987(T=1)S
+3979 V
+1987(D=$WD_BACKPATH/$PROJ_DIR)S
+3910 V
+1987(while)S
+2203([)S
+2275(\261r)S
+2383($D/test.$T)S
+2779(])S
+3841 V
+1987(do)S
+3772 V
+2095(echo)S
+2275(Running)S
+2563(test)S
+2743($T)S
+3703 V
+2095(IN=$D/input.$T)S
+3634 V
+2095(OUT=$D/output.$T)S
+3565 V
+2095(try_run)S
+2383(fsize=1k)S
+2707(\\)S
+3496 V
+2203(a.out)S
+2419(<)S
+2491($IN)S
+2635(>)S
+2707(,x)S
+3427 V
+2095(status=$?)S
+3358 V
+2095(if)S
+2203([)S
+2275($status)S
+2563(\261ne)S
+2707(0)S
+2779(])S
+3289 V
+2095(then)S
+3220 V
+2203(try_log)S
+2491($status)S
+3151 V
+2203(exit)S
+2383($T)S
+3082 V
+2095(fi)S
+3013 V
+2095(if)S
+2203(cmp)S
+2347(\261s)S
+2455(,x)S
+2563($OUT)S
+2944 V
+2095(then)S
+2875 V
+2203(true)S
+2806 V
+2095(else)S
+2737 V
+2203(exit)S
+2383($T)S
+2668 V
+2095(fi)S
+2599 V
+2095(T=\301expr)S
+2383($T)S
+2491(+)S
+2563(1\301)S
+2530 V
+1987(done)S
+2461 V
+1987(exit)S
+2167(0)S
+10/Times-Bold F
+2323 V
+2481(Figure)S
+2672(7)S
+2254 V
+2085(Run)S
+2214(script)S
+2381(using)S
+2537(input)S
+2693(and)S
+2809(output)S
+2998(\256les)S
+1944 2218 M
+10/Times-Roman F
+-2001 L
+1944 4219 M
+1296 l2
+3240 4219 M
+2001 L
+3240 2218 M
+-1296 l2
+2080 V
+1944(previous)S
+2177(example.)S
+2443(It)S
+2506(is)S
+2572(important)S
+2833(for)S
+2929(security)S
+3146(rea-)S
+2011 V
+1944(sons)S
+2074(to)S
+2144(pipe)S
+2271(the)S
+2368(data)S
+2492(to)S
+2562(be)S
+2642(printed)S
+2836(into)S
+10/Times-Italic F
+2953(more)S
+10/Times-Roman F
+3099(rather)S
+1942 V
+1944(than)S
+2083(giving)S
+2271(\256lenames)S
+2536(as)S
+2620(arguments)S
+2905(to)S
+10/Times-Italic F
+2986(more)S
+10/Times-Roman F
+3143(\(see)S
+10/Times-Italic F
+1873 V
+1944(Using)S
+2117(More)S
+10/Times-Roman F
+2247(,)S
+2292(below)S
+2469(for)S
+2569(details\).)S
+2812(The)S
+10/Times-Bold F
+2936(\261d)S
+10/Times-Roman F
+3028(\257ag)S
+3147(was)S
+1804 V
+1944(given)S
+2107(to)S
+2183(cause)S
+10/Times-Italic F
+2346(more)S
+10/Times-Roman F
+2498(to)S
+2574(print)S
+2717(a)S
+2773(descriptive)S
+3066(prompt)S
+1735 V
+1944(when)S
+2097(it)S
+2154(pauses)S
+2337(at)S
+2403(the)S
+2499(bottom)S
+2692(of)S
+2764(the)S
+2860(screen.)S
+3071(This)S
+3200(is)S
+1666 V
+1944(helpful)S
+2141(to)S
+2213(novice)S
+2399(users)S
+2547(who)S
+2675(are)S
+2774(unfamiliar)S
+3051(with)S
+3183(its)S
+1597 V
+1944(operation.)S
+11/Times-Bold F
+1456 V
+1944(2.5.5.)S
+2138(The)S
+2270(cleanup)S
+2512(Script)S
+10/Times-Roman F
+1363 V
+2094(This)S
+2229(script)S
+2391(is)S
+2459(optional.)S
+2720(If)S
+2788(it)S
+2850(exists,)S
+3030(it)S
+3092(is)S
+3160(run)S
+1294 V
+1944(after)S
+2085(the)S
+10/Times-Bold F
+2189(run)S
+10/Times-Roman F
+2311(or)S
+10/Times-Bold F
+2390(run_safe)S
+10/Times-Roman F
+2642(script)S
+2805(has)S
+2914(\256nished)S
+3133(\(and)S
+1225 V
+1944(after)S
+2079(the)S
+10/Times-Bold F
+2177(explain)S
+10/Times-Roman F
+2388(script,)S
+2560(if)S
+2620(there)S
+2764(is)S
+2827(one,)S
+2952(is)S
+3015(\256nished\).)S
+1156 V
+1944(One)S
+2067(argument)S
+2318(is)S
+2381(passed)S
+2564(to)S
+2634(this)S
+2744(script:)S
+2918(\2520\272)S
+3025(indicates)S
+1087 V
+1944(that)S
+2062(the)S
+2163(project)S
+2358(could)S
+2519(not)S
+2623(be)S
+2707(built)S
+2845(or)S
+2922(failed)S
+3087(a)S
+3141(test,)S
+1018 V
+1944(and)S
+2053(\2521\272)S
+2159(indicates)S
+2396(that)S
+2509(the)S
+2605(student)S
+2801(successfully)S
+3116(com-)S
+949 V
+1944(pleted)S
+2122(the)S
+2226(project.)S
+2459(If)S
+2529(it)S
+2593(is)S
+2663(necessary)S
+2927(to)S
+3004(know)S
+3166(the)S
+880 V
+1944(names)S
+2134(of)S
+2220(the)S
+2330(\256les)S
+2465(submitted)S
+2738(by)S
+2833(the)S
+2942(student,)S
+3166(the)S
+9/Times-Bold F
+811 V
+1944(FILES)S
+10/Times-Roman F
+2120(environment)S
+2445(variable)S
+2660(may)S
+2784(be)S
+2861(used.)S
+718 V
+2094(This)S
+2223(script)S
+2379(is)S
+2440(most)S
+2578(frequently)S
+2847(used)S
+2978(to)S
+3046(perform)S
+649 V
+1944(cleanup)S
+2158(tasks)S
+2304(that)S
+2421(could)S
+2581(not)S
+2684(be)S
+2767(done)S
+2910(at)S
+2979(the)S
+3078(end)S
+3190(of)S
+580 V
+1944(the)S
+10/Times-Bold F
+2041(run_safe)S
+10/Times-Roman F
+2287(script.)S
+2479(It)S
+2539(can)S
+2646(also)S
+2766(be)S
+2845(used)S
+2977(to)S
+3046(perform)S
+511 V
+1944(cleanup)S
+2158(tasks)S
+2304(unique)S
+2494(to)S
+2567(a)S
+2620(particular)S
+2878(project)S
+3071(so)S
+3149(that)S
+11/Times-Bold F
+259 V
+1741(Page)S
+1898(9)S
+E
+%%Page: 10 12
+B
+11/Times-Bold F
+4429 V
+432(03/13/0)S
+11/Times-Italic F
+1627(The)S
+1748(Try)S
+1862(System)S
+11/Times-Bold F
+2882(Version)S
+3124(1.11)S
+10/Courier F
+4117 V
+475(#!)S
+583(/bin/sh)S
+4048 V
+475(if)S
+583([)S
+655($1)S
+763(\261gt)S
+907(128)S
+1051(])S
+3979 V
+475(then)S
+3910 V
+583(echo)S
+763(The)S
+907(cause)S
+1123(of)S
+1231(the)S
+1375(failure)S
+1663(can)S
+1807(be)S
+1915(determined)S
+2311(from)S
+2491(the)S
+2635(output)S
+2887(you)S
+3841 V
+583(echo)S
+763(have)S
+943(already)S
+1231(seen.)S
+3772 V
+583(exit)S
+3703 V
+475(fi)S
+3634 V
+475(echo)S
+655(Here)S
+835(is)S
+943(the)S
+1087(input)S
+1303(for)S
+1447(test)S
+1627($1)S
+3565 V
+475(cat)S
+619($WD_BACKPATH/$PROJ_DIR/input.$1)S
+1771(|)S
+1843(more)S
+2023(\261d)S
+10/Times-Bold F
+3427 V
+1725(Figure)S
+1916(8)S
+3358 V
+1652(Explain)S
+1872(script)S
+432 3322 M
+10/Times-Roman F
+-897 L
+432 4219 M
+2808 l2
+3240 4219 M
+897 L
+3240 3322 M
+-2808 l2
+3184 V
+432(a)S
+490(common)S
+10/Times-Bold F
+731(run)S
+10/Times-Roman F
+854(script)S
+1018(could)S
+1182(be)S
+1269(used.)S
+1444(If)S
+1514(the)S
+10/Times-Bold F
+1618(save)S
+10/Times-Roman F
+3115 V
+432(option)S
+608(was)S
+723(given)S
+879(for)S
+971(a)S
+1020(project)S
+1210(in)S
+1279(the)S
+10/Times-Bold F
+1374(.tryrc)S
+10/Times-Roman F
+1541(\256le,)S
+1654(the)S
+3046 V
+432(scratch)S
+645(directory)S
+904(will)S
+1039(not)S
+1157(be)S
+1255(cleaned)S
+1481(out.)S
+1634(The)S
+10/Times-Bold F
+2977 V
+432(cleanup)S
+10/Times-Roman F
+660(script)S
+822(can)S
+933(be)S
+1017(used)S
+1154(in)S
+1228(this)S
+1342(case)S
+1473(to)S
+1547(remove)S
+2908 V
+432(any)S
+554(unneeded)S
+820(\256les)S
+955(from)S
+1107(the)S
+1216(scratch)S
+1422(directory)S
+1675(so)S
+2839 V
+432(that)S
+543(only)S
+670(the)S
+764(good)S
+904(stuff)S
+1034(is)S
+1094(kept.)S
+2746 V
+582(The)S
+723(exit)S
+861(status)S
+1045(of)S
+1142(the)S
+10/Times-Bold F
+1262(cleanup)S
+10/Times-Roman F
+1508(script)S
+1688(is)S
+2677 V
+432(ignored)S
+649(unless)S
+832(the)S
+10/Times-Bold F
+939(cleanupstatus)S
+10/Times-Roman F
+1321(option)S
+1507(is)S
+1579(given.)S
+2608 V
+432(In)S
+503(this)S
+611(case,)S
+751(a)S
+799(non-zero)S
+1034(status)S
+1192(causes)S
+8/Times-Bold F
+1366(TRY)S
+10/Times-Roman F
+1489(to)S
+1557(log)S
+1654(the)S
+2539 V
+432(failure)S
+620(and)S
+737(exit,)S
+873(and)S
+989(the)S
+10/Times-Bold F
+1092(try_log)S
+10/Times-Roman F
+1305(program)S
+1538(may)S
+1671(be)S
+2470 V
+432(used)S
+571(in)S
+647(the)S
+10/Times-Bold F
+749(cleanup)S
+10/Times-Roman F
+977(script)S
+1139(to)S
+1214(add)S
+1329(a)S
+1384(more)S
+1536(detailed)S
+2401 V
+432(explanation)S
+734(to)S
+801(the)S
+895(log)S
+992(\256le.)S
+2308 V
+582(Figure)S
+769(9)S
+828(shows)S
+1006(a)S
+10/Times-Bold F
+1062(cleanup)S
+10/Times-Roman F
+1291(script)S
+1454(that)S
+1574(copies)S
+2239 V
+432(the)S
+529(student's)S
+769(\256les)S
+892(to)S
+962(an)S
+1042(archive)S
+1243(that)S
+1356(can)S
+1462(be)S
+1541(perused)S
+2170 V
+432(later,)S
+582(for)S
+679(example,)S
+926(to)S
+1000(grade)S
+1161(the)S
+1261(student's)S
+1504(program-)S
+2101 V
+432(ming)S
+576(style.)S
+11/Times-Bold F
+1960 V
+432(2.5.6.)S
+626(The)S
+758(dump_log)S
+1063(Script)S
+10/Times-Roman F
+1867 V
+582(This)S
+714(script)S
+872(is)S
+936(executed)S
+1175(when)S
+1329(the)S
+1427(student)S
+1625(uses)S
+1798 V
+432(the)S
+10/Times-Bold F
+535(\261l)S
+10/Times-Roman F
+611(option)S
+794(in)S
+8/Times-Bold F
+866(TRY)S
+10/Times-Roman F
+968(.)S
+1032(Its)S
+1121(purpose)S
+1340(is)S
+1409(to)S
+1485(print)S
+1628(por-)S
+1729 V
+432(tions)S
+572(of)S
+644(the)S
+740(student's)S
+979(log)S
+1078(\256le.)S
+1212(It)S
+1271(is)S
+1333(run)S
+1435(from)S
+1574(within)S
+1660 V
+432(the)S
+535(scratch)S
+735(directory,)S
+997(although)S
+1236(no)S
+1324(student)S
+1526(\256les)S
+1654(are)S
+1591 V
+432(copied)S
+614(with)S
+10/Times-Bold F
+741(-l)S
+10/Times-Roman F
+778(.)S
+833(It)S
+890(is)S
+950(called)S
+1115(with)S
+1242(the)S
+1336(name)S
+1487(of)S
+1557(the)S
+1651(log)S
+1522 V
+432(\256le)S
+535(and)S
+648(the)S
+748(project)S
+942(code)S
+1082(as)S
+1157(arguments;)S
+1450(the)S
+1549(log)S
+1651(\256le)S
+1453 V
+432(name)S
+602(is)S
+681(the)S
+794(pathname)S
+1068(to)S
+1154(the)S
+1267(log)S
+1383(\256le)S
+1499(from)S
+1654(the)S
+10/Courier F
+1279 V
+475(#!)S
+583(/bin/sh)S
+1210 V
+475(ARCH=$WD_BACKPATH/arch_$PROJ_DIR)S
+1141 V
+475(if)S
+583([)S
+655(!)S
+727(-d)S
+835($ARCH)S
+1051(])S
+1072 V
+475(then)S
+1003 V
+583(mkdir)S
+799($ARCH)S
+934 V
+475(fi)S
+865 V
+475(rm)S
+583(*.o)S
+796 V
+475(tar)S
+619(cf)S
+727($ARCH/$STUDENT)S
+1267(*)S
+727 V
+475(compress)S
+799($ARCH/$STUDENT)S
+10/Times-Bold F
+589 V
+969(Figure)S
+1160(9)S
+520 V
+888(Cleanup)S
+1124(script)S
+432 484 M
+10/Times-Roman F
+-897 L
+432 1381 M
+1296 l2
+1728 1381 M
+897 L
+1728 484 M
+-1296 l2
+3184 V
+1944(scratch)S
+2139(directory.)S
+2416(The)S
+2534(instructor)S
+2789(can)S
+2896(print)S
+3033(as)S
+3106(much)S
+3115 V
+1944(or)S
+2033(as)S
+2122(little)S
+2273(information)S
+2597(from)S
+2753(the)S
+2865(log)S
+2980(\256le)S
+3095(as)S
+3183(he)S
+3046 V
+1944(wants.)S
+2168(The)S
+2311(exit)S
+2451(status)S
+2637(of)S
+2735(this)S
+2870(script)S
+3052(has)S
+3180(no)S
+2977 V
+1944(signi\256cance.)S
+2884 V
+2094(It)S
+2152(is)S
+2213(likely)S
+2372(that)S
+2484(most)S
+2622(projects)S
+2834(will)S
+2948(have)S
+3082(identi-)S
+2815 V
+1944(cal)S
+10/Times-Bold F
+2044(dump_log)S
+10/Times-Roman F
+2329(scripts.)S
+2550(Therefore,)S
+2831(if)S
+2896(no)S
+10/Times-Bold F
+2984(dump_log)S
+10/Times-Roman F
+2746 V
+1944(script)S
+2134(is)S
+2229(found)S
+2424(in)S
+2526(the)S
+2655(project)S
+2878(directory,)S
+3166(the)S
+10/Times-Bold F
+2677 V
+1944(dump_log)S
+10/Times-Roman F
+2231(\(if)S
+2319(there)S
+2470(is)S
+2540(one\))S
+2677(in)S
+2754(the)S
+2858(script)S
+3022(directory)S
+2608 V
+1944(\(or)S
+2048(the)S
+2156(try)S
+2257(directory)S
+2509(if)S
+2580(no)S
+10/Times-Bold F
+2673(script_dir)S
+10/Times-Roman F
+2960(was)S
+3086(given\))S
+2539 V
+1944(will)S
+2058(be)S
+2135(executed)S
+2370(instead.)S
+2446 V
+2094(The)S
+2214(script)S
+2374(below)S
+2547(simply)S
+2737(prints)S
+2900(the)S
+3000(entire)S
+3163(log)S
+2377 V
+1944(\256le,)S
+2056(regardless)S
+2320(of)S
+2390(the)S
+2484(project)S
+2672(code.)S
+10/Courier F
+2284 V
+1987(#!)S
+2095(/bin/sh)S
+2215 V
+1987(cat)S
+2131($1)S
+2239(|)S
+2311(more)S
+2491(\261d)S
+10/Times-Roman F
+2098 V
+2094(The)S
+2219(next)S
+2354(script)S
+2518(prints)S
+2685(only)S
+2822(those)S
+2979(entries)S
+3170(for)S
+2029 V
+1944(the)S
+2046(speci\256ed)S
+2287(project.)S
+2517(The)S
+10/Symbol F
+2638(\256)S
+10/Times-Roman F
+2724(symbol)S
+2928(in)S
+3002(the)S
+10/Times-Italic F
+3103(egrep)S
+10/Times-Roman F
+1960 V
+1944(patterns)S
+2156(below)S
+2324(represents)S
+2589(a)S
+2636(tab.)S
+2765(This)S
+2892(is)S
+2952(adequate)S
+3187(so)S
+1891 V
+1944(long)S
+2074(as)S
+2146(none)S
+2285(of)S
+2357(the)S
+2453(project)S
+2643(codes)S
+2802(look)S
+2931(like)S
+3044(dates)S
+3190(or)S
+1822 V
+1944(times.)S
+10/Courier F
+1729 V
+1987(#!)S
+2095(/bin/sh)S
+1660 V
+1987(egrep)S
+2203(")S
+10/Symbol F
+2239(\256)S
+10/Courier F
+2298($2)S
+10/Symbol F
+2370(\256)S
+10/Courier F
+2429(")S
+2501($1)S
+10/Times-Roman F
+1543 V
+2094(The)S
+2212(script)S
+2370(in)S
+2441(Figure)S
+2622(10)S
+2705(simply)S
+2892(tells)S
+3016(a)S
+3066(student)S
+1474 V
+1944(whether)S
+2179(he)S
+2277(has)S
+2397(completed)S
+2689(the)S
+2803(speci\256ed)S
+3057(project.)S
+1405 V
+1944(The)S
+2063(\256nal)S
+2195(example)S
+2425(in)S
+2497(Figure)S
+2679(11)S
+2764(shows)S
+2938(a)S
+2990(script)S
+3149(that)S
+10/Courier F
+1231 V
+1987(#!)S
+2095(/bin/sh)S
+1162 V
+1987(X=\301egrep)S
+2311(")S
+10/Symbol F
+2347(\256)S
+10/Courier F
+2406($2)S
+10/Symbol F
+2478(\256)S
+10/Courier F
+2537(.*)S
+10/Symbol F
+2609(\256)S
+10/Courier F
+2668(Completed")S
+3064($1\301)S
+1093 V
+1987(if)S
+2095([)S
+2167(\261n)S
+2275("$X")S
+2455(])S
+1024 V
+1987(then)S
+955 V
+2095(echo)S
+2275(Completed)S
+886 V
+1987(else)S
+817 V
+2095(echo)S
+2275(Not)S
+2419(completed)S
+748 V
+1987(fi)S
+10/Times-Bold F
+610 V
+2466(Figure)S
+2657(10)S
+541 V
+2136(Completion)S
+2456(status)S
+2625(dump_log)S
+2901(script)S
+1944 505 M
+10/Times-Roman F
+-828 L
+1944 1333 M
+1296 l2
+3240 1333 M
+828 L
+3240 505 M
+-1296 l2
+11/Times-Bold F
+259 V
+1724(Page)S
+1881(10)S
+E
+%%Page: 11 13
+B
+11/Times-Bold F
+4429 V
+432(03/13/0)S
+11/Times-Italic F
+1627(The)S
+1748(Try)S
+1862(System)S
+11/Times-Bold F
+2882(Version)S
+3124(1.11)S
+10/Times-Roman F
+4222 V
+432(allows)S
+620(a)S
+678(student)S
+883(to)S
+961(examine)S
+1196(his)S
+1296(entire)S
+1464(log)S
+1571(\256le)S
+1678(as)S
+4153 V
+432(well)S
+567(as)S
+648(the)S
+753(entries)S
+945(for)S
+1046(a)S
+1104(speci\256c)S
+1318(project.)S
+1551(This)S
+1688(is)S
+4084 V
+432(done)S
+579(with)S
+716(a)S
+772(dummy)S
+985(entry)S
+1138(\252all\272)S
+1282(in)S
+1358(the)S
+10/Times-Bold F
+1461(.tryrc)S
+10/Times-Roman F
+1636(\256le.)S
+4015 V
+432(In)S
+504(this)S
+613(case,)S
+754(the)S
+850(log)S
+949(\256le)S
+1048(is)S
+1110(sorted)S
+1279(\256rst,)S
+1409(which)S
+1578(brings)S
+3946 V
+432(all)S
+525(of)S
+606(the)S
+711(entries)S
+903(for)S
+1004(each)S
+1146(project)S
+1345(together)S
+1574(before)S
+3877 V
+432(printing)S
+643(them.)S
+11/Times-Bold F
+3736 V
+432(2.5.7.)S
+626(The)S
+758(query)S
+945(Script)S
+10/Times-Roman F
+3643 V
+582(This)S
+718(optional)S
+945(script)S
+1108(is)S
+1177(intended)S
+1414(to)S
+1489(provide)S
+1701(a)S
+3574 V
+432(mechanism)S
+735(by)S
+823(which)S
+998(the)S
+1100(student)S
+1302(can)S
+1413(obtain)S
+1591(infor-)S
+3505 V
+432(mation)S
+623(about)S
+780(a)S
+830(project.)S
+1056(It)S
+1116(is)S
+1179(executed)S
+1417(when)S
+1569(the)S
+10/Times-Bold F
+1665(\261q)S
+10/Times-Roman F
+3436 V
+432(\257ag)S
+550(is)S
+618(given)S
+780(to)S
+8/Times-Bold F
+851(TRY)S
+10/Times-Roman F
+953(.)S
+1016(The)S
+1138(script)S
+1300(is)S
+1368(executed)S
+1611(from)S
+3367 V
+432(the)S
+544(scratch)S
+753(directory)S
+1009(like)S
+1138(the)S
+1249(rest)S
+1373(of)S
+1460(the)S
+1571(scripts)S
+3298 V
+432(\(although)S
+694(no)S
+785(student)S
+990(\256les)S
+1121(are)S
+1226(copied)S
+1418(for)S
+1519(queries\).)S
+3229 V
+432(An)S
+555(instructor)S
+836(could)S
+1019(write)S
+1192(a)S
+1268(query)S
+1454(script)S
+1637(that)S
+3160 V
+432(divulged)S
+673(information)S
+988(about)S
+1151(the)S
+1254(tests)S
+1390(for)S
+1489(a)S
+1545(project,)S
+3091 V
+432(collected)S
+682(information)S
+997(from)S
+1144(the)S
+1248(student,)S
+1467(gave)S
+1611(hints)S
+3022 V
+432(for)S
+534(completing)S
+837(the)S
+942(project,)S
+1156(and)S
+1274(so)S
+1358(forth.)S
+1541(Queries)S
+2953 V
+432(are)S
+526(not)S
+623(recorded)S
+854(in)S
+921(the)S
+1015(log)S
+1112(\256le.)S
+2860 V
+582(There)S
+744(is)S
+805(no)S
+10/Times-Bold F
+886(query_safe)S
+10/Times-Roman F
+1187(script.)S
+1377(Like)S
+1509(the)S
+1604(other)S
+2791 V
+432(unprotected)S
+755(scripts,)S
+965(the)S
+10/Times-Bold F
+1077(query)S
+10/Times-Roman F
+1265(script)S
+1436(is)S
+1513(executed)S
+2722 V
+432(with)S
+561(the)S
+657(instructor's)S
+953(user-id.)S
+1177(Because)S
+1400(of)S
+1472(its)S
+1550(general)S
+2653 V
+432(nature,)S
+621(one)S
+731(must)S
+871(be)S
+951(particularly)S
+1252(vigilant)S
+1459(when)S
+1611(writ-)S
+2584 V
+432(ing)S
+533(this)S
+644(script)S
+802(to)S
+873(avoid)S
+1031(commands)S
+1316(that)S
+1430(might)S
+1594(allow)S
+2515 V
+432(the)S
+550(student)S
+768(to)S
+859(execute)S
+1088(arbitrary)S
+1340(programs.)S
+1645(For)S
+2446 V
+432(example,)S
+680(it)S
+742(is)S
+809(unsafe)S
+993(to)S
+1067(invoke)S
+1258(an)S
+1342(editor)S
+1510(from)S
+1654(the)S
+2377 V
+432(script)S
+596(and)S
+712(allow)S
+875(the)S
+978(student)S
+1181(to)S
+1257(enter)S
+1407(editing)S
+1604(com-)S
+2308 V
+432(mands;)S
+648(the)S
+763(student)S
+978(could)S
+1153(use)S
+1274(the)S
+1389(editor's)S
+1614(shell)S
+2239 V
+432(escape)S
+646(to)S
+745(execute)S
+982(arbitrary)S
+1242(commands)S
+1555(in)S
+1654(the)S
+2170 V
+432(instructor's)S
+732(account.)S
+10/Times-Bold F
+981(Try_run)S
+10/Times-Roman F
+1226(can)S
+1335(be)S
+1417(used)S
+1552(to)S
+1624(exe-)S
+2101 V
+432(cute)S
+573(any)S
+700(such)S
+850(dangerous)S
+1136(program)S
+1379(in)S
+1465(the)S
+10/Times-Bold F
+1578(query)S
+10/Times-Roman F
+2032 V
+432(script,)S
+604(so)S
+680(long)S
+810(as)S
+883(any)S
+993(\256les)S
+1116(that)S
+1230(need)S
+1367(to)S
+1437(be)S
+1517(accessed)S
+1963 V
+432(by)S
+529(the)S
+639(program)S
+879(reside)S
+1059(in)S
+1142(\(or)S
+1248(have)S
+1398(links)S
+1551(in\))S
+1654(the)S
+1894 V
+432(scratch)S
+623(directory.)S
+11/Times-Bold F
+1753 V
+432(2.6.)S
+576(Modifying)S
+891(the)S
+1001(Environment)S
+10/Times-Roman F
+1660 V
+582(While)S
+8/Times-Bold F
+750(TRY)S
+10/Times-Roman F
+876(begins)S
+1057(with)S
+1188(the)S
+1286(environment)S
+1614(vari-)S
+1591 V
+432(ables)S
+588(de\256ned)S
+797(by)S
+889(the)S
+995(student,)S
+1216(it)S
+1282(modi\256es)S
+1520(some)S
+1678(of)S
+1522 V
+432(these)S
+584(values)S
+766(for)S
+864(security)S
+1082(reasons)S
+1289(\(see)S
+10/Times-Italic F
+1413(Security)S
+1638(and)S
+1453 V
+432(The)S
+557(Environment)S
+10/Times-Roman F
+868(,)S
+918(below\).)S
+1155(The)S
+1284(instructor)S
+1550(is)S
+1624(then)S
+1384 V
+432(given)S
+616(two)S
+755(opportunities)S
+1122(to)S
+1218(further)S
+1431(modify)S
+1654(the)S
+1315 V
+432(environment.)S
+10/Courier F
+1141 V
+475(#!)S
+583(/bin/sh)S
+1072 V
+475(if)S
+583([)S
+655("$2")S
+835(=)S
+907(all)S
+1051(])S
+1003 V
+475(then)S
+934 V
+583(sort)S
+763($1)S
+871(|)S
+943(more)S
+1123(-d)S
+865 V
+475(else)S
+796 V
+583(egrep)S
+799(")S
+10/Symbol F
+835(\256)S
+10/Courier F
+894($2)S
+10/Symbol F
+966(\256)S
+10/Courier F
+1025(")S
+1097($1)S
+727 V
+475(fi)S
+10/Times-Bold F
+589 V
+954(Figure)S
+1145(11)S
+520 V
+676(Dump_log)S
+962(script)S
+1129(for)S
+1226(all)S
+1310(entries)S
+432 484 M
+10/Times-Roman F
+-759 L
+432 1243 M
+1296 l2
+1728 1243 M
+759 L
+1728 484 M
+-1296 l2
+4222 V
+2094(First,)S
+2241(environment)S
+2568(variables)S
+2807(may)S
+2932(be)S
+3010(set)S
+3098(in)S
+3166(the)S
+10/Times-Bold F
+4153 V
+1944(.tryrc)S
+10/Times-Roman F
+2127(\256le,)S
+2256(as)S
+2343(previously)S
+2634(described.)S
+2937(Second,)S
+3166(the)S
+10/Times-Bold F
+4084 V
+1944(init)S
+10/Times-Roman F
+2031(,)S
+10/Times-Bold F
+2079(build)S
+10/Times-Roman F
+2212(,)S
+10/Times-Bold F
+2259(build_safe)S
+10/Times-Roman F
+2522(,)S
+10/Times-Bold F
+2569(run)S
+10/Times-Roman F
+2662(,)S
+2709(and)S
+10/Times-Bold F
+2828(run_safe)S
+10/Times-Roman F
+3083(scripts)S
+4015 V
+1944(may)S
+2089(all)S
+2191(create)S
+2377(a)S
+2445(\256le)S
+2562(named)S
+10/Times-Bold F
+2763(.ENVIRONMENT)S
+10/Times-Roman F
+3946 V
+1944(containing)S
+2232(environment)S
+2570(variable)S
+2798(de\256nitions)S
+3084(of)S
+3166(the)S
+3877 V
+1944(form)S
+10/Courier-Oblique F
+3784 V
+1987(NAME=value)S
+10/Times-Roman F
+3691 V
+1944(If)S
+2026(such)S
+2178(a)S
+2247(\256le)S
+2366(exists)S
+2545(after)S
+2698(one)S
+2827(of)S
+2918(these)S
+3083(scripts)S
+3622 V
+1944(\256nishes,)S
+8/Times-Bold F
+2159(TRY)S
+10/Times-Roman F
+2282(will)S
+2397(add)S
+2505(those)S
+2653(variables)S
+2892(to)S
+2959(its)S
+3036(environ-)S
+3553 V
+1944(ment)S
+2096(so)S
+2180(that)S
+2302(their)S
+2444(values)S
+2629(will)S
+2753(be)S
+2840(available)S
+3089(to)S
+3166(the)S
+3484 V
+1944(subsequent)S
+2231(scripts.)S
+2443(Should)S
+2633(a)S
+2680(variable)S
+2895(which)S
+3062(already)S
+3415 V
+1944(has)S
+2054(a)S
+2111(value)S
+2272(be)S
+2359(set)S
+2456(in)S
+2533(this)S
+2650(manner,)S
+2876(the)S
+2980(new)S
+3109(value)S
+3346 V
+1944(replaces)S
+2162(the)S
+2256(old)S
+2353(one.)S
+11/Times-Bold F
+3205 V
+1944(2.7.)S
+2088(Status)S
+2287(Messages)S
+10/Times-Bold F
+3112 V
+2094(T)S
+8/Times-Bold F
+2134(RY)S
+10/Times-Roman F
+2250(informs)S
+2483(the)S
+2603(student)S
+2822(when)S
+2997(the)S
+3116(build)S
+3043 V
+1944(script)S
+2105(fails,)S
+2250(when)S
+2406(a)S
+2459(test)S
+2569(in)S
+2642(the)S
+2742(run)S
+2848(script)S
+3008(fails,)S
+3153(and)S
+2974 V
+1944(when)S
+2109(the)S
+2218(project)S
+2421(is)S
+2496(successfully)S
+2825(completed.)S
+3146(The)S
+2905 V
+1944(instructor)S
+2204(can)S
+2317(specify)S
+2520(the)S
+2623(text)S
+2743(to)S
+2818(be)S
+2903(used)S
+3041(in)S
+3116(these)S
+2836 V
+1944(messages)S
+2213(with)S
+2362(environment)S
+2709(variables)S
+2969(set)S
+3078(in)S
+3166(the)S
+10/Times-Bold F
+2767 V
+1944(.tryrc)S
+10/Times-Roman F
+2123(\256le.)S
+2268(There)S
+2442(is)S
+2515(an)S
+2605(environment)S
+2943(variable)S
+3170(for)S
+2698 V
+1944(each)S
+2085(of)S
+2165(these)S
+2319(messages.)S
+2611(If)S
+2681(it)S
+2745(is)S
+2815(explicitly)S
+3074(empty,)S
+2629 V
+1944(the)S
+2038(message)S
+2262(is)S
+2322(not)S
+2419(printed)S
+2610(at)S
+2674(all.)S
+2536 V
+2094(These)S
+2273(messages)S
+2535(are)S
+2644(all)S
+2740(used)S
+2885(as)S
+2970(the)S
+3079(format)S
+2467 V
+1944(string)S
+2113(for)S
+2215(a)S
+2274(C)S
+2346(language)S
+10/Times-Bold F
+2596(printf.)S
+10/Times-Roman F
+2812(Figure)S
+3000(12)S
+3091(shows)S
+2398 V
+1944(the)S
+2056(default)S
+2262(messages,)S
+2542(the)S
+2654(names)S
+2846(of)S
+2934(the)S
+3045(relevant)S
+2329 V
+1944(environment)S
+2275(variables,)S
+2533(and)S
+2645(the)S
+2744(argument)S
+2997(printed)S
+3193(in)S
+2260 V
+1944(each)S
+2085(message.)S
+2354(If)S
+2424(the)S
+2528(text)S
+2648(supplied)S
+2881(for)S
+2980(a)S
+3036(message)S
+2191 V
+1944(does)S
+2082(not)S
+2187(contain)S
+2392(a)S
+2446(format)S
+2634(code,)S
+2790(the)S
+2891(argument)S
+3146(will)S
+2122 V
+1944(not)S
+2042(be)S
+2120(printed.)S
+2347(If)S
+2407(it)S
+2461(does)S
+2591(contain)S
+2789(a)S
+2836(format)S
+3017(code,)S
+3166(the)S
+2053 V
+1944(code)S
+2080(must)S
+2219(be)S
+2298(compatible)S
+2589(with)S
+2718(the)S
+2813(one)S
+2921(shown)S
+3098(in)S
+3166(the)S
+1984 V
+1944(table.)S
+2131(You)S
+2268(deserve)S
+2486(what)S
+2636(you)S
+2759(get)S
+2866(if)S
+2936(your)S
+3079(format)S
+1915 V
+1944(code)S
+2089(is)S
+2160(not)S
+2267(compatible,)S
+2581(or)S
+2661(if)S
+2728(you)S
+2848(give)S
+2982(more)S
+3136(than)S
+1846 V
+1944(one.)S
+11/Times-Bold F
+1705 V
+1944(2.8.)S
+2088(News)S
+10/Times-Bold F
+1612 V
+2094(T)S
+8/Times-Bold F
+2134(RY)S
+10/Times-Roman F
+2243(implements)S
+2564(a)S
+2630(capability)S
+2908(to)S
+2994(allow)S
+3166(the)S
+1543 V
+1944(instructor)S
+2197(to)S
+2266(provide)S
+2472(students)S
+2690(with)S
+2818(news.)S
+2997(If)S
+3058(there)S
+3200(is)S
+1474 V
+1944(a)S
+1992(\256le)S
+2090(called)S
+10/Times-Bold F
+2256(news)S
+10/Times-Roman F
+2403(in)S
+2471(the)S
+2566(try)S
+2654(directory)S
+2892(with)S
+3019(read)S
+3143(per-)S
+1405 V
+1944(mission)S
+2163(for)S
+2265(the)S
+2370(owner,)S
+2566(its)S
+2654(contents)S
+2886(are)S
+2991(written)S
+3193(to)S
+1336 V
+1944(the)S
+2060(student's)S
+2319(terminal)S
+2563(after)S
+2715(the)S
+2830(\256les)S
+2971(have)S
+3126(been)S
+1267 V
+1944(copied.)S
+2163(This)S
+2293(\256le)S
+2393(is)S
+2456(intended)S
+2687(to)S
+2757(be)S
+2837(used)S
+2970(for)S
+3062(general)S
+1198 V
+1944(information)S
+2255(for)S
+2351(a)S
+2404(class.)S
+2582(There)S
+2749(can)S
+2858(also)S
+2980(be)S
+3062(a)S
+10/Times-Bold F
+3114(news)S
+10/Times-Roman F
+1129 V
+1944(or)S
+10/Times-Bold F
+2033(news.)S
+10/Times-Italic F
+2174(project-code)S
+10/Times-Roman F
+2518(\256le)S
+2634(in)S
+2720(each)S
+2870(of)S
+2959(the)S
+3072(project)S
+1060 V
+1944(directories)S
+2229(for)S
+2329(speci\256c)S
+2543(information)S
+2857(about)S
+3020(that)S
+3140(pro-)S
+991 V
+1944(ject.)S
+2088(The)S
+2203(former)S
+2388(is)S
+2448(used)S
+2578(for)S
+2668(projects)S
+2879(with)S
+3006(their)S
+3137(own)S
+922 V
+1944(project)S
+2136(directories,)S
+2430(and)S
+2541(the)S
+2638(latter)S
+2786(for)S
+2879(projects)S
+3093(which)S
+853 V
+1944(share)S
+2105(a)S
+2166(common)S
+2411(project)S
+2612(directory.)S
+2898(If)S
+2971(both)S
+3111(exist,)S
+784 V
+1944(only)S
+2090(the)S
+2203(latter)S
+2367(\256le)S
+2483(is)S
+2562(used.)S
+2746(This)S
+2892(news)S
+3054(is)S
+3133(only)S
+715 V
+1944(printed)S
+2135(when)S
+2285(the)S
+2379(speci\256c)S
+2583(project)S
+2771(is)S
+2831(submitted.)S
+622 V
+2094(A)S
+2172(status)S
+2343(\256le)S
+2454(is)S
+2528(kept)S
+2666(in)S
+2747(the)S
+2855(student's)S
+3106(home)S
+553 V
+1944(directory)S
+2204(recording)S
+2477(which)S
+2666(news)S
+2830(\256les)S
+2971(have)S
+3126(been)S
+484 V
+1944(seen.)S
+2121(This)S
+2263(is)S
+2338(keyed)S
+2517(on)S
+2612(the)S
+2721(date)S
+2857(that)S
+2983(news)S
+3140(\256les)S
+11/Times-Bold F
+259 V
+1724(Page)S
+1881(11)S
+E
+%%Page: 12 14
+B
+11/Times-Bold F
+4429 V
+432(03/13/0)S
+11/Times-Italic F
+1627(The)S
+1748(Try)S
+1862(System)S
+11/Times-Bold F
+2882(Version)S
+3124(1.11)S
+10/Times-BoldItalic F
+4093 V
+706(Env)S
+826(Variable)S
+1241(Argument)S
+1607(Format)S
+2239(Default)S
+2446(message)S
+10/Times-Roman F
+621 4084 M
+2387 l2
+10/Courier F
+4015 V
+621(TRY_SUCCESS)S
+10/Times-Roman F
+1215(project)S
+1403(code)S
+1664(%s)S
+1884(You)S
+2007(have)S
+2141(successfully)S
+2455(completed)S
+2727(project)S
+2915(%s!)S
+10/Courier F
+3946 V
+621(TRY_FAIL_BUILD)S
+10/Times-Roman F
+1215(project)S
+1403(code)S
+1664(%s)S
+1884(Couldn't)S
+2118(build)S
+2262(your)S
+2392(project.)S
+10/Courier F
+3877 V
+621(TRY_FAIL_RUN)S
+10/Times-Roman F
+1215(test)S
+1319(number)S
+1660(%d)S
+1884(Your)S
+2027(project)S
+2215(failed)S
+2373(test)S
+2477(%d.)S
+10/Times-Bold F
+3715 V
+1710(Figure)S
+1901(12)S
+3646 V
+1570(T)S
+8/Times-Bold F
+1610(RY)S
+10/Times-Bold F
+1700(status)S
+1869(messages)S
+432 3610 M
+10/Times-Roman F
+-609 L
+432 4219 M
+2808 l2
+3240 4219 M
+609 L
+3240 3610 M
+-2808 l2
+3472 V
+432(were)S
+580(modi\256ed,)S
+839(so)S
+922(any)S
+1039(change)S
+1240(to)S
+1317(a)S
+1374(news)S
+1527(\256le)S
+1634(will)S
+3403 V
+432(cause)S
+587(it)S
+641(to)S
+708(be)S
+785(shown)S
+961(to)S
+1028(the)S
+1122(student)S
+1316(during)S
+1493(their)S
+1624(next)S
+3334 V
+432(run)S
+536(of)S
+8/Times-Bold F
+605(TRY)S
+10/Times-Roman F
+707(.)S
+765(If)S
+828(the)S
+10/Times-Bold F
+925(\261n)S
+10/Times-Roman F
+1011(\257ag)S
+1124(is)S
+1187(given)S
+1344(to)S
+8/Times-Bold F
+1410(TRY)S
+10/Times-Roman F
+1512(,)S
+1550(general)S
+3265 V
+432(news)S
+585(\(if)S
+672(any\))S
+809(and)S
+926(news)S
+1079(for)S
+1179(the)S
+1283(named)S
+1474(project)S
+1671(\(if)S
+3196 V
+432(any\))S
+569(are)S
+673(printed)S
+874(regardless)S
+1148(of)S
+1228(whether)S
+1451(the)S
+1554(student)S
+3127 V
+432(has)S
+532(seen)S
+659(it)S
+713(before.)S
+3034 V
+582(News)S
+759(is)S
+840(not)S
+958(printed)S
+1170(when)S
+1340(running)S
+1567(in)S
+1654(the)S
+2965 V
+432(background)S
+736(\()S
+10/Times-Bold F
+756(\261b)S
+10/Times-Roman F
+819(\))S
+859(mode.)S
+11/Times-Bold F
+2824 V
+432(2.9.)S
+576(Errors)S
+10/Times-Roman F
+2731 V
+582(Errors)S
+766(that)S
+891(may)S
+1028(occur)S
+1195(when)S
+1358(a)S
+1418(student)S
+1625(runs)S
+8/Times-Bold F
+2662 V
+432(TRY)S
+10/Times-Roman F
+566(either)S
+736(have)S
+882(to)S
+961(do)S
+1053(with)S
+1192(the)S
+1298(student's)S
+1547(\256les)S
+1678(or)S
+2593 V
+432(with)S
+575(the)S
+685(instructor's)S
+994(scripts)S
+1186(and)S
+1308(\256les.)S
+1478(There)S
+1654(are)S
+2524 V
+432(also)S
+561(several)S
+764(\252impossible\272)S
+1110(errors)S
+1281(that)S
+1403(should)S
+1594(never)S
+2455 V
+432(occur,)S
+612(such)S
+753(as)S
+834(not)S
+942(being)S
+1107(able)S
+1239(to)S
+1316(fork)S
+1446(or)S
+1526(create)S
+1701(a)S
+2386 V
+432(pipe,)S
+582(etc.)S
+719(Errors)S
+900(that)S
+1021(are)S
+1125(the)S
+1229(fault)S
+1370(of)S
+1450(the)S
+1554(student)S
+2317 V
+432(are)S
+529(reported)S
+753(to)S
+822(the)S
+918(student.)S
+1149(These)S
+1315(include)S
+1515(\256les)S
+1637(that)S
+2248 V
+432(the)S
+536(student)S
+740(named)S
+931(which)S
+1108(cannot)S
+1299(be)S
+1386(accessed,)S
+1641(and)S
+2179 V
+432(incorrect)S
+698(instructor)S
+980(or)S
+1080(project)S
+1298(code)S
+1462(arguments.)S
+2110 V
+432(Interrupts)S
+686(are)S
+780(also)S
+897(reported)S
+1118(to)S
+1185(the)S
+1279(user.)S
+2017 V
+582(When)S
+759(any)S
+879(other)S
+1036(error)S
+1186(occurs,)S
+8/Times-Bold F
+1387(TRY)S
+10/Times-Roman F
+1521(tells)S
+1654(the)S
+1948 V
+432(student)S
+656(to)S
+753(see)S
+880(their)S
+1041(instructor,)S
+1337(and)S
+1474(records)S
+1701(a)S
+1879 V
+432(descriptive)S
+726(error)S
+872(message)S
+1105(in)S
+1181(the)S
+1284(student's)S
+1530(log)S
+1636(\256le.)S
+1810 V
+432(This)S
+564(prevents)S
+793(students)S
+1015(from)S
+1157(seeing)S
+1336(the)S
+1435(gory)S
+1570(details)S
+1741 V
+432(of)S
+519(the)S
+630(instructor's)S
+941(mistakes,)S
+1204(and)S
+1328(also)S
+1461(allows)S
+1654(the)S
+1672 V
+432(instructors)S
+710(to)S
+781(see)S
+882(the)S
+979(real)S
+1093(error)S
+1233(message)S
+1460(rather)S
+1624(than)S
+1603 V
+432(relying)S
+634(on)S
+725(what)S
+872(the)S
+976(student)S
+1180(thought)S
+1394(they)S
+1528(saw)S
+1651(but)S
+1534 V
+432(didn't)S
+596(write)S
+740(down)S
+893(and)S
+1000(is)S
+1060(no)S
+1140(longer)S
+1314(quite)S
+1455(sure)S
+1575(of.)S
+1441 V
+582(The)S
+709(check)S
+883(option)S
+1069(to)S
+8/Times-Bold F
+1144(TRY)S
+10/Times-Roman F
+1278(\(described)S
+1561(below\))S
+1372 V
+432(allows)S
+629(the)S
+743(instructor)S
+1014(to)S
+1101(verify)S
+1284(that)S
+1414(the)S
+1527(required)S
+1303 V
+432(scripts)S
+609(exist)S
+743(and)S
+850(that)S
+961(the)S
+1055(scripts)S
+1232(and)S
+1339(directories)S
+1614(have)S
+1234 V
+432(the)S
+532(proper)S
+715(modes.)S
+933(Also,)S
+1086(after)S
+1222(setting)S
+1408(up)S
+1493(a)S
+1545(project,)S
+1165 V
+432(it)S
+493(is)S
+560(a)S
+613(good)S
+759(idea)S
+886(to)S
+959(test)S
+1069(your)S
+1205(scripts)S
+1388(by)S
+1474(using)S
+8/Times-Bold F
+1626(TRY)S
+10/Times-Roman F
+1096 V
+432(from)S
+581(a)S
+640(different)S
+879(account)S
+1098(\(e.g.)S
+1236(if)S
+1304(you)S
+1425(have)S
+1570(set)S
+1668(up)S
+8/Times-Bold F
+1027 V
+432(TRY)S
+10/Times-Roman F
+576(in)S
+665(your)S
+817(grader)S
+1013(account,)S
+1258(test)S
+1384(it)S
+1460(from)S
+1618(your)S
+958 V
+432(faculty)S
+644(account\).)S
+931(This)S
+1081(often)S
+1248(spots)S
+1414(problems)S
+1681(in)S
+889 V
+432(scripts)S
+616(or)S
+693(with)S
+827(permissions)S
+1141(of)S
+1217(data)S
+1344(\256les)S
+1470(that)S
+1587(might)S
+820 V
+432(otherwise)S
+686(have)S
+820(caused)S
+1004(trouble)S
+1195(for)S
+1285(the)S
+1379(students.)S
+11/Times-Bold F
+679 V
+432(3.)S
+526(Security)S
+10/Times-Bold F
+586 V
+582(T)S
+8/Times-Bold F
+622(RY)S
+10/Times-Roman F
+715(runs)S
+840(as)S
+912(a)S
+961(set-user-id)S
+1237(program)S
+1463(in)S
+1532(order)S
+1681(to)S
+517 V
+432(be)S
+533(able)S
+678(to)S
+769(access)S
+967(the)S
+1084(instructor's)S
+1401(\256les)S
+1544(without)S
+448 V
+432(requiring)S
+680(that)S
+798(the)S
+899(student)S
+1100(have)S
+1241(access)S
+1422(to)S
+1496(them.)S
+1678(In)S
+3472 V
+1944(this)S
+2052(regard,)S
+2242(the)S
+2337(information)S
+2643(in)S
+2711(the)S
+2805(try)S
+2892(directory)S
+3130(is)S
+3190(as)S
+3403 V
+1944(safe)S
+2070(from)S
+2216(students)S
+2442(as)S
+2521(the)S
+2623(instructor)S
+2882(cares)S
+3034(to)S
+3109(make)S
+3334 V
+1944(it.)S
+2050(The)S
+2181(dif\256culty)S
+2439(with)S
+2583(security)S
+2810(comes)S
+3000(when)S
+3166(the)S
+3265 V
+1944(student's)S
+2188(program)S
+2419(is)S
+2486(executed)S
+2728(in)S
+2802(the)S
+2902(scratch)S
+3099(direc-)S
+3196 V
+1944(tory.)S
+2104(Presumably)S
+2416(this)S
+2531(program)S
+2763(could)S
+2925(do)S
+10/Times-Italic F
+3012(anything)S
+10/Times-Roman F
+3223(;)S
+3127 V
+1944(for)S
+2037(example,)S
+2280(deleting)S
+2498(\256les)S
+2621(in)S
+2691(the)S
+2787(current)S
+2980(and)S
+3089(parent)S
+3058 V
+1944(directories.)S
+2260(A)S
+2329(more)S
+2478(sophisticated)S
+2818(user)S
+2943(might)S
+3109(make)S
+2989 V
+1944(a)S
+1998(copy)S
+2142(of)S
+10/Times-Bold F
+2219(/bin/sh)S
+10/Times-Roman F
+2418(in)S
+2491(his)S
+2587(own)S
+2716(directory)S
+2960(and)S
+3073(set)S
+3166(the)S
+2920 V
+1944(mode)S
+2100(so)S
+2175(that)S
+2288(it)S
+2344(is)S
+2406(set-user-id)S
+2682(to)S
+2751(the)S
+2847(faculty)S
+3037(account,)S
+2851 V
+1944(or)S
+2017(remove)S
+2221(failure)S
+2401(entries)S
+2584(from)S
+2723(his)S
+2815(own)S
+2940(log)S
+3039(\256le,)S
+3153(and)S
+2782 V
+1944(so)S
+2023(forth.)S
+2201(The)S
+2321(really)S
+2485(careful)S
+2679(student)S
+2878(can)S
+2987(arrange)S
+3193(to)S
+2713 V
+1944(leave)S
+2092(no)S
+2172(traces)S
+2333(of)S
+2403(his)S
+2493(mischief.)S
+2620 V
+2094(For)S
+2203(such)S
+2339(things)S
+2512(to)S
+2585(happen,)S
+2799(the)S
+2898(student's)S
+3140(pro-)S
+2551 V
+1944(gram)S
+2093(must)S
+2235(be)S
+2317(executed)S
+2557(by)S
+2641(the)S
+2739(instructor's)S
+3037(account.)S
+2482 V
+1944(However,)S
+2230(this)S
+2367(is)S
+2457(typically)S
+2719(what)S
+2886(happens)S
+3133(with)S
+10/Times-Italic F
+2413 V
+1944(submit)S
+10/Times-Roman F
+2104(\(1R\),)S
+2260(where)S
+2438(the)S
+2543(instructor)S
+2805(runs)S
+2939(shell)S
+3083(scripts)S
+2344 V
+1944(to)S
+2014(execute)S
+2222(the)S
+2319(students')S
+2559(programs)S
+2809(and)S
+2918(save)S
+3047(the)S
+3143(out-)S
+2275 V
+1944(put)S
+2041(for)S
+2131(later)S
+2259(perusal.)S
+2182 V
+2094(These)S
+2277(and)S
+2403(other)S
+2566(security)S
+2796(issues)S
+2978(were)S
+3133(con-)S
+2113 V
+1944(sidered)S
+2153(in)S
+2235(the)S
+2344(design)S
+2536(of)S
+8/Times-Bold F
+2617(TRY)S
+10/Times-Roman F
+2719(.)S
+2789(It)S
+2861(is)S
+2935(the)S
+3043(author's)S
+2044 V
+1944(belief)S
+2112(that)S
+2233(a)S
+2289(moderately)S
+2590(careful)S
+2787(instructor)S
+3047(is)S
+3116(com-)S
+1963 V
+1944(pletely)S
+2164(safe)S
+2316(using)S
+8/Times-Bold F
+2497(TRY)S
+7/Times-Roman F
+1987 V
+2599(2)S
+10/Times-Roman F
+1963 V
+2620(.)S
+2710(Neither)S
+2945(people)S
+3160(nor)S
+1894 V
+1944(software)S
+2182(are)S
+2286(perfect,)S
+2499(however,)S
+2751(hence)S
+2922(the)S
+3026(assertion)S
+1825 V
+1944(that)S
+2060(it)S
+2119(is)S
+2184(better)S
+2347(to)S
+2419(use)S
+8/Times-Bold F
+2520(TRY)S
+10/Times-Roman F
+2647(in)S
+2719(an)S
+2801(account)S
+3014(that)S
+3130(does)S
+1756 V
+1944(not)S
+2041(have)S
+2175(a)S
+2222(lot)S
+2306(of)S
+2376(power)S
+2546(than)S
+2670(in)S
+2737(a)S
+2784(faculty)S
+2972(account.)S
+11/Times-Bold F
+1615 V
+1944(3.1.)S
+2088(The)S
+2220(Safe)S
+2363(Scripts)S
+10/Times-Roman F
+1522 V
+2094(The)S
+10/Times-Bold F
+2215(build)S
+10/Times-Roman F
+2375(and)S
+10/Times-Bold F
+2489(run)S
+10/Times-Roman F
+2609(scripts)S
+2792(are)S
+2892(executed)S
+3133(with)S
+1453 V
+1944(the)S
+2041(instructor's)S
+2338(user-id.)S
+2562(This)S
+2691(is)S
+2753(acceptable)S
+3031(for)S
+3123(most)S
+1384 V
+1944(commands)S
+2228(that)S
+2342(might)S
+2506(be)S
+2586(needed)S
+2780(to)S
+2850(build)S
+2997(and)S
+3107(test)S
+3213(a)S
+1315 V
+1944(project,)S
+2152(and)S
+2264(simpli\256es)S
+2523(accessing)S
+2779(\256les)S
+2903(in)S
+2974(the)S
+3072(project)S
+1246 V
+1944(directory)S
+2207(and)S
+2339(elsewhere.)S
+2660(There)S
+2846(are)S
+2964(commands,)S
+1177 V
+1944(however,)S
+2220(that)S
+2365(are)S
+2493(risky)S
+2667(to)S
+2768(execute)S
+3006(with)S
+3166(the)S
+1108 V
+1944(instructor's)S
+2271(identity.)S
+2544(Running)S
+10/Times-Italic F
+2804(make)S
+10/Times-Roman F
+2931(\(1\))S
+3054(with)S
+3213(a)S
+1039 V
+1944(student-supplied)S
+2373(make\256le,)S
+2627(for)S
+2728(example,)S
+2979(allows)S
+3166(the)S
+970 V
+1944(student)S
+2158(to)S
+2245(execute)S
+2470(arbitrary)S
+2718(commands)S
+3019(with)S
+3166(the)S
+901 V
+1944(instructor's)S
+2238(identity)S
+2443(in)S
+2510(the)S
+2604(instructor's)S
+2898(account.)S
+808 V
+2094(The)S
+10/Times-Bold F
+2212(build_safe)S
+10/Times-Roman F
+2499(and)S
+10/Times-Bold F
+2610(run_safe)S
+10/Times-Roman F
+2857(scripts)S
+3038(are)S
+3136(exe-)S
+739 V
+1944(cuted)S
+2122(with)S
+2275(a)S
+2348(nonexistent)S
+2672(user-id)S
+2885(and)S
+3018(group-id.)S
+670 V
+1944(Commands)S
+2241(executed)S
+2479(in)S
+2549(these)S
+2696(scripts)S
+2875(will)S
+2991(be)S
+3070(able)S
+3193(to)S
+601 V
+1944(access)S
+2123(only)S
+2255(those)S
+2407(\256les)S
+2532(that)S
+2648(have)S
+2786(public)S
+2961(permission.)S
+8/Times-Roman F
+1944 544 M
+864 l
+5/Times-Roman F
+481 V
+2073(2)S
+8/Times-Roman F
+463 V
+2104(But)S
+2189(see)S
+8/Times-Italic F
+2266(Using)S
+2397(Make)S
+8/Times-Roman F
+2503(,)S
+2531(below.)S
+11/Times-Bold F
+259 V
+1724(Page)S
+1881(12)S
+E
+%%Page: 13 15
+B
+11/Times-Bold F
+4429 V
+432(03/13/0)S
+11/Times-Italic F
+1627(The)S
+1748(Try)S
+1862(System)S
+11/Times-Bold F
+2882(Version)S
+3124(1.11)S
+10/Times-Roman F
+4222 V
+432(Arbitrary)S
+688(commands)S
+981(from)S
+1130(a)S
+1189(student)S
+1395(make\256le)S
+1634(will)S
+4153 V
+432(therefore)S
+671(be)S
+749(limited)S
+942(by)S
+1022(the)S
+1116(public)S
+1287(permissions)S
+1594(set)S
+1681(in)S
+4084 V
+432(the)S
+530(try)S
+621(directory)S
+863(rather)S
+1027(than)S
+1154(by)S
+1237(the)S
+1334(instructor's)S
+1631(per-)S
+4015 V
+432(missions,)S
+677(and)S
+784(can)S
+888(therefore)S
+1126(be)S
+1203(rendered)S
+1434(harmless.)S
+3922 V
+582(To)S
+676(allow)S
+837(access)S
+1018(to)S
+1092(\256les)S
+1219(in)S
+1293(the)S
+1393(project)S
+1587(direc-)S
+3853 V
+432(tory)S
+556(from)S
+700(the)S
+10/Times-Bold F
+801(build_safe)S
+10/Times-Roman F
+1091(and)S
+10/Times-Bold F
+1205(run_safe)S
+10/Times-Roman F
+1455(scripts,)S
+1654(the)S
+3784 V
+432(try)S
+528(directory)S
+775(and)S
+891(project)S
+1088(directory)S
+1334(must)S
+1479(both)S
+1614(have)S
+3715 V
+432(at)S
+498(least)S
+631(mode)S
+787(111.)S
+934(The)S
+1050(\256les)S
+1172(that)S
+1284(are)S
+1379(accessed)S
+1611(must)S
+3646 V
+432(also)S
+555(have)S
+695(the)S
+795(appropriate)S
+1096(public)S
+1273(permission)S
+1563(set.)S
+1691(It)S
+3577 V
+432(is)S
+502(recommended)S
+874(that)S
+995(only)S
+1131(the)S
+1234(required)S
+1464(permission)S
+3508 V
+432(be)S
+522(given,)S
+704(and)S
+824(no)S
+917(more.)S
+1109(711)S
+1232(would)S
+1415(be)S
+1504(a)S
+1563(typical)S
+3439 V
+432(mode)S
+600(for)S
+704(the)S
+812(try)S
+912(directory)S
+1163(and)S
+1283(for)S
+1386(project)S
+1587(direc-)S
+3370 V
+432(tories.)S
+627(This)S
+760(would)S
+936(allow)S
+1096(the)S
+1196(safe)S
+1319(scripts)S
+1502(to)S
+1574(access)S
+3301 V
+432(\256les)S
+554(in)S
+622(the)S
+717(directory,)S
+971(but)S
+1069(would)S
+1240(not)S
+1338(allow)S
+1493(malicious)S
+3232 V
+432(commands)S
+725(to)S
+804(list)S
+910(the)S
+1016(directories)S
+1303(or)S
+1384(add)S
+1502(or)S
+1583(delete)S
+3163 V
+432(\256les)S
+552(in)S
+619(them.)S
+3070 V
+582(Mode)S
+746(711)S
+860(for)S
+953(the)S
+1050(try)S
+1140(directory)S
+1381(allows)S
+1561(outsid-)S
+3001 V
+432(ers)S
+542(into)S
+676(the)S
+789(directory)S
+1046(if)S
+1122(they)S
+1265(already)S
+1482(know)S
+1654(the)S
+2932 V
+432(names)S
+617(of)S
+698(\256les)S
+828(contained)S
+1093(therein.)S
+1326(To)S
+1423(obtain)S
+1604(com-)S
+2863 V
+432(plete)S
+588(protection)S
+871(from)S
+1026(outsiders,)S
+1295(the)S
+1406(try)S
+1510(directory)S
+2794 V
+432(should)S
+612(be)S
+689(created)S
+884(in)S
+951(a)S
+998(directory)S
+1236(whose)S
+1409(mode)S
+1563(is)S
+1623(700.)S
+2725 V
+432(The)S
+550(required)S
+775(public)S
+950(mode)S
+1108(for)S
+1202(the)S
+1300(try)S
+1390(directory)S
+1631(also)S
+2656 V
+432(does)S
+567(not)S
+669(prevent)S
+875(a)S
+926(malicious)S
+1185(student)S
+1383(program)S
+1611(from)S
+2587 V
+432(accessing)S
+698(\256les)S
+833(in)S
+915(the)S
+1024(directory)S
+1277(whose)S
+1465(names)S
+1654(are)S
+2518 V
+432(known)S
+616(in)S
+684(advance.)S
+938(Such)S
+1079(access)S
+1254(is)S
+1315(prevented)S
+1574(by)S
+1654(the)S
+2449 V
+432(permissions)S
+751(on)S
+842(the)S
+947(\256les)S
+1078(themselves.)S
+1412(The)S
+1537(absence)S
+2380 V
+432(of)S
+505(write)S
+652(permission)S
+939(on)S
+1022(the)S
+1119(try)S
+1209(directory)S
+1450(and)S
+1560(project)S
+2311 V
+432(directories)S
+735(prevents)S
+987(the)S
+1108(malicious)S
+1390(student)S
+1611(from)S
+2242 V
+432(creating)S
+647(new)S
+767(\256les)S
+887(or)S
+957(deleting)S
+1172(in)S
+1239(them.)S
+2149 V
+582(The)S
+707(scratch)S
+908(directories)S
+1193(require)S
+1394(mode)S
+1558(777)S
+1678(as)S
+2080 V
+432(the)S
+537(nonexistent)S
+845(user)S
+975(will)S
+1099(be)S
+1186(creating)S
+1411(and)S
+1528(possibly)S
+2011 V
+432(deleting)S
+653(\256les)S
+779(in)S
+852(them.)S
+10/Times-Bold F
+1034(T)S
+8/Times-Bold F
+1074(RY)S
+10/Times-Roman F
+1170(creates)S
+1363(them)S
+1509(with)S
+1641(this)S
+1942 V
+432(mode)S
+602(and)S
+724(makes)S
+913(sure)S
+1048(they)S
+1187(still)S
+1313(have)S
+1462(the)S
+1571(proper)S
+1873 V
+432(mode)S
+587(before)S
+762(each)S
+894(use.)S
+1030(Files)S
+1168(copied)S
+1349(into)S
+1463(the)S
+1557(scratch)S
+1804 V
+432(directory)S
+685(will)S
+814(be)S
+905(owned)S
+1099(by)S
+1193(the)S
+1301(nonexistent)S
+1613(user,)S
+1735 V
+432(with)S
+578(their)S
+728(group)S
+907(and)S
+1033(public)S
+1223(permissions)S
+1549(set)S
+1654(the)S
+1666 V
+432(same)S
+594(as)S
+681(the)S
+792(owner)S
+979(permissions)S
+1303(on)S
+1400(the)S
+1511(student's)S
+1597 V
+432(copy)S
+569(of)S
+639(the)S
+733(\256le.)S
+1504 V
+582(Figure)S
+762(13)S
+844(shows)S
+1015(a)S
+1064(script)S
+1220(that)S
+1333(tests)S
+1462(a)S
+1511(student's)S
+1435 V
+432(make\256le.)S
+698(The)S
+10/Times-Bold F
+815(run_safe)S
+10/Times-Roman F
+1061(script)S
+1218(was)S
+1333(used)S
+1465(because)S
+1678(of)S
+1366 V
+432(the)S
+526(need)S
+660(to)S
+727(run)S
+10/Times-Italic F
+827(make)S
+10/Times-Roman F
+954(.)S
+1273 V
+582(This)S
+724(script)S
+893(has)S
+1008(several)S
+1214(noteworthy)S
+1522(features.)S
+1204 V
+432(First,)S
+10/Times-Bold F
+577(try_run)S
+10/Times-Roman F
+797(is)S
+857(used)S
+987(to)S
+1054(execute)S
+10/Times-Italic F
+1259(make)S
+10/Times-Roman F
+1386(.)S
+1441(This)S
+1568(guards)S
+1135 V
+432(against)S
+631(in\256nite)S
+830(loops)S
+988(in)S
+1063(the)S
+1165(commands)S
+1453(the)S
+1554(student)S
+1066 V
+432(might)S
+610(execute.)S
+867(The)S
+10/Times-Bold F
+998(\261p)S
+10/Times-Roman F
+1098(option)S
+1289(is)S
+1365(used)S
+1511(to)S
+1594(allow)S
+997 V
+432(access)S
+618(to)S
+697(commands)S
+990(in)S
+1069(system)S
+1267(directories;)S
+1570(this)S
+1688(is)S
+928 V
+432(safe)S
+554(because)S
+770(the)S
+869(script)S
+1028(is)S
+1093(executed)S
+1332(with)S
+1463(the)S
+1561(nonex-)S
+859 V
+432(istent)S
+583(user-id.)S
+766 V
+582(If)S
+648(the)S
+748(shell)S
+887(variable)S
+10/Times-Bold F
+1107(TRY_SAVE_ANS)S
+10/Times-Roman F
+1596(is)S
+1661(set)S
+697 V
+432(to)S
+503(any)S
+614(value,)S
+783(the)S
+880(script)S
+1037(will)S
+1154(copy)S
+1294(the)S
+1391(student's)S
+1631(out-)S
+628 V
+432(put)S
+534(\256les)S
+658(and)S
+769(use)S
+873(them)S
+1018(as)S
+1092(the)S
+1190(correct)S
+1382(answers.)S
+1634(The)S
+559 V
+432(instructor)S
+709(could)S
+888(use)S
+1013(this)S
+1145(feature)S
+1358(with)S
+1510(his)S
+1625(own)S
+490 V
+432(make\256le)S
+664(to)S
+735(easily)S
+900(create)S
+1068(the)S
+1165(correct)S
+1356(output)S
+1533(\256les.)S
+1691(It)S
+10/Courier F
+4117 V
+1987(#!)S
+2095(/bin/sh)S
+4048 V
+1987(D=$WD_BACKPATH/$PROJ_DIR)S
+3979 V
+1987(TRY_SAVE_ANS=)S
+3910 V
+1987(T=1)S
+3841 V
+1987(while)S
+2203([)S
+2275(\261r)S
+2383($D/test.$T)S
+2779(])S
+3772 V
+1987(do)S
+3703 V
+2095(echo)S
+2275(Running)S
+2563(test)S
+2743($T)S
+3634 V
+2095(touch)S
+2311(\301cat)S
+2491($D/touch.$T\301)S
+3565 V
+2095(try_run)S
+2383(\261p)S
+2491(cpu=20)S
+2743(\\)S
+3496 V
+2203(/bin/make)S
+2563(>)S
+2635(,x)S
+3427 V
+2095(status=$?)S
+3358 V
+2095(if)S
+2203([)S
+2275($status)S
+2563(\261ne)S
+2707(0)S
+2779(])S
+3289 V
+2095(then)S
+3220 V
+2203(try_log)S
+2491($status)S
+3151 V
+2203(exit)S
+2383($T)S
+3082 V
+2095(fi)S
+3013 V
+2095(awk)S
+2239(\261f)S
+2347($D/awk1)S
+2635(<)S
+2707(,x)S
+2815(|)S
+2944 V
+2203(try_deblank)S
+2635(\261b)S
+2743(\261r)S
+2851(>)S
+2923(,$$)S
+2875 V
+2095(if)S
+2203([)S
+2275(\261n)S
+2383("$TRY_SAVE_ANS")S
+2959(])S
+2806 V
+2095(then)S
+2737 V
+2203(cp)S
+2311(,$$)S
+2455($D/output.$T)S
+2668 V
+2095(fi)S
+2599 V
+2095(if)S
+2203(cmp)S
+2347(\261s)S
+2455(,$$)S
+2599($D/output.$T)S
+2530 V
+2095(then)S
+2461 V
+2203(true)S
+2392 V
+2095(else)S
+2323 V
+2203(exit)S
+2383($T)S
+2254 V
+2095(fi)S
+2185 V
+2095(T=\301expr)S
+2383($T)S
+2491(+)S
+2563(1\301)S
+2116 V
+1987(done)S
+2047 V
+1987(exit)S
+2167(0)S
+10/Times-Bold F
+1909 V
+2466(Figure)S
+2657(13)S
+1840 V
+2389(Run_safe)S
+2648(script)S
+1944 1804 M
+10/Times-Roman F
+-2415 L
+1944 4219 M
+1296 l2
+3240 4219 M
+2415 L
+3240 1804 M
+-1296 l2
+1666 V
+1944(is)S
+2023(important)S
+2297(that)S
+2427(this)S
+2552(variable)S
+2785(either)S
+2961(begin)S
+3133(with)S
+1597 V
+1944(\252TRY_\272)S
+2171(or)S
+2244(be)S
+2324(explicitly)S
+2576(set)S
+2666(empty)S
+2840(to)S
+2910(guard)S
+3069(against)S
+1528 V
+1944(the)S
+2039(possibility)S
+2311(of)S
+2382(the)S
+2477(student)S
+2672(having)S
+2857(an)S
+2935(environment)S
+1459 V
+1944(variable)S
+2179(with)S
+2326(the)S
+2440(same)S
+2604(name.)S
+2810(This)S
+2957(script)S
+3130(does)S
+1390 V
+1944(both.)S
+1297 V
+2094(Note)S
+2248(that)S
+2376(between)S
+10/Times-Italic F
+2614(make)S
+10/Times-Roman F
+2741(s,)S
+2816(various)S
+3030(\256les)S
+3166(are)S
+1228 V
+1944(touched)S
+2159(to)S
+2230(see)S
+2331(how)S
+2458(the)S
+2556(student's)S
+2797(make\256le)S
+3029(reacts)S
+3193(to)S
+1159 V
+1944(the)S
+2040(changes.)S
+2291(Also,)S
+2441(the)S
+10/Times-Italic F
+2537(make)S
+10/Times-Roman F
+2686(output)S
+2862(is)S
+2924(massaged)S
+3180(by)S
+10/Times-Bold F
+1090 V
+1944(try_deblank)S
+10/Times-Roman F
+2299(and)S
+2428(an)S
+10/Times-Italic F
+2527(awk)S
+10/Times-Roman F
+2666(program)S
+2911(before)S
+3106(being)S
+1021 V
+1944(compared)S
+2216(to)S
+2297(the)S
+2405(solutions;)S
+2672(this)S
+2792(takes)S
+2949(care)S
+3083(of)S
+3166(the)S
+952 V
+1944(possibility)S
+2243(that)S
+2382(the)S
+2503(student's)S
+2767(make\256le)S
+3022(compiles)S
+883 V
+1944(source)S
+2152(\256les)S
+2303(in)S
+2401(a)S
+2479(different)S
+2738(order)S
+2915(than)S
+3069(in)S
+3166(the)S
+814 V
+1944(instructor's)S
+2238(make\256le.)S
+11/Times-Bold F
+673 V
+1944(3.2.)S
+2088(Security)S
+2344(and)S
+2473(The)S
+2605(Environment)S
+10/Times-Roman F
+580 V
+2094(The)S
+2210(environment)S
+2537(is)S
+2598(another)S
+2800(source)S
+2978(of)S
+3049(security)S
+511 V
+1944(problems.)S
+2223(The)S
+2337(student)S
+2531(is)S
+2591(executing)S
+8/Times-Bold F
+2842(TRY)S
+10/Times-Roman F
+2944(,)S
+2979(so)S
+3052(it)S
+3106(is)S
+3166(the)S
+11/Times-Bold F
+259 V
+1724(Page)S
+1881(13)S
+E
+%%Page: 14 16
+B
+11/Times-Bold F
+4429 V
+432(03/13/0)S
+11/Times-Italic F
+1627(The)S
+1748(Try)S
+1862(System)S
+11/Times-Bold F
+2882(Version)S
+3124(1.11)S
+10/Times-Roman F
+4222 V
+432(student's)S
+689(environment)S
+1034(that)S
+1165(is)S
+1245(passed)S
+1445(by)S
+8/Times-Bold F
+1540(TRY)S
+10/Times-Roman F
+1681(to)S
+4153 V
+432(everything)S
+711(it)S
+765(executes.)S
+1028(For)S
+1131(this)S
+1238(reason,)S
+1430(the)S
+1524(environ-)S
+4084 V
+432(ment)S
+579(is)S
+645(laundered)S
+909(as)S
+985(described)S
+1242(below)S
+1415(before)S
+1594(being)S
+4015 V
+432(passed)S
+617(to)S
+689(any)S
+801(of)S
+875(the)S
+973(instructor's)S
+1271(scripts.)S
+1487(Figure)S
+1668(14)S
+3946 V
+432(summarizes)S
+770(the)S
+893(environment)S
+1247(variables)S
+1514(that)S
+1654(are)S
+3877 V
+432(added)S
+596(or)S
+666(changed.)S
+3784 V
+582(Experienced)S
+910(shell)S
+1049(script)S
+1208(writers)S
+1400(often)S
+1549(use)S
+1654(the)S
+9/Times-Bold F
+3715 V
+432(HOME)S
+10/Times-Roman F
+625(environment)S
+952(variable.)S
+1204(Were)S
+1357(it)S
+1413(not)S
+1512(changed,)S
+3646 V
+432(this)S
+543(would)S
+717(be)S
+797(the)S
+894(student's)S
+1134(home)S
+1291(directory.)S
+1567(There-)S
+3577 V
+432(fore,)S
+9/Times-Bold F
+577(HOME)S
+10/Times-Roman F
+783(is)S
+858(set)S
+960(to)S
+1042(the)S
+1150(home)S
+1318(directory)S
+1570(of)S
+1654(the)S
+3508 V
+432(instructor's)S
+734(account.)S
+984(The)S
+1105(student's)S
+1349(home)S
+1510(directory)S
+3439 V
+432(is)S
+492(kept)S
+616(in)S
+683(the)S
+777(new)S
+897(variable)S
+9/Times-Bold F
+1110(STUDENT_HOME)S
+10/Times-Roman F
+1583(.)S
+3346 V
+582(A)S
+649(new)S
+773(variable)S
+992(called)S
+9/Times-Bold F
+1159(PROJ_DIR)S
+10/Times-Roman F
+1450(is)S
+1514(added)S
+1681(to)S
+3277 V
+432(the)S
+531(environment.)S
+896(Its)S
+981(value)S
+1137(is)S
+1202(the)S
+1301(name)S
+1456(of)S
+1530(the)S
+1628(pro-)S
+3208 V
+432(ject)S
+552(directory.)S
+837(This)S
+976(is)S
+1048(useful)S
+1226(in)S
+1304(shell)S
+1449(scripts)S
+1637(that)S
+3139 V
+432(are)S
+534(used)S
+672(by)S
+760(more)S
+912(than)S
+1044(one)S
+1159(project.)S
+1389(The)S
+1510(variables)S
+9/Times-Bold F
+3070 V
+432(INST)S
+10/Times-Roman F
+589(and)S
+9/Times-Bold F
+705(PROJ)S
+10/Times-Roman F
+876(are)S
+980(also)S
+1107(created;)S
+1329(their)S
+1470(values)S
+1654(are)S
+3001 V
+432(the)S
+557(instructor's)S
+882(account)S
+1120(and)S
+1257(the)S
+1381(project)S
+1599(code,)S
+2932 V
+432(respectively.)S
+2839 V
+582(A)S
+664(common)S
+913(strategy)S
+1142(to)S
+1227(circumvent)S
+1537(security)S
+2770 V
+432(provisions)S
+703(is)S
+764(to)S
+832(create)S
+998(one's)S
+1148(own)S
+1271(versions)S
+1491(of)S
+1561(system)S
+2701 V
+432(programs)S
+685(\(e.g.)S
+818(cc,)S
+913(ls,)S
+994(etc.\))S
+1126(in)S
+1199(one's)S
+1355(own)S
+1484(bin)S
+1587(direc-)S
+2632 V
+432(tory,)S
+582(and)S
+707(set)S
+811(the)S
+9/Times-Bold F
+920(PATH)S
+10/Times-Roman F
+1107(environment)S
+1449(variable)S
+1681(to)S
+2563 V
+432(search)S
+614(that)S
+733(directory)S
+979(before)S
+1161(the)S
+1263(system)S
+1458(directories.)S
+2494 V
+432(If)S
+498(the)S
+598(instructor)S
+855(uses)S
+984(any)S
+1097(of)S
+1173(these)S
+1323(command)S
+1586(in)S
+1658(his)S
+2425 V
+432(scripts,)S
+627(the)S
+723(student's)S
+962(version)S
+1161(of)S
+1233(the)S
+1329(program)S
+1555(will)S
+1671(be)S
+2356 V
+432(executed,)S
+688(presumably)S
+995(with)S
+1128(the)S
+1228(instructor's)S
+1528(identity.)S
+2287 V
+432(To)S
+519(avoid)S
+673(this,)S
+8/Times-Bold F
+791(TRY)S
+10/Times-Roman F
+913(sets)S
+9/Times-Bold F
+1021(PATH)S
+10/Times-Roman F
+1191(to)S
+10/Courier F
+2194 V
+475(/usr/local/bin:/usr/ucb:/bin:/usr/bin)S
+10/Times-Roman F
+2101 V
+432(This)S
+569(ensures)S
+778(that)S
+898(only)S
+1034(the)S
+1137(standard)S
+1370(directories)S
+1654(are)S
+2032 V
+432(searched)S
+663(for)S
+753(programs)S
+1000(used)S
+1130(in)S
+1197(shell)S
+1331(scripts.)S
+10/Times-BoldItalic F
+1858 V
+725(Variable)S
+2021(Set)S
+2118(to)S
+10/Times-Roman F
+598 1849 M
+2433 l2
+10/Courier F
+1780 V
+598(BACKGROUND)S
+10/Times-Roman F
+1156(\252yes\272)S
+1310(if)S
+1367(the)S
+1461(student)S
+1655(gave)S
+1789(the)S
+10/Times-Bold F
+1883(\261b)S
+10/Times-Roman F
+1966(option,)S
+2155(else)S
+2269(not)S
+2366(set.)S
+10/Courier F
+1711 V
+598(FILES)S
+10/Times-Roman F
+1156(a)S
+1203(list)S
+1297(of)S
+1367(the)S
+1461(\256le)S
+1558(names)S
+1732(given)S
+1886(by)S
+1966(the)S
+2060(student.)S
+10/Courier F
+1642 V
+598(HOME)S
+10/Times-Roman F
+1156(the)S
+1250(name)S
+1401(of)S
+1471(the)S
+1565(instructor's)S
+1859(home)S
+2013(directory.)S
+10/Courier F
+1573 V
+598(INST)S
+10/Times-Roman F
+1156(the)S
+1250(name)S
+1401(of)S
+1471(the)S
+1565(instructor's)S
+1859(account.)S
+10/Courier F
+1504 V
+598(LOG_DIR)S
+10/Times-Roman F
+1156(the)S
+1250(directory)S
+1488(containing)S
+1763(the)S
+1857(log)S
+1954(\256les)S
+2074(\(relative)S
+2296(to)S
+2363(the)S
+2457(try)S
+2544(directory\))S
+10/Courier F
+1435 V
+598(PATH)S
+10/Times-Roman F
+1156(the)S
+1250(standard)S
+1474(value)S
+1625(\252/usr/local/bin:/usr/ucb:/bin:/usr/bin\272)S
+10/Courier F
+1366 V
+598(PROJ)S
+10/Times-Roman F
+1156(the)S
+1250(project)S
+1438(name)S
+1589(given)S
+1743(by)S
+1823(the)S
+1917(student.)S
+10/Courier F
+1297 V
+598(PROJ_DIR)S
+10/Times-Roman F
+1156(the)S
+1250(name)S
+1401(of)S
+1471(the)S
+1565(project)S
+1753(directory.)S
+10/Courier F
+1228 V
+598(SCRIPT_DIR)S
+10/Times-Roman F
+1156(the)S
+1250(directory)S
+1488(containing)S
+1763(the)S
+1857(common)S
+2088(scripts)S
+2265(\(relative)S
+2487(to)S
+2554(the)S
+2648(try)S
+2735(directory\))S
+10/Courier F
+1159 V
+598(SHELL)S
+10/Times-Roman F
+1156(the)S
+1250(bogus)S
+1413(value)S
+1564(\252/bin/echo\272)S
+10/Courier F
+1090 V
+598(SIGNAL)S
+10/Times-Roman F
+1156(the)S
+1250(number)S
+1454(of)S
+1524(the)S
+1618(signal)S
+1782(that)S
+1893(occurred)S
+10/Courier F
+1021 V
+598(STUDENT)S
+10/Times-Roman F
+1156(the)S
+1250(student's)S
+1487(account)S
+1695(name)S
+10/Courier F
+952 V
+598(STUDENT_HOME)S
+10/Times-Roman F
+1156(the)S
+1250(name)S
+1401(of)S
+1471(the)S
+1565(student's)S
+1802(home)S
+1956(directory.)S
+10/Courier F
+883 V
+598(TRY_STARTTIME)S
+10/Times-Roman F
+1156(the)S
+1250(time)S
+1378(of)S
+1448(day)S
+1555(when)S
+8/Times-Bold F
+1705(TRY)S
+10/Times-Roman F
+1827(was)S
+1940(started.)S
+10/Courier F
+814 V
+598(WD_BACKPATH)S
+10/Times-Roman F
+1156(the)S
+1250(pathname)S
+1505(to)S
+1572(get)S
+1666(back)S
+1800(to)S
+1867(the)S
+1961(try)S
+2048(directory)S
+2286(from)S
+2423(the)S
+2517(scratch)S
+2708(directories)S
+10/Courier F
+745 V
+598(WD_DIR)S
+10/Times-Roman F
+1156(the)S
+1250(directory)S
+1488(containing)S
+1763(the)S
+1857(scratch)S
+2048(directories)S
+2323(\(relative)S
+2545(to)S
+2612(the)S
+2706(try)S
+2793(directory\))S
+10/Times-Bold F
+607 V
+1710(Figure)S
+1901(14)S
+538 V
+1539(Environment)S
+1899(variables)S
+432 502 M
+10/Times-Roman F
+-1458 L
+432 1960 M
+2808 l2
+3240 1960 M
+1458 L
+3240 502 M
+-2808 l2
+4222 V
+2094(The)S
+2211(current)S
+2405(directory)S
+2646(is)S
+2708(absent)S
+2884(from)S
+9/Times-Bold F
+3021(PATH)S
+10/Times-Roman F
+3193(to)S
+4153 V
+1944(prevent)S
+2156(the)S
+2261(student)S
+2466(from)S
+2614(passing)S
+2825(his)S
+2926(version)S
+3133(of)S
+3213(a)S
+4084 V
+1944(system)S
+2139(program)S
+2371(in)S
+2446(as)S
+2524(a)S
+2579(\256le)S
+2684(and)S
+2799(executing)S
+3062(it)S
+3123(from)S
+4015 V
+1944(the)S
+2041(scratch)S
+2235(directory.)S
+2510(This)S
+2639(also)S
+2758(makes)S
+2934(it)S
+2990(less)S
+3102(likely)S
+3946 V
+1944(that)S
+2078(the)S
+2195(instructor)S
+2468(will)S
+2604(accidentally)S
+2939(execute)S
+3166(the)S
+3877 V
+1944(student's)S
+2195(program)S
+2433(directly)S
+2652(in)S
+2733(a)S
+2794(script)S
+2962(rather)S
+3136(than)S
+3808 V
+1944(with)S
+10/Times-Bold F
+2077(try_run)S
+10/Times-Roman F
+2303(\(see)S
+2425(below\),)S
+2632(which)S
+2804(would)S
+2979(be)S
+3061(a)S
+3113(secu-)S
+3739 V
+1944(rity)S
+2048(breach.)S
+3646 V
+2094(If)S
+2155(the)S
+2250(instructor)S
+2502(wishes)S
+2686(to)S
+2754(use)S
+2855(programs)S
+3103(in)S
+3170(his)S
+3577 V
+1944(own)S
+10/Times-Bold F
+2083(bin)S
+10/Times-Roman F
+2202(directory)S
+2456(in)S
+8/Times-Bold F
+2535(TRY)S
+10/Times-Roman F
+2673(scripts,)S
+9/Times-Bold F
+2879(PATH)S
+10/Times-Roman F
+3064(can)S
+3183(be)S
+3508 V
+1944(changed)S
+2170(in)S
+2242(the)S
+2340(appropriate)S
+2639(scripts)S
+2820(as)S
+2894(in)S
+2965(the)S
+3063(follow-)S
+3439 V
+1944(ing)S
+2041(example:)S
+10/Courier F
+3346 V
+1987(PATH=$HOME/bin:$PATH)S
+10/Times-Roman F
+3253 V
+1944(One)S
+2082(should)S
+10/Times-Italic F
+2280(not)S
+10/Times-Roman F
+2394(put)S
+2508(the)S
+2619(current)S
+2827(directory)S
+3082(in)S
+3166(the)S
+9/Times-Bold F
+3184 V
+1944(PATH)S
+10/Times-Roman F
+2119(as)S
+2194(that)S
+2310(could)S
+2469(cause)S
+2628(scripts)S
+2810(or)S
+2885(programs)S
+3137(sub-)S
+3115 V
+1944(mitted)S
+2124(by)S
+2209(the)S
+2308(student)S
+2507(to)S
+2579(be)S
+2661(run)S
+2766(instead)S
+2962(of)S
+3036(standard)S
+3046 V
+1944(programs.)S
+2953 V
+2094(An)S
+2200(environment)S
+2538(variables)S
+9/Times-Bold F
+2787(FILES)S
+10/Times-Roman F
+2976(is)S
+3048(created;)S
+2884 V
+1944(its)S
+2028(value)S
+2186(is)S
+2253(the)S
+2354(list)S
+2455(of)S
+2532(\256le)S
+2636(names)S
+2816(submitted)S
+3080(by)S
+3166(the)S
+2815 V
+1944(student.)S
+2722 V
+2094(If)S
+2155(the)S
+2250(student)S
+2445(used)S
+2576(the)S
+10/Times-Bold F
+2671(\261b)S
+10/Times-Roman F
+2755(option)S
+2930(to)S
+2998(run)S
+3099(in)S
+3166(the)S
+2653 V
+1944(background,)S
+2306(the)S
+2443(environment)S
+2811(variable)S
+9/Times-Bold F
+3066(BACK-)S
+2584 V
+1944(GROUND)S
+10/Times-Roman F
+2210(will)S
+2330(be)S
+2413(set.)S
+2540(The)S
+2659(instructor)S
+2915(may)S
+3044(test)S
+3153(this)S
+2515 V
+1944(in)S
+2015(scripts)S
+2196(to)S
+2267(decide,)S
+2464(for)S
+2558(example,)S
+2802(whether)S
+3020(or)S
+3093(not)S
+3193(to)S
+2446 V
+1944(use)S
+10/Times-Italic F
+2057(more)S
+10/Times-Roman F
+2180(\(1\))S
+2283(\(which)S
+2482(is)S
+2554(interactive\))S
+2862(to)S
+2941(print)S
+3087(to)S
+3166(the)S
+2377 V
+1944(screen.)S
+2284 V
+2094(The)S
+2215(environment)S
+2547(variable)S
+9/Times-Bold F
+2767(SHELL)S
+10/Times-Roman F
+2973(is)S
+3039(changed)S
+2215 V
+1944(to)S
+2025(be)S
+2116(\252/bin/echo\272)S
+2429(in)S
+2510(order)S
+2671(to)S
+2752(prevent)S
+2967(users)S
+3123(from)S
+2146 V
+1944(gaining)S
+2159(access)S
+2347(to)S
+2427(the)S
+2534(shell)S
+2681(through)S
+10/Times-Italic F
+2901(more)S
+10/Times-Roman F
+3024(.)S
+3092(\(Also,)S
+2077 V
+1944(see)S
+10/Times-Italic F
+2070(Using)S
+2262(More)S
+10/Times-Roman F
+2392(,)S
+2455(below.\))S
+2705(Unfortunately,)S
+3106(many)S
+2008 V
+1944(other)S
+2090(programs)S
+2338(also)S
+2456(examine)S
+2682(this)S
+2790(variable,)S
+3021(and)S
+3129(their)S
+11/Times-Bold F
+259 V
+1724(Page)S
+1881(14)S
+E
+%%Page: 15 17
+B
+11/Times-Bold F
+4429 V
+432(03/13/0)S
+11/Times-Italic F
+1627(The)S
+1748(Try)S
+1862(System)S
+11/Times-Bold F
+2882(Version)S
+3124(1.11)S
+10/Times-Roman F
+4222 V
+432(operation)S
+706(will)S
+846(also)S
+989(be)S
+1092(affected)S
+1333(by)S
+1439(its)S
+1542(change.)S
+4153 V
+432(Those)S
+603(that)S
+717(use)S
+820(it)S
+877(to)S
+947(do)S
+1030(shell)S
+1167(escapes)S
+1374(will)S
+1491(no)S
+1574(longer)S
+4084 V
+432(be)S
+509(able)S
+630(to)S
+697(do)S
+777(so,)S
+865(which)S
+1032(is)S
+1092(just)S
+1199(what)S
+1336(is)S
+1396(desired.)S
+1625(Pro-)S
+4015 V
+432(grams)S
+601(that)S
+714(use)S
+816(it)S
+872(for)S
+964(other)S
+1110(reasons)S
+1311(may)S
+1436(not)S
+1534(work)S
+1678(as)S
+3946 V
+432(expected)S
+667(in)S
+8/Times-Bold F
+730(TRY)S
+10/Times-Roman F
+852(scripts.)S
+3853 V
+582(The)S
+701(environment)S
+1030(variable)S
+9/Times-Bold F
+1247(STUDENT)S
+10/Times-Roman F
+1526(is)S
+1590(set)S
+1681(to)S
+3784 V
+432(the)S
+526(student's)S
+763(account)S
+971(name.)S
+3691 V
+582(Setting)S
+792(any)S
+917(of)S
+1005(these)S
+1167(environment)S
+1510(variables)S
+3622 V
+432(from)S
+570(the)S
+10/Times-Bold F
+665(.tryrc)S
+10/Times-Roman F
+831(\256le)S
+928(supercedes)S
+1212(the)S
+1306(actions)S
+1497(described)S
+3553 V
+432(above.)S
+638(This)S
+772(gives)S
+926(the)S
+1027(instructor)S
+1285(a)S
+1339(way,)S
+1481(for)S
+1577(exam-)S
+3484 V
+432(ple,)S
+542(to)S
+610(set)S
+697(his)S
+787(own)S
+9/Times-Bold F
+908(PATH)S
+10/Times-Roman F
+1078(variable)S
+1293(without)S
+1497(having)S
+1681(to)S
+3415 V
+432(remember)S
+697(to)S
+764(put)S
+861(it)S
+915(in)S
+982(each)S
+1113(and)S
+1220(every)S
+1374(script.)S
+3322 V
+582(All)S
+701(variables)S
+961(in)S
+1050(the)S
+1165(student's)S
+1423(environment)S
+3253 V
+432(that)S
+554(begin)S
+719(with)S
+856(\252TRY_\272)S
+1090(are)S
+1194(deleted.)S
+1434(This)S
+1571(allows)S
+3184 V
+432(the)S
+551(instructor)S
+827(to)S
+919(use)S
+1044(variables)S
+1306(with)S
+1457(this)S
+1588(pre\256x)S
+3115 V
+432(without)S
+637(having)S
+822(to)S
+890(worry)S
+1054(about)S
+1208(interference)S
+1517(from)S
+1654(the)S
+3046 V
+432(student.)S
+11/Times-Bold F
+2905 V
+432(3.3.)S
+576(Using)S
+760(More)S
+10/Times-Roman F
+2812 V
+582(Throughout)S
+893(this)S
+1006(document,)S
+1285(the)S
+10/Times-Italic F
+1385(more)S
+10/Times-Roman F
+1508(\(1\))S
+1604(com-)S
+2743 V
+432(mand)S
+588(has)S
+690(been)S
+826(suggested)S
+1085(as)S
+1157(the)S
+1253(way)S
+1374(to)S
+1442(present)S
+1637(text)S
+2674 V
+432(to)S
+500(the)S
+595(user,)S
+731(as)S
+801(it)S
+855(prevents)S
+1079(long)S
+1206(output)S
+1380(from)S
+1517(scrolling)S
+2605 V
+432(off)S
+525(of)S
+598(the)S
+695(top)S
+795(of)S
+868(the)S
+965(screen)S
+1142(before)S
+1319(the)S
+1416(user)S
+1539(has)S
+1641(had)S
+2536 V
+432(a)S
+484(chance)S
+676(to)S
+747(read)S
+875(it.)S
+968(Unfortunately,)S
+10/Times-Italic F
+1345(more)S
+10/Times-Roman F
+1492(itself)S
+1637(is)S
+1701(a)S
+2467 V
+432(source)S
+609(of)S
+679(two)S
+789(security)S
+1000(problems.)S
+2374 V
+582(The)S
+699(\256rst)S
+815(problem)S
+1039(is)S
+1102(the)S
+1199(shell)S
+1336(escape)S
+1520(mechan-)S
+2305 V
+432(ism,)S
+588(which)S
+788(is)S
+881(effectively)S
+1193(disabled)S
+1447(when)S
+8/Times-Bold F
+1626(TRY)S
+10/Times-Roman F
+2236 V
+432(changes)S
+677(the)S
+9/Times-Bold F
+800(SHELL)S
+10/Times-Roman F
+1031(environment)S
+1386(variable)S
+1631(\(see)S
+2167 V
+432(above\).)S
+677(The)S
+817(second)S
+1030(problem)S
+1277(is)S
+1362(the)S
+1481(ability)S
+1681(to)S
+2098 V
+432(invoke)S
+625(an)S
+711(editor)S
+881(on)S
+970(the)S
+1073(current)S
+1273(\256le)S
+1379(being)S
+1542(printed.)S
+2029 V
+432(From)S
+584(the)S
+680(editor,)S
+857(the)S
+952(student)S
+1147(might)S
+1309(be)S
+1387(able)S
+1509(to)S
+1577(obtain)S
+1960 V
+432(a)S
+491(shell)S
+637(\(depending)S
+940(on)S
+1032(whether)S
+1257(the)S
+1362(editor)S
+1534(invoked)S
+1891 V
+432(examines)S
+713(the)S
+9/Times-Bold F
+838(SHELL)S
+10/Times-Roman F
+1071(variable\).)S
+1374(This)S
+1534(can)S
+1671(be)S
+1822 V
+432(prevented)S
+699(by)S
+788(using)S
+10/Times-Italic F
+947(more)S
+10/Times-Roman F
+1099(only)S
+1235(in)S
+1310(a)S
+1365(pipeline,)S
+1603(as)S
+1681(in)S
+1753 V
+432(the)S
+526(following)S
+780(example:)S
+10/Courier F
+1660 V
+475(cat)S
+619(errors)S
+871(|)S
+943(more)S
+1123(\261d)S
+10/Times-Italic F
+1567 V
+432(More)S
+10/Times-Roman F
+585(will)S
+702(not)S
+802(start)S
+929(an)S
+1009(editor)S
+1172(when)S
+1324(its)S
+1403(input)S
+1549(is)S
+1611(from)S
+1498 V
+432(a)S
+479(pipe,)S
+618(thus)S
+738(avoiding)S
+969(the)S
+1063(security)S
+1274(problem.)S
+10/Times-Italic F
+1405 V
+582(More)S
+10/Times-Roman F
+743(really)S
+911(ought)S
+1078(to)S
+1155(have)S
+1299(a)S
+1356(\252secure)S
+1567(mode\272)S
+1336 V
+432(\257ag)S
+552(that)S
+673(would)S
+853(prevent)S
+1064(it)S
+1128(from)S
+1275(starting)S
+1485(editors)S
+1678(or)S
+1267 V
+432(invoking)S
+690(shells)S
+871(in)S
+962(sensitive)S
+1217(situations.)S
+1527(Until)S
+1694(it)S
+1198 V
+432(does,)S
+587(one)S
+704(must)S
+850(be)S
+936(careful)S
+1133(when)S
+1292(writing)S
+1495(scripts)S
+1681(to)S
+1129 V
+432(never)S
+601(invoke)S
+10/Times-Italic F
+799(more)S
+10/Times-Roman F
+956(directly)S
+1175(on)S
+1269(a)S
+1330(\256le.)S
+1476(The)S
+1604(other)S
+1060 V
+432(alternative)S
+712(is)S
+776(to)S
+846(simply)S
+1033(not)S
+1133(use)S
+1236(it,)S
+1308(or)S
+1381(to)S
+1451(write)S
+1598(one's)S
+991 V
+432(own.)S
+11/Times-Bold F
+850 V
+432(3.4.)S
+576(Using)S
+760(Make)S
+10/Times-Roman F
+757 V
+582(The)S
+715(need)S
+868(to)S
+954(run)S
+10/Times-Italic F
+1073(make)S
+10/Times-Roman F
+1239(from)S
+1394(a)S
+1459(safe)S
+1594(script)S
+688 V
+432(when)S
+609(students)S
+853(submit)S
+1064(their)S
+1222(own)S
+1371(make\256les)S
+1648(has)S
+619 V
+432(already)S
+640(been)S
+784(discussed.)S
+1078(However,)S
+1342(the)S
+1445(safe)S
+1571(scripts)S
+550 V
+432(cannot)S
+620(prevent)S
+828(this)S
+941(problem:)S
+1185(if)S
+1248(the)S
+1348(student)S
+1548(starts)S
+1701(a)S
+481 V
+432(shell)S
+580(from)S
+731(his)S
+834(make\256le,)S
+1090(then)S
+1227(he)S
+1317(can)S
+10/Times-Italic F
+1434(cd)S
+10/Times-Roman F
+1524(to)S
+1604(other)S
+4222 V
+1944(scratch)S
+2145(directories)S
+2430(and)S
+2546(try)S
+2642(to)S
+2718(make)S
+2878(copies)S
+3061(of)S
+3140(\256les)S
+4153 V
+1944(submitted)S
+2202(by)S
+2282(other)S
+2426(students.)S
+2678(This)S
+2805(is)S
+2865(hard)S
+2992(to)S
+3059(prevent)S
+4084 V
+1944(because)S
+2169(of)S
+2253(the)S
+2361(liberal)S
+2549(permissions)S
+2869(needed)S
+3073(on)S
+3166(the)S
+4015 V
+1944(scratch)S
+2141(directories)S
+2422(in)S
+2495(order)S
+2647(to)S
+2719(allow)S
+2878(processes)S
+3133(with)S
+3946 V
+1944(the)S
+2043(nonexistent)S
+2345(user-id)S
+2536(to)S
+2607(work)S
+2754(in)S
+2825(them.)S
+3005(However,)S
+3877 V
+1944(the)S
+2052(default)S
+2254(is)S
+2328(to)S
+2409(delete)S
+2588(everything)S
+2880(in)S
+2961(the)S
+3069(scratch)S
+3808 V
+1944(directory)S
+2185(at)S
+2252(the)S
+2349(end)S
+2459(of)S
+2532(the)S
+2629(submission,)S
+2937(so)S
+3013(the)S
+3110(prob-)S
+3739 V
+1944(lem)S
+2079(reduces)S
+2307(to)S
+2398(one)S
+2528(of)S
+2621(timing:)S
+2839(copies)S
+3036(may)S
+3183(be)S
+3670 V
+1944(obtained)S
+2188(only)S
+2331(when)S
+2496(the)S
+2605(other)S
+2764(student)S
+2973(is)S
+3048(actually)S
+3601 V
+1944(running)S
+8/Times-Bold F
+2149(TRY)S
+10/Times-Roman F
+2251(,)S
+2288(and)S
+2397(then)S
+2523(only)S
+2652(when)S
+2804(the)S
+2899(students')S
+3137(own)S
+3532 V
+1944(make\256les)S
+2197(are)S
+2292(used.)S
+2458(Students)S
+2686(can)S
+2791(be)S
+2869(very)S
+2997(tenacious,)S
+3463 V
+1944(however.)S
+3370 V
+2094(The)S
+2229(safest)S
+2407(strategy)S
+2639(is)S
+2720(not)S
+2838(to)S
+2925(take)S
+3066(student)S
+3301 V
+1944(make\256les.)S
+2234(But)S
+2345(if)S
+2406(you)S
+2520(must,)S
+2676(consider)S
+2904(\256ltering)S
+3119(them)S
+3232 V
+1944(to)S
+2011(look)S
+2138(for)S
+2228(invocations)S
+2526(of)S
+2596(a)S
+2643(shell.)S
+11/Times-Bold F
+3091 V
+1944(4.)S
+2038(Directory)S
+2330(and)S
+2459(File)S
+2586(Modes)S
+10/Times-Roman F
+2998 V
+2094(The)S
+2243(table)S
+2415(below)S
+2616(speci\256es)S
+2877(the)S
+3005(minimum)S
+2929 V
+1944(modes)S
+2121(needed)S
+2312(for)S
+2402(things)S
+2569(in)S
+2636(the)S
+2730(try)S
+2817(directory.)S
+10/Times-BoldItalic F
+2836 V
+2410(What)S
+2795(Mode)S
+10/Times-Roman F
+2249 2827 M
+686 l2
+2758 V
+2249(try)S
+2336(directory)S
+2820(111)S
+2689 V
+2249(project)S
+2437(directory)S
+2675(\262)S
+2820(111)S
+2620 V
+2249(wd_dir)S
+2439(\263)S
+2820(100)S
+2551 V
+2249(script_dir)S
+2500(\263)S
+2820(100)S
+2482 V
+2249(log_dir)S
+2443(\263)S
+2820(100)S
+2413 V
+2249(news)S
+2392(\256les)S
+2820(400)S
+10/Times-Bold F
+2344 V
+2249(init)S
+10/Times-Roman F
+2356(script)S
+2820(500)S
+10/Times-Bold F
+2275 V
+2249(build)S
+10/Times-Roman F
+2402(script)S
+2820(500)S
+10/Times-Bold F
+2206 V
+2249(build_safe)S
+10/Times-Roman F
+2532(script)S
+2820(555)S
+10/Times-Bold F
+2137 V
+2249(run)S
+10/Times-Roman F
+2362(script)S
+2820(500)S
+10/Times-Bold F
+2068 V
+2249(run_safe)S
+10/Times-Roman F
+2492(script)S
+2820(555)S
+10/Times-Bold F
+1999 V
+2249(explain)S
+10/Times-Roman F
+2456(script)S
+2820(500)S
+10/Times-Bold F
+1930 V
+2249(cleanup)S
+10/Times-Roman F
+2469(script)S
+2820(500)S
+10/Times-Bold F
+1861 V
+2249(dump_log)S
+10/Times-Roman F
+2525(script)S
+2820(500)S
+10/Times-Bold F
+1792 V
+2249(query)S
+10/Times-Roman F
+2419(script)S
+2820(500)S
+1675 V
+1944(\262)S
+2094(If)S
+2157(the)S
+2254(pathname)S
+2512(for)S
+2605(the)S
+2702(project)S
+2893(directory)S
+3133(con-)S
+1606 V
+2094(tains)S
+2244(subdirectories,)S
+2632(each)S
+2778(component)S
+3081(of)S
+3166(the)S
+1537 V
+2094(name)S
+2245(must)S
+2382(also)S
+2499(have)S
+2633(at)S
+2697(least)S
+2828(this)S
+2935(permission.)S
+1444 V
+1944(\263)S
+2094(These)S
+2272(all)S
+2366(default)S
+2567(to)S
+2647(the)S
+2754(try)S
+2854(directory.)S
+3140(If)S
+3213(a)S
+1375 V
+2094(pathname)S
+2369(is)S
+2449(given)S
+2623(for)S
+2733(any)S
+2860(of)S
+2950(these,)S
+3129(each)S
+1306 V
+2094(component)S
+2396(of)S
+2480(the)S
+2588(name)S
+2753(must)S
+2904(have)S
+3052(at)S
+3129(least)S
+1237 V
+2094(this)S
+2201(permission.)S
+1144 V
+2094(Files)S
+2232(in)S
+2300(the)S
+2395(project)S
+2584(directory)S
+2823(that)S
+2935(are)S
+3029(accessed)S
+1075 V
+1944(from)S
+2087(the)S
+10/Times-Bold F
+2187(build_safe)S
+10/Times-Roman F
+2476(or)S
+10/Times-Bold F
+2552(run_safe)S
+10/Times-Roman F
+2801(scripts)S
+2984(must)S
+3126(have)S
+1006 V
+1944(public)S
+2147(permission)S
+2463(appropriate)S
+2789(for)S
+2910(the)S
+3035(type)S
+3190(of)S
+937 V
+1944(access.)S
+2167(Usually)S
+2388(this)S
+2509(is)S
+2583(read)S
+2720(permission,)S
+3032(meaning)S
+868 V
+1944(that)S
+2055(they)S
+2179(will)S
+2293(require)S
+2484(at)S
+2548(least)S
+2679(mode)S
+2833(444.)S
+11/Times-Bold F
+727 V
+1944(4.1.)S
+2088(The)S
+2220(Check)S
+2422(Option)S
+10/Times-Roman F
+634 V
+2094(The)S
+10/Times-Bold F
+2214(\261c)S
+10/Times-Roman F
+2296(option)S
+2475(to)S
+8/Times-Bold F
+2543(TRY)S
+10/Times-Roman F
+2670(causes)S
+2852(it)S
+2911(to)S
+2983(check)S
+3149(that)S
+565 V
+1944(the)S
+2049(various)S
+2256(directories)S
+2541(and)S
+2658(scripts)S
+2845(are)S
+2949(present)S
+3153(and)S
+496 V
+1944(have)S
+2094(the)S
+2204(proper)S
+2397(mode.)S
+2602(Improper)S
+2862(modes)S
+3054(will)S
+3183(be)S
+11/Times-Bold F
+259 V
+1724(Page)S
+1881(15)S
+E
+%%Page: 16 18
+B
+11/Times-Bold F
+4429 V
+432(03/13/0)S
+11/Times-Italic F
+1627(The)S
+1748(Try)S
+1862(System)S
+11/Times-Bold F
+2882(Version)S
+3124(1.11)S
+10/Times-Roman F
+4222 V
+432(changed.)S
+10/Times-Italic F
+697(Note:)S
+10/Times-Roman F
+860(only)S
+996(the)S
+1098(scripts)S
+1283(and)S
+1398(directories)S
+1681(in)S
+4153 V
+432(the)S
+530(table)S
+672(above)S
+840(are)S
+938(checked)S
+1159(with)S
+1289(this)S
+1399(option.)S
+1611(Files)S
+4084 V
+432(accessed)S
+666(from)S
+806(within)S
+983(the)S
+1080(instructor's)S
+1376(scripts)S
+1555(are)S
+1651(not)S
+4015 V
+432(checked)S
+650(for)S
+740(proper)S
+917(permissions.)S
+3922 V
+582(This)S
+710(may)S
+835(only)S
+963(be)S
+1041(used)S
+1172(by)S
+1253(the)S
+1348(instructor.)S
+1634(The)S
+3853 V
+432(instructor)S
+690(account)S
+905(and)S
+1019(project)S
+1213(code)S
+1353(must)S
+1496(be)S
+1579(given,)S
+3784 V
+432(but)S
+542(no)S
+634(\256les)S
+766(are)S
+872(required)S
+1105(for)S
+1207(this)S
+1326(option.)S
+1547(Sample)S
+3715 V
+432(output)S
+606(from)S
+743(the)S
+837(check)S
+998(option)S
+1172(is)S
+1232(shown)S
+1408(in)S
+1475(Figure)S
+1652(15.)S
+11/Times-Bold F
+3574 V
+432(5.)S
+526(Signals)S
+10/Times-Roman F
+3481 V
+582(Signals)S
+784(that)S
+899(are)S
+997(likely)S
+1159(to)S
+1230(be)S
+1311(generated)S
+1570(by)S
+1654(the)S
+3412 V
+432(user)S
+570(include)S
+9/Times-Bold F
+784(SIGINT)S
+10/Times-Roman F
+1011(\(the)S
+1143(delete)S
+1325(or)S
+1412(rubout)S
+1606(key\),)S
+9/Times-Bold F
+3343 V
+432(SIGHUP)S
+10/Times-Roman F
+661(\(modem)S
+884(hangup\),)S
+9/Times-Bold F
+1116(SIGQUIT)S
+10/Times-Roman F
+1369(\(keyboard)S
+1634(quit)S
+3274 V
+432(signal\),)S
+641(and)S
+9/Times-Bold F
+756(SIGTERM)S
+10/Times-Roman F
+1041(\(from)S
+1208(the)S
+10/Times-Italic F
+1312(kill)S
+10/Times-Roman F
+1390(\(1\))S
+1489(program\).)S
+10/Times-Bold F
+3205 V
+432(T)S
+8/Times-Bold F
+472(RY)S
+10/Times-Roman F
+562(always)S
+749(honors)S
+932(these)S
+1076(signals)S
+1263(while)S
+1417(the)S
+1511(student's)S
+3136 V
+432(\256les)S
+565(are)S
+672(being)S
+839(copied)S
+1032(\(for)S
+1154(when)S
+1316(the)S
+1422(student)S
+1628(sees)S
+3067 V
+432(that)S
+566(he)S
+666(has)S
+789(given)S
+966(the)S
+1083(wrong)S
+1278(\256le\),)S
+1432(and)S
+1561(always)S
+2998 V
+432(ignores)S
+641(them)S
+793(after)S
+935(the)S
+10/Times-Bold F
+1040(run)S
+10/Times-Roman F
+1164(script)S
+1329(has)S
+1440(\256nished)S
+1661(\(to)S
+2929 V
+432(prevent)S
+647(students)S
+878(from)S
+1029(being)S
+1197(able)S
+1332(to)S
+1413(interrupt)S
+1654(the)S
+10/Times-Bold F
+2860 V
+432(cleanup)S
+10/Times-Roman F
+653(or)S
+10/Times-Bold F
+723(explain)S
+10/Times-Roman F
+930(scripts\).)S
+1162(The)S
+1276(way)S
+1396(in)S
+1463(which)S
+8/Times-Bold F
+1626(TRY)S
+10/Times-Roman F
+2791 V
+432(handles)S
+636(these)S
+780(signals)S
+967(while)S
+1121(the)S
+1215(project)S
+1403(is)S
+1463(being)S
+1617(built)S
+2722 V
+432(and)S
+542(tested)S
+706(depends)S
+926(on)S
+1009(options)S
+1209(given)S
+1366(by)S
+1448(the)S
+1544(instruc-)S
+2653 V
+432(tor,)S
+534(whose)S
+707(effects)S
+888(are)S
+982(explained)S
+1237(below.)S
+2560 V
+582(All)S
+695(other)S
+855(signals)S
+1058(always)S
+1260(cause)S
+8/Times-Bold F
+1425(TRY)S
+10/Times-Roman F
+1562(to)S
+1644(ter-)S
+2491 V
+432(minate)S
+628(abnormally,)S
+949(with)S
+1087(the)S
+1192(signal)S
+1366(name)S
+1527(reported)S
+2422 V
+432(in)S
+516(the)S
+627(log)S
+741(\256le)S
+854(if)S
+927(possible.)S
+1195(These)S
+1375(signals)S
+1578(would)S
+2353 V
+432(ordinarily)S
+692(indicate)S
+906(the)S
+1002(presence)S
+1235(of)S
+1307(a)S
+1356(bug)S
+1467(in)S
+1535(the)S
+8/Times-Bold F
+1626(TRY)S
+10/Times-Roman F
+2284 V
+432(program)S
+657(\(e.g.)S
+784(a)S
+831(memory)S
+1052(fault\),)S
+1218(however,)S
+1460(the)S
+1554(student)S
+2215 V
+432(can)S
+549(always)S
+749(send)S
+892(such)S
+1035(a)S
+1095(signal)S
+1272(with)S
+1412(the)S
+10/Times-Italic F
+1518(kill)S
+10/Times-Roman F
+1628(pro-)S
+2146 V
+432(gram.)S
+11/Times-Bold F
+2005 V
+432(5.1.)S
+576(Signal)S
+774(Handling)S
+1060(Options)S
+10/Times-Roman F
+1912 V
+582(By)S
+677(default,)S
+885(the)S
+984(the)S
+1083(four)S
+1208(user)S
+1332(signals)S
+1523(are)S
+1621(han-)S
+1843 V
+432(dled)S
+567(the)S
+672(same)S
+827(as)S
+908(the)S
+1013(other)S
+1168(signals.)S
+1401(Their)S
+1563(receipt)S
+1774 V
+432(causes)S
+8/Times-Bold F
+615(TRY)S
+10/Times-Roman F
+747(to)S
+824(terminate)S
+1083(abnormally,)S
+1403(reporting)S
+1654(the)S
+1705 V
+432(signal)S
+603(name)S
+761(in)S
+835(the)S
+936(log)S
+1040(\256le.)S
+1178(Shell)S
+1328(scripts)S
+1511(will)S
+1631(also)S
+1636 V
+432(receive)S
+644(these)S
+805(signals,)S
+1024(and)S
+1148(instructors)S
+1439(are)S
+1550(free)S
+1681(to)S
+1567 V
+432(implement)S
+725(any)S
+846(desired)S
+1054(signal)S
+1232(handling)S
+1477(actions)S
+1681(in)S
+10/Courier F
+1393 V
+475($)S
+547(try)S
+691(\261c)S
+799(kar)S
+943(4\2611)S
+1324 V
+475(try:)S
+655(Looking)S
+943(in)S
+1051(directory)S
+1411("class/309/labs":)S
+1255 V
+475(try:)S
+655("make/build_safe")S
+1303(and)S
+1447("make/build")S
+1915(both)S
+2095(exist,)S
+2347(the)S
+2491(former)S
+2743(will)S
+2923(be)S
+3031(used.)S
+1186 V
+475(try:)S
+655("make/build_safe")S
+1303(exists)S
+1555(but)S
+1699(has)S
+1843(mode)S
+2023(600.)S
+2239(It)S
+2347(needs)S
+2563(at)S
+2671(least)S
+2887(mode)S
+3067(555.)S
+1117 V
+475(try:)S
+655(I)S
+727(changed)S
+1015(it)S
+1123(to)S
+1231(755)S
+1375(for)S
+1519(you.)S
+1048 V
+475(try:)S
+655("make/run_safe")S
+1231(exists)S
+1483(but)S
+1627(has)S
+1771(mode)S
+1951(600.)S
+2167(It)S
+2275(needs)S
+2491(at)S
+2599(least)S
+2815(mode)S
+2995(555.)S
+979 V
+475(try:)S
+655(I)S
+727(changed)S
+1015(it)S
+1123(to)S
+1231(755)S
+1375(for)S
+1519(you.)S
+910 V
+475(try:)S
+655("make/explain")S
+1195(exists)S
+1447(but)S
+1591(has)S
+1735(mode)S
+1915(0.)S
+2059(It)S
+2167(needs)S
+2383(at)S
+2491(least)S
+2707(mode)S
+2887(500.)S
+841 V
+475(try:)S
+655(I)S
+727(changed)S
+1015(it)S
+1123(to)S
+1231(500)S
+1375(for)S
+1519(you.)S
+772 V
+475($)S
+10/Times-Bold F
+634 V
+1710(Figure)S
+1901(15)S
+565 V
+1348(Sample)S
+1558(output)S
+1747(from)S
+1894(the)S
+1994(check)S
+2161(option)S
+432 529 M
+10/Times-Roman F
+-966 L
+432 1495 M
+2808 l2
+3240 1495 M
+966 L
+3240 529 M
+-2808 l2
+4222 V
+1944(scripts)S
+2121(with)S
+2248(the)S
+10/Times-Bold F
+2342(trap)S
+10/Times-Roman F
+2472(or)S
+10/Times-Bold F
+2542(onintr)S
+10/Times-Roman F
+2722(shell)S
+2856(statements.)S
+4129 V
+2094(Two)S
+2232(of)S
+2310(the)S
+2412(options)S
+2617(that)S
+2736(can)S
+2847(be)S
+2931(given)S
+3092(in)S
+3166(the)S
+10/Times-Bold F
+4060 V
+1944(.tryrc)S
+10/Times-Roman F
+2114(\256le)S
+2215(modify)S
+2413(the)S
+2510(way)S
+2633(the)S
+2730(four)S
+2853(user)S
+2976(signals)S
+3166(are)S
+3991 V
+1944(handled.)S
+2210(The)S
+10/Times-Bold F
+2344(ignore)S
+10/Times-Roman F
+2548(option)S
+2741(causes)S
+2937(them)S
+3097(to)S
+3183(be)S
+3922 V
+1944(ignored,)S
+2168(and)S
+2280(causes)S
+2462(all)S
+2548(shell)S
+2687(scripts)S
+2869(to)S
+2941(ignore)S
+3119(them)S
+3853 V
+1944(as)S
+2017(well.)S
+2179(The)S
+2296(instructor)S
+2550(may)S
+2677(wish)S
+2813(to)S
+2882(explicitly)S
+3133(han-)S
+3784 V
+1944(dle)S
+2038(other)S
+2182(signals)S
+2369(in)S
+2436(his)S
+2526(scripts.)S
+3691 V
+2094(The)S
+10/Times-Bold F
+2209(post)S
+10/Times-Roman F
+2336(option)S
+2510(causes)S
+8/Times-Bold F
+2683(TRY)S
+10/Times-Roman F
+2805(to)S
+2872(ignore)S
+3046(the)S
+3140(four)S
+3622 V
+1944(user)S
+2065(signals,)S
+2267(but)S
+2364(does)S
+2494(not)S
+2591(arrange)S
+2792(for)S
+2882(shell)S
+3016(scripts)S
+3193(to)S
+3553 V
+1944(ignore)S
+2135(them.)S
+2328(The)S
+2459(instructor)S
+2727(can)S
+2848(handle)S
+3046(them)S
+3203(if)S
+3484 V
+1944(desired)S
+2139(with)S
+2267(the)S
+10/Times-Bold F
+2362(trap)S
+10/Times-Roman F
+2493(or)S
+10/Times-Bold F
+2564(onintr)S
+10/Times-Roman F
+2745(shell)S
+2880(statements.)S
+3190(In)S
+3415 V
+1944(addition,)S
+2189(when)S
+8/Times-Bold F
+2347(TRY)S
+10/Times-Roman F
+2481(receives)S
+2711(a)S
+2770(signal,)S
+2960(it)S
+3025(adds)S
+3166(the)S
+3346 V
+1944(variable)S
+9/Times-Bold F
+2170(SIGNAL)S
+10/Times-Roman F
+2409(to)S
+2488(the)S
+2594(environment;)S
+2948(its)S
+3037(value)S
+3200(is)S
+3277 V
+1944(the)S
+2044(number)S
+2253(of)S
+2328(the)S
+2427(signal)S
+2596(received)S
+2826(\(see)S
+10/Times-Italic F
+2948(signal)S
+10/Times-Roman F
+3095(\(2\))S
+3190(or)S
+10/Times-Italic F
+3208 V
+1944(sigvec)S
+10/Times-Roman F
+2095(\(2\))S
+2196(\).)S
+2282(If)S
+2353(desired,)S
+2573(the)S
+2678(instructor)S
+2940(can)S
+3055(test)S
+3170(for)S
+3139 V
+1944(this)S
+2052(variable)S
+2268(in)S
+2336(his)S
+2426(shell)S
+2560(scripts)S
+2737(and)S
+2844(take)S
+2965(appropriate)S
+3070 V
+1944(action)S
+2112(if)S
+2169(it)S
+2223(is)S
+2283(found.)S
+2977 V
+2094(Giving)S
+2288(both)S
+2422(the)S
+10/Times-Bold F
+2522(post)S
+10/Times-Roman F
+2654(and)S
+10/Times-Bold F
+2767(ignore)S
+10/Times-Roman F
+2957(options)S
+3160(has)S
+2908 V
+1944(the)S
+2044(same)S
+2194(effect)S
+2358(as)S
+10/Times-Bold F
+2433(ignore)S
+10/Times-Roman F
+2597(,)S
+2637(except)S
+2820(that)S
+2936(the)S
+9/Times-Bold F
+3033(SIGNAL)S
+10/Times-Roman F
+2839 V
+1944(environment)S
+2278(variable)S
+2502(is)S
+2570(posted)S
+2755(when)S
+2913(a)S
+2968(user)S
+3096(signal)S
+2770 V
+1944(is)S
+2004(received.)S
+2677 V
+2094(One)S
+2227(must)S
+2377(be)S
+2467(aware)S
+2644(that)S
+2768(these)S
+2924(options)S
+3133(only)S
+2608 V
+1944(change)S
+2152(the)S
+2263(default)S
+2468(signal)S
+2648(handling)S
+2895(actions.)S
+3137(If)S
+3213(a)S
+2539 V
+1944(program)S
+2186(explicitly)S
+2453(arranges)S
+2695(to)S
+2780(catch)S
+2946(signals,)S
+3166(the)S
+2470 V
+1944(ignored)S
+2157(signals)S
+2353(will)S
+2476(no)S
+2565(longer)S
+2747(be)S
+2832(ignored.)S
+3079(A)S
+3150(few)S
+2401 V
+1944(programs)S
+2191(do)S
+2271(this;)S
+2395(the)S
+2489(C)S
+2549(compiler)S
+2784(is)S
+2844(a)S
+2891(notable)S
+3089(exam-)S
+2332 V
+1944(ple.)S
+2078(Even)S
+2227(with)S
+2359(the)S
+10/Times-Bold F
+2458(ignore)S
+10/Times-Roman F
+2647(option)S
+2826(set,)S
+2933(the)S
+3032(user)S
+3156(can)S
+2263 V
+1944(interrupt)S
+2181(the)S
+2284(C)S
+2353(compiler,)S
+2612(which)S
+2787(will)S
+2909(then)S
+3041(return)S
+3213(a)S
+2194 V
+1944(failing)S
+2133(exit)S
+2255(status)S
+2423(so)S
+2507(at)S
+2582(least)S
+2724(the)S
+2828(build)S
+2982(script)S
+3146(will)S
+2125 V
+1944(behave)S
+2151(reasonably.)S
+2483(If)S
+2559(programs)S
+2822(used)S
+2968(in)S
+3051(the)S
+3160(run)S
+2056 V
+1944(script)S
+2105(arrange)S
+2313(to)S
+2387(catch)S
+2541(their)S
+2678(signals,)S
+2886(it)S
+2946(could)S
+3106(cause)S
+1987 V
+1944(more)S
+2096(of)S
+2174(a)S
+2229(problem.)S
+2493(It)S
+2558(is)S
+2626(unfortunate)S
+2932(that)S
+3051(there)S
+3200(is)S
+1918 V
+1944(nothing)S
+2148(that)S
+2259(can)S
+2363(be)S
+2440(done)S
+2577(in)S
+8/Times-Bold F
+2640(TRY)S
+10/Times-Roman F
+2762(to)S
+2829(remedy)S
+3030(this.)S
+11/Times-Bold F
+1777 V
+1944(6.)S
+2038(Utility)S
+2239(Programs)S
+10/Times-Roman F
+1684 V
+2094(There)S
+2265(are)S
+2369(several)S
+2570(utility)S
+2745(programs)S
+3002(that)S
+3123(were)S
+1615 V
+1944(developed)S
+2212(for)S
+8/Times-Bold F
+2298(TRY)S
+10/Times-Roman F
+2400(;)S
+2437(these)S
+2581(are)S
+2675(described)S
+2926(below.)S
+11/Times-Bold F
+259 V
+1724(Page)S
+1881(16)S
+E
+%%Page: 17 19
+B
+11/Times-Bold F
+4429 V
+432(03/13/0)S
+11/Times-Italic F
+1627(The)S
+1748(Try)S
+1862(System)S
+11/Times-Bold F
+2882(Version)S
+3124(1.11)S
+4222 V
+432(6.1.)S
+576(Try_run)S
+10/Times-Roman F
+4129 V
+582(This)S
+716(program)S
+947(is)S
+1013(used)S
+1149(to)S
+1222(run)S
+1328(a)S
+1381(student's)S
+1624(exe-)S
+4060 V
+432(cutable)S
+637(program)S
+871(in)S
+948(a)S
+1005(controlled)S
+1279(manner.)S
+1524(It)S
+1590(limits)S
+3991 V
+432(the)S
+536(resources)S
+793(that)S
+914(can)S
+1028(be)S
+1115(used)S
+1255(by)S
+1345(the)S
+1448(program)S
+1681(to)S
+3922 V
+432(catch)S
+598(in\256nite)S
+807(loops)S
+975(and)S
+1100(prevent)S
+1319(huge)S
+1474(\256les)S
+1611(from)S
+3853 V
+432(being)S
+587(created.)S
+818(It)S
+875(prevents)S
+1099(the)S
+1193(program)S
+1417(from)S
+1554(access-)S
+3784 V
+432(ing)S
+531(any)S
+640(\256les)S
+762(outside)S
+958(of)S
+1030(the)S
+1126(current)S
+1319(directory)S
+1559(to)S
+1628(pro-)S
+3715 V
+432(tect)S
+552(the)S
+658(instructor)S
+921(account)S
+1141(from)S
+1290(malicious)S
+1557(actions)S
+3646 V
+432(that)S
+553(a)S
+610(student)S
+814(program)S
+1047(might)S
+1217(take.)S
+1382(Its)S
+1471(exit)S
+1591(status)S
+3577 V
+432(can)S
+549(be)S
+639(tested)S
+813(in)S
+893(the)S
+1000(script)S
+1166(to)S
+1245(determine)S
+1519(how)S
+1654(the)S
+3508 V
+432(student's)S
+669(program)S
+893(\256nished.)S
+3415 V
+582(See)S
+10/Times-Italic F
+689(try)S
+10/Times-Roman F
+756(\(1R\))S
+886(for)S
+976(complete)S
+1218(information.)S
+11/Times-Bold F
+3274 V
+432(6.2.)S
+576(Try_log)S
+10/Times-Roman F
+3181 V
+582(This)S
+718(program)S
+951(inserts)S
+1137(a)S
+1193(message)S
+1426(into)S
+1549(the)S
+1651(log)S
+3112 V
+432(\256le,)S
+552(and)S
+667(may)S
+799(be)S
+884(used)S
+1022(in)S
+1097(build)S
+1248(and)S
+1362(run)S
+1469(scripts.)S
+1688(If)S
+3043 V
+432(one)S
+559(command)S
+837(line)S
+968(argument)S
+1236(is)S
+1316(given)S
+1489(and)S
+1615(it)S
+1688(is)S
+2974 V
+432(numeric,)S
+678(it)S
+745(is)S
+818(assumed)S
+1058(to)S
+1138(be)S
+1228(an)S
+1318(exit)S
+1442(status)S
+1611(from)S
+10/Times-Bold F
+2905 V
+432(try_run)S
+10/Times-Roman F
+671(and)S
+797(a)S
+863(message)S
+1106(explaining)S
+1400(the)S
+1513(status)S
+1688(is)S
+2836 V
+432(added)S
+609(to)S
+689(the)S
+796(log)S
+905(\256le.)S
+1049(Otherwise,)S
+1343(the)S
+1449(text)S
+1572(of)S
+1654(the)S
+2767 V
+432(argument\(s\))S
+756(is)S
+829(taken)S
+993(as)S
+1076(the)S
+1182(message)S
+1418(and)S
+1537(inserted)S
+2698 V
+432(into)S
+557(the)S
+662(log)S
+770(\256le.)S
+913(Newlines)S
+1171(found)S
+1342(in)S
+1420(the)S
+1524(message)S
+2629 V
+432(are)S
+547(removed.)S
+834(Messages)S
+1108(that)S
+1240(are)S
+1355(too)S
+1473(long)S
+1621(\(e.g.)S
+2560 V
+432(several)S
+638(hundred)S
+869(characters\))S
+1168(should)S
+1362(be)S
+1453(avoided)S
+1678(as)S
+2491 V
+432(they)S
+570(may)S
+708(break)S
+875(programs)S
+1135(that)S
+1259(read)S
+1396(the)S
+1503(log)S
+1613(\256les.)S
+10/Times-Bold F
+2422 V
+432(try_log)S
+10/Times-Roman F
+646(may)S
+780(be)S
+867(used)S
+1007(before)S
+1190(successful)S
+1466(as)S
+1545(well)S
+1678(as)S
+2353 V
+432(unsuccessful)S
+770(termination)S
+1080(of)S
+1161(a)S
+1218(script,)S
+1397(but)S
+1504(it)S
+1568(should)S
+2284 V
+432(be)S
+509(executed)S
+744(only)S
+871(once.)S
+2191 V
+582(Several)S
+796(of)S
+879(the)S
+986(previous)S
+1226(examples)S
+1486(illustrated)S
+2122 V
+432(the)S
+550(use)S
+674(of)S
+10/Times-Bold F
+767(try_log)S
+10/Times-Roman F
+994(to)S
+1084(report)S
+1271(error)S
+1431(status)S
+1611(from)S
+10/Times-Bold F
+2053 V
+432(try_run)S
+10/Times-Roman F
+658(and)S
+771(to)S
+844(add)S
+957(other)S
+1107(messages)S
+1360(to)S
+1433(the)S
+1533(log)S
+1636(\256le.)S
+1984 V
+432(Figure)S
+614(16)S
+699(shows)S
+873(a)S
+925(build)S
+1073(script)S
+1231(that)S
+1346(uses)S
+10/Times-Bold F
+1473(try_log)S
+10/Times-Roman F
+1681(to)S
+1915 V
+432(record)S
+611(whether)S
+830(a)S
+882(failure)S
+1065(was)S
+1183(due)S
+1294(to)S
+1365(compilation)S
+1678(or)S
+1846 V
+432(linking)S
+637(errors.)S
+845(This)S
+985(might)S
+1159(be)S
+1249(taken)S
+1413(into)S
+1540(account)S
+1777 V
+432(when)S
+582(grading)S
+786(the)S
+880(project.)S
+1684 V
+582(See)S
+10/Times-Bold F
+689(try_log)S
+10/Times-Roman F
+893(for)S
+983(complete)S
+1225(information.)S
+11/Times-Bold F
+1543 V
+432(6.3.)S
+576(Try_deblank)S
+10/Times-Roman F
+1450 V
+582(This)S
+721(program)S
+957(performs)S
+1206(commonly)S
+1496(used)S
+1637(text)S
+1381 V
+432(manipulations,)S
+813(and)S
+924(is)S
+988(often)S
+1136(used)S
+1270(to)S
+1340(\256lter)S
+1477(the)S
+1574(output)S
+1312 V
+432(of)S
+528(a)S
+601(student's)S
+864(program)S
+1114(before)S
+1314(checking)S
+1578(it)S
+1658(for)S
+1243 V
+432(correctness.)S
+761(Options)S
+973(available)S
+1214(include)S
+1414(removing)S
+1667(all)S
+1174 V
+432(leading)S
+634(and)S
+745(trailing)S
+944(blanks,)S
+1140(adding)S
+1328(one)S
+1439(leading)S
+1641(and)S
+1105 V
+432(one)S
+542(trailing)S
+740(blank,)S
+911(reducing)S
+1144(runs)S
+1269(of)S
+1341(blanks)S
+1520(to)S
+1589(a)S
+1638(sin-)S
+1036 V
+432(gle)S
+539(blank,)S
+721(removing)S
+985(blank)S
+1151(lines,)S
+1312(and)S
+1431(printing)S
+1654(the)S
+967 V
+432(input)S
+581(one)S
+693(word)S
+841(per)S
+942(line.)S
+1092(Tabs)S
+1233(may)S
+1361(also)S
+1482(be)S
+1563(treated)S
+898 V
+432(as)S
+502(blanks)S
+679(in)S
+746(the)S
+840(above)S
+1004(transformations.)S
+805 V
+582(See)S
+10/Times-Bold F
+689(try_deblank)S
+10/Times-Roman F
+1022(for)S
+1112(complete)S
+1354(information.)S
+11/Times-Bold F
+664 V
+432(7.)S
+526(Detecting)S
+815(Cheating)S
+10/Times-Bold F
+571 V
+582(T)S
+8/Times-Bold F
+622(RY)S
+10/Times-Roman F
+715(deletes)S
+906(the)S
+1003(contents)S
+1226(of)S
+1298(the)S
+1394(scratch)S
+1587(direc-)S
+502 V
+432(tory)S
+563(when)S
+727(it)S
+795(is)S
+869(\256nished.)S
+1128(Instructors)S
+1419(might)S
+1594(argue)S
+10/Courier F
+4117 V
+1987(#!)S
+2095(/bin/sh)S
+4048 V
+1987(echo)S
+2167(cc)S
+2275(\261c)S
+2383($*)S
+3979 V
+1987(cc)S
+2095(\261c)S
+2203($*)S
+3910 V
+1987(if)S
+2095([)S
+2167($?)S
+2275(\261ne)S
+2419(0)S
+2491(])S
+3841 V
+1987(then)S
+3772 V
+2095(try_log)S
+2383(cc)S
+3703 V
+2095(exit)S
+2275(1)S
+3634 V
+1987(fi)S
+3565 V
+1987(D=$WD_BACKPATH/$PROJ_DIR)S
+3496 V
+1987(ln)S
+2095($D/print\261o)S
+2491(print.o)S
+3427 V
+1987(echo)S
+2167(cc)S
+2275(*.o)S
+3358 V
+1987(cc)S
+2095(*.o)S
+3289 V
+1987(if)S
+2095([)S
+2167($?)S
+2275(\261ne)S
+2419(0)S
+2491(])S
+3220 V
+1987(then)S
+3151 V
+2095(try_log)S
+2383(ld)S
+3082 V
+2095(exit)S
+2275(1)S
+3013 V
+1987(fi)S
+2944 V
+1987(exit)S
+2167(0)S
+10/Times-Bold F
+2806 V
+2466(Figure)S
+2657(16)S
+2737 V
+2258(Build)S
+2418(script)S
+2585(using)S
+2741(try_log)S
+1944 2701 M
+10/Times-Roman F
+-1518 L
+1944 4219 M
+1296 l2
+3240 4219 M
+1518 L
+3240 2701 M
+-1296 l2
+2563 V
+1944(that)S
+2063(this)S
+2178(makes)S
+2359(it)S
+2420(more)S
+2571(dif\256cult)S
+2789(to)S
+2863(detect)S
+3035(cheating)S
+2494 V
+1944(by)S
+2026(removing)S
+2279(the)S
+2374(evidence.)S
+2645(The)S
+2760(instructor)S
+3012(is)S
+3073(always)S
+2425 V
+1944(free)S
+2064(to)S
+2137(make)S
+2294(copies)S
+2474(of)S
+2550(whatever)S
+2797(\256les)S
+2923(he)S
+3005(wishes)S
+3193(in)S
+2356 V
+1944(any)S
+2069(location)S
+2302(outside)S
+2514(of)S
+2601(the)S
+2712(scratch)S
+2920(directory,)S
+3190(as)S
+2287 V
+1944(illustrated)S
+2235(in)S
+2331(the)S
+2454(sample)S
+10/Times-Bold F
+2674(cleanup)S
+10/Times-Roman F
+2923(script)S
+3106(given)S
+2218 V
+1944(above.)S
+2169(To)S
+2282(help)S
+2432(detect)S
+2623(cheating,)S
+2889(the)S
+3009(instructor)S
+2149 V
+1944(would)S
+2127(also)S
+2257(wish)S
+2403(to)S
+2482(run)S
+2594(some)S
+2753(sort)S
+2875(of)S
+2957(program)S
+3193(to)S
+2080 V
+1944(help)S
+2069(\256nd)S
+2183(duplication)S
+2476(among)S
+2660(different)S
+2888(students')S
+3125(\256les.)S
+2011 V
+1944(The)S
+2067(example)S
+2301(below,)S
+2492(executed)S
+2736(at)S
+2809(the)S
+2912(end)S
+3027(of)S
+3105(a)S
+3160(run)S
+1942 V
+1944(script,)S
+2121(records)S
+2326(in)S
+2401(the)S
+2502(log)S
+2606(\256le)S
+2710(a)S
+2764(checksum)S
+3032(for)S
+3129(each)S
+1873 V
+1944(of)S
+2014(the)S
+2108(student's)S
+2345(\256les.)S
+10/Courier F
+1780 V
+1987(try_log)S
+2275(\301sum)S
+2455($FILES\301)S
+11/Times-Bold F
+1615 V
+1944(8.)S
+2038(Where)S
+2250(Implemented)S
+10/Times-Roman F
+1522 V
+2094(Currently,)S
+8/Times-Bold F
+2364(TRY)S
+10/Times-Roman F
+2494(is)S
+2562(installed)S
+2794(on)S
+2881(all)S
+2969(of)S
+3046(the)S
+3147(Sun)S
+1453 V
+1944(servers)S
+2134(\(solaris\).)S
+11/Times-Bold F
+1312 V
+1944(9.)S
+2038(Appendices)S
+10/Times-Roman F
+1219 V
+2094(The)S
+2221(\256rst)S
+2347(appendix)S
+2601(summarizes)S
+2921(the)S
+3027(purposes)S
+1150 V
+1944(and)S
+2059(requirements)S
+2401(of)S
+2478(all)S
+2566(of)S
+2643(the)S
+2744(shell)S
+2885(scripts)S
+3069(written)S
+1081 V
+1944(by)S
+2026(the)S
+2122(instructor.)S
+2410(Manual)S
+2616(pages)S
+2775(for)S
+2867(these)S
+3013(programs)S
+1012 V
+1944(are)S
+2041(included)S
+2272(next.)S
+2434(The)S
+2551(shorter)S
+8/Times-Bold F
+2737(TRY)S
+10/Times-Roman F
+2862(manual)S
+3063(page)S
+3200(is)S
+943 V
+1944(intended)S
+2183(for)S
+2284(distribution)S
+2593(to)S
+2671(students,)S
+2914(who)S
+3048(need)S
+3193(to)S
+874 V
+1944(know)S
+2105(how)S
+2236(to)S
+2311(run)S
+2419(the)S
+2521(program)S
+2753(but)S
+2858(do)S
+2946(not)S
+3051(need)S
+3193(to)S
+805 V
+1944(know)S
+2097(the)S
+2191(details)S
+2369(of)S
+2439(how)S
+2562(project)S
+2750(tests)S
+2877(are)S
+2971(set)S
+3058(up.)S
+11/Times-Bold F
+259 V
+1724(Page)S
+1881(17)S
+E
+%%Page: 18 20
+B
+11/Times-Bold F
+4429 V
+432(03/13/0)S
+11/Times-Italic F
+1627(The)S
+1748(Try)S
+1862(System)S
+11/Times-Bold F
+2882(Version)S
+3124(1.11)S
+10/Times-Roman F
+699 4282 M
+2274 l2
+10/Times-BoldItalic F
+4213 V
+781(Script)S
+1070(Req/)S
+1292(Min)S
+1737(Arguments)S
+2586(Exit)S
+4144 V
+781(Name)S
+1082(Opt)S
+1274(Mode)S
+1788(Passed)S
+2574(Code)S
+10/Times-Roman F
+699 4135 M
+2274 l2
+4066 V
+729(init)S
+1070(opt)S
+1274(500)S
+1504(student's)S
+1741(\256le)S
+1838(names)S
+2333(0=success,)S
+3997 V
+2333(1=failed)S
+2555(\(4\))S
+699 3988 M
+2274 l2
+3919 V
+729(build)S
+1070(\(1\))S
+1274(500)S
+1504(student's)S
+1741(\256le)S
+1838(names)S
+2333(0=success,)S
+3850 V
+2333(1=failed)S
+699 3841 M
+2274 l2
+3772 V
+729(build_safe)S
+1070(\(1\))S
+1274(555)S
+1504(student's)S
+1741(\256le)S
+1838(names)S
+2333(0=success,)S
+3703 V
+2333(1=failed)S
+699 3694 M
+2274 l2
+3625 V
+729(run)S
+1070(\(2\))S
+1274(500)S
+1504(student's)S
+1741(\256le)S
+1838(names)S
+2333(0=successful,)S
+2679(else)S
+2793(return)S
+3556 V
+2333(number)S
+2537(of)S
+2607(the)S
+2701(failed)S
+2859(test)S
+699 3547 M
+2274 l2
+3478 V
+729(run_safe)S
+1070(\(2\))S
+1274(555)S
+1504(student's)S
+1741(\256le)S
+1838(names)S
+2333(0=successful,)S
+2679(else)S
+2793(return)S
+3409 V
+2333(number)S
+2537(of)S
+2607(the)S
+2701(failed)S
+2859(test)S
+699 3400 M
+2274 l2
+3331 V
+729(explain)S
+1070(\(3\))S
+1274(500)S
+1504(number)S
+1708(returned)S
+1929(by)S
+2009(run)S
+2109(script)S
+2333(\(none\))S
+699 3322 M
+2274 l2
+3253 V
+729(cleanup)S
+1070(opt)S
+1274(500)S
+1504(0=project)S
+1756(failed)S
+2333(0=success,)S
+3184 V
+1504(1=project)S
+1756(succeeded)S
+2333(1=failed)S
+2555(\(5\))S
+699 3175 M
+2274 l2
+3106 V
+729(dump_log)S
+1070(\(3\))S
+1274(500)S
+1504(name)S
+1655(of)S
+1725(log)S
+1822(\256le,)S
+1934(project)S
+2122(code)S
+2333(\(none\))S
+699 3097 M
+2274 l2
+3028 V
+729(query)S
+1070(opt)S
+1274(500)S
+1504(\(none\))S
+2333(\(none\))S
+699 3019 M
+2274 l2
+699 3019 M
+-1263 L
+2973 3019 M
+-1263 L
+10/Times-Italic F
+2902 V
+432(Notes:)S
+10/Times-Roman F
+2809 V
+582(Scripts)S
+771(that)S
+884(require)S
+1077(a)S
+1126(minimum)S
+1383(mode)S
+1539(of)S
+1611(555)S
+1723(are)S
+1818(executed)S
+2054(by)S
+2135(a)S
+2183(nonexistent)S
+2482(user-id.)S
+2705(Other)S
+2863(scripts)S
+3041(are)S
+3136(exe-)S
+2740 V
+582(cuted)S
+733(by)S
+813(the)S
+907(instructor's)S
+1201(user-id.)S
+2647 V
+432(\(1\))S
+582(Either)S
+758(the)S
+10/Times-Bold F
+860(build)S
+10/Times-Roman F
+1021(or)S
+1099(the)S
+10/Times-Bold F
+1201(build_safe)S
+10/Times-Roman F
+1492(script)S
+1654(is)S
+1722(required.)S
+1986(If)S
+2054(both)S
+2189(are)S
+2291(present,)S
+2508(the)S
+10/Times-Bold F
+2610(build_safe)S
+10/Times-Roman F
+2901(script)S
+3062(will)S
+3183(be)S
+2578 V
+582(used.)S
+2485 V
+432(\(2\))S
+582(Either)S
+750(the)S
+10/Times-Bold F
+844(run)S
+10/Times-Roman F
+957(or)S
+1027(the)S
+10/Times-Bold F
+1121(run_safe)S
+10/Times-Roman F
+1364(script)S
+1518(is)S
+1578(required.)S
+1834(If)S
+1894(both)S
+2021(are)S
+2115(present,)S
+2324(the)S
+10/Times-Bold F
+2418(run_safe)S
+10/Times-Roman F
+2661(script)S
+2815(will)S
+2929(be)S
+3006(used.)S
+2392 V
+432(\(3\))S
+582(If)S
+644(there)S
+787(is)S
+849(no)S
+10/Times-Bold F
+931(explain)S
+10/Times-Roman F
+1140(script)S
+1296(in)S
+1365(the)S
+1461(project)S
+1651(directory,)S
+1906(the)S
+10/Times-Bold F
+2002(explain)S
+10/Times-Roman F
+2211(script)S
+2367(\(if)S
+2446(there)S
+2589(is)S
+2651(one\))S
+2780(in)S
+2849(the)S
+2944(script)S
+3099(direc-)S
+2323 V
+582(tory)S
+699(will)S
+813(be)S
+890(used.)S
+1055(The)S
+1169(same)S
+1313(is)S
+1373(true)S
+1487(for)S
+1577(the)S
+10/Times-Bold F
+1671(dump_log)S
+10/Times-Roman F
+1947(script.)S
+2230 V
+432(\(4\))S
+582(The)S
+696(status)S
+853(of)S
+923(the)S
+10/Times-Bold F
+1017(init)S
+10/Times-Roman F
+1124(script)S
+1278(is)S
+1338(relevant)S
+1553(only)S
+1680(when)S
+1830(the)S
+10/Times-Bold F
+1924(initstatus)S
+10/Times-Roman F
+2180(option)S
+2354(is)S
+2414(given.)S
+2137 V
+432(\(5\))S
+582(The)S
+696(status)S
+853(of)S
+923(the)S
+10/Times-Bold F
+1017(cleanup)S
+10/Times-Roman F
+1237(script)S
+1391(is)S
+1451(relevant)S
+1666(only)S
+1793(when)S
+1943(the)S
+10/Times-Bold F
+2037(cleanupstatus)S
+10/Times-Roman F
+2406(option)S
+2580(is)S
+2640(given.)S
+10/Times-Bold F
+1906 V
+1686(Appendix)S
+1955(1)S
+1837 V
+1501(Summary)S
+1774(of)S
+1844(Shell)S
+1991(Scripts)S
+11/Times-Bold F
+259 V
+1724(Page)S
+1881(18)S
+E
+%%Trailer
+end lwsave restore
+%%Pages: 20
+%%DocumentFonts: Times-Roman Times-Italic Times-Bold Times-BoldItalic Courier
+%%+ Courier-Oblique Symbol

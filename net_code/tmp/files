@@ -1,0 +1,90 @@
+
+Command: sleep 2
+    real:      1.04
+    user:      0.00
+    sys:      0.00
+    child user:      0.00
+    chlid sys:      0.00
+
+Command: date
+2011年 08月 10日 星期三 17:06:42 CST
+    real:      0.01
+    user:      0.00
+    sys:      0.00
+    child user:      0.01
+    chlid sys:      0.00
+
+Command: sleep 2
+    real:      0.70
+    user:      0.00
+    sys:      0.00
+    child user:      0.01
+    chlid sys:      0.00
+
+Command: ls -a
+.
+..
+a.out
+echoenv.c
+execv.c
+files
+times.c
+    real:      0.00
+    user:      0.00
+    sys:      0.00
+    child user:      0.00
+    chlid sys:      0.00
+
+Command: sleep 2
+    real:      2.01
+    user:      0.00
+    sys:      0.00
+    child user:      0.00
+    chlid sys:      0.01
+
+Command: lspci
+00:00.0 RAM memory: nVidia Corporation MCP61 Memory Controller (rev a1)
+00:01.0 ISA bridge: nVidia Corporation MCP61 LPC Bridge (rev a2)
+00:01.1 SMBus: nVidia Corporation MCP61 SMBus (rev a2)
+00:01.2 RAM memory: nVidia Corporation MCP61 Memory Controller (rev a2)
+00:02.0 USB Controller: nVidia Corporation MCP61 USB Controller (rev a3)
+00:02.1 USB Controller: nVidia Corporation MCP61 USB Controller (rev a3)
+00:04.0 PCI bridge: nVidia Corporation MCP61 PCI bridge (rev a1)
+00:05.0 Audio device: nVidia Corporation MCP61 High Definition Audio (rev a2)
+00:06.0 IDE interface: nVidia Corporation MCP61 IDE (rev a2)
+00:07.0 Bridge: nVidia Corporation MCP61 Ethernet (rev a2)
+00:08.0 IDE interface: nVidia Corporation MCP61 SATA Controller (rev a2)
+00:08.1 IDE interface: nVidia Corporation MCP61 SATA Controller (rev a2)
+00:09.0 PCI bridge: nVidia Corporation MCP61 PCI Express bridge (rev a2)
+00:0b.0 PCI bridge: nVidia Corporation MCP61 PCI Express bridge (rev a2)
+00:0c.0 PCI bridge: nVidia Corporation MCP61 PCI Express bridge (rev a2)
+00:0d.0 VGA compatible controller: nVidia Corporation C61 [GeForce 6150SE nForce 430] (rev a2)
+00:18.0 Host bridge: Advanced Micro Devices [AMD] K10 [Opteron, Athlon64, Sempron] HyperTransport Configuration
+00:18.1 Host bridge: Advanced Micro Devices [AMD] K10 [Opteron, Athlon64, Sempron] Address Map
+00:18.2 Host bridge: Advanced Micro Devices [AMD] K10 [Opteron, Athlon64, Sempron] DRAM Controller
+00:18.3 Host bridge: Advanced Micro Devices [AMD] K10 [Opteron, Athlon64, Sempron] Miscellaneous Control
+00:18.4 Host bridge: Advanced Micro Devices [AMD] K10 [Opteron, Athlon64, Sempron] Link Control
+    real:      0.03
+    user:      0.00
+    sys:      0.00
+    child user:      0.03
+    chlid sys:      0.01
+
+Command: sleep 3
+    real:      3.00
+    user:      0.00
+    sys:      0.00
+    child user:      0.00
+    chlid sys:      0.00
+
+Command: who
+drv      pts/0        2011-08-10 14:28 (:0.0)
+drv      pts/1        2011-08-10 16:09 (:0.0)
+drv      pts/2        2011-08-10 15:59 (:0.0)
+drv      pts/3        2011-08-10 16:04 (:0.0)
+drv      pts/4        2011-08-10 16:29 (:0.0)
+    real:      0.01
+    user:      0.00
+    sys:      0.00
+    child user:      0.01
+    chlid sys:      0.00

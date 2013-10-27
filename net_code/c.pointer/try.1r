@@ -1,0 +1,448 @@
+.\" $com ${ME:-me} -m -Man ${MEFLAGS:-''} -T${T:-$DEFAULT_T} $@ -tbl
+.ig
+###############################################################################
+#									      #
+#    Copyright (c) 1989 by Kenneth A. Reek.  Permission to copy or use this   #
+#    software without fee is granted to non-profit and not-for-profit	      #
+#    institutions and organizations provided that:			      #
+#    1) such copying or use is not for commercial advantage, and	      #
+#    2) no portion of this software is incorporated into any other program    #
+#       or device for commercial advantage, and				      #
+#    3) this copyright notice remains with the software.		      #
+#    Permission is also granted to make this software available to other      #
+#    non-profit or not-for-profit institutions and organizations whose use    #
+#    satisfies (1) through (3) above.  Any use of this software for	      #
+#    commercial advantage, or incorporation of any part of this software      #
+#    into any other program or device for commercial advantage, or any use    #
+#    or copying other than by non-profit or not-for-profit institutions or    #
+#    organizations requires written permission of the copyright holder.       #
+#									      #
+###############################################################################
+..
+.ll 6.5i
+.po 1i
+.TH TRY 1R "R. I. T."
+.SH NAME
+try \- try a program against the instructor's test cases
+.SH SYNOPSIS
+.B try
+[
+.B \-b
+.B \-l
+.B \-n
+.B \-q
+.if !'\*X'student' .B \-c
+]
+.I inst\-acct
+.I project\-code
+[
+.I file
+\&... ]
+.SH DESCRIPTION
+.I Try
+allows a student to try his/her program with test data
+prepared by the instructor.
+The results of the attempt are kept in a log file.
+.I inst\-acct
+is the account name where the project is tested,
+and
+.I project\-code
+is the code identifying the particular project you wish to test.
+Both of these values will be given to the student by the instructor.
+The
+.I file
+argument should be a list of pathnames to
+all of the files necessary for this project.
+Directory names may not be given in this list.
+The last component of each pathname should all be unique,
+as all of the files are copied into the same directory.
+.PP
+.I Try
+copies the named files into a scratch directory in
+.IR inst\-acct ,
+creates the project (e.g. make, compile, link, etc.),
+and then runs it with the instructor's test cases.
+The student is informed of the success or failure of the tests,
+which is also recorded in a log file.
+The instructor can arrange for the details of failed tests to be
+given to the student as an aid in correcting the project.
+.PP
+There is one scratch directory created for each student using
+.IR try .
+If several
+.IR try 's
+are started from one login account, however,
+they will all share the same scratch directory
+and will do things like deleting each other's files.
+To avoid such problems, do not attempt to run more than one
+.I try
+at a time, even with different projects.
+If several students use the same login account, they must coordinate with
+each other to avoid running multiple
+.IR try 's
+from the same account.
+.SH OPTIONS
+.PP
+The following options are recognized:
+.TP
+.B \-b
+is used when running in the background.
+It prevents news from being printed (thus avoiding the ``Press RETURN to continue'' prompt).
+At the instructor's discretion, this option may also change how
+results from your project are reported to you.
+Note that this option does not actually \fIcause\fR execution in the background.
+.TP
+.B \-l
+causes the student's log file to be printed.
+No
+.IR file
+arguments are needed when this option is used.
+The instructor determines whether this option may be used
+for a project,
+and what portions of the log file are actually printed.
+.TP
+.B \-n
+causes any general news or news for that specific project
+to be printed.
+Ordinarily, news is printed only when it has changed since it was
+last read; this option prints the current news unconditionally.
+No 
+.I file
+arguments are needed with this option.
+.TP
+.B \-q
+make an query on a project.
+The instructor determines whether queries can be done on a project,
+and also determines what is to be done during a query.
+Your instructor will inform you
+if a particular project supports this option.
+No 
+.I file
+arguments are needed with this option.
+.if '\*X'student' .ig ZZ
+.TP
+.B \-c
+(check)
+causes
+.I try
+to see if the required files exist and gives them the proper modes.
+The
+.I inst\-acct
+and
+.I project\-code
+must be given when
+.B \-c
+is used,
+but no files need be given.
+Only the instructor is allowed to use this option.
+.SH "INSTRUCTOR INFORMATION"
+The directories and files used by
+.I try
+all reside in a directory of your choice called the ``try directory''.
+It contains all of the scratch directories for students
+and their log files.
+.PP
+All of the files and scripts associated with any particular project
+are stored in the ``project directory'', which resides in the try directory.
+This keeps scripts and data files for different projects separate
+from each other and from the scratch directories and log files.
+.SH "SHELL SCRIPTS USED"
+The following is a summary of the scripts needed for a project.
+The scripts that require a minimum mode of 555
+are executed with a nonexistent user-id;
+all other scripts are executed with the instructor's (or grader's)
+user-id.
+.na
+.sp .5
+.ne 3i
+.TS
+box center;
+c c c c c
+c c c c c
+l l l l l.
+.ft I
+Script	Req	Min	Arguments	Exit
+Name	/opt	mode	passed	code
+.ft R
+_
+init	opt	500	student's file names	0=success,
+				1=failure (4)
+_
+build	(1)	500	student's file names	T{
+0=success, 1=failed
+T}
+_
+build_safe	(1)	555	student's file names	T{
+0=success, 1=failed
+T}
+_
+run	(2)	500	student's file names	T{
+.nf
+0=successful, else return
+number of the failed test
+T}
+_
+run_safe	(2)	555	student's file names	T{
+.nf
+0=successful, else return
+number of the failed test
+T}
+_
+explain	(3)	500	number returned by run script	none
+_
+cleanup	opt	500	0=project failed,	0=success,
+			1=project succeeded	1=failure (5)
+_
+dump_log	(3)	500	name of log file, project code	none
+_
+query	opt	500	(none)	(none)
+.TE
+.sp .5
+.ad
+.I Notes:
+.IP (1)
+Either the 
+.B build
+or the 
+.B build_safe
+script are required.
+If both are present, the 
+.B build_safe
+script will be used.
+.IP (2)
+Either the 
+.B run
+or the 
+.B run_safe
+script are required.
+If both are present, the 
+.B run_safe
+script will be used.
+.IP (3)
+If there is no
+.B explain
+script in the project directory,
+the
+.B explain
+script in the try directory (if there is one) will be used.
+The same is true for the
+.B dump_log
+script.
+.IP (4)
+The status of the
+.B init
+script is relevant only when the 
+.B initstatus
+option is given.
+.IP (5)
+The status of the
+.B cleanup
+script is relevant only when the 
+.B cleanupstatus
+option is given.
+.SH "SETTING UP A PROJECT"
+The following are necessary to use
+.I try
+for a project.
+.IP 1)
+You must decide where
+.IR try 's
+stuff should be stored,
+and create a directory for it.
+This is called the ``try directory'',
+and must have at least mode 111.
+It may have any name.
+To protect it from students,
+the try directory
+should be created in a directory with no public permissions.
+.IP 2)
+You must create a directory within the try directory
+for the scripts and files associated with this project.
+This is called the ``project directory'',
+and must have at least mode 111.
+It may have any name.
+.IP 3)
+There must be an entry
+of the form:
+.sp .5
+.ti +.5i
+project\-code     try_dir     project_dir     options
+.sp .5
+in the
+.B .tryrc
+file in your home directory.
+The fields are separated by white space;
+the first two fields are required and the third and fourth are optional.
+.I project\-code
+is the project code given to your students,
+(the code they will use when they run
+.IR try ).
+.I Try_dir
+is the pathname of the try directory,
+relative to your home directory.
+.I Project_dir
+is the name of the project directory, relative to the try directory.
+If the third argument is not given,
+.I project_dir
+will have the same name as
+.I project\-code.
+See \fIThe Try System\fR for the permissible
+.I options.
+.IP 4)
+Within the project directory,
+the following shell scripts may or must exist.
+These may also be implemented as true programs if you prefer.
+.RS
+.TP \w'build_safem'u
+.B init
+.I Optional.
+This script contains commands that perform initialization
+needed prior to building the student's project.
+It is most commonly used to perform commands that could not be done
+in the beginning of a
+.B build_safe
+script,
+or to perform unusual initialization so that a common
+.B build
+script can be used.
+.TP
+.B build
+This script contains the commands needed to create the student's project,
+which may include compilation, formatting, or whatever is appropriate
+\fIexcept make\fR.
+(To
+.I make
+a student project, the
+.B build_safe
+script (see below) should be used instead.)\ 
+It must have at least mode 500.
+If the project was successfully built, the script must return
+an exit status of zero, otherwise, it must return non-zero.
+Either this script or the
+.B build_safe
+script must be present.
+.TP
+.B build_safe
+This script is identical to the
+.B build
+script except that it is executed with a safe user-id.
+This is the script to use if
+student-specified commands are used
+to build the student's project
+(e.g. using
+.I make
+with the student's makefile,
+or running a shell script provided by the student).
+It must have at least mode 555.
+The 
+.B build_safe
+script must exit with a status of zero or nonzero
+depending on whether or not it was successful.
+.TP
+.B run
+This script runs the student's project.
+(If commands specified by the student must be executed,
+the
+.B run_safe
+script should be used instead, see below.)\ 
+It must have at least mode 500.
+The
+.B try_run
+program is used to execute the student's program;
+it limits resource usage to catch infinite loops and prevent huge
+files from being created,
+and also guards against malicious code.
+If the student's project passed all of the tests, the script must return a zero
+exit status.
+Otherwise, it should exit with a number in the range 1-127
+to indicate which test failed.
+The high order bit is not included as part of the test number;
+if you set it you may interpret it in your 
+.B explain
+script
+in any way you wish
+(e.g. to change how a failed test is reported to the student).
+In this case, exit codes in the range 129-255 correspond to tests 1-127.
+The number 128 should not be used as an exit code.
+.TP
+.B run_safe
+This script runs the student's project,
+but executes with a safe user-id.
+This is the script to use if
+.I make
+is executed as part of the testing,
+or if a student-supplied shell script is executed.
+It must have at least mode 555.
+The exit status required is the same as for the
+.B run
+script.
+.TP
+.B explain
+.I Optional.
+This script gives the student information about the test that
+caused the project to fail.
+If it exists, it must have at least mode 500.
+The
+.B explain
+script in the try directory (if there is one)
+is used for all projects without one of their own.
+.TP
+.B cleanup
+.I Optional.
+This script contains commands to perform any cleanup needed
+after the student's project is tested.
+It is not necessary to delete files from the scratch directory,
+as that is done by
+.I try.
+This script is most commonly used to perform tasks that could not be
+done at the end of a
+.B run_safe
+script,
+or to perform unusual cleanup operations so that a common
+.B run
+script can be used.
+.TP
+.B dump_log
+.I Optional.
+This script prints a student's log file.
+If it exists, it must have at least mode 500.
+The
+.B dump_log
+script in the try directory (if there is one)
+is used for all projects without one of their own.
+.TP
+.B query
+.I Optional.
+This script is called when the
+.B \-q
+option is given by the student,
+and can do anything the instructor desires,
+such as giving hints about a project,
+divulging test data, etc.
+It executes with the instructor's user-id (unlike the safe scripts),
+and so the same precautions must be taken with the query script
+as with other unprotected scripts such as
+.B build
+or
+.BR run .
+.RE
+.IP 5)
+If desired, a file called
+.B news
+may be created in the try directory.
+If this file has owner read permission,
+its contents will be shown to the student the next time he runs
+.IR try .
+Each project directory may also contain a
+.B news
+file which, if readable, is shown to the student when he
+tries his stuff for that particular project.
+A record is kept in the student's home directory of news that has been seen.
+This record keeps track of the modification time of each news file;
+any subsequent modification of a news file will cause it to be
+shown again to the student.
+.SH "SEE ALSO"
+\fIThe Try System\fR, by K. Reek
+.SH BUGS
+Report bugs to K. Reek, x6155
+.ZZ
