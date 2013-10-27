@@ -1,0 +1,291 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AR	./Makefile	/^AR            = ar cqs$/;"	m
+CC	./Makefile	/^CC            = gcc$/;"	m
+CELL_H	./cell.h	2;"	d
+CFLAGS	./Makefile	/^CFLAGS        = -pipe -O2 -Wall -W -D_REENTRANT -fPIE $(DEFINES)$/;"	m
+CHK_DIR_EXISTS	./Makefile	/^CHK_DIR_EXISTS= test -d$/;"	m
+COMPRESS	./Makefile	/^COMPRESS      = gzip -9f$/;"	m
+COPY	./Makefile	/^COPY          = cp -f$/;"	m
+COPY_DIR	./Makefile	/^COPY_DIR      = cp -f -R$/;"	m
+COPY_FILE	./Makefile	/^COPY_FILE     = cp -f$/;"	m
+CXX	./Makefile	/^CXX           = g++$/;"	m
+CXXFLAGS	./Makefile	/^CXXFLAGS      = -pipe -O2 -Wall -W -D_REENTRANT -fPIE $(DEFINES)$/;"	m
+Cell	./cell.cpp	/^Cell::Cell()$/;"	f	class:Cell
+Cell	./cell.h	/^class Cell : public QTableWidgetItem$/;"	c
+ColumnCount	./spreadsheet.h	/^    enum { MagicNumber = 0x7F51C883, RowCount = 999, ColumnCount = 26 };$/;"	e	enum:Spreadsheet::__anon2
+DEFINES	./Makefile	/^DEFINES       = -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB$/;"	m
+DEL_DIR	./Makefile	/^DEL_DIR       = rmdir$/;"	m
+DEL_FILE	./Makefile	/^DEL_FILE      = rm -f$/;"	m
+DESTDIR	./Makefile	/^DESTDIR       = $/;"	m
+DIST	./Makefile	/^DIST          = \/opt\/Qt5.0.1\/5.0.1\/gcc\/mkspecs\/features\/spec_pre.prf \\$/;"	m
+FINDDIALOG_H	./finddialog.h	2;"	d
+FindDialog	./finddialog.cpp	/^FindDialog::FindDialog(QWidget *parent)$/;"	f	class:FindDialog
+FindDialog	./finddialog.h	/^class FindDialog : public QDialog$/;"	c
+GOTOCELLDIALOG_H	./gotocelldialog.h	2;"	d
+GoToCellDialog	./gotocelldialog.cpp	/^GoToCellDialog::GoToCellDialog(QWidget *parent)$/;"	f	class:GoToCellDialog
+GoToCellDialog	./gotocelldialog.h	/^class GoToCellDialog : public QDialog, public Ui::GoToCellDialog$/;"	c
+GoToCellDialog	./ui_gotocelldialog.h	/^    class GoToCellDialog: public Ui_GoToCellDialog {};$/;"	c	namespace:Ui
+INCPATH	./Makefile	/^INCPATH       = -I\/opt\/Qt5.0.1\/5.0.1\/gcc\/mkspecs\/linux-g++ -I. -I\/opt\/Qt5.0.1\/5.0.1\/gcc\/include -I\/opt\/Qt5.0.1\/5.0.1\/gcc\/include\/QtWidgets -I\/opt\/Qt5.0.1\/5.0.1\/gcc\/include\/QtGui -I\/opt\/Qt5.0.1\/5.0.1\/gcc\/include\/QtCore -I. -I.$/;"	m
+INSTALL_DIR	./Makefile	/^INSTALL_DIR   = $(COPY_DIR)$/;"	m
+INSTALL_FILE	./Makefile	/^INSTALL_FILE  = install -m 644 -p$/;"	m
+INSTALL_PROGRAM	./Makefile	/^INSTALL_PROGRAM = install -m 755 -p$/;"	m
+Invalid	./cell.cpp	/^const QVariant Invalid;$/;"	v
+KeyCount	./spreadsheet.h	/^    enum { KeyCount = 3 };$/;"	e	enum:SpreadsheetCompare::__anon3
+LFLAGS	./Makefile	/^LFLAGS        = -Wl,-O1 -Wl,-rpath,\/opt\/Qt5.0.1\/5.0.1\/gcc -Wl,-rpath,\/opt\/Qt5.0.1\/5.0.1\/gcc\/lib$/;"	m
+LIBS	./Makefile	/^LIBS          = $(SUBLIBS) -L\/opt\/Qt5.0.1\/5.0.1\/gcc\/lib -lQt5Widgets -lQt5Gui -lQt5Core -lGL -lpthread $/;"	m
+LINK	./Makefile	/^LINK          = g++$/;"	m
+MAINWINDOW_H	./mainwindow.h	2;"	d
+MAKEFILE	./Makefile	/^MAKEFILE      = Makefile$/;"	m
+MKDIR	./Makefile	/^MKDIR         = mkdir -p$/;"	m
+MOVE	./Makefile	/^MOVE          = mv -f$/;"	m
+MagicNumber	./spreadsheet.h	/^    enum { MagicNumber = 0x7F51C883, RowCount = 999, ColumnCount = 26 };$/;"	e	enum:Spreadsheet::__anon2
+MainWindow	./mainwindow.cpp	/^MainWindow::MainWindow()$/;"	f	class:MainWindow
+MainWindow	./mainwindow.h	/^class MainWindow : public QMainWindow$/;"	c
+MaxRecentFiles	./mainwindow.h	/^    enum { MaxRecentFiles = 5 };$/;"	e	enum:MainWindow::__anon1
+OBJECTS	./Makefile	/^OBJECTS       = cell.o \\$/;"	m
+OBJECTS_DIR	./Makefile	/^OBJECTS_DIR   = .\/$/;"	m
+QMAKE	./Makefile	/^QMAKE         = \/opt\/Qt5.0.1\/5.0.1\/gcc\/bin\/qmake$/;"	m
+QMAKE_TARGET	./Makefile	/^QMAKE_TARGET  = spreadsheet$/;"	m
+QT_MOC_LITERAL	./moc_finddialog.cpp	25;"	d	file:
+QT_MOC_LITERAL	./moc_finddialog.cpp	47;"	d	file:
+QT_MOC_LITERAL	./moc_gotocelldialog.cpp	25;"	d	file:
+QT_MOC_LITERAL	./moc_gotocelldialog.cpp	39;"	d	file:
+QT_MOC_LITERAL	./moc_mainwindow.cpp	25;"	d	file:
+QT_MOC_LITERAL	./moc_mainwindow.cpp	50;"	d	file:
+QT_MOC_LITERAL	./moc_sortdialog.cpp	25;"	d	file:
+QT_MOC_LITERAL	./moc_sortdialog.cpp	36;"	d	file:
+QT_MOC_LITERAL	./moc_spreadsheet.cpp	25;"	d	file:
+QT_MOC_LITERAL	./moc_spreadsheet.cpp	57;"	d	file:
+RANLIB	./Makefile	/^RANLIB        = $/;"	m
+RowCount	./spreadsheet.h	/^    enum { MagicNumber = 0x7F51C883, RowCount = 999, ColumnCount = 26 };$/;"	e	enum:Spreadsheet::__anon2
+SED	./Makefile	/^SED           = sed$/;"	m
+SORTDIALOG_H	./sortdialog.h	2;"	d
+SOURCES	./Makefile	/^SOURCES       = cell.cpp \\$/;"	m
+SPREADSHEET_H	./spreadsheet.h	2;"	d
+STRIP	./Makefile	/^STRIP         = strip$/;"	m
+SYMLINK	./Makefile	/^SYMLINK       = ln -f -s$/;"	m
+SortDialog	./sortdialog.cpp	/^SortDialog::SortDialog(QWidget *parent)$/;"	f	class:SortDialog
+SortDialog	./sortdialog.h	/^class SortDialog : public QDialog, public Ui::SortDialog$/;"	c
+SortDialog	./ui_sortdialog.h	/^    class SortDialog: public Ui_SortDialog {};$/;"	c	namespace:Ui
+Spreadsheet	./spreadsheet.cpp	/^Spreadsheet::Spreadsheet(QWidget *parent)$/;"	f	class:Spreadsheet
+Spreadsheet	./spreadsheet.h	/^class Spreadsheet : public QTableWidget$/;"	c
+SpreadsheetCompare	./spreadsheet.h	/^class SpreadsheetCompare$/;"	c
+TAR	./Makefile	/^TAR           = tar -cf$/;"	m
+TARGET	./Makefile	/^TARGET        = spreadsheet$/;"	m
+UI_GOTOCELLDIALOG_H	./ui_gotocelldialog.h	10;"	d
+UI_SORTDIALOG_H	./ui_sortdialog.h	10;"	d
+Ui	./ui_gotocelldialog.h	/^namespace Ui {$/;"	n
+Ui	./ui_sortdialog.h	/^namespace Ui {$/;"	n
+Ui_GoToCellDialog	./ui_gotocelldialog.h	/^class Ui_GoToCellDialog$/;"	c
+Ui_SortDialog	./ui_sortdialog.h	/^class Ui_SortDialog$/;"	c
+about	./mainwindow.cpp	/^void MainWindow::about()$/;"	f	class:MainWindow
+aboutAction	./mainwindow.h	/^    QAction *aboutAction;$/;"	m	class:MainWindow
+aboutQtAction	./mainwindow.h	/^    QAction *aboutQtAction;$/;"	m	class:MainWindow
+ascending	./spreadsheet.h	/^    bool ascending[KeyCount];$/;"	m	class:SpreadsheetCompare
+autoRecalc	./spreadsheet.h	/^    bool autoRecalc;$/;"	m	class:Spreadsheet
+autoRecalcAction	./mainwindow.h	/^    QAction *autoRecalcAction;$/;"	m	class:MainWindow
+autoRecalculate	./spreadsheet.h	/^    bool autoRecalculate() const { return autoRecalc; }$/;"	f	class:Spreadsheet
+backwardCheckBox	./finddialog.h	/^    QCheckBox *backwardCheckBox;$/;"	m	class:FindDialog
+buttonBox	./ui_gotocelldialog.h	/^    QDialogButtonBox *buttonBox;$/;"	m	class:Ui_GoToCellDialog
+cacheIsDirty	./cell.h	/^    mutable bool cacheIsDirty;$/;"	m	class:Cell
+cachedValue	./cell.h	/^    mutable QVariant cachedValue;$/;"	m	class:Cell
+cancelButton	./ui_sortdialog.h	/^    QPushButton *cancelButton;$/;"	m	class:Ui_SortDialog
+caseCheckBox	./finddialog.h	/^    QCheckBox *caseCheckBox;$/;"	m	class:FindDialog
+cell	./spreadsheet.cpp	/^Cell *Spreadsheet::cell(int row, int column) const$/;"	f	class:Spreadsheet
+clear	./spreadsheet.cpp	/^void Spreadsheet::clear()$/;"	f	class:Spreadsheet
+clone	./cell.cpp	/^QTableWidgetItem *Cell::clone() const$/;"	f	class:Cell
+closeButton	./finddialog.h	/^    QPushButton *closeButton;$/;"	m	class:FindDialog
+closeEvent	./mainwindow.cpp	/^void MainWindow::closeEvent(QCloseEvent *event)$/;"	f	class:MainWindow
+copy	./spreadsheet.cpp	/^void Spreadsheet::copy()$/;"	f	class:Spreadsheet
+copyAction	./mainwindow.h	/^    QAction *copyAction;$/;"	m	class:MainWindow
+createActions	./mainwindow.cpp	/^void MainWindow::createActions()$/;"	f	class:MainWindow
+createContextMenu	./mainwindow.cpp	/^void MainWindow::createContextMenu()$/;"	f	class:MainWindow
+createMenus	./mainwindow.cpp	/^void MainWindow::createMenus()$/;"	f	class:MainWindow
+createStatusBar	./mainwindow.cpp	/^void MainWindow::createStatusBar()$/;"	f	class:MainWindow
+createToolBars	./mainwindow.cpp	/^void MainWindow::createToolBars()$/;"	f	class:MainWindow
+curFile	./mainwindow.h	/^    QString curFile;$/;"	m	class:MainWindow
+currentFormula	./spreadsheet.cpp	/^QString Spreadsheet::currentFormula() const$/;"	f	class:Spreadsheet
+currentLocation	./spreadsheet.cpp	/^QString Spreadsheet::currentLocation() const$/;"	f	class:Spreadsheet
+cut	./spreadsheet.cpp	/^void Spreadsheet::cut()$/;"	f	class:Spreadsheet
+cutAction	./mainwindow.h	/^    QAction *cutAction;$/;"	m	class:MainWindow
+data	./cell.cpp	/^QVariant Cell::data(int role) const$/;"	f	class:Cell
+data	./moc_finddialog.cpp	/^    QByteArrayData data[10];$/;"	m	struct:qt_meta_stringdata_FindDialog_t	file:
+data	./moc_gotocelldialog.cpp	/^    QByteArrayData data[3];$/;"	m	struct:qt_meta_stringdata_GoToCellDialog_t	file:
+data	./moc_mainwindow.cpp	/^    QByteArrayData data[13];$/;"	m	struct:qt_meta_stringdata_MainWindow_t	file:
+data	./moc_sortdialog.cpp	/^    QByteArrayData data[1];$/;"	m	struct:qt_meta_stringdata_SortDialog_t	file:
+data	./moc_spreadsheet.cpp	/^    QByteArrayData data[18];$/;"	m	struct:qt_meta_stringdata_Spreadsheet_t	file:
+del	./spreadsheet.cpp	/^void Spreadsheet::del()$/;"	f	class:Spreadsheet
+deleteAction	./mainwindow.h	/^    QAction *deleteAction;$/;"	m	class:MainWindow
+editMenu	./mainwindow.h	/^    QMenu *editMenu;$/;"	m	class:MainWindow
+editToolBar	./mainwindow.h	/^    QToolBar *editToolBar;$/;"	m	class:MainWindow
+enableFindButton	./finddialog.cpp	/^void FindDialog::enableFindButton(const QString &text)$/;"	f	class:FindDialog
+evalExpression	./cell.cpp	/^QVariant Cell::evalExpression(const QString &str, int &pos) const$/;"	f	class:Cell
+evalFactor	./cell.cpp	/^QVariant Cell::evalFactor(const QString &str, int &pos) const$/;"	f	class:Cell
+evalTerm	./cell.cpp	/^QVariant Cell::evalTerm(const QString &str, int &pos) const$/;"	f	class:Cell
+exitAction	./mainwindow.h	/^    QAction *exitAction;$/;"	m	class:MainWindow
+fileMenu	./mainwindow.h	/^    QMenu *fileMenu;$/;"	m	class:MainWindow
+fileToolBar	./mainwindow.h	/^    QToolBar *fileToolBar;$/;"	m	class:MainWindow
+find	./mainwindow.cpp	/^void MainWindow::find()$/;"	f	class:MainWindow
+findAction	./mainwindow.h	/^    QAction *findAction;$/;"	m	class:MainWindow
+findButton	./finddialog.h	/^    QPushButton *findButton;$/;"	m	class:FindDialog
+findClicked	./finddialog.cpp	/^void FindDialog::findClicked()$/;"	f	class:FindDialog
+findDialog	./mainwindow.h	/^    FindDialog *findDialog;$/;"	m	class:MainWindow
+findNext	./moc_finddialog.cpp	/^void FindDialog::findNext(const QString & _t1, Qt::CaseSensitivity _t2)$/;"	f	class:FindDialog
+findNext	./spreadsheet.cpp	/^void Spreadsheet::findNext(const QString &str, Qt::CaseSensitivity cs)$/;"	f	class:Spreadsheet
+findPrevious	./moc_finddialog.cpp	/^void FindDialog::findPrevious(const QString & _t1, Qt::CaseSensitivity _t2)$/;"	f	class:FindDialog
+findPrevious	./spreadsheet.cpp	/^void Spreadsheet::findPrevious(const QString &str,$/;"	f	class:Spreadsheet
+formula	./cell.cpp	/^QString Cell::formula() const$/;"	f	class:Cell
+formula	./spreadsheet.cpp	/^QString Spreadsheet::formula(int row, int column) const$/;"	f	class:Spreadsheet
+formulaLabel	./mainwindow.h	/^    QLabel *formulaLabel;$/;"	m	class:MainWindow
+goToCell	./mainwindow.cpp	/^void MainWindow::goToCell()$/;"	f	class:MainWindow
+goToCellAction	./mainwindow.h	/^    QAction *goToCellAction;$/;"	m	class:MainWindow
+gridLayout	./ui_sortdialog.h	/^    QGridLayout *gridLayout;$/;"	m	class:Ui_SortDialog
+gridLayout1	./ui_sortdialog.h	/^    QGridLayout *gridLayout1;$/;"	m	class:Ui_SortDialog
+gridLayout2	./ui_sortdialog.h	/^    QGridLayout *gridLayout2;$/;"	m	class:Ui_SortDialog
+gridLayout3	./ui_sortdialog.h	/^    QGridLayout *gridLayout3;$/;"	m	class:Ui_SortDialog
+hboxLayout	./ui_gotocelldialog.h	/^    QHBoxLayout *hboxLayout;$/;"	m	class:Ui_GoToCellDialog
+helpMenu	./mainwindow.h	/^    QMenu *helpMenu;$/;"	m	class:MainWindow
+keys	./spreadsheet.h	/^    int keys[KeyCount];$/;"	m	class:SpreadsheetCompare
+label	./finddialog.h	/^    QLabel *label;$/;"	m	class:FindDialog
+label	./ui_gotocelldialog.h	/^    QLabel *label;$/;"	m	class:Ui_GoToCellDialog
+lineEdit	./finddialog.h	/^    QLineEdit *lineEdit;$/;"	m	class:FindDialog
+lineEdit	./ui_gotocelldialog.h	/^    QLineEdit *lineEdit;$/;"	m	class:Ui_GoToCellDialog
+loadFile	./mainwindow.cpp	/^bool MainWindow::loadFile(const QString &fileName)$/;"	f	class:MainWindow
+locationLabel	./mainwindow.h	/^    QLabel *locationLabel;$/;"	m	class:MainWindow
+main	./main.cpp	/^int main(int argc, char *argv[])$/;"	f
+metaObject	./moc_finddialog.cpp	/^const QMetaObject *FindDialog::metaObject() const$/;"	f	class:FindDialog
+metaObject	./moc_gotocelldialog.cpp	/^const QMetaObject *GoToCellDialog::metaObject() const$/;"	f	class:GoToCellDialog
+metaObject	./moc_mainwindow.cpp	/^const QMetaObject *MainWindow::metaObject() const$/;"	f	class:MainWindow
+metaObject	./moc_sortdialog.cpp	/^const QMetaObject *SortDialog::metaObject() const$/;"	f	class:SortDialog
+metaObject	./moc_spreadsheet.cpp	/^const QMetaObject *Spreadsheet::metaObject() const$/;"	f	class:Spreadsheet
+modified	./moc_spreadsheet.cpp	/^void Spreadsheet::modified()$/;"	f	class:Spreadsheet
+moreButton	./ui_sortdialog.h	/^    QPushButton *moreButton;$/;"	m	class:Ui_SortDialog
+newAction	./mainwindow.h	/^    QAction *newAction;$/;"	m	class:MainWindow
+newFile	./mainwindow.cpp	/^void MainWindow::newFile()$/;"	f	class:MainWindow
+okButton	./ui_sortdialog.h	/^    QPushButton *okButton;$/;"	m	class:Ui_SortDialog
+okToContinue	./mainwindow.cpp	/^bool MainWindow::okToContinue()$/;"	f	class:MainWindow
+on_lineEdit_textChanged	./gotocelldialog.cpp	/^void GoToCellDialog::on_lineEdit_textChanged()$/;"	f	class:GoToCellDialog
+open	./mainwindow.cpp	/^void MainWindow::open()$/;"	f	class:MainWindow
+openAction	./mainwindow.h	/^    QAction *openAction;$/;"	m	class:MainWindow
+openRecentFile	./mainwindow.cpp	/^void MainWindow::openRecentFile()$/;"	f	class:MainWindow
+operator ()	./spreadsheet.cpp	/^bool SpreadsheetCompare::operator()(const QStringList &row1,$/;"	f	class:SpreadsheetCompare
+optionsMenu	./mainwindow.h	/^    QMenu *optionsMenu;$/;"	m	class:MainWindow
+paste	./spreadsheet.cpp	/^void Spreadsheet::paste()$/;"	f	class:Spreadsheet
+pasteAction	./mainwindow.h	/^    QAction *pasteAction;$/;"	m	class:MainWindow
+primaryColumnCombo	./ui_sortdialog.h	/^    QComboBox *primaryColumnCombo;$/;"	m	class:Ui_SortDialog
+primaryColumnLabel	./ui_sortdialog.h	/^    QLabel *primaryColumnLabel;$/;"	m	class:Ui_SortDialog
+primaryGroupBox	./ui_sortdialog.h	/^    QGroupBox *primaryGroupBox;$/;"	m	class:Ui_SortDialog
+primaryOrderCombo	./ui_sortdialog.h	/^    QComboBox *primaryOrderCombo;$/;"	m	class:Ui_SortDialog
+primaryOrderLabel	./ui_sortdialog.h	/^    QLabel *primaryOrderLabel;$/;"	m	class:Ui_SortDialog
+qCleanupResources_spreadsheet	./qrc_spreadsheet.cpp	/^int QT_MANGLE_NAMESPACE(qCleanupResources_spreadsheet)()$/;"	f
+qInitResources_spreadsheet	./qrc_spreadsheet.cpp	/^int QT_MANGLE_NAMESPACE(qInitResources_spreadsheet)()$/;"	f
+qt_meta_data_FindDialog	./moc_finddialog.cpp	/^static const uint qt_meta_data_FindDialog[] = {$/;"	v	file:
+qt_meta_data_GoToCellDialog	./moc_gotocelldialog.cpp	/^static const uint qt_meta_data_GoToCellDialog[] = {$/;"	v	file:
+qt_meta_data_MainWindow	./moc_mainwindow.cpp	/^static const uint qt_meta_data_MainWindow[] = {$/;"	v	file:
+qt_meta_data_SortDialog	./moc_sortdialog.cpp	/^static const uint qt_meta_data_SortDialog[] = {$/;"	v	file:
+qt_meta_data_Spreadsheet	./moc_spreadsheet.cpp	/^static const uint qt_meta_data_Spreadsheet[] = {$/;"	v	file:
+qt_meta_stringdata_FindDialog	./moc_finddialog.cpp	/^static const qt_meta_stringdata_FindDialog_t qt_meta_stringdata_FindDialog = {$/;"	v	file:
+qt_meta_stringdata_FindDialog_t	./moc_finddialog.cpp	/^struct qt_meta_stringdata_FindDialog_t {$/;"	s	file:
+qt_meta_stringdata_GoToCellDialog	./moc_gotocelldialog.cpp	/^static const qt_meta_stringdata_GoToCellDialog_t qt_meta_stringdata_GoToCellDialog = {$/;"	v	file:
+qt_meta_stringdata_GoToCellDialog_t	./moc_gotocelldialog.cpp	/^struct qt_meta_stringdata_GoToCellDialog_t {$/;"	s	file:
+qt_meta_stringdata_MainWindow	./moc_mainwindow.cpp	/^static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {$/;"	v	file:
+qt_meta_stringdata_MainWindow_t	./moc_mainwindow.cpp	/^struct qt_meta_stringdata_MainWindow_t {$/;"	s	file:
+qt_meta_stringdata_SortDialog	./moc_sortdialog.cpp	/^static const qt_meta_stringdata_SortDialog_t qt_meta_stringdata_SortDialog = {$/;"	v	file:
+qt_meta_stringdata_SortDialog_t	./moc_sortdialog.cpp	/^struct qt_meta_stringdata_SortDialog_t {$/;"	s	file:
+qt_meta_stringdata_Spreadsheet	./moc_spreadsheet.cpp	/^static const qt_meta_stringdata_Spreadsheet_t qt_meta_stringdata_Spreadsheet = {$/;"	v	file:
+qt_meta_stringdata_Spreadsheet_t	./moc_spreadsheet.cpp	/^struct qt_meta_stringdata_Spreadsheet_t {$/;"	s	file:
+qt_metacall	./moc_finddialog.cpp	/^int FindDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:FindDialog
+qt_metacall	./moc_gotocelldialog.cpp	/^int GoToCellDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:GoToCellDialog
+qt_metacall	./moc_mainwindow.cpp	/^int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:MainWindow
+qt_metacall	./moc_sortdialog.cpp	/^int SortDialog::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:SortDialog
+qt_metacall	./moc_spreadsheet.cpp	/^int Spreadsheet::qt_metacall(QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:Spreadsheet
+qt_metacast	./moc_finddialog.cpp	/^void *FindDialog::qt_metacast(const char *_clname)$/;"	f	class:FindDialog
+qt_metacast	./moc_gotocelldialog.cpp	/^void *GoToCellDialog::qt_metacast(const char *_clname)$/;"	f	class:GoToCellDialog
+qt_metacast	./moc_mainwindow.cpp	/^void *MainWindow::qt_metacast(const char *_clname)$/;"	f	class:MainWindow
+qt_metacast	./moc_sortdialog.cpp	/^void *SortDialog::qt_metacast(const char *_clname)$/;"	f	class:SortDialog
+qt_metacast	./moc_spreadsheet.cpp	/^void *Spreadsheet::qt_metacast(const char *_clname)$/;"	f	class:Spreadsheet
+qt_resource_data	./qrc_spreadsheet.cpp	/^static const unsigned char qt_resource_data[] = {$/;"	v	file:
+qt_resource_name	./qrc_spreadsheet.cpp	/^static const unsigned char qt_resource_name[] = {$/;"	v	file:
+qt_resource_struct	./qrc_spreadsheet.cpp	/^static const unsigned char qt_resource_struct[] = {$/;"	v	file:
+qt_static_metacall	./moc_finddialog.cpp	/^void FindDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:FindDialog
+qt_static_metacall	./moc_gotocelldialog.cpp	/^void GoToCellDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:GoToCellDialog
+qt_static_metacall	./moc_mainwindow.cpp	/^void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:MainWindow
+qt_static_metacall	./moc_sortdialog.cpp	/^void SortDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:SortDialog
+qt_static_metacall	./moc_spreadsheet.cpp	/^void Spreadsheet::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)$/;"	f	class:Spreadsheet
+readFile	./spreadsheet.cpp	/^bool Spreadsheet::readFile(const QString &fileName)$/;"	f	class:Spreadsheet
+readSettings	./mainwindow.cpp	/^void MainWindow::readSettings()$/;"	f	class:MainWindow
+recalculate	./spreadsheet.cpp	/^void Spreadsheet::recalculate()$/;"	f	class:Spreadsheet
+recalculateAction	./mainwindow.h	/^    QAction *recalculateAction;$/;"	m	class:MainWindow
+recentFileActions	./mainwindow.h	/^    QAction *recentFileActions[MaxRecentFiles];$/;"	m	class:MainWindow
+recentFiles	./mainwindow.h	/^    QStringList recentFiles;$/;"	m	class:MainWindow
+retranslateUi	./ui_gotocelldialog.h	/^    void retranslateUi(QWidget *GoToCellDialog)$/;"	f	class:Ui_GoToCellDialog
+retranslateUi	./ui_sortdialog.h	/^    void retranslateUi(QDialog *SortDialog)$/;"	f	class:Ui_SortDialog
+save	./mainwindow.cpp	/^bool MainWindow::save()$/;"	f	class:MainWindow
+saveAction	./mainwindow.h	/^    QAction *saveAction;$/;"	m	class:MainWindow
+saveAs	./mainwindow.cpp	/^bool MainWindow::saveAs()$/;"	f	class:MainWindow
+saveAsAction	./mainwindow.h	/^    QAction *saveAsAction;$/;"	m	class:MainWindow
+saveFile	./mainwindow.cpp	/^bool MainWindow::saveFile(const QString &fileName)$/;"	f	class:MainWindow
+secondaryColumnCombo	./ui_sortdialog.h	/^    QComboBox *secondaryColumnCombo;$/;"	m	class:Ui_SortDialog
+secondaryColumnLabel	./ui_sortdialog.h	/^    QLabel *secondaryColumnLabel;$/;"	m	class:Ui_SortDialog
+secondaryGroupBox	./ui_sortdialog.h	/^    QGroupBox *secondaryGroupBox;$/;"	m	class:Ui_SortDialog
+secondaryOrderCombo	./ui_sortdialog.h	/^    QComboBox *secondaryOrderCombo;$/;"	m	class:Ui_SortDialog
+secondaryOrderLabel	./ui_sortdialog.h	/^    QLabel *secondaryOrderLabel;$/;"	m	class:Ui_SortDialog
+selectAllAction	./mainwindow.h	/^    QAction *selectAllAction;$/;"	m	class:MainWindow
+selectColumnAction	./mainwindow.h	/^    QAction *selectColumnAction;$/;"	m	class:MainWindow
+selectCurrentColumn	./spreadsheet.cpp	/^void Spreadsheet::selectCurrentColumn()$/;"	f	class:Spreadsheet
+selectCurrentRow	./spreadsheet.cpp	/^void Spreadsheet::selectCurrentRow()$/;"	f	class:Spreadsheet
+selectRowAction	./mainwindow.h	/^    QAction *selectRowAction;$/;"	m	class:MainWindow
+selectSubMenu	./mainwindow.h	/^    QMenu *selectSubMenu;$/;"	m	class:MainWindow
+selectedRange	./spreadsheet.cpp	/^QTableWidgetSelectionRange Spreadsheet::selectedRange() const$/;"	f	class:Spreadsheet
+separatorAction	./mainwindow.h	/^    QAction *separatorAction;$/;"	m	class:MainWindow
+setAutoRecalculate	./spreadsheet.cpp	/^void Spreadsheet::setAutoRecalculate(bool recalc)$/;"	f	class:Spreadsheet
+setColumnRange	./sortdialog.cpp	/^void SortDialog::setColumnRange(QChar first, QChar last)$/;"	f	class:SortDialog
+setCurrentFile	./mainwindow.cpp	/^void MainWindow::setCurrentFile(const QString &fileName)$/;"	f	class:MainWindow
+setData	./cell.cpp	/^void Cell::setData(int role, const QVariant &value)$/;"	f	class:Cell
+setDirty	./cell.cpp	/^void Cell::setDirty()$/;"	f	class:Cell
+setFormula	./cell.cpp	/^void Cell::setFormula(const QString &formula)$/;"	f	class:Cell
+setFormula	./spreadsheet.cpp	/^void Spreadsheet::setFormula(int row, int column,$/;"	f	class:Spreadsheet
+setupUi	./ui_gotocelldialog.h	/^    void setupUi(QWidget *GoToCellDialog)$/;"	f	class:Ui_GoToCellDialog
+setupUi	./ui_sortdialog.h	/^    void setupUi(QDialog *SortDialog)$/;"	f	class:Ui_SortDialog
+showGridAction	./mainwindow.h	/^    QAction *showGridAction;$/;"	m	class:MainWindow
+somethingChanged	./spreadsheet.cpp	/^void Spreadsheet::somethingChanged()$/;"	f	class:Spreadsheet
+sort	./mainwindow.cpp	/^void MainWindow::sort()$/;"	f	class:MainWindow
+sort	./spreadsheet.cpp	/^void Spreadsheet::sort(const SpreadsheetCompare &compare)$/;"	f	class:Spreadsheet
+sortAction	./mainwindow.h	/^    QAction *sortAction;$/;"	m	class:MainWindow
+spacerItem	./ui_sortdialog.h	/^    QSpacerItem *spacerItem;$/;"	m	class:Ui_SortDialog
+spacerItem1	./ui_sortdialog.h	/^    QSpacerItem *spacerItem1;$/;"	m	class:Ui_SortDialog
+spacerItem2	./ui_sortdialog.h	/^    QSpacerItem *spacerItem2;$/;"	m	class:Ui_SortDialog
+spacerItem3	./ui_sortdialog.h	/^    QSpacerItem *spacerItem3;$/;"	m	class:Ui_SortDialog
+spacerItem4	./ui_sortdialog.h	/^    QSpacerItem *spacerItem4;$/;"	m	class:Ui_SortDialog
+spreadsheet	./mainwindow.h	/^    Spreadsheet *spreadsheet;$/;"	m	class:MainWindow
+spreadsheetModified	./mainwindow.cpp	/^void MainWindow::spreadsheetModified()$/;"	f	class:MainWindow
+staticMetaObject	./moc_finddialog.cpp	/^const QMetaObject FindDialog::staticMetaObject = {$/;"	m	class:FindDialog	file:
+staticMetaObject	./moc_gotocelldialog.cpp	/^const QMetaObject GoToCellDialog::staticMetaObject = {$/;"	m	class:GoToCellDialog	file:
+staticMetaObject	./moc_mainwindow.cpp	/^const QMetaObject MainWindow::staticMetaObject = {$/;"	m	class:MainWindow	file:
+staticMetaObject	./moc_sortdialog.cpp	/^const QMetaObject SortDialog::staticMetaObject = {$/;"	m	class:SortDialog	file:
+staticMetaObject	./moc_spreadsheet.cpp	/^const QMetaObject Spreadsheet::staticMetaObject = {$/;"	m	class:Spreadsheet	file:
+stringdata	./moc_finddialog.cpp	/^    char stringdata[96];$/;"	m	struct:qt_meta_stringdata_FindDialog_t	file:
+stringdata	./moc_gotocelldialog.cpp	/^    char stringdata[41];$/;"	m	struct:qt_meta_stringdata_GoToCellDialog_t	file:
+stringdata	./moc_mainwindow.cpp	/^    char stringdata[114];$/;"	m	struct:qt_meta_stringdata_MainWindow_t	file:
+stringdata	./moc_sortdialog.cpp	/^    char stringdata[12];$/;"	m	struct:qt_meta_stringdata_SortDialog_t	file:
+stringdata	./moc_spreadsheet.cpp	/^    char stringdata[183];$/;"	m	struct:qt_meta_stringdata_Spreadsheet_t	file:
+strippedName	./mainwindow.cpp	/^QString MainWindow::strippedName(const QString &fullFileName)$/;"	f	class:MainWindow
+tertiaryColumnCombo	./ui_sortdialog.h	/^    QComboBox *tertiaryColumnCombo;$/;"	m	class:Ui_SortDialog
+tertiaryColumnLabel	./ui_sortdialog.h	/^    QLabel *tertiaryColumnLabel;$/;"	m	class:Ui_SortDialog
+tertiaryGroupBox	./ui_sortdialog.h	/^    QGroupBox *tertiaryGroupBox;$/;"	m	class:Ui_SortDialog
+tertiaryOrderCombo	./ui_sortdialog.h	/^    QComboBox *tertiaryOrderCombo;$/;"	m	class:Ui_SortDialog
+tertiaryOrderLabel	./ui_sortdialog.h	/^    QLabel *tertiaryOrderLabel;$/;"	m	class:Ui_SortDialog
+text	./spreadsheet.cpp	/^QString Spreadsheet::text(int row, int column) const$/;"	f	class:Spreadsheet
+toolsMenu	./mainwindow.h	/^    QMenu *toolsMenu;$/;"	m	class:MainWindow
+updateRecentFileActions	./mainwindow.cpp	/^void MainWindow::updateRecentFileActions()$/;"	f	class:MainWindow
+updateStatusBar	./mainwindow.cpp	/^void MainWindow::updateStatusBar()$/;"	f	class:MainWindow
+value	./cell.cpp	/^QVariant Cell::value() const$/;"	f	class:Cell
+vboxLayout	./ui_gotocelldialog.h	/^    QVBoxLayout *vboxLayout;$/;"	m	class:Ui_GoToCellDialog
+vboxLayout	./ui_sortdialog.h	/^    QVBoxLayout *vboxLayout;$/;"	m	class:Ui_SortDialog
+writeFile	./spreadsheet.cpp	/^bool Spreadsheet::writeFile(const QString &fileName)$/;"	f	class:Spreadsheet
+writeSettings	./mainwindow.cpp	/^void MainWindow::writeSettings()$/;"	f	class:MainWindow
