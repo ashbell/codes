@@ -13,7 +13,22 @@
 6. echo aaaaaHHHdfsdfssd | sed 's/[^.\n]/&\n/g'| sed '/^$/d' | sort | uniq -c | tr -d ' \n'  :\
    show the count of alpha appearances and sort it.
 
-
 7. echo -e {1..10}'+' | tr -d ' '| sed 's/+$//g' | bc  : nice job.
+
+8. seq -s '/' 10 | sed 's/^/scale=20;/' | bc : Funny!
+
+9. use nc and script or scriptreplay to show .
+   > a. Create a pipe to use:   mkfifo fifo . On server.
+   > b. Listen local IP and PORT :  nc -ln server_ip -p server_port.  On client.
+   > c. Bind our PIPE to Player_server:  cat fifo | nc server_ip port.
+   > d. Now, show your ideas in console. script -f fifo. The client will see what u r doing.
+   -----------------
+   > e. Use scriptreplay commands.  script -t 2> time.log -a output.session
+   > f. Play it.  scriptreplay  time.log output.session.
+   -----------------
+
+10. find  . -maxdepth 1 -name "*.pdf" | grep "^./[a-z].*.pdf"
+   > -maxdepth (a non-negative integer)
+
 
 
