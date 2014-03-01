@@ -1,21 +1,21 @@
 #! /usr/bin/python
 
-<<<<<<< HEAD
+
 # http://www.google.com, 'my google website'
-=======
+
 # http://www.gogle.com, 'my google website'
->>>>>>> a35a9dcf7cc447b2d5116160b82eda0bc2cfa178
+
 # a simple bookmarks manage tool by python.
 # bookmark struct:
 # 'website_name' : 'url' : 'optional commit'
 
-<<<<<<< HEAD
+
 
 # Short name of functions
 
-=======
+
 # Short name of functions
->>>>>>> a35a9dcf7cc447b2d5116160b82eda0bc2cfa178
+
 ANB = 'add_new_bookmark'
 MEB = 'modi_exist_bookmark'
 DB  = 'delete_bookmark'
@@ -121,7 +121,7 @@ def fun_subs_menu(function):
             c = ''
             print 'file ', save_path, ' is exists, (A)ppend or (O)verwrite it?'
             c = raw_input ('  :  ').strip()[0].lower() 
-<<<<<<< HEAD
+
             if  c == 'o':
                 file_fd = file (save_path, 'w+')
                 file_fd.truncate (0)
@@ -138,14 +138,13 @@ def fun_subs_menu(function):
             for v in val:
                 file_fd.writelines (['%-20s%-40s%-60s%s' % (i, v, val[v], os.linesep)])
         file_fd.close()
-            
-=======
-            if  c == 'a' or c == 'o':
+
+	if  c == 'a' or c == 'o':
                 file_fd = file (save_path, 'w+')
                 if c == 'o':
                     file_fd.truncate (0)
                     file_fd.close ()
->>>>>>> a35a9dcf7cc447b2d5116160b82eda0bc2cfa178
+
 
 def pr_bookmarks():
     for key in bookmarks.keys():
@@ -176,11 +175,11 @@ while True:
     elif choice == 's':
         fun_subs_menu ('save_and_quit')
     else:
-<<<<<<< HEAD
+
         pr_bookmarks ()
-=======
+
         pr_bookmarks()
->>>>>>> a35a9dcf7cc447b2d5116160b82eda0bc2cfa178
+
 
 
 
