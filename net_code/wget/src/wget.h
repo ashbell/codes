@@ -239,6 +239,7 @@ typedef double SUM_SIZE_INT;
    otherwise, the result is undefined.  */
 #define XDIGIT_TO_NUM(h) ((h) < 'A' ? (h) - '0' : c_toupper (h) - 'A' + 10)
 #define X2DIGITS_TO_NUM(h1, h2) ((XDIGIT_TO_NUM (h1) << 4) + XDIGIT_TO_NUM (h2))
+/* h1 << 4 == h1 * 2^4 = h1 * 16 */
 
 /* The reverse of the above: convert a number in the [0, 16) range to
    the ASCII representation of the corresponding hexadecimal digit.
@@ -282,7 +283,7 @@ typedef double SUM_SIZE_INT;
   strcpy (*SA_dest, SA_src);				\
 } while (0)
 
-/* Generally useful if you want to avoid arbitrary size limits but
+/* Generally useful if you want to avoid arbitrary [任意的] size limits but
    don't need a full dynamic array.  Assumes that BASEVAR points to a
    malloced array of TYPE objects (or possibly a NULL pointer, if
    SIZEVAR is 0), with the total size stored in SIZEVAR.  This macro
@@ -316,7 +317,7 @@ enum
 {
   TEXTHTML             = 0x0001,	/* document is of type text/html
                                            or application/xhtml+xml */
-  RETROKF              = 0x0002,	/* retrieval was OK */
+  RETROKF              = 0x0002,	/* retrieval[检索，取回，恢复，拯救] was OK */
   HEAD_ONLY            = 0x0004,	/* only send the HEAD request */
   SEND_NOCACHE         = 0x0008,	/* send Pragma: no-cache directive */
   ACCEPTRANGES         = 0x0010,	/* Accept-ranges header was found */
@@ -356,7 +357,7 @@ typedef enum
 
    A VMS ODS2 file system can not tolerate multiple dots.  An ODS5 file
    system can, but even there not all dots are equal, and heroic effort
-   would be needed to get ".html^.orig" rather than (the less desirable)
+   would be needed to get ".html^.orig" rather than (the less desirable)[令人满意的，值得要的]
    "^.html.orig".  It's more satisfactory always to use "_orig" on VMS
    (rather than including "vms.h", testing "ods5_dest", and acting
    accordingly).

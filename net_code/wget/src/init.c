@@ -108,7 +108,7 @@ static const struct {
   { "accept",           &opt.accepts,           cmd_vector },
   { "addhostdir",       &opt.add_hostdir,       cmd_boolean },
   { "adjustextension",  &opt.adjust_extension,  cmd_boolean },
-  { "alwaysrest",       &opt.always_rest,       cmd_boolean }, /* deprecated */
+  { "alwaysrest",       &opt.always_rest,       cmd_boolean }, /* deprecated 丢弃不赞成*/
   { "askpassword",      &opt.ask_passwd,        cmd_boolean },
   { "authnochallenge",  &opt.auth_without_challenge,
                                                 cmd_boolean },
@@ -261,9 +261,9 @@ static int
 command_by_name (const char *cmdname)
 {
   /* Use binary search for speed.  Wget has ~100 commands, which
-     guarantees a worst case performance of 7 string comparisons.  */
+     guarantees[保证] a worst case performance[性能 执行] of 7 string comparisons.  */
   int lo = 0, hi = countof (commands) - 1;
-
+  /* Sorted commands[] */
   while (lo <= hi)
     {
       int mid = (lo + hi) >> 1;
@@ -361,7 +361,7 @@ home_dir (void)
         {
 #if defined(MSDOS)
           /* Under MSDOS, if $HOME isn't defined, use the directory where
-             `wget.exe' resides.  */
+             `wget.exe' resides.[住 居住 属于 ]  */
           const char *_w32_get_argv0 (void); /* in libwatt.a/pcconfig.c */
           char *p;
 
@@ -656,6 +656,7 @@ parse_line (const char *line, char **com, char **val, int *comind)
   cmdend = p;
 
   /* Skip '=', as well as any space before or after it. */
+  /* Why not?? initial p = line, becase p is pointer to end */
   while (p < end && c_isspace (*p))
     ++p;
   if (p == end || *p != '=')

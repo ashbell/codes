@@ -64,7 +64,7 @@ class Archiver:
 	def __init__( self, decomfn, extract_to ,\
 			files,   co_out ):
 		self.decomfn     = decomfn 
-		self.extract_to = extract_to
+		self.extract_to  = extract_to
 		self.files       = files
 		self.co_out      = co_out
 		print 'Options Parse OK....'
@@ -85,37 +85,50 @@ class Archiver:
 			# Extract all
 			#f.extractall( extract_to, namelist )	
 			for items in  namelist:
-				#print '-- %s ...file' % items 
-				if os.path.exists( items ):  # file's path is exist. tips it!
-				    print 'File: %s is exist ! What do u want? Rename ? Overwrite?' % items
-				    choice = raw_input( 'Choice: ' )[0]
-				    if ( choice == 'R' ) or ( choice == 'r' ):
-				    	file_name = raw_input( 'Another file name: ' )
-					dir_name = os.path.dirname( items )
-					ex_newpath = '%s/%s' % ( dir_name, file_name )
-					print 'New extract path: %s ' % ex_newpath 
-					if not os.path.exists( ex_newpath ):
-						f.extract( items, ex_newpath )
-						ex_path = '%s/%s' % ( ex_newpath, items )
-						print ex_path
-						real_path = '%s/%s' % ( dir_name, file_name )
-						print real_path
-						shutil.copy( ex_path, './tmpfile')
-						os.unlink(ex_path)
-						os.removedirs( os.path.dirname(ex_path ))
-						os.renames( './tmpfile', real_path )
-						print 'Remove %s...' % ex_path
-						print 'Rename Ok...'
-				        else:
-						print 'You are The Fucking Fool!, I wont\'t Working For you!'
+				if os.path.isdir( items ): # Root path is existed.
+					print '%s is directory and existed .!' % items,
+					choice = raw_input('(A)nother place? or (O)verwrite it?' )[0]
+					if ((choice == 'A') or (choice == 'a')):
+						while True:
+							newdirname = raw_input( 'new place: ')
+							print 'getcwd: %s ' % os.getcwdu()
+							newpalce = '%s/%s' % ( os.getcwdu(), newdirname )
+							print 'New dir palce: %s' % newpalce
+							if os.path.isdir( newpalce ):
+								print 'Choose another one !'
+							else:
+								extract_to = newpalce
+								break
+					elif ((choice == '0') or (choice == 'o')):
+						extract_to = os.getcwdu()
+					print 'Target: ', extract_to
+				elif os.path.exists( items ): # File is existed.
+					print 'File: %s is existed.!, (R)ename or (O)verwrite it?  ' % items,
+					c = raw_input( )[0]
+					if ( c == 'R' ) or ( c == 'r' ):
+						while True:
+							rename = raw_input( 'Another file name: ' )
+							newfilepath = '%s%s%s' % ( os.path.dirname( items),'/', rename )
+							print 'New file path: %s ' % newfilepath
+							if os.path.exists( newfilepath ):
+								print 'Fuck u, choose another one.!'
+							else:
+								nf = open( newfilepath, 'ab+')
+								if not nf:
+									print 'create newfile % error !' % newfilepath
+									exit( 0 )
+								nf.write( f.read( items ) )
+								nf.close()
+								break
+					elif (( c == 'O') or ( c == 'o')):
+						print 'Default is overwrite it'
+					else:
+						print 'Unknown cmd!'
 						exit( 0 )
-				    elif ( choice == 'O' ) or ( choice == 'o' ):
-				    	extract_to = '%s%s' % ( extract_to, '../' )
+				else:
+					print 'Ex---> %s' % items
 					f.extract( items, extract_to )
-				    else:
-				    	print 'Bad options, exit !'
-					exit( 0 )
-				time.sleep( 0.5 )
+			f.close()
 		else:
 			print 'Create %s Fail! Choose another path' % extract_to
 			exit( 0 )
