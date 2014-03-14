@@ -132,19 +132,37 @@ class Archiver:
 		else:
 			print 'Create %s Fail! Choose another path' % extract_to
 			exit( 0 )
-			 	
 
-	def zip_compress( self, files, compress ):
+	@staticmethod
+	def path_check_modify( path ):
+		if not os.path.exists( path ):
+			print 'File Pat:  %s not exist.!' % path,
+			while ( not os.path.exists( path ) ):
+				files = raw_input( 'Waht do u want:  ')
+		if os.path.isdir( path ) and (path[-1:] != '/'):
+			path = '%s%s' % (path, '/')
+		return path
+
+	def zip_compress( self, files, co_out ):
 	 	print '[ Now   Compress  file(s): ]', files, 'compress to --> ', co_out
 		print
+		namelist = []
+		files = Archiver.path_check_modify( files )
+
+		if os.path.isdir( files ):
+			print 'DIR: %s, Compress all files in it.!' % files
+			list = os.listdir( files )
+			for x in list:
+				namelist.append( '%s%s' % ( files, x ) )
+		
 	def zip_de_compress( self, decomfn, extract_to, files, co_out ):
 		print '[ Decompress  archiver: ]  %-20s' % decomfn, 'Output_Path--> %40s' % extract_to
 		print '[ Now   Compress files: ]  %-20s' % files ,  'Output File--> %40s' % co_out
 		print
 
 p = Archiver( decomfn, extract_to, files, co_out )
-#p.compress( files)
-p.zip_decompress( decomfn, extract_to)
+p.zip_compress( files, co_out ) 
+#p.zip_decompress( decomfn, extract_to)
 #p.de_compress( decomfn, extract_to, files, co_out )
 
 
